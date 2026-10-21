@@ -1,0 +1,30 @@
+/* Domi — "The round". Condensed grotesque + mono for times; forest night, apricot route. */
+:root { --bg: #15241F; --ink: #E9F1EC; --accent: #E58B5F; --muted: #8FA39A; --line: rgba(233,241,236,.12);
+  --cap-font: "IBM Plex Sans Condensed"; --cap-bg: rgba(21,36,31,.82); --cap-ink: #E9F1EC; --cap-radius: calc(var(--u)*.6); --vignette: .35; }
+#stage { background: #15241F; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: calc(var(--u)*6) calc(var(--u)*6); }
+.headline { font-family: "IBM Plex Sans Condensed"; font-weight: 700; letter-spacing: -.01em; }
+.eyebrow, .mono { font-family: "IBM Plex Mono"; font-weight: 500; letter-spacing: .08em; }
+.eyebrow { text-transform: none; }
+.eyebrow::before { content: "● "; color: var(--accent); }
+.diary { position: relative; width: 100%; height: 100%; display: grid; grid-template-columns: 22% 1fr; grid-auto-rows: 1fr; gap: calc(var(--u)*.8) calc(var(--u)*1.6); }
+.diary .time { font: 500 calc(var(--u)*2.6) "IBM Plex Mono"; color: var(--muted); align-self: center; }
+.diary .slot { border-radius: calc(var(--u)*.8); background: rgba(30,77,64,.85); border: 1px solid rgba(233,241,236,.15); position: relative; overflow: hidden;
+  font: 700 calc(var(--u)*2.6) "IBM Plex Sans Condensed"; color: var(--ink); display: flex; align-items: center; padding: 0 calc(var(--u)*2); }
+.diary .slot.gap { background: transparent; border: 2px dashed var(--accent); color: var(--accent); }
+.diary .slot .strike { position: absolute; left: 4%; right: 4%; top: 50%; height: 3px; background: var(--accent); transform-origin: left; }
+.diary .slot .fill { position: absolute; inset: 0; background: var(--accent); color: #15241F; display: flex; align-items: center; padding: 0 calc(var(--u)*2); transform-origin: left; }
+.map { position: absolute; inset: 0; }
+.map svg { width: 100%; height: 100%; overflow: visible; }
+.map .house { fill: var(--ink); opacity: .55; }
+.map .route { fill: none; stroke: var(--accent); stroke-width: .9; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 1.2px var(--accent)); }
+.map .van { fill: var(--accent); }
+.chips { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-wrap: wrap; gap: calc(var(--u)*1.2); }
+.chip { font: 500 calc(var(--u)*2.5) "IBM Plex Mono"; padding: calc(var(--u)*1) calc(var(--u)*1.8); border-radius: 99px; border: 1px solid var(--accent); color: var(--accent); background: rgba(21,36,31,.9); }
+.sms { position: absolute; right: 0; top: 4%; max-width: 70%; font: 700 calc(var(--u)*4) "IBM Plex Sans Condensed"; background: var(--ink); color: #15241F; padding: calc(var(--u)*1.6) calc(var(--u)*2.6); border-radius: calc(var(--u)*3) calc(var(--u)*3) calc(var(--u)*.6) calc(var(--u)*3); }
+.big { font-family: "IBM Plex Sans Condensed"; font-weight: 700; font-size: calc(var(--u)*8.6); line-height: 1.02; text-align: left; }
+.annot { font: 500 calc(var(--u)*2.4) "IBM Plex Mono"; color: var(--accent); margin-top: calc(var(--u)*3); text-align: left; }
+.role-value .center { align-items: flex-start; text-align: left; }
+.url { font: 700 calc(var(--u)*6) "IBM Plex Sans Condensed"; }
+.brandmark { font: 700 calc(var(--u)*13) "IBM Plex Sans Condensed"; letter-spacing: -.02em; }
+.brandmark .dot { color: var(--accent); }

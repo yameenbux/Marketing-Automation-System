@@ -1,0 +1,185 @@
+{
+  "slug": "bolton-vouched",
+  "name": "Bolton Vouched",
+  "scenes": [
+    {
+      "role": "hook",
+      "on_screen": "Bolton Vouched",
+      "narration": "Bolton Vouched brings together local people, vouched for by Bolton.",
+      "fact_id": "tagline",
+      "start": 0.0,
+      "dur": 5.04,
+      "lead": 0.9,
+      "captions": [
+        [
+          0.9,
+          3.0524898,
+          "Bolton Vouched brings together local people,"
+        ],
+        [
+          3.0524898,
+          4.487483,
+          "vouched for by Bolton."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/bolton-vouched/film/audio/vo_01.wav"
+    },
+    {
+      "role": "problem",
+      "on_screen": "Good recommendations in the local WhatsApp group scroll away under hundreds of messages",
+      "narration": "Good recommendations in the local WhatsApp group scroll away under hundreds of messages, so the next person has to ask all over again.",
+      "fact_id": "pain-buried-recommendations",
+      "start": 5.04,
+      "dur": 8.01,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.2035580869565217,
+          "Good recommendations in the local WhatsApp"
+        ],
+        [
+          2.2035580869565217,
+          4.057116173913044,
+          "group scroll away under hundreds of"
+        ],
+        [
+          4.057116173913044,
+          5.910674260869565,
+          "messages, so the next person has"
+        ],
+        [
+          5.910674260869565,
+          7.455306,
+          "to ask all over again."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/bolton-vouched/film/audio/vo_02.wav"
+    },
+    {
+      "role": "feature",
+      "on_screen": "Pick a trade and an area, then call or WhatsApp a trader in one tap",
+      "narration": "Pick a trade and an area, then call or WhatsApp a trader in one tap.",
+      "fact_id": "feature-one-tap-contact",
+      "start": 13.05,
+      "dur": 4.43,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.7617732,
+          "Pick a trade and an area,"
+        ],
+        [
+          1.7617732,
+          3.1735463999999998,
+          "then call or WhatsApp a trader"
+        ],
+        [
+          3.1735463999999998,
+          3.8794329999999997,
+          "in one tap."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/bolton-vouched/film/audio/vo_03.wav",
+      "shot": null
+    },
+    {
+      "role": "feature",
+      "on_screen": "The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport",
+      "narration": "The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport.",
+      "fact_id": "feature-categories",
+      "start": 17.48,
+      "dur": 10.18,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          3.1329116,
+          "The directory covers 43 categories in"
+        ],
+        [
+          3.1329116,
+          5.915823199999999,
+          "seven groups, from home and trades"
+        ],
+        [
+          5.915823199999999,
+          8.698734799999999,
+          "to repairs, moving, events, lessons, vehicles"
+        ],
+        [
+          8.698734799999999,
+          9.626371999999998,
+          "and transport."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/bolton-vouched/film/audio/vo_04.wav",
+      "shot": null
+    },
+    {
+      "role": "value",
+      "on_screen": "Nobody can pay to move up the list, and that promise is the heart of the product",
+      "narration": "Nobody can pay to move up the list, and that promise is the heart of the product.",
+      "fact_id": "value-no-pay-to-rank",
+      "start": 27.66,
+      "dur": 4.74,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.7063183529411763,
+          "Nobody can pay to move up"
+        ],
+        [
+          1.7063183529411763,
+          3.062636705882353,
+          "the list, and that promise is"
+        ],
+        [
+          3.062636705882353,
+          4.192902,
+          "the heart of the product."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/bolton-vouched/film/audio/vo_05.wav"
+    },
+    {
+      "role": "cta",
+      "on_screen": "https://boltonvouched.ysbdesigns.uk",
+      "narration": "Find out more at the link.",
+      "fact_id": "url-site",
+      "start": 32.4,
+      "dur": 3.2,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.8012469999999996,
+          "Find out more at the link."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/bolton-vouched/film/audio/vo_06.wav"
+    }
+  ],
+  "total": 35.6,
+  "assets": {
+    "hero": null,
+    "sections": [],
+    "mobile": null
+  },
+  "fact_ids": [
+    "tagline",
+    "pain-buried-recommendations",
+    "feature-one-tap-contact",
+    "feature-categories",
+    "value-no-pay-to-rank",
+    "url-site"
+  ],
+  "voice": {
+    "model": "en_GB-northern_english_male-medium.onnx",
+    "speaker": null,
+    "rate": 1.0,
+    "credit": "Piper 'northern_english_male' voice \u2014 dataset CC BY-SA 4.0 (OpenSLR 83)"
+  }
+}

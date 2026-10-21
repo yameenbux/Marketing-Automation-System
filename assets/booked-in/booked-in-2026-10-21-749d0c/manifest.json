@@ -1,0 +1,52 @@
+{
+  "campaign_id": "booked-in-2026-10-21-749d0c",
+  "product": "booked-in",
+  "objective": "awareness: introduce the product to its target audience with verified facts",
+  "created_at": "2026-10-21T19:02:08+00:00",
+  "input_hash": "c1611168cea57ca72abb06d0bf87c6f9ad934e24d359f4bebb003477238729df",
+  "profile_commit": "141f36e484e3a9354edb576f3edb9b05b1c5720e",
+  "qc_ok": true,
+  "status": "draft \u2014 unpublished, awaiting human review",
+  "fact_ids": [
+    "overview-booking-page",
+    "pain-dm-booking",
+    "feature-live-changes",
+    "feature-no-double-booking",
+    "value-no-commission"
+  ],
+  "files": [
+    "video_story.mp4",
+    "captions_story.srt",
+    "video_square.mp4",
+    "captions_square.srt",
+    "video_landscape.mp4",
+    "captions_landscape.srt",
+    "motion_logo_sting.mp4",
+    "storyboard.png",
+    "thumbnail.jpg",
+    "card_portrait.jpg",
+    "card_square.jpg",
+    "card_story.jpg",
+    "carousel_1.jpg",
+    "carousel_2.jpg",
+    "carousel_3.jpg",
+    "brief.md",
+    "script.md",
+    "script.json",
+    "storyboard.md",
+    "prompts.md",
+    "copy.md",
+    "qc.json",
+    "LICENCES.md"
+  ],
+  "content_ids": [
+    "cnt_494ee4b255e0",
+    "cnt_d38d5a904b81",
+    "cnt_cdac37075094"
+  ],
+  "notes": [
+    "no verified product URL \u2014 text-only visuals"
+  ],
+  "cost_gbp": 0.0,
+  "cost_note": "local rendering and local TTS \u2014 no paid APIs used"
+}

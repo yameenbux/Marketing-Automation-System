@@ -1,0 +1,24 @@
+/* Tidemark — "Signal from noise". Geometric sans + mono numerals, abyssal violet, coral tide line. */
+:root { --bg: #1A1230; --ink: #F1ECFA; --accent: #FF6B5E; --muted: #9C8FC0; --violet: #4B2E73;
+  --cap-font: "Manrope"; --cap-bg: rgba(26,18,48,.75); --cap-ink: #F1ECFA; --cap-radius: calc(var(--u)*1.6); --vignette: .5; }
+#stage { background: linear-gradient(180deg, #2A1E45 0%, #1A1230 70%); }
+.headline { font-family: "Manrope"; font-weight: 800; letter-spacing: -.025em; font-size: calc(var(--u)*7.8); }
+.eyebrow, .mono { font-family: "JetBrains Mono"; font-weight: 500; letter-spacing: .06em; text-transform: none; color: var(--accent); }
+.waves { position: absolute; inset: 0; }
+.waves path { fill: none; stroke: var(--muted); stroke-width: .25; opacity: .5; }
+.chart { position: relative; width: 100%; height: 100%; }
+.chart svg { width: 100%; height: 100%; overflow: visible; }
+.chart .axis { stroke: rgba(241,236,250,.25); stroke-width: .3; }
+.chart .dot { fill: var(--ink); }
+.chart .trend { fill: none; stroke: var(--accent); stroke-width: 1.4; stroke-linecap: round; filter: drop-shadow(0 0 1.5px var(--accent)); }
+.chart .ma { fill: none; stroke: var(--muted); stroke-width: .7; stroke-dasharray: 2 2; }
+.chart .lab { font: 500 3.2px "JetBrains Mono"; fill: var(--ink); }
+.readout { position: absolute; right: 0; top: -6%; font: 500 calc(var(--u)*7) "JetBrains Mono"; color: var(--ink); }
+.readout small { font-size: .4em; color: var(--muted); }
+.wordmark { font: 800 calc(var(--u)*12) "Manrope"; letter-spacing: -.04em; }
+.tideline { height: 3px; background: var(--accent); margin: calc(var(--u)*3) auto 0; border-radius: 3px; box-shadow: 0 0 calc(var(--u)*2) var(--accent); }
+.sub { font: 500 calc(var(--u)*3) "JetBrains Mono"; color: var(--muted); margin-top: calc(var(--u)*2.4); }
+.big { font: 800 calc(var(--u)*8.4) "Manrope"; letter-spacing: -.03em; line-height: 1.04; }
+.url { font: 500 calc(var(--u)*4.4) "JetBrains Mono"; color: var(--accent); }
+.role-problem .waves, .role-feature .waves { opacity: .3; }
+.chart .dot { opacity: .9; }

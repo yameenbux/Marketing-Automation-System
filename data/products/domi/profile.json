@@ -1,0 +1,295 @@
+{
+  "slug": "domi",
+  "name": "Domi",
+  "repo": "yameenbux/audiologydomi",
+  "maker": "YSB Ventures Ltd",
+  "product_type": "b2b_saas",
+  "maturity": "working demo",
+  "approval": {
+    "status": "draft",
+    "approved_by": null,
+    "approved_at": null
+  },
+  "brand": {
+    "primary_color": "#1E4D40",
+    "secondary_color": "#15241F",
+    "accent_color": "#E07B4F",
+    "tone": "Plain-spoken, practical and scrupulously honest about what is and isn't built, written for busy home-visit practices in British English.",
+    "color_source": {
+      "path": "README.md",
+      "quote": "![Node](https://img.shields.io/badge/Node-22-1E4D40?style=flat-square&labelColor=15241F&color=1E4D40)"
+    }
+  },
+  "facts": [
+    {
+      "id": "tagline",
+      "kind": "overview",
+      "text": "Domi is a diary for home-visit healthcare that refills itself when patients cancel.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Home-visit diaries that refill themselves.**"
+      }
+    },
+    {
+      "id": "overview-refill",
+      "kind": "overview",
+      "text": "When a patient cancels, Domi texts the best-matched person on the waiting list and books the first one who says yes.",
+      "source": {
+        "path": "README.md",
+        "quote": "patient cancels, Domi texts the best-matched person on the waiting list and books"
+      }
+    },
+    {
+      "id": "audience-services",
+      "kind": "audience",
+      "text": "Domi is built for healthcare that comes to the patient's home, including eye care, hearing, foot care, dental, physio, blood tests, nursing and therapy assessments.",
+      "source": {
+        "path": "README.md",
+        "quote": "The diary for healthcare that comes to the patient's home: eye care, hearing,"
+      }
+    },
+    {
+      "id": "audience-eyecare",
+      "kind": "audience",
+      "text": "Domiciliary eye care is the service Domi is built for today, and the demo is an eye-care practice.",
+      "source": {
+        "path": "README.md",
+        "quote": "| **Domiciliary eye care** | Built for it: the demo is an eye-care practice |"
+      }
+    },
+    {
+      "id": "pain-cancellations",
+      "kind": "pain_point",
+      "text": "A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round.",
+      "source": {
+        "path": "README.md",
+        "quote": "A home-visit practice loses more to a cancellation than a clinic does. The"
+      }
+    },
+    {
+      "id": "pain-waiting-list",
+      "kind": "pain_point",
+      "text": "Patients on the waiting list who would happily take a freed slot often never hear about it.",
+      "source": {
+        "path": "README.md",
+        "quote": "round, and the people on the waiting list who would have taken it never hear"
+      }
+    },
+    {
+      "id": "value-act-on-gap",
+      "kind": "value_prop",
+      "text": "Plenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes.",
+      "source": {
+        "path": "README.md",
+        "quote": "Plenty of systems keep a diary. What Domi does differently is **act on the gap**:"
+      }
+    },
+    {
+      "id": "value-own-name",
+      "kind": "value_prop",
+      "text": "Patients see the practice's own name in every text, on the booking page and on invoices, never Domi's.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Patients see the practice, not Domi.** Every patient text, the booking page and invoices use the practice's name"
+      }
+    },
+    {
+      "id": "feature-refill-engine",
+      "kind": "feature",
+      "text": "The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each.",
+      "source": {
+        "path": "README.md",
+        "quote": "Ranking: clinical priority, then local, days waiting, preferred clinician. Each candidate shows the reasons"
+      }
+    },
+    {
+      "id": "feature-cancel-by-text",
+      "kind": "feature",
+      "text": "Patients can cancel by texting CANCEL, which starts the refill with no staff involved.",
+      "source": {
+        "path": "README.md",
+        "quote": "A patient texting CANCEL cancels the visit and starts the refill, with no staff involved."
+      }
+    },
+    {
+      "id": "feature-book-by-road",
+      "kind": "feature",
+      "text": "New visits are booked where they add the least driving, weighed against how soon the patient needs to be seen.",
+      "source": {
+        "path": "README.md",
+        "quote": "putting them where they add the least driving, weighed against how soon the"
+      }
+    },
+    {
+      "id": "feature-route-planning",
+      "kind": "feature",
+      "text": "Route planning puts visits that haven't started in the order that drives least, from the clinician's home base and back.",
+      "source": {
+        "path": "README.md",
+        "quote": "Visits that haven't started are put in the order that drives least, from the clinician's home base and back."
+      }
+    },
+    {
+      "id": "feature-clinician-app",
+      "kind": "feature",
+      "text": "A phone-first clinician view shows today's round with drive times, patient records, quick notes and an On my way text to the patient.",
+      "source": {
+        "path": "README.md",
+        "quote": "Phone-first. Today's round with drive times, patient records (alerts, last prescription, glasses, history)"
+      }
+    },
+    {
+      "id": "feature-offline",
+      "kind": "feature",
+      "text": "The clinician app works offline, syncing notes and visit updates in order when signal returns.",
+      "source": {
+        "path": "README.md",
+        "quote": "notes and visit updates made without signal sync in order when it returns. Signing out wipes the copy"
+      }
+    },
+    {
+      "id": "feature-referral-form",
+      "kind": "feature",
+      "text": "An online referral form replaces callback forms and paper, and accepting a referral creates the patient record and a waiting-list place.",
+      "source": {
+        "path": "README.md",
+        "quote": "accepting one creates the patient record and a waiting-list place and texts whoever gave a mobile"
+      }
+    },
+    {
+      "id": "feature-reminders",
+      "kind": "feature",
+      "text": "Every visit gets a day-before reminder text, and a CANCEL reply refills that slot a day ahead.",
+      "source": {
+        "path": "README.md",
+        "quote": "A CANCEL reply refills that slot a day ahead"
+      }
+    },
+    {
+      "id": "feature-income-mileage",
+      "kind": "feature",
+      "text": "Domi reports recovered income and cancellations refilled, plus per-clinician mileage and utilisation downloadable as CSV.",
+      "source": {
+        "path": "README.md",
+        "quote": "Recovered income, cancellations refilled, average time to refill and income still unfilled, from the office's own fee per visit"
+      }
+    },
+    {
+      "id": "integration-facebook-leads",
+      "kind": "integration",
+      "text": "Leads from the practice's Facebook ad forms can arrive in Domi via a connector such as Zapier, Make or Meta's own webhook.",
+      "source": {
+        "path": "README.md",
+        "quote": "A connector (Zapier or Make's Facebook Lead Ads trigger, or Meta's own webhook) posts each lead to"
+      }
+    },
+    {
+      "id": "privacy-gdpr",
+      "kind": "privacy",
+      "text": "From a patient's record, the office can download everything held about them or erase their details on request, in line with UK GDPR.",
+      "source": {
+        "path": "README.md",
+        "quote": "From the record: download everything held about a patient (subject access), or erase their details on request."
+      }
+    },
+    {
+      "id": "limitation-not-used",
+      "kind": "limitation",
+      "text": "Domi is a working demo and is not yet used by any practice.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Everything in green is built, tested and working in the demo. Domi is not yet"
+      }
+    },
+    {
+      "id": "limitation-no-real-data",
+      "kind": "limitation",
+      "text": "The demo is not for real patient data: it keeps everything in memory and holds invented patients only.",
+      "source": {
+        "path": "README.md",
+        "quote": "**The demo is not for real patient data.** It keeps everything in memory, holds"
+      }
+    },
+    {
+      "id": "limitation-hosting",
+      "kind": "limitation",
+      "text": "Before real patients, Domi still needs a permanent UK database with tested backups, along with real accounts and compliance paperwork.",
+      "source": {
+        "path": "README.md",
+        "quote": "**A permanent UK database:** managed Postgres in London, encrypted, with daily backups and a restore that has actually been tested."
+      }
+    },
+    {
+      "id": "limitation-no-customers",
+      "kind": "limitation",
+      "text": "Domi has no customers yet, so there are no testimonials or logos to show.",
+      "source": {
+        "path": "README.md",
+        "quote": "Domi has none yet, so no testimonials, logos or \"trusted"
+      }
+    },
+    {
+      "id": "limitation-ready-to-set-up",
+      "kind": "limitation",
+      "text": "Hearing care is ready to set up rather than built for, and Noah 4 integration is not built.",
+      "source": {
+        "path": "README.md",
+        "quote": "| **Hearing care** | Ready to set up | Hearing tests, fittings, wax removal and aid reviews as visit types; audiogram records set up with the practice. *Not built:* Noah 4 |"
+      }
+    },
+    {
+      "id": "limitation-pcse-manual",
+      "kind": "limitation",
+      "text": "PCSE notifications are still lodged by hand; sending them automatically is on the roadmap.",
+      "source": {
+        "path": "README.md",
+        "quote": "Sending them to PCSE automatically is on the roadmap"
+      }
+    },
+    {
+      "id": "limitation-nations",
+      "kind": "limitation",
+      "text": "Scotland, Wales and Northern Ireland have their own sight-test rules, which Domi doesn't model yet.",
+      "source": {
+        "path": "README.md",
+        "quote": "Ireland have their own rules, which Domi doesn't model yet."
+      }
+    },
+    {
+      "id": "limitation-nhs-same-day",
+      "kind": "limitation",
+      "text": "NHS sight tests can't fill a same-day gap: PCSE needs a pre-visit notification at least 48 hours ahead.",
+      "source": {
+        "path": "README.md",
+        "quote": "home needs a pre-visit notification (PVN) to PCSE at least 48 hours ahead"
+      }
+    },
+    {
+      "id": "limitation-demo-sleeps",
+      "kind": "limitation",
+      "text": "The hosted demo runs on a free plan that sleeps when idle and takes a short while to wake.",
+      "source": {
+        "path": "README.md",
+        "quote": "On the free plan it **sleeps after 15 minutes without visits** and takes about"
+      }
+    },
+    {
+      "id": "url-website",
+      "kind": "url",
+      "text": "Find out more at domi.ysbdesigns.uk.",
+      "source": {
+        "path": "README.md",
+        "quote": "Made by YSB Ventures Ltd · [domi.ysbdesigns.uk](https://domi.ysbdesigns.uk)"
+      }
+    },
+    {
+      "id": "url-demo",
+      "kind": "url",
+      "text": "Try the neutral working demo at app.domi.ysbdesigns.uk.",
+      "source": {
+        "path": "README.md",
+        "quote": "demo at [app.domi.ysbdesigns.uk](https://app.domi.ysbdesigns.uk/?brand=domi)"
+      }
+    }
+  ]
+}

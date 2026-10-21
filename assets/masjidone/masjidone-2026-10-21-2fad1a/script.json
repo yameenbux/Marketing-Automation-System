@@ -1,0 +1,47 @@
+{
+  "scenes": [
+    {
+      "role": "hook",
+      "fact_id": "overview-one-system",
+      "on_screen": "MasjidOne",
+      "narration": "MasjidOne is one system that brings together a masjid's madrasah and its congregation.",
+      "seconds": 5.0
+    },
+    {
+      "role": "problem",
+      "fact_id": "pain-disconnected-tools",
+      "on_screen": "Many masājid run their week across several tools that…",
+      "narration": "Many masājid run their week across several tools that do not talk to each other.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-four-surfaces",
+      "on_screen": "Every masjid gets four surfaces",
+      "narration": "Every masjid gets four surfaces: a website, in-masjid screens, a congregation app and a madrasah portal, in its own colours and on its own domain.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-madrasah-portal",
+      "on_screen": "The madrasah portal holds the masjid's roll",
+      "narration": "The madrasah portal holds the masjid's roll, classes, staff and households, with registers and fees configured.",
+      "seconds": 5.0
+    },
+    {
+      "role": "value",
+      "fact_id": "value-madrasah-operations",
+      "on_screen": "MasjidOne runs the madrasah's daily operations",
+      "narration": "MasjidOne runs the madrasah's daily operations — the register, the sabaq heard and the fee due — in the same system as the congregation side.",
+      "seconds": 5.0
+    },
+    {
+      "role": "cta",
+      "fact_id": "url-website",
+      "on_screen": "https://masjidone.co.uk",
+      "narration": "Find out more at the link.",
+      "seconds": 5.0
+    }
+  ],
+  "target_seconds": 30
+}

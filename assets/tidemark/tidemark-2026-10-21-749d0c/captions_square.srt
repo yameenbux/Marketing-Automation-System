@@ -1,0 +1,63 @@
+1
+00:00:00,150 --> 00:00:02,440
+Tidemark is an iPhone weight tracker that
+
+2
+00:00:02,440 --> 00:00:04,730
+focuses on your trend rather than the
+
+3
+00:00:04,730 --> 00:00:06,366
+day-to-day swings on the scale.
+
+4
+00:00:07,270 --> 00:00:09,443
+A bathroom scale gives one number a
+
+5
+00:00:09,443 --> 00:00:11,615
+day, and that number can swing with
+
+6
+00:00:11,615 --> 00:00:13,788
+salt, water, sleep or a late meal.
+
+7
+00:00:14,690 --> 00:00:16,986
+The trend uses Holt's linear smoothing, which
+
+8
+00:00:16,986 --> 00:00:19,283
+follows the direction you're heading rather than
+
+9
+00:00:19,283 --> 00:00:21,579
+trailing behind like a plain moving average.
+
+10
+00:00:22,480 --> 00:00:24,772
+When a weigh-in jumps, the Trend tab
+
+11
+00:00:24,772 --> 00:00:26,409
+explains why that is normal.
+
+12
+00:00:27,310 --> 00:00:29,363
+Tidemark reads your numbers properly: a trend
+
+13
+00:00:29,363 --> 00:00:31,417
+one odd day can't drag far, an
+
+14
+00:00:31,417 --> 00:00:33,470
+honest weekly rate and a plan to
+
+15
+00:00:33,470 --> 00:00:34,350
+hold it against.
+
+16
+00:00:35,250 --> 00:00:36,624
+Find out more at the link.

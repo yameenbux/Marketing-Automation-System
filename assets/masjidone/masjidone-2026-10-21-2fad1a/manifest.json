@@ -1,0 +1,53 @@
+{
+  "campaign_id": "masjidone-2026-10-21-2fad1a",
+  "product": "masjidone",
+  "objective": "Introduce MasjidOne to UK masjid committees and drive demo requests",
+  "created_at": "2026-10-21T16:49:28+00:00",
+  "input_hash": "134eb529e47f702bd1da49878ecd890c8f1b4c0097ca6a66885069f86b2328a2",
+  "profile_commit": "4d76350005336446c6159a78e347d5f303e9cf33",
+  "qc_ok": true,
+  "status": "draft \u2014 unpublished, awaiting human review",
+  "fact_ids": [
+    "overview-one-system",
+    "pain-disconnected-tools",
+    "feature-four-surfaces",
+    "feature-madrasah-portal",
+    "value-madrasah-operations",
+    "url-website"
+  ],
+  "files": [
+    "video_story.mp4",
+    "captions_story.srt",
+    "video_square.mp4",
+    "captions_square.srt",
+    "video_landscape.mp4",
+    "captions_landscape.srt",
+    "motion_logo_sting.mp4",
+    "storyboard.png",
+    "thumbnail.jpg",
+    "card_portrait.jpg",
+    "card_square.jpg",
+    "card_story.jpg",
+    "carousel_1.jpg",
+    "carousel_2.jpg",
+    "carousel_3.jpg",
+    "brief.md",
+    "script.md",
+    "script.json",
+    "storyboard.md",
+    "prompts.md",
+    "copy.md",
+    "qc.json",
+    "LICENCES.md"
+  ],
+  "content_ids": [
+    "cnt_f11fefc2a5b3",
+    "cnt_67fac76d4c78",
+    "cnt_8bf2467c34ef"
+  ],
+  "notes": [
+    "screenshots captured from https://masjidone.co.uk \u2014 page sections are not matched to claims; review that visuals fit the narration"
+  ],
+  "cost_gbp": 0.0,
+  "cost_note": "local rendering and local TTS \u2014 no paid APIs used"
+}

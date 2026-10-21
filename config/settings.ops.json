@@ -1,0 +1,11 @@
+{
+  "_comment": "Operating mode for the scheduled runs (committed, no secrets). Live publishing enabled by the owner on 2026-10-21 ('push from tomorrow morning'). Every post still needs human approval in the approval desk; the kill switch overrides everything.",
+  "dry_run": false,
+  "live": {"publishing": true, "outreach_sending": false},
+  "metricool": {"blog_id": "2910993"},
+  "media": {
+    "base_url": "https://raw.githubusercontent.com/yameenbux/Marketing-Automation-System/claude/marketing-automation-build",
+    "repo_web": "https://github.com/yameenbux/Marketing-Automation-System/blob/claude/marketing-automation-build"
+  },
+  "limits": {"max_posts_per_day": 3, "max_renders_per_day": 12}
+}

@@ -1,0 +1,34 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+config/settings.json
+*.pem
+*.key
+
+# Runtime state, logs and personal data — never commit (this may contain lead data covered by UK GDPR)
+var/
+data/leads/
+data/outreach/
+data/suppression/
+*.sqlite
+*.sqlite3
+*.db
+
+# Cache of synced repo content (regenerable)
+data/products/*/sources/
+
+# Large generated media (keep manifests/briefs/scripts; regenerate renders)
+assets/**/*.mp4
+assets/**/*.wav
+assets/**/frames/
+models/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/

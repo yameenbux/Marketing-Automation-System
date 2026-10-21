@@ -1,0 +1,112 @@
+{
+  "product": "bolton-vouched",
+  "researched_at": "2026-10-21",
+  "method": "WebSearch/WebFetch of public pages",
+  "status": "research — re-verify before any public comparative claim (CAP Code 3.33–3.44)",
+  "notes": [
+    "checkatrade.com and mybuilder.com returned HTTP 403 to WebFetch on 2026-10-21, so their entries rely on a third-party article (Markel Direct, dated 21 Oct 2025) and not on their own pages. Re-verify on the first-party sites before any comparative claim.",
+    "Third-party pricing figures from search snippets (whito.co.uk, trade2base etc.) varied widely and could not be confirmed on first-party pages, so they are deliberately left out.",
+    "No individual tradesperson's or resident's details are recorded."
+  ],
+  "competitors": [
+    {
+      "name": "Checkatrade",
+      "url": "https://www.checkatrade.com/",
+      "category": "direct",
+      "what_they_offer": "UK directory and lead platform where homeowners search for vetted, reviewed tradespeople. Per Markel, registration involves an online application, proof of qualifications and identity verification.",
+      "pricing": "Per Markel Direct (21 Oct 2025): memberships 'starting from £30 +VAT a month'; that basic tier only lets a trader build a profile, and appearing in search requires choosing and paying for a number of leads. Not confirmed on checkatrade.com (403).",
+      "sources": [
+        "https://www.markeluk.com/articles/best-websites-for-tradespeople",
+        "https://www.ratedpeople.com/help/tradesperson"
+      ],
+      "overlap": "Search by trade and area, reviews, checks on traders, free to homeowners. Bolton traders are listed on it.",
+      "gap_vs_bolton_vouched": "According to Markel, paying for leads is required to appear in Checkatrade's search, so payment appears to affect visibility. That is the opposite of Bolton Vouched's 'nobody can pay to move up the list'. A WhatsApp-community origin and one-tap WhatsApp contact are not mentioned in the sources fetched."
+    },
+    {
+      "name": "MyBuilder",
+      "url": "https://www.mybuilder.com/",
+      "category": "direct",
+      "what_they_offer": "Homeowners post a job; tradespeople express interest and homeowners shortlist who they want, after which contact details are exchanged. Per Markel, tradespeople give personal and company details, complete an evaluation for their trade and verify their identity.",
+      "pricing": "Per Markel Direct (21 Oct 2025): 'MyBuilder has no membership fees'; a fee is charged when a homeowner shortlists the tradesperson, to access the customer's contact details. No amount is given. Not confirmed on mybuilder.com (403).",
+      "sources": [
+        "https://www.markeluk.com/articles/best-websites-for-tradespeople"
+      ],
+      "overlap": "Reviews, identity checks, free to homeowners, has Bolton tradesperson listing pages.",
+      "gap_vs_bolton_vouched": "It works by job posting and paid shortlisting, not as a browse-and-call directory. Recommendations from a local community group and free contact for traders are not mentioned in the sources fetched."
+    },
+    {
+      "name": "Rated People",
+      "url": "https://www.ratedpeople.com/",
+      "category": "direct",
+      "what_they_offer": "Homeowners post a job for free ('Free to post, with no hidden fees') and 'Get up to 3 quotes to compare' from local tradespeople; 'Every tradesperson is rated & reviewed.'",
+      "pricing": "Its tradesperson help page describes a fixed lead plan on a 12-month term, priced by phone 'based on your trade and area', and an Opportunities Board where signing up is free and 'you only pay when you choose to unlock a lead'. No figures or currency are published. It says 'Rated People closed all memberships before it became part of Checkatrade.'",
+      "sources": [
+        "https://www.ratedpeople.com/",
+        "https://www.ratedpeople.com/help/tradesperson"
+      ],
+      "overlap": "Local tradespeople, reviews, free to homeowners.",
+      "gap_vs_bolton_vouched": "Traders pay for leads. The pages fetched do not describe identity, insurance or Gas Safe checks. It says it is now part of Checkatrade."
+    },
+    {
+      "name": "TrustATrader",
+      "url": "https://www.trustatrader.com/",
+      "category": "direct",
+      "what_they_offer": "Directory to find local tradespeople by trade and location, with customer reviews, a mobile app and a free-to-register 'TrustATrader Guarantee' on agreed jobs. It says all traders have Public Liability Insurance and must give proof of qualifications and trade association membership.",
+      "pricing": "Membership fees not published. Its site says 'No commission rates' and 'Never pay for your leads from TrustATrader.com'; 'Memberships are limited per area so you get a fair share of leads.'",
+      "sources": [
+        "https://www.trustatrader.com/",
+        "https://www.trustatrader.com/join-us",
+        "https://www.trustatrader.com/how-it-works",
+        "https://www.markeluk.com/articles/best-websites-for-tradespeople"
+      ],
+      "overlap": "The closest model to Bolton Vouched: a browse-by-trade-and-area directory with reviews, insurance and qualification checks, and no per-lead fees. Per Markel, applicants must supply at least 5 references.",
+      "gap_vs_bolton_vouched": "It appears to be a paid membership (price not published) with a capped number of members per area. A free basic listing is not mentioned on their site. It says traders' 'place on the website depends upon their quality of service', but does not say whether membership payment affects order."
+    },
+    {
+      "name": "Bark",
+      "url": "https://www.bark.com/en/gb/",
+      "category": "partial",
+      "what_they_offer": "Marketplace for local services of all kinds: customers 'Get free quotes within minutes', and professionals receive customers' details only once they have sent a quote.",
+      "pricing": "Credit-based. Professionals buy a credit pack and spend credits to contact customers; the cost per lead is set per job ('the service, the value of the job' and local supply and demand); credits are valid for 3 months; 'No commission, no hidden fees'. No price per credit or currency is shown on the page.",
+      "sources": [
+        "https://www.bark.com/en/gb/",
+        "https://www.bark.com/en/gb/sellers/pricing/",
+        "https://www.bark.com/en/gb/how-it-works/sellers/",
+        "https://www.bark.com/en/gb/how-it-works/"
+      ],
+      "overlap": "Customers find local tradespeople free of charge.",
+      "gap_vs_bolton_vouched": "Vetting or verification of professionals is not described on the pages fetched. It is national and covers every category, not a local community. Traders pay per introduction."
+    },
+    {
+      "name": "Nextdoor",
+      "url": "https://business.nextdoor.com/en-gb/",
+      "category": "substitute",
+      "what_they_offer": "Neighbourhood social network where neighbours 'come for local recommendations from their community'. Businesses can make a free business page and free posts.",
+      "pricing": "Free business page and posts. Paid targeted ads through Nextdoor Ads Manager; no prices or currency published ('Contact sales').",
+      "sources": [
+        "https://business.nextdoor.com/en-gb/"
+      ],
+      "overlap": "Neighbour-to-neighbour recommendations of local businesses.",
+      "gap_vs_bolton_vouched": "Businesses can pay for ads. A structured trade-and-area directory and admin-recorded checks such as ID, insurance or Gas Safe are not mentioned on the page fetched."
+    },
+    {
+      "name": "Local Facebook / WhatsApp community groups",
+      "url": "https://help.trustmarktrades.com/docs/social-media/facebook/facebook-local-groups",
+      "category": "substitute",
+      "what_they_offer": "Residents post requests such as 'Can anyone recommend a good plumber?' and rely on neighbours' suggestions, which per TrustMark's guide they trust more than advertising. Common group rules include 'No advertising (or limited advertising)' and 'Only recommendations when asked.'",
+      "pricing": null,
+      "sources": [
+        "https://help.trustmarktrades.com/docs/social-media/facebook/facebook-local-groups"
+      ],
+      "overlap": "The behaviour Bolton Vouched is built on: free, trusted, word-of-mouth recommendations in Bolton's WhatsApp group.",
+      "gap_vs_bolton_vouched": "Searchable, persistent listings and recorded checks are not part of these groups. Per the Bolton Vouched profile, recommendations 'scroll away under a few hundred messages'. No specific Bolton Facebook group was verified."
+    }
+  ],
+  "positioning_takeaways": [
+    "Most national platforms fetched charge traders per lead or per introduction: Rated People's Opportunities Board, Bark's credits, and MyBuilder's shortlist fee per Markel. Bolton Vouched's free basic listing with no lead fees looks like a real point of difference for traders, but check current terms first.",
+    "Per Markel (Oct 2025), Checkatrade's basic tier does not show up in search unless the trader pays for leads. 'Nobody can pay to move up the list' could be a strong message, but phrase it about Bolton Vouched only, not as a claim against named rivals, until checkatrade.com is verified directly.",
+    "TrustATrader is the closest in model (directory, insurance and qualification checks, no lead fees) but appears to be a paid membership capped per area. Bolton Vouched could stress 'free for good' and 'every trader agreed to be listed', without stating TrustATrader's price, which is not published.",
+    "'Vetted' means different things on each site and is often vague. Rated People says only 'rated & reviewed', and Bark's pages describe no verification. Bolton Vouched showing exactly which checks were recorded on each profile (ID, insurance, Gas Safe, DVSA) is a specific, honest claim, provided it stays scoped to what an admin actually recorded.",
+    "The real substitute is the community group itself: TrustMark's guide says residents trust neighbours' recommendations more than ads. Messaging such as 'the WhatsApp group's recommendations, kept where you can find them' plays to that trust rather than competing with it."
+  ]
+}

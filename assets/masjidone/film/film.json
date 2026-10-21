@@ -1,0 +1,206 @@
+{
+  "slug": "masjidone",
+  "name": "MasjidOne",
+  "scenes": [
+    {
+      "role": "hook",
+      "on_screen": "MasjidOne",
+      "narration": "MasjidOne is one system that brings together a masjid's madrasah and its congregation.",
+      "fact_id": "overview-one-system",
+      "start": 0.0,
+      "dur": 6.05,
+      "lead": 0.9,
+      "captions": [
+        [
+          0.9,
+          3.0219466153846155,
+          "MasjidOne is one system that brings"
+        ],
+        [
+          3.0219466153846155,
+          5.1438932307692316,
+          "together a masjid's madrasah and its"
+        ],
+        [
+          5.1438932307692316,
+          5.4975510000000005,
+          "congregation."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/masjidone/film/audio/vo_01.wav"
+    },
+    {
+      "role": "problem",
+      "on_screen": "Many mas\u0101jid run their week across several tools that do not talk to each other",
+      "narration": "Many mas\u0101jid run their week across several tools that do not talk to each other.",
+      "fact_id": "pain-disconnected-tools",
+      "start": 6.05,
+      "dur": 4.6,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.8314332000000002,
+          "Many mas\u0101jid run their week across"
+        ],
+        [
+          1.8314332000000002,
+          3.3128664000000003,
+          "several tools that do not talk"
+        ],
+        [
+          3.3128664000000003,
+          4.053583,
+          "to each other."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/masjidone/film/audio/vo_02.wav"
+    },
+    {
+      "role": "feature",
+      "on_screen": "Every masjid gets four surfaces",
+      "narration": "Every masjid gets four surfaces: a website, in-masjid screens, a congregation app and a madrasah portal, in its own colours and on its own domain.",
+      "fact_id": "feature-four-surfaces",
+      "start": 10.65,
+      "dur": 9.06,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.30883536,
+          "Every masjid gets four surfaces: a"
+        ],
+        [
+          2.30883536,
+          4.26767072,
+          "website, in-masjid screens, a congregation app"
+        ],
+        [
+          4.26767072,
+          6.226506079999999,
+          "and a madrasah portal, in its"
+        ],
+        [
+          6.226506079999999,
+          8.18534144,
+          "own colours and on its own"
+        ],
+        [
+          8.18534144,
+          8.511814,
+          "domain."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/masjidone/film/audio/vo_03.wav",
+      "shot": "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop_s2.png"
+    },
+    {
+      "role": "feature",
+      "on_screen": "The madrasah portal holds the masjid's roll, classes, staff and households, with registers and fees configured",
+      "narration": "The madrasah portal holds the masjid's roll, classes, staff and households, with registers and fees configured.",
+      "fact_id": "feature-madrasah-portal",
+      "start": 19.71,
+      "dur": 7.19,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.709728,
+          "The madrasah portal holds the masjid's"
+        ],
+        [
+          2.709728,
+          5.069456,
+          "roll, classes, staff and households, with"
+        ],
+        [
+          5.069456,
+          6.642608,
+          "registers and fees configured."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/masjidone/film/audio/vo_04.wav",
+      "shot": "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop_s4.png"
+    },
+    {
+      "role": "value",
+      "on_screen": "MasjidOne runs the madrasah's daily operations",
+      "narration": "MasjidOne runs the madrasah's daily operations \u2014 the register, the sabaq heard and the fee due \u2014 in the same system as the congregation side.",
+      "fact_id": "value-madrasah-operations",
+      "start": 26.9,
+      "dur": 8.07,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.07199184,
+          "MasjidOne runs the madrasah's daily operations"
+        ],
+        [
+          2.07199184,
+          3.79398368,
+          "\u2014 the register, the sabaq heard"
+        ],
+        [
+          3.79398368,
+          5.51597552,
+          "and the fee due \u2014 in"
+        ],
+        [
+          5.51597552,
+          7.23796736,
+          "the same system as the congregation"
+        ],
+        [
+          7.23796736,
+          7.524966,
+          "side."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/masjidone/film/audio/vo_05.wav"
+    },
+    {
+      "role": "cta",
+      "on_screen": "https://masjidone.co.uk",
+      "narration": "Find out more at the link.",
+      "fact_id": "url-website",
+      "start": 34.97,
+      "dur": 3.2,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.603878,
+          "Find out more at the link."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/masjidone/film/audio/vo_06.wav"
+    }
+  ],
+  "total": 38.17,
+  "assets": {
+    "hero": "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop.png",
+    "sections": [
+      "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop_s1.png",
+      "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop_s2.png",
+      "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop_s3.png",
+      "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop_s4.png",
+      "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/desktop_s5.png"
+    ],
+    "mobile": "file:///home/user/Marketing-Automation-System/assets/masjidone/film/source/mobile.png"
+  },
+  "fact_ids": [
+    "overview-one-system",
+    "pain-disconnected-tools",
+    "feature-four-surfaces",
+    "feature-madrasah-portal",
+    "value-madrasah-operations",
+    "url-website"
+  ],
+  "voice": {
+    "model": "en_GB-vctk-medium.onnx",
+    "speaker": 95,
+    "rate": 1.08,
+    "credit": "Piper VCTK voice (speaker p226) \u2014 dataset CC BY 4.0, University of Edinburgh"
+  }
+}

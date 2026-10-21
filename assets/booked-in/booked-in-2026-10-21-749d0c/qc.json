@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-10-21T19:02:08+00:00",
+  "ok": true,
+  "brand_contrast": {
+    "text_on_bg": 13.43,
+    "muted_on_bg": 7.51,
+    "accent_on_bg": 3.97
+  },
+  "results": {
+    "video_story.mp4": {
+      "ok": true,
+      "errors": [],
+      "duration_s": 34.27,
+      "size_bytes": 1494226,
+      "sha256": "0c9972daad5b67e62491b83bcf2d1a84203b1618238e31849ed0936144d4c5ff"
+    },
+    "video_square.mp4": {
+      "ok": true,
+      "errors": [],
+      "duration_s": 34.27,
+      "size_bytes": 1233260,
+      "sha256": "1c34e8d0a80a544e9eb5eeb2815e51b24169d606447b469d2f3bf77797da95cf"
+    },
+    "video_landscape.mp4": {
+      "ok": true,
+      "errors": [],
+      "duration_s": 34.27,
+      "size_bytes": 1355526,
+      "sha256": "f595bcc905521fc14b166b286bfb3ea899f99f263c5add15bef83d36ef95314d"
+    },
+    "motion_logo_sting.mp4": {
+      "ok": true,
+      "errors": [],
+      "duration_s": 3.2,
+      "size_bytes": 43085,
+      "sha256": "70a7cb9e37d7251c5092c78a18cead0342cd8aa0bdaec0572cb5f31e49826722"
+    },
+    "thumbnail.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "de7130904442c0b4ac0a99cef637157bcc7a3c394b25da028912786f1d1ddcd3"
+    },
+    "card_portrait.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "af4b175b6dbdadc81654aa79efccc9b730bcc95e81a86c419bb53cdec8ac0db2"
+    },
+    "card_square.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "e311d006922df8734d25900a635e92245cfafd64c0a22971a71f6d5cf171aacf"
+    },
+    "card_story.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "a9c0dd23e7d6b6f94cc00b2c09e4167cff96bf2b61cf60abb44b0e69fd20682e"
+    },
+    "carousel_1.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "d7acceaaf348f04165148928af004b4d12f8dca1b4b586beada049498fa16be2"
+    },
+    "carousel_2.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "f4fd9b20e19f177c3fb93790c8eb31281bf0e7e59dc3f691eaccb174de269164"
+    },
+    "carousel_3.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "c175571468547ac83dc6adbbe6658e0cbd170f57257906f597b0fa19fe1218dc"
+    }
+  },
+  "copy_validation": {
+    "instagram": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "product profile not yet human-approved \u2014 content cannot be approved until it is"
+      ]
+    },
+    "linkedin": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "product profile not yet human-approved \u2014 content cannot be approved until it is"
+      ]
+    },
+    "x": {
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "product profile not yet human-approved \u2014 content cannot be approved until it is"
+      ]
+    }
+  }
+}

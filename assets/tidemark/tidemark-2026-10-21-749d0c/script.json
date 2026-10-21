@@ -1,0 +1,47 @@
+{
+  "scenes": [
+    {
+      "role": "hook",
+      "fact_id": "overview-trend-not-noise",
+      "on_screen": "Tidemark",
+      "narration": "Tidemark is an iPhone weight tracker that focuses on your trend rather than the day-to-day swings on the scale.",
+      "seconds": 5.0
+    },
+    {
+      "role": "problem",
+      "fact_id": "pain-scale-swings",
+      "on_screen": "A bathroom scale gives one number a day",
+      "narration": "A bathroom scale gives one number a day, and that number can swing with salt, water, sleep or a late meal.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-holt-smoothing",
+      "on_screen": "The trend uses Holt's linear smoothing",
+      "narration": "The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-trend-explains",
+      "on_screen": "When a weigh-in jumps, the Trend tab explains why that is normal",
+      "narration": "When a weigh-in jumps, the Trend tab explains why that is normal.",
+      "seconds": 5.0
+    },
+    {
+      "role": "value",
+      "fact_id": "value-read-numbers-properly",
+      "on_screen": "Tidemark reads your numbers properly",
+      "narration": "Tidemark reads your numbers properly: a trend one odd day can't drag far, an honest weekly rate and a plan to hold it against.",
+      "seconds": 5.0
+    },
+    {
+      "role": "cta",
+      "fact_id": "url-website",
+      "on_screen": "https://tidemark.ysbdesigns.uk",
+      "narration": "Find out more at the link.",
+      "seconds": 5.0
+    }
+  ],
+  "target_seconds": 30
+}

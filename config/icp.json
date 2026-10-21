@@ -1,0 +1,195 @@
+{
+  "_comment": "Ideal customer profiles. These are STRATEGY HYPOTHESES derived from verified audience facts — not facts. Weights are transparent and editable. Scores are 0–100.",
+  "masjidone": {
+    "derived_from_facts": [
+      "audience-*"
+    ],
+    "segments": [
+      "UK masjid with an evening madrasah",
+      "Islamic centre running classes and a congregation app"
+    ],
+    "criteria": [
+      {
+        "id": "uk",
+        "label": "Located in the UK",
+        "weight": 25,
+        "field": "country",
+        "equals": "GB"
+      },
+      {
+        "id": "runs_madrasah",
+        "label": "Runs a madrasah / evening classes (public evidence)",
+        "weight": 30,
+        "field": "signals",
+        "contains": "madrasah"
+      },
+      {
+        "id": "registered_charity",
+        "label": "Registered charity (public register)",
+        "weight": 15,
+        "field": "signals",
+        "contains": "registered_charity"
+      },
+      {
+        "id": "corporate",
+        "label": "Corporate subscriber (CIO / charitable company) — needed for email",
+        "weight": 15,
+        "field": "subscriber_type",
+        "equals": "corporate"
+      },
+      {
+        "id": "has_website",
+        "label": "Has its own website",
+        "weight": 15,
+        "field": "website",
+        "present": true
+      }
+    ],
+    "exclude": [
+      {
+        "field": "signals",
+        "contains": "existing_customer"
+      }
+    ]
+  },
+  "domi": {
+    "derived_from_facts": [
+      "audience-*"
+    ],
+    "segments": [
+      "Domiciliary optometry practice",
+      "Home-visit audiology / podiatry provider"
+    ],
+    "criteria": [
+      {
+        "id": "uk",
+        "label": "Located in England (Domi models English sight-test rules only)",
+        "weight": 25,
+        "field": "region",
+        "equals": "England"
+      },
+      {
+        "id": "eye_care",
+        "label": "Domiciliary eye care (the only built-for service)",
+        "weight": 35,
+        "field": "signals",
+        "contains": "domiciliary_eye_care"
+      },
+      {
+        "id": "corporate",
+        "label": "Limited company",
+        "weight": 20,
+        "field": "subscriber_type",
+        "equals": "corporate"
+      },
+      {
+        "id": "has_website",
+        "label": "Has its own website",
+        "weight": 10,
+        "field": "website",
+        "present": true
+      },
+      {
+        "id": "multi_clinician",
+        "label": "More than one clinician (routing matters)",
+        "weight": 10,
+        "field": "signals",
+        "contains": "multi_clinician"
+      }
+    ],
+    "exclude": []
+  },
+  "booked-in": {
+    "derived_from_facts": [
+      "audience-solo-beauty",
+      "audience-lash-technicians",
+      "audience-mobile-and-fixed"
+    ],
+    "outbound": false,
+    "why_no_outbound": "Solo beauty pros are overwhelmingly sole traders (PECR individual subscribers).",
+    "segments": [
+      "Solo lash technicians taking bookings by Instagram DM",
+      "Mobile and home-studio beauty pros (nails, brows) working alone"
+    ],
+    "organic_targeting": {
+      "platforms": [
+        "instagram"
+      ],
+      "signals": [
+        "books via DMs / 'link in bio'",
+        "solo operator, no salon staff",
+        "patch tests required for treatments"
+      ],
+      "content_angles": [
+        "DM booking pain",
+        "no marketplace showing competitors",
+        "patch-test records"
+      ]
+    },
+    "criteria": [],
+    "exclude": []
+  },
+  "tidemark": {
+    "derived_from_facts": [
+      "audience-losing-weight",
+      "audience-medication-users",
+      "audience-privacy-minded"
+    ],
+    "outbound": false,
+    "why_no_outbound": "Consumer app; individuals. Organic + App Store only once launched.",
+    "segments": [
+      "Privacy-minded iPhone users who weigh in regularly",
+      "People who want the trend rather than the daily number"
+    ],
+    "organic_targeting": {
+      "platforms": [
+        "instagram"
+      ],
+      "signals": [
+        "iPhone users",
+        "prefer no account / on-device data"
+      ],
+      "content_angles": [
+        "scale swings explained",
+        "trend vs daily number",
+        "no account, nothing leaves the phone"
+      ],
+      "restrictions": [
+        "no weight-loss outcome claims",
+        "never name prescription-only medicines (CAP Code s.12)",
+        "CAP rules on weight-control ads: don't target under-18s"
+      ]
+    },
+    "criteria": [],
+    "exclude": []
+  },
+  "bolton-vouched": {
+    "derived_from_facts": [
+      "audience-residents",
+      "audience-traders"
+    ],
+    "outbound": false,
+    "why_no_outbound": "Residents are consumers; traders are mostly sole traders (PECR individual subscribers). Traders join through admin consent links.",
+    "segments": [
+      "Bolton residents looking for a recommended local tradesperson",
+      "Bolton tradespeople recommended in the WhatsApp group (recruited personally, not marketed to)"
+    ],
+    "organic_targeting": {
+      "platforms": [
+        "facebook",
+        "instagram"
+      ],
+      "signals": [
+        "Bolton postcodes BL1–BL7",
+        "members of local community groups"
+      ],
+      "content_angles": [
+        "stop asking 'anyone know a good…?'",
+        "recommendations that don't scroll away",
+        "free, no sign-up"
+      ]
+    },
+    "criteria": [],
+    "exclude": []
+  }
+}

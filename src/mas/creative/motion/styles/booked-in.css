@@ -1,0 +1,29 @@
+/* Booked In — "Link in bio". Fashion-magazine italic didone, plum velvet, rose and gold leaf, bokeh. */
+:root { --bg: #2B0F1B; --ink: #F6E6E8; --accent: #E7A6B0; --gold: #D2A56A; --plum: #43192A;
+  --cap-font: "Jost"; --cap-bg: rgba(43,15,27,.72); --cap-ink: #F6E6E8; --cap-radius: 99px; --vignette: .5; --flash: #FFE9EE; }
+#stage { background: radial-gradient(ellipse at 30% 20%, #5A2236 0%, #43192A 40%, #2B0F1B 100%); }
+.headline { font-family: "Bodoni Moda", serif; font-style: italic; font-weight: 500; font-size: calc(var(--u)*8.6); line-height: 1.08; }
+.f-landscape .headline { font-size: calc(var(--u)*7.4); }
+.eyebrow { font-family: "Jost"; font-weight: 500; letter-spacing: .3em; color: var(--gold); }
+.bokeh { position: absolute; inset: 0; overflow: hidden; }
+.bokeh i { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(231,166,176,.55), rgba(231,166,176,0) 70%); }
+.wordmark { font: italic 700 calc(var(--u)*14) "Bodoni Moda"; letter-spacing: -.01em; }
+.wordmark-sub { font: 500 calc(var(--u)*2.8) "Jost"; letter-spacing: .4em; text-transform: uppercase; color: var(--gold); margin-top: calc(var(--u)*2); }
+.swash { height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: calc(var(--u)*2.5) auto 0; }
+.thread { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: calc(var(--u)*1.4); }
+.dm { align-self: flex-start; max-width: 78%; font: 400 calc(var(--u)*3.3) "Jost"; padding: calc(var(--u)*1.5) calc(var(--u)*2.4); border-radius: calc(var(--u)*3); background: rgba(246,230,232,.12); color: var(--ink); backdrop-filter: blur(4px); }
+.dm .ts { display: block; font-size: .62em; opacity: .55; margin-top: .3em; letter-spacing: .08em; }
+.seen { align-self: flex-end; font: 500 calc(var(--u)*2.2) "Jost"; letter-spacing: .2em; text-transform: uppercase; opacity: .6; }
+.card { position: relative; width: 78%; margin: 0 auto; padding: calc(var(--u)*3); border-radius: calc(var(--u)*3); background: rgba(246,230,232,.08); border: 1px solid rgba(231,166,176,.35); }
+.row { display: flex; justify-content: space-between; align-items: center; font: 400 calc(var(--u)*3.2) "Jost"; padding: calc(var(--u)*1.4) 0; border-bottom: 1px solid rgba(231,166,176,.18); }
+.row:last-child { border-bottom: none; }
+.pill { font: 500 calc(var(--u)*2.6) "Jost"; letter-spacing: .14em; text-transform: uppercase; padding: calc(var(--u)*1) calc(var(--u)*2.2); border-radius: 99px; border: 1px solid var(--accent); }
+.pill.on { background: var(--accent); color: var(--plum); }
+.ripple { position: absolute; width: calc(var(--u)*10); height: calc(var(--u)*10); border-radius: 50%; border: 2px solid var(--accent); pointer-events: none; }
+.slotbig { font: italic 700 calc(var(--u)*9) "Bodoni Moda"; text-align: center; }
+.hand { position: absolute; top: 64%; font: 500 calc(var(--u)*3) "Jost"; padding: calc(var(--u)*1.2) calc(var(--u)*2.2); border-radius: 99px; background: rgba(246,230,232,.14); }
+.taken { position: absolute; left: 50%; top: 84%; transform: translateX(-50%); font: 500 calc(var(--u)*2.6) "Jost"; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+.lines { text-align: center; }
+.lines .ln { font: italic 500 calc(var(--u)*8) "Bodoni Moda"; line-height: 1.12; position: relative; display: inline-block; }
+.lines .ln::after { content: ""; position: absolute; left: 0; right: 0; bottom: .08em; height: .06em; background: var(--accent); transform-origin: left; transform: scaleX(var(--k, 0)); }
+.f-landscape .lines .ln { font-size: calc(var(--u)*7); }

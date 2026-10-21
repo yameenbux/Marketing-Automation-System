@@ -1,0 +1,295 @@
+{
+  "slug": "bolton-vouched",
+  "name": "Bolton Vouched",
+  "repo": "yameenbux/Boltontradesmen",
+  "maker": "YSB Designs, a trading name of YSB Ventures Ltd",
+  "product_type": "directory",
+  "maturity": "live today, with a pre-launch checklist still open",
+  "approval": {
+    "status": "draft",
+    "approved_by": null,
+    "approved_at": null
+  },
+  "brand": {
+    "primary_color": "#6E2616",
+    "secondary_color": "#9C3A25",
+    "accent_color": "#B5862C",
+    "tone": "Warm, neighbourly and plain-spoken, written in British English and scrupulously honest about what is built, what is coming and what is never for sale.",
+    "color_source": {
+      "path": "README.md",
+      "quote": "![Next.js](https://img.shields.io/badge/Next.js-16-6E2616?style=flat-square&labelColor=6E2616&color=9C3A25)"
+    }
+  },
+  "facts": [
+    {
+      "id": "tagline",
+      "kind": "overview",
+      "text": "Bolton Vouched brings together local people, vouched for by Bolton.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Local people, vouched for by Bolton.**"
+      }
+    },
+    {
+      "id": "overview-whatsapp-recommended",
+      "kind": "overview",
+      "text": "Bolton Vouched gathers the tradespeople that Bolton's WhatsApp group recommends in one place, alongside the checks that have been made on them.",
+      "source": {
+        "path": "README.md",
+        "quote": "The tradespeople Bolton's WhatsApp group recommends, in one place, with the checks we've made."
+      }
+    },
+    {
+      "id": "audience-residents",
+      "kind": "audience",
+      "text": "For Bolton residents who need a trusted tradesperson, it is free to use with no account and no sign-up.",
+      "source": {
+        "path": "README.md",
+        "quote": "| **Residents** | Free. No account, no sign-up |"
+      }
+    },
+    {
+      "id": "audience-traders",
+      "kind": "audience",
+      "text": "For local tradespeople, a basic listing on Bolton Vouched is free, for good.",
+      "source": {
+        "path": "README.md",
+        "quote": "| **A basic listing** | Free, for good |"
+      }
+    },
+    {
+      "id": "pain-buried-recommendations",
+      "kind": "pain_point",
+      "text": "Good recommendations in the local WhatsApp group scroll away under hundreds of messages, so the next person has to ask all over again.",
+      "source": {
+        "path": "README.md",
+        "quote": "Then they scroll away under a few hundred messages, and the next person asks again."
+      }
+    },
+    {
+      "id": "pain-anyone-know",
+      "kind": "pain_point",
+      "text": "Every week someone in the Bolton Tradesmen WhatsApp group asks whether anyone knows a good tradesperson.",
+      "source": {
+        "path": "README.md",
+        "quote": "Every week someone in the Bolton Tradesmen WhatsApp group asks *\"anyone know a good…?\"*."
+      }
+    },
+    {
+      "id": "pain-trader-cold-calls",
+      "kind": "pain_point",
+      "text": "A directory of tradespeople's mobile numbers is exactly what spammers and scrapers want, and traders who get cold-called will not stay listed.",
+      "source": {
+        "path": "README.md",
+        "quote": "A directory of tradespeople's mobile numbers is exactly what spammers and scrapers want"
+      }
+    },
+    {
+      "id": "value-no-pay-to-rank",
+      "kind": "value_prop",
+      "text": "Nobody can pay to move up the list, and that promise is the heart of the product.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Nobody can pay to move up the list.** That sentence is the product."
+      }
+    },
+    {
+      "id": "value-findable",
+      "kind": "value_prop",
+      "text": "Recommended people are kept where you can find them, sorted by trade and by the BL areas they cover, with a button to call or WhatsApp them.",
+      "source": {
+        "path": "README.md",
+        "quote": "group recommends, sorted by trade and by the BL areas they cover, with what"
+      }
+    },
+    {
+      "id": "value-ranking-from-reviews",
+      "kind": "value_prop",
+      "text": "Payment never affects ranking: a trader's place in the list will come from reviews only.",
+      "source": {
+        "path": "README.md",
+        "quote": "A trader's place in the list will come from reviews only."
+      }
+    },
+    {
+      "id": "feature-one-tap-contact",
+      "kind": "feature",
+      "text": "Pick a trade and an area, then call or WhatsApp a trader in one tap.",
+      "source": {
+        "path": "README.md",
+        "quote": "Pick a trade and an area, then call or WhatsApp them in one tap."
+      }
+    },
+    {
+      "id": "feature-categories",
+      "kind": "feature",
+      "text": "The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport.",
+      "source": {
+        "path": "README.md",
+        "quote": "**43 categories in seven groups**: home and trades, repairs and appliances,"
+      }
+    },
+    {
+      "id": "feature-checks",
+      "kind": "feature",
+      "text": "Profiles show what has been checked about each trader, such as ID, insurance, Gas Safe and DVSA.",
+      "source": {
+        "path": "README.md",
+        "quote": "we've checked about them (ID, insurance, Gas Safe, DVSA and so on) and a button"
+      }
+    },
+    {
+      "id": "feature-gas-safe-required",
+      "kind": "feature",
+      "text": "Gas and boiler listings cannot go live without a Gas Safe check, and driving instructors need a DVSA ADI check.",
+      "source": {
+        "path": "README.md",
+        "quote": "Gas & boilers can't go live without a Gas Safe check; driving instructors need"
+      }
+    },
+    {
+      "id": "feature-consent",
+      "kind": "feature",
+      "text": "Every trader on Bolton Vouched has agreed to be listed, after reading exactly how they will appear.",
+      "source": {
+        "path": "README.md",
+        "quote": "a trader is listed only after they open their link, read exactly how they'll appear, and agree."
+      }
+    },
+    {
+      "id": "feature-reviews",
+      "kind": "feature",
+      "text": "Residents can leave a review by signing in with Google or a code sent to their email.",
+      "source": {
+        "path": "README.md",
+        "quote": "sign in with Google or a code sent to your email to leave a review."
+      }
+    },
+    {
+      "id": "feature-review-proof",
+      "kind": "feature",
+      "text": "Reviews take one screen of taps, can be edited for 14 days and can carry an optional private proof photo or PDF.",
+      "source": {
+        "path": "README.md",
+        "quote": "editable for 14 days, with an optional private proof photo or PDF (location data"
+      }
+    },
+    {
+      "id": "feature-provider-replies",
+      "kind": "feature",
+      "text": "Traders linked to their listing can reply once to each review.",
+      "source": {
+        "path": "README.md",
+        "quote": "signed in and their account is linked to the listing. Then they reply once to each review."
+      }
+    },
+    {
+      "id": "feature-taking-on-work",
+      "kind": "feature",
+      "text": "Traders can show whether they are taking on work or booked up until a date, and this never changes the order or a badge.",
+      "source": {
+        "path": "README.md",
+        "quote": "the date), can filter a category list, and never changes the order or a badge."
+      }
+    },
+    {
+      "id": "feature-trader-dashboard",
+      "kind": "feature",
+      "text": "The trader dashboard shows enquiries this month and all time, and lets traders edit their description and areas or pause their listing.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Trader dashboard** at `/platform/provider`: enquiries this month and all time (calls"
+      }
+    },
+    {
+      "id": "feature-ask-bolton",
+      "kind": "feature",
+      "text": "Ask Bolton lets signed-in residents ask the community for a good tradesperson, with answers that must name a live listing in that trade.",
+      "source": {
+        "path": "README.md",
+        "quote": "Answers must name a live listing in that"
+      }
+    },
+    {
+      "id": "feature-price-guides",
+      "kind": "feature",
+      "text": "Price guides show what locals paid for a trade, built only from reviews once that trade has 10 counted reviews.",
+      "source": {
+        "path": "README.md",
+        "quote": "only from reviews, a trade at a time, once it has 10 counted reviews (published or under"
+      }
+    },
+    {
+      "id": "privacy-numbers-hidden",
+      "kind": "privacy",
+      "text": "Traders' phone numbers are never in the page's HTML, so scrapers reading the page find no phone numbers.",
+      "source": {
+        "path": "README.md",
+        "quote": "Scrapers reading the page find no phone numbers."
+      }
+    },
+    {
+      "id": "privacy-no-trackers",
+      "kind": "privacy",
+      "text": "Looking around keeps nothing: no cookies, no account and no analytics.",
+      "source": {
+        "path": "README.md",
+        "quote": "| Someone looks around | Nothing. No cookies, no account, no analytics | Nowhere |"
+      }
+    },
+    {
+      "id": "limitation-pro-not-built",
+      "kind": "limitation",
+      "text": "The optional paid Pro tier is coming and not built; the dashboard only says it is coming soon, and there is no payment and no badge for sale.",
+      "source": {
+        "path": "README.md",
+        "quote": "The optional paid tier, **Pro** (see *Free and Verified*). The dashboard only says it's coming soon."
+      }
+    },
+    {
+      "id": "limitation-pro-price-planned",
+      "kind": "limitation",
+      "text": "Pro is not built; it is planned at £10 a month or £100 a year, offered to a trader only after their 5th enquiry.",
+      "source": {
+        "path": "README.md",
+        "quote": "| **Pro**, optional (*not built*) | £10 a month or £100 a year, offered to a trader after their 5th enquiry |"
+      }
+    },
+    {
+      "id": "limitation-no-phone-sign-in",
+      "kind": "limitation",
+      "text": "Sign-in by text message is switched off, so residents sign in with Google or an email code instead.",
+      "source": {
+        "path": "README.md",
+        "quote": "text is switched off: don't tell anyone to sign in with their mobile."
+      }
+    },
+    {
+      "id": "limitation-draft-policies",
+      "kind": "limitation",
+      "text": "The policy pages are drafts pending legal review.",
+      "source": {
+        "path": "README.md",
+        "quote": "then remove the *Draft — pending legal review* banner"
+      }
+    },
+    {
+      "id": "limitation-no-profile-views",
+      "kind": "limitation",
+      "text": "Profile views are not recorded, so the trader dashboard does not show them.",
+      "source": {
+        "path": "README.md",
+        "quote": "Profile views aren't recorded, so they aren't shown."
+      }
+    },
+    {
+      "id": "url-site",
+      "kind": "url",
+      "text": "Bolton Vouched is at boltonvouched.ysbdesigns.uk.",
+      "source": {
+        "path": "README.md",
+        "quote": "| `NEXT_PUBLIC_SITE_URL` | `https://boltonvouched.ysbdesigns.uk`."
+      }
+    }
+  ]
+}

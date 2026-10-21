@@ -1,0 +1,218 @@
+{
+  "_comment": "Product repositories. Read-only sources of product knowledge. Discovered 2026-10-21 via the account's repository list; classification from README content — confirm 'needs_confirmation' entries.",
+  "owner": "yameenbux",
+  "products": [
+    {
+      "slug": "masjidone",
+      "name": "MasjidOne",
+      "owner": "yameenbux",
+      "repo": "MasjidOne",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://masjidone.co.uk",
+      "demo_url": null,
+      "notes": "B2B SaaS for masājid/madrasahs. Has pricing and a live website.",
+      "last_successful_sync": "2026-10-21T16:46:49+00:00",
+      "last_synced_commit": "4d76350005336446c6159a78e347d5f303e9cf33",
+      "brand": {
+        "primary_color": "#0C2A21",
+        "secondary_color": "#2C4C40",
+        "accent_color": "#C0A46A",
+        "tone": "Plain-spoken, candid and community-minded, careful never to overclaim and respectful of Islamic terminology.",
+        "source": "data/products/masjidone/profile.json (verified from README)"
+      },
+      "target_audience": [
+        "UK masjid with an evening madrasah",
+        "Islamic centre running classes and a congregation app"
+      ]
+    },
+    {
+      "slug": "domi",
+      "name": "Domi",
+      "owner": "yameenbux",
+      "repo": "audiologydomi",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://domi.ysbdesigns.uk",
+      "demo_url": "https://app.domi.ysbdesigns.uk/?brand=domi",
+      "notes": "B2B SaaS for home-visit healthcare. Working demo, no customers yet.",
+      "last_successful_sync": "2026-10-21T16:46:50+00:00",
+      "last_synced_commit": "32080b358fb0bbcce0dcfaeb89382aa340fc3ca4",
+      "brand": {
+        "primary_color": "#1E4D40",
+        "secondary_color": "#15241F",
+        "accent_color": "#E07B4F",
+        "tone": "Plain-spoken, practical and scrupulously honest about what is and isn't built, written for busy home-visit practices in British English.",
+        "source": "data/products/domi/profile.json (verified from README)"
+      },
+      "target_audience": [
+        "Domiciliary optometry practice",
+        "Home-visit audiology / podiatry provider"
+      ]
+    },
+    {
+      "slug": "booked-in",
+      "name": "Booked In",
+      "owner": "yameenbux",
+      "repo": "Peony-Beauty-Platform",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": null,
+      "demo_url": null,
+      "notes": "Booking page for solo beauty professionals. README: not provisioned (no live email/payments).",
+      "last_successful_sync": "2026-10-21T16:46:51+00:00",
+      "last_synced_commit": "141f36e484e3a9354edb576f3edb9b05b1c5720e",
+      "brand": {
+        "primary_color": "#43192A",
+        "secondary_color": "#8E2F43",
+        "accent_color": "#B8465C",
+        "tone": "Warm, plain-spoken and candid, written in British English for working beauty professionals rather than technologists, and careful never to oversell.",
+        "source": "data/products/booked-in/profile.json (verified from README)"
+      },
+      "target_audience": [
+        "Solo lash technicians taking bookings by Instagram DM",
+        "Mobile and home-studio beauty pros (nails, brows) working alone"
+      ]
+    },
+    {
+      "slug": "tidemark",
+      "name": "Tidemark",
+      "owner": "yameenbux",
+      "repo": "Tidemark-Fitness",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://tidemark.ysbdesigns.uk",
+      "demo_url": null,
+      "notes": "B2C iPhone weight tracker. Not yet on the App Store.",
+      "last_successful_sync": "2026-10-21T16:46:52+00:00",
+      "last_synced_commit": "f9be463f63cb0c87c01cd9fda65273988b780c2b",
+      "brand": {
+        "primary_color": "#2A1E45",
+        "secondary_color": "#4B2E73",
+        "accent_color": "#FF6B5E",
+        "tone": "Plain-spoken, calm and candid: it explains what the app does and doesn't do, avoids hype and refuses to scold.",
+        "source": "data/products/tidemark/profile.json (verified from README)"
+      },
+      "target_audience": [
+        "Privacy-minded iPhone users who weigh in regularly",
+        "People who want the trend rather than the daily number"
+      ]
+    },
+    {
+      "slug": "bolton-vouched",
+      "name": "Bolton Vouched",
+      "owner": "yameenbux",
+      "repo": "Boltontradesmen",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": null,
+      "demo_url": null,
+      "notes": "Local tradespeople directory for Bolton (confirmed in scope by owner 2026-10-21).",
+      "last_successful_sync": "2026-10-21T16:59:16+00:00",
+      "last_synced_commit": "68434942f3bc46ce0cabd720f85cedbeb5db17bb",
+      "screenshots": false,
+      "screenshots_note": "Live listings show real tradespeople's names and numbers; they consented to a listing, not to appearing in ads.",
+      "brand": {
+        "primary_color": "#6E2616",
+        "secondary_color": "#9C3A25",
+        "accent_color": "#B5862C",
+        "tone": "Warm, neighbourly and plain-spoken, written in British English and scrupulously honest about what is built, what is coming and what is never for sale.",
+        "source": "data/products/bolton-vouched/profile.json (verified from README)"
+      },
+      "target_audience": [
+        "Bolton residents looking for a recommended local tradesperson",
+        "Bolton tradespeople recommended in the WhatsApp group (recruited personally, not marketed to)"
+      ]
+    },
+    {
+      "slug": "ysb-designs",
+      "name": "YSB Designs (agency)",
+      "owner": "yameenbux",
+      "repo": "ysbdesignsportfolio",
+      "default_branch": "main",
+      "category": "agency",
+      "enabled": false,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://ysbdesigns.uk",
+      "demo_url": null,
+      "notes": "Agency portfolio — services, not a SaaS. Enable if you want agency marketing.",
+      "last_successful_sync": null
+    }
+  ],
+  "excluded": [
+    {
+      "repo": "Hairbychrissy",
+      "reason": "client project"
+    },
+    {
+      "repo": "DiamondPlumbing",
+      "reason": "client project"
+    },
+    {
+      "repo": "Luxescentuk",
+      "reason": "client project"
+    },
+    {
+      "repo": "aquavape-rebrand",
+      "reason": "client project"
+    },
+    {
+      "repo": "Venetiancompany",
+      "reason": "speculative pitch sample"
+    },
+    {
+      "repo": "BuxTravel",
+      "reason": "client project"
+    },
+    {
+      "repo": "Taiyabah-Mosque-Website-Rebrand",
+      "reason": "charity client project (related to MasjidOne but not the product)"
+    },
+    {
+      "repo": "Taiyabah-Mosque-App",
+      "reason": "charity client project"
+    },
+    {
+      "repo": "Taiyabah-Masjid-HomeSmartScreen",
+      "reason": "charity client project"
+    },
+    {
+      "repo": "Taiyabah-Mosque-Interactive-Screens",
+      "reason": "charity client project"
+    },
+    {
+      "repo": "YameenBux",
+      "reason": "GitHub profile README"
+    },
+    {
+      "repo": "Marketing-Automation-System",
+      "reason": "this repository"
+    },
+    {
+      "repo": "ybhomelab",
+      "reason": "private; not a product"
+    }
+  ]
+}

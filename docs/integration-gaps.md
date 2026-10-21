@@ -1,0 +1,23 @@
+# Integration gaps, in priority order
+
+| # | Gap | Impact | What closes it | Cost |
+|---|---|---|---|---|
+| 1 | **This repo is PUBLIC** and is named `Marketing-Automation-System`, not `ysb-marketing-automation` | Lead data, reports and outbox files must never be committed here (`.gitignore` blocks them), and scheduled CI on a public repo would expose logs | GitHub → Settings → General: rename to `ysb-marketing-automation`, then Danger Zone → change visibility to **Private** | £0 |
+| 2 | **Only one social account is connected** (Instagram `masjidone.uk` via Metricool) | Domi, Booked In, Tidemark and Bolton Vouched can only produce drafts | Connect each product's accounts in Metricool, then add them to `config/channels.json` | Depends on your Metricool plan (free plan limits brands) |
+| 3 | **Metricool can't be called from Python**, only through the claude.ai connector | The 09:00 scheduled task submits the outbox, **but scheduled tasks currently get no connectors** | Add the Metricool connector to both scheduled tasks in claude.ai | £0 |
+| 4 | **Media must be public URLs** for Metricool | Videos and images are local files | Upload to Cloudflare R2 (free tier) or attach them by hand in Metricool | £0 |
+| 5 | **No LLM at runtime** | Copy is assembled from verified fact sentences: accurate but plain | Optional: Anthropic API key with the £5/month LLM cap (not built yet), or polish copy during approval | ~£1–3/month at the planned volume |
+| 6 | **Narration licence ambiguity** (Piper alba ← lessac) | Treat the sample narration as a draft | Re-voice with ElevenLabs (paid plan, commercial rights) or record your own voice | ElevenLabs credits |
+| 7 | ~~No background music~~ **closed**: procedural score with ducking and -16 LUFS loudness (`creative/music.py`) | — | ElevenLabs Music later if wanted | credits |
+| 8 | **Analytics ingestion** | The 16:30 run reads Metricool analytics into `reports/daily/`, once the connector is attached | Same as gap 3 | £0 |
+| 9 | **Lead sources** | Only CSV import and the Companies House adapter exist | Free Companies House key; a Charity Commission API key for MasjidOne; Exa/Firecrawl research inside Claude sessions, exported to CSV | £0 / metered |
+| 10 | **No outbound sending integration**, by design | Outreach stops at drafts | Write your LIA, sender identity and opt-out handling, then explicitly authorise a provider and operating limits | — |
+| 11 | **GitHub REST API blocked in cloud sessions** | Sync uses the raw/ls-remote fallback (works fine) | None needed; on your own machine the REST path is used automatically | £0 |
+| 12 | **Docker untested** | — | Run `docker compose up --build` on your machine and report any errors | £0 |
+| 13 | **Lottie export** not implemented | Motion graphics ship as MP4 only | Add if a site or app actually needs Lottie | £0 |
+| 14 | **MasjidOne parent access status** contradicts itself in the README; the live site says it's built | The validator blocks "parent access" claims | Confirm, then fix the README; the profile follows on next sync | £0 |
+| 15 | **Bolton Vouched has no outbound route** (residents and sole-trader tradespeople are individual subscribers under PECR) | Growth is organic: social, local Facebook/WhatsApp community groups you're a member of (posted by you, not automated) | Connect a Bolton Vouched Instagram/Facebook page in Metricool | £0 |
+| 16 | **Bolton Vouched README: diagram 02 alt text is out of date** (says community questions and trader dashboards are "coming and not built"; the text says they're live) | The profile follows the text, so only Pro is treated as unbuilt | Update the alt text in the Boltontradesmen repo | £0 |
+| 17 | **Analytics baseline: `masjidone.uk` has ~1 follower and 0–1 daily reach** | Content volume isn't the constraint; distribution is | See docs/portfolio-strategy.md: owned channels per product, borrowed audiences, launch-gated timing | £0 |
+| 18 | **ElevenLabs credits exhausted** (47 left; 5 narrations, 4 music beds and 5 stills refused on 21 Oct) | Films use local Piper voices and procedural music | Top up, then re-voice with the chosen voices: MasjidOne Oliver `lo1O1Dz1Tu4FWVEPaxuT`, Domi Alice `Xb7hH8MSUJpSbSDYk0k2`, Booked In Clara V. `0ggs85h7hrWz8ExXnsBc`, Tidemark Dr Oli `1P9lzrAhggxzcHA9jcDZ`, Bolton Vouched Jack (Northern) `BaOSOFEajuOD7eIEjbbS`. About $1.20 for all five | ~£1 |
+| 19 | **Canva AI credits exhausted** | No AI imagery | Wait for the monthly reset or upgrade; procedural visuals are used meanwhile | plan |

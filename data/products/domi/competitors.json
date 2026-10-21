@@ -1,0 +1,91 @@
+{
+  "product": "domi",
+  "researched_at": "2026-10-21",
+  "method": "WebSearch/WebFetch of public pages",
+  "status": "research — re-verify before any public comparative claim (CAP Code 3.33–3.44)",
+  "competitors": [
+    {
+      "name": "Opticabase (with Opticabase Home add-on)",
+      "url": "https://www.opticabase.co.uk",
+      "category": "direct",
+      "what_they_offer": "UK optical practice management system (recalls, dispensing, clinical notes, eGOS England) with an 'Opticabase Home' add-on described as 'Software for Optician domiciliary providers without the need for an internet connnection'. A 2022 AOP feature says it also provides an electronic solution for pre-visit notifications and that over 650 practices in the UK and Ireland use Opticabase.",
+      "pricing": "Published ex VAT: Full Clinical System £195/month/practice; Opticabase Home add-on £70/month/practice (£35/month for fewer than 35 domiciliary visits/month); SMS 5.5p per text",
+      "sources": [
+        "https://www.opticabase.co.uk",
+        "https://www.opticabase.co.uk/prices",
+        "https://www.aop.org.uk/ot/features/2022/02/15/supporting-practice-systems",
+        "https://www.aop.org.uk/ot/features/2019/10/01/ot-focuses-on-it-software-and-domiciliary"
+      ],
+      "overlap": "Domiciliary eye care focus; offline working on visits; patient records; SMS messaging; pre-visit notification handling (per AOP 2022)",
+      "gap_vs_domi": "Waiting-list refill of cancelled slots by text, cancel-by-text reply, route planning/least-driving booking and online referral form are not mentioned on the pages fetched. Note: Opticabase appears to be ahead of Domi on eGOS/PVN, which Domi still lodges by hand."
+    },
+    {
+      "name": "Blink OMS (GenerationNET)",
+      "url": "https://www.blinkoms.co.uk",
+      "category": "partial",
+      "what_they_offer": "Cloud-based optician management system with integrated eGOS submission to PCSE, online booking through the practice website, recalls and SMS text reminders to patients in the next clinic.",
+      "pricing": null,
+      "sources": [
+        "https://www.blinkoms.co.uk"
+      ],
+      "overlap": "Cloud diary accessible remotely; SMS reminders; online booking; patient records",
+      "gap_vs_domi": "Domiciliary services, waiting-list refill, route planning, offline clinician app and referral intake are not mentioned on their site. (Search snippets claim domiciliary use and £30–£145/month pricing, but these were not confirmed on a fetched page.)"
+    },
+    {
+      "name": "Acuitas 3 (Ocuco)",
+      "url": "https://www.ocuco.com/uk/",
+      "category": "partial",
+      "what_they_offer": "Optical practice management software for UK practices covering scheduling, staff and clinic performance, eGOS integration (GOS1, GOS3, GOS4), and recall/marketing with automatic recalls, SMS reminders and email marketing.",
+      "pricing": null,
+      "sources": [
+        "https://www.ocuco.com/uk/"
+      ],
+      "overlap": "Appointment diary; SMS appointment confirmations and recalls; online booking (mentioned in a testimonial)",
+      "gap_vs_domi": "Domiciliary/home visits, waiting lists, route planning and referral forms are not mentioned on the page fetched; appears clinic/high-street oriented."
+    },
+    {
+      "name": "OctopusPro (Mobile Optometrist & Domiciliary Optician Scheduling)",
+      "url": "https://octopuspro.com/mobile-optic-schedule-software",
+      "category": "partial",
+      "what_they_offer": "Generic field-service platform with a page marketed at mobile optometrists and domiciliary opticians: practitioner rotas and visit routes on one calendar, proximity-based scheduling, GPS tracking, branded online booking portal, automated email/SMS/app reminders and a practitioner mobile app with forms that 'can be completed online or offline'.",
+      "pricing": "Published: Starter $36.25/month ($348/year); Established $60 USD per admin seat + $6 USD per fieldworker seat per month; Unlimited Users $99 USD platform fee/month plus $1 per booked job or 2% of invoiced revenue",
+      "sources": [
+        "https://octopuspro.com/mobile-optic-schedule-software",
+        "https://octopuspro.com/pricing/"
+      ],
+      "overlap": "Home-visit scheduling; route planning & optimisation (listed on all plans); SMS reminders and two-way SMS; online booking; clinician mobile app with offline forms",
+      "gap_vs_domi": "Waiting-list refill of cancelled slots is not mentioned; no NHS/GOS, PVN or eye-care clinical records (prescription, glasses) mentioned; priced in USD and not UK-specific; referral intake not mentioned."
+    },
+    {
+      "name": "OptimoRoute",
+      "url": "https://optimoroute.com/pricing/",
+      "category": "substitute",
+      "what_they_offer": "Route optimisation and planning tool with automated planning, weekly planning (Pro), a driver mobile app that receives routes and sends real-time updates, and real-time order tracking with customer ETA notifications.",
+      "pricing": "Published per driver per month, billed annually: Lite $35.10; Pro $44.10; Custom on request",
+      "sources": [
+        "https://optimoroute.com/pricing/"
+      ],
+      "overlap": "Route planning/optimisation of a day's visits; field app; customer ETA notifications (similar to 'On my way' text)",
+      "gap_vs_domi": "Not healthcare-specific: no patient records, waiting list, cancellation refill, referrals or GDPR subject-access tools mentioned; SMS not explicitly mentioned on the pricing page."
+    },
+    {
+      "name": "Cal.com",
+      "url": "https://cal.com/routing/routing-for-optometrists",
+      "category": "substitute",
+      "what_they_offer": "General booking/scheduling tool with an optometry page offering routing/intake forms that match patients to the right optometrist, calendar sync with Google/Outlook/Apple, multi-location bookings, analytics and a self-hosting option.",
+      "pricing": null,
+      "sources": [
+        "https://cal.com/routing/routing-for-optometrists"
+      ],
+      "overlap": "Online booking and intake forms (loosely comparable to Domi's referral form)",
+      "gap_vs_domi": "Reminders, SMS, waitlists and home visits are not mentioned on the page fetched; no route planning or clinical records mentioned."
+    }
+  ],
+  "positioning_takeaways": [
+    "None of the six fetched competitor pages mention automatically refilling a cancelled slot from a waiting list by text, so 'acts on the gap' appears to be a genuine differentiator — re-verify each vendor before saying so publicly, and avoid absolute 'only' claims.",
+    "Optical PMS vendors (Opticabase, Blink OMS, Acuitas 3) lead on NHS eGOS integration and, for Opticabase, pre-visit notifications; Domi lodges PCSE notifications by hand, so messaging should position Domi on diary/refill/routing rather than NHS claims, or as complementary to an existing PMS.",
+    "Opticabase publishes a dedicated domiciliary add-on price (£70/month, or £35/month under 35 visits/month, on top of £195/month), giving a visible UK price anchor for domiciliary software buyers.",
+    "Generic field-service and routing tools (OctopusPro, OptimoRoute) cover route optimisation and SMS reminders but publish USD pricing and do not mention NHS/eye-care records; Domi can stress being built for UK domiciliary eye care with clinical context (prescriptions, alerts) in the clinician app.",
+    "Offline working is offered by Opticabase Home and OctopusPro forms, so offline support is table stakes rather than a differentiator; recovered-income reporting and least-driving booking are not mentioned by any fetched competitor and may resonate more."
+  ]
+}
