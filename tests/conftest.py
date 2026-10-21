@@ -51,6 +51,13 @@ PROFILE = {
 }
 
 
+@pytest.fixture(autouse=True)
+def _clean_mas_env(monkeypatch):
+    """Tests control mode explicitly; CI's own MAS_DRY_RUN / MAS_KILL_SWITCH must not leak into them."""
+    monkeypatch.delenv("MAS_DRY_RUN", raising=False)
+    monkeypatch.delenv("MAS_KILL_SWITCH", raising=False)
+
+
 @pytest.fixture
 def root(tmp_path):
     (tmp_path / "config").mkdir()
