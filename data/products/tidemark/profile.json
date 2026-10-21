@@ -4,7 +4,7 @@
   "repo": "yameenbux/Tidemark-Fitness",
   "maker": "YSB Ventures Ltd.",
   "product_type": "b2c_app",
-  "maturity": "Built and tested; not yet on the App Store (Apple Developer enrolment in review)",
+  "maturity": "Pre-launch: built and unit-tested, running in Expo Go, no signed iPhone build and not on the App Store.",
   "approval": {
     "status": "draft",
     "approved_by": null,
@@ -213,10 +213,10 @@
     {
       "id": "limitation-not-on-app-store",
       "kind": "limitation",
-      "text": "Tidemark is built and tested but is not on the App Store yet; the Apple Developer enrolment is in review and the site says 'Coming soon to the App Store'.",
+      "text": "Tidemark is built and tested but is not on the App Store yet; until launch the website says 'Coming soon to the App Store'.",
       "source": {
         "path": "README.md",
-        "quote": "**Everything in green is built, tested and working. It is not on the App Store"
+        "quote": "Until then the site says \"Coming soon to the App Store\""
       }
     },
     {
@@ -289,6 +289,78 @@
       "source": {
         "path": "README.md",
         "quote": "privacy.html     the privacy policy, served at /privacy.html"
+      }
+    },
+    {
+      "id": "limitation-no-waitlist",
+      "kind": "limitation",
+      "text": "The website has no waitlist or sign-up form, so it collects nothing from visitors.",
+      "source": {
+        "path": "README.md",
+        "quote": "The site has no waitlist or sign-up form, so it collects nothing."
+      }
+    },
+    {
+      "id": "pricing-offer-or-trial",
+      "kind": "pricing",
+      "text": "The yearly launch offer and the free trial cannot run at the same time; the one-week free trial on yearly Plus only starts after the launch offer ends.",
+      "source": {
+        "path": "README.md",
+        "quote": "**The launch offer and the trial can't run at the same time.**"
+      }
+    },
+    {
+      "id": "pricing-plus-dose-analysis-report",
+      "kind": "pricing",
+      "text": "Tidemark Plus includes the dose analysis and the doctor report.",
+      "source": {
+        "path": "README.md",
+        "quote": "Plus includes the dose analysis and doctor report"
+      }
+    },
+    {
+      "id": "pricing-nothing-lost-on-lapse",
+      "kind": "pricing",
+      "text": "Nothing you enter in a Plus feature is lost if Plus lapses; it is hidden, kept, and comes back if you resubscribe.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Nothing entered in a Plus feature is lost when Plus lapses.**"
+      }
+    },
+    {
+      "id": "value-no-dark-patterns",
+      "kind": "value_prop",
+      "text": "There are no dark patterns: no countdown timers, no fake 'only today' prices and nothing pre-ticked.",
+      "source": {
+        "path": "README.md",
+        "quote": "**No dark patterns.** No countdown timers, no fake \"only today\" prices, no"
+      }
+    },
+    {
+      "id": "feature-kg-stones-pounds",
+      "kind": "feature",
+      "text": "Weights are in kilograms by default, with stones and pounds for anyone who prefers them.",
+      "source": {
+        "path": "README.md",
+        "quote": "kilograms first, with stones and pounds for anyone who chooses them."
+      }
+    },
+    {
+      "id": "overview-app-store-name",
+      "kind": "overview",
+      "text": "The App Store listing name is 'Tidemark: Weight Trend Tracker', while the Home Screen shows Tidemark.",
+      "source": {
+        "path": "README.md",
+        "quote": "as \"Tidemark: Weight Trend Tracker\" (the Home Screen still says Tidemark)."
+      }
+    },
+    {
+      "id": "privacy-delete-all-data",
+      "kind": "privacy",
+      "text": "With no account, there is nothing to delete beyond the Delete all my data option in Settings.",
+      "source": {
+        "path": "README.md",
+        "quote": "there's no account, so there's nothing to delete beyond Settings → Delete all my data."
       }
     }
   ]

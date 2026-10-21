@@ -3,7 +3,7 @@
 > Generated from `profile.json` — edit that, not this file. Source: `yameenbux/Tidemark-Fitness` README.
 
 - **Maker:** YSB Ventures Ltd.  
-- **Type:** b2c_app · **Maturity:** Built and tested; not yet on the App Store (Apple Developer enrolment in review)  
+- **Type:** b2c_app · **Maturity:** Pre-launch: built and unit-tested, running in Expo Go, no signed iPhone build and not on the App Store.  
 - **Approval:** draft
 - **Brand:** primary #2A1E45, secondary #4B2E73, accent #FF6B5E — Plain-spoken, calm and candid: it explains what the app does and doesn't do, avoids hype and refuses to scold.
 
@@ -13,6 +13,8 @@
   <sub>`overview-trend-not-noise` — “**A weight tracker that shows the trend, not the noise.**”</sub>
 - Your weigh-ins, your trend and your plan live on your phone and nowhere else.  
   <sub>`overview-on-your-phone` — “Weigh-ins, the trend and your plan, on your phone and nowhere else.”</sub>
+- The App Store listing name is 'Tidemark: Weight Trend Tracker', while the Home Screen shows Tidemark.  
+  <sub>`overview-app-store-name` — “as "Tidemark: Weight Trend Tracker" (the Home Screen still says Tidemark).”</sub>
 
 ## Target audience
 
@@ -36,6 +38,8 @@
   <sub>`value-read-numbers-properly` — “a trend that one odd day can't drag far, an honest weekly”</sub>
 - The target line is a guide, not a verdict, and nothing in the app scolds you.  
   <sub>`value-guide-not-verdict` — “**The target line is a guide, not a verdict.** That sentence is the product.”</sub>
+- There are no dark patterns: no countdown timers, no fake 'only today' prices and nothing pre-ticked.  
+  <sub>`value-no-dark-patterns` — “**No dark patterns.** No countdown timers, no fake "only today" prices, no”</sub>
 
 ## Verified features
 
@@ -53,6 +57,8 @@
   <sub>`feature-protected-backups` — “A file you choose where to put. Backups can be locked with a password”</sub>
 - Every restore takes a snapshot first, and the snapshot is kept for 30 days in case you need it.  
   <sub>`feature-undo-and-snapshots` — “The snapshot taken before the restore is kept for 30 days”</sub>
+- Weights are in kilograms by default, with stones and pounds for anyone who prefers them.  
+  <sub>`feature-kg-stones-pounds` — “kilograms first, with stones and pounds for anyone who chooses them.”</sub>
 
 ## Privacy and data
 
@@ -60,6 +66,8 @@
   <sub>`privacy-data-not-collected` — “**"Data Not Collected" is a commitment, not a description.** It stays true”</sub>
 - Buying Plus sends nothing of yours, and there are no analytics, ads, crash SDKs or accounts.  
   <sub>`privacy-no-analytics` — “buying Plus sends nothing of yours; there are no analytics, ads, crash SDKs or accounts”</sub>
+- With no account, there is nothing to delete beyond the Delete all my data option in Settings.  
+  <sub>`privacy-delete-all-data` — “there's no account, so there's nothing to delete beyond Settings → Delete all my data.”</sub>
 
 ## Pricing (as stated in the README)
 
@@ -69,6 +77,12 @@
   <sub>`pricing-plus-tiers` — “What's free, what's in Tidemark Plus at £2.99 a month, £19.99 a year or £49.99 once, and what is not built yet”</sub>
 - For the first 90 days there is a launch offer: yearly Plus at £11.99 for the first year, then £19.99.  
   <sub>`pricing-launch-offer` — “yearly at £11.99 for the first year, then £19.99, for the first 90 days”</sub>
+- The yearly launch offer and the free trial cannot run at the same time; the one-week free trial on yearly Plus only starts after the launch offer ends.  
+  <sub>`pricing-offer-or-trial` — “**The launch offer and the trial can't run at the same time.**”</sub>
+- Tidemark Plus includes the dose analysis and the doctor report.  
+  <sub>`pricing-plus-dose-analysis-report` — “Plus includes the dose analysis and doctor report”</sub>
+- Nothing you enter in a Plus feature is lost if Plus lapses; it is hidden, kept, and comes back if you resubscribe.  
+  <sub>`pricing-nothing-lost-on-lapse` — “**Nothing entered in a Plus feature is lost when Plus lapses.**”</sub>
 
 ## Links
 
@@ -79,8 +93,8 @@
 
 ## Known limitations — never market these as done
 
-- Tidemark is built and tested but is not on the App Store yet; the Apple Developer enrolment is in review and the site says 'Coming soon to the App Store'.  
-  <sub>`limitation-not-on-app-store` — “**Everything in green is built, tested and working. It is not on the App Store”</sub>
+- Tidemark is built and tested but is not on the App Store yet; until launch the website says 'Coming soon to the App Store'.  
+  <sub>`limitation-not-on-app-store` — “Until then the site says "Coming soon to the App Store"”</sub>
 - Buying and restoring Plus, iOS file encryption while locked and production hardening are written and unit-tested but not yet proven on a device.  
   <sub>`limitation-unproven-on-device` — “Plus, iOS file encryption while the phone is locked, and the production”</sub>
 - Apple Health sync, widgets and automatic backups are built but have not yet run on a phone, so they should be treated as in development.  
@@ -93,6 +107,8 @@
   <sub>`limitation-data-loss-without-backup` — “**Lose the phone without a backup and the data is gone.** The app reminds you”</sub>
 - The web build is the owner's private test tool, not a product, and is not offered to anyone.  
   <sub>`limitation-web-build-not-product` — “The web build of the app: the owner's private test tool, not a product.”</sub>
+- The website has no waitlist or sign-up form, so it collects nothing from visitors.  
+  <sub>`limitation-no-waitlist` — “The site has no waitlist or sign-up form, so it collects nothing.”</sub>
 
 ## Competitors
 
