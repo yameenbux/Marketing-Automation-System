@@ -268,7 +268,17 @@
         "Who decides on new systems, and when does the committee next meet?",
         "What would you need to see to try something new with one class?"
       ],
-      "pilot_offer": "Run one or more of your own classes in MasjidOne for an agreed period, with weekly check-ins and you doing any setup. At the end the committee decides. Real pupil data only after M-P1 (ICO registration and data processing agreement) is done."
+      "pilot_offer": "Run one or more of your own classes in MasjidOne for an agreed period, with weekly check-ins and you doing any setup. At the end the committee decides. Real pupil data only after M-P1 (ICO registration and data processing agreement) is done.",
+      "email": {
+        "subject": "{org}: the madrasah register and the office in one system",
+        "fact_ids": [
+          "pain-family-known-three-times",
+          "value-one-family-record",
+          "feature-missed-register-flag",
+          "value-local-support"
+        ],
+        "ask": "Would you be open to a short phone call next week? If someone else looks after the madrasah's admin, I'd be grateful to know who."
+      }
     },
     "domi": {
       "priority": 2,
@@ -362,9 +372,9 @@
         {
           "id": "D-P3",
           "blocks": "email",
-          "item": "Set sender identity and opt-out in config/outreach.json before any email.",
+          "item": "Sender identity and opt-out set from the Companies House record (config/company.json).",
           "owner": "you",
-          "done": false
+          "done": true
         },
         {
           "id": "D-P4",
@@ -490,7 +500,16 @@
         "What happens to a cancelled slot today?",
         "Would a separate refill and route tool alongside your current system be acceptable?"
       ],
-      "pilot_offer": "Two steps. First, a design-partner trial on the working demo with invented patients modelled on a typical week of yours. Then a signed pilot on the live London environment, with a pilot results view built from your own diary figures, never estimates (feature-pilot-results). Real patients only once D-P1's paperwork is done."
+      "pilot_offer": "Two steps. First, a design-partner trial on the working demo with invented patients modelled on a typical week of yours. Then a signed pilot on the live London environment, with a pilot results view built from your own diary figures, never estimates (feature-pilot-results). Real patients only once D-P1's paperwork is done.",
+      "email": {
+        "subject": "Cancelled home visits at {org}",
+        "fact_ids": [
+          "pain-cancellations",
+          "value-act-on-gap",
+          "feature-pcse-notice-rules"
+        ],
+        "ask": "Would a short phone call next week be useful? I'd like to hear how you fill cancellations now, and show you the call list if it fits."
+      }
     },
     "bolton-vouched": {
       "priority": 3,

@@ -1,10 +1,11 @@
 {
   "_comment": "Outbound rules per product. Everything defaults to blocked. A human must fill in sender identity, opt-out mechanism and a Legitimate Interests Assessment (LIA) before ANY draft can become eligible. This is not legal advice — check current ICO guidance on PECR and UK GDPR.",
   "sender": {
-    "legal_name": null,
-    "postal_address": null,
-    "reply_to": null,
-    "opt_out_instructions": null
+    "legal_name": "YSB Ventures Ltd (company no. 16022339, registered in England and Wales)",
+    "postal_address": "711 Crompton Way, Bolton, England, BL1 8TL",
+    "reply_to": "yameen@ysbdesigns.uk",
+    "opt_out_instructions": "Not relevant? Reply \"no thanks\" and I won't email again.",
+    "_source": "Companies House register, checked 2026-10-21; reply_to is the Gmail send-as address in use"
   },
   "research_max_age_days": 180,
   "products": {

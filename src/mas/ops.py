@@ -13,7 +13,7 @@ from .context import Context
 from .store import now_iso
 
 STATE_TABLES = ("content", "campaigns", "publications", "runs", "costs", "sync_state")
-NEVER_EXPORT = ("leads", "suppression", "outreach")
+NEVER_EXPORT = ("leads", "suppression", "outreach", "contact_history")
 # Audit rows about leads and outreach name organisations or carry suppression keys (which can be email addresses).
 PRIVATE_AUDIT_ACTIONS = ("eligibility", "suppress", "draft_outreach", "approve_outreach", "send_outreach")
 AUDIT_DAYS = 30

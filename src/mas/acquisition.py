@@ -26,8 +26,17 @@ NEAR = {"bolton": 40, "blackburn": 15, "manchester": 15, "oldham": 15, "rochdale
 
 # --- plan ---------------------------------------------------------------------------------
 def load_plan(root: Path) -> dict | None:
+    """The committed plan, plus dated commitments to named prospects from var/pipeline/commitments.json
+    ({slug: [{date, item}]}). Those name real organisations, so they stay in the gitignored var/ folder."""
     p = root / "config" / "acquisition.json"
-    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+    if not p.exists():
+        return None
+    plan = json.loads(p.read_text(encoding="utf-8"))
+    cp = root / "var" / "pipeline" / "commitments.json"
+    for slug, items in (json.loads(cp.read_text(encoding="utf-8")) if cp.exists() else {}).items():
+        if slug in plan["products"]:
+            plan["products"][slug]["commitments"] = plan["products"][slug].get("commitments", []) + items
+    return plan
 
 
 def active(plan: dict | None) -> list[str]:
@@ -229,7 +238,7 @@ def _urgent(p: dict, blocks: str, wk: int) -> bool:
     return any(c["source"] == blocks and c["priority"] <= 3 for c in p["channels"])
 
 
-def next_actions(plan: dict, events: list[dict], today: date) -> list[dict]:
+def next_actions(plan: dict, events: list[dict], today: date, email: dict | None = None) -> list[dict]:
     """Ranked actions for the owner: what unblocks this week, then this week's shortfalls, then evidence,
     then blockers for later weeks. Higher-priority products first within each band."""
     acts: list[tuple[float, dict]] = []
@@ -241,6 +250,10 @@ def next_actions(plan: dict, events: list[dict], today: date) -> list[dict]:
     for slug in active(plan):
         p = plan["products"][slug]
         pr = p.get("priority", 9) / 10
+        for cm in p.get("commitments", []):                      # dated promises to real prospects come first
+            due = date.fromisoformat(cm["date"])
+            if today <= due <= today + timedelta(days=7):
+                acts.append((0.5 + pr, {"product": slug, "who": "you", "action": f"By {cm['date']}: {cm['item']}"}))
         for pre in p.get("prerequisites", []):
             if not pre.get("done"):
                 band = 1 if _urgent(p, pre["blocks"], wk) else 4
@@ -262,6 +275,13 @@ def next_actions(plan: dict, events: list[dict], today: date) -> list[dict]:
             if h["status"] == "contradicted":
                 acts.append((3 + pr, {"product": slug, "who": "you",
                                       "action": f"{h['id']} contradicted: {h['if_contradicted']}"}))
+    for slug, st in (email or {}).items():
+        if slug in plan["products"] and st["organisations_emailed"] >= 30 and (st["days_since_first"] or 0) >= 7 \
+                and (st["reply_rate"] or 0) < 0.02:
+            acts.append((1.5 + plan["products"][slug].get("priority", 9) / 10, {"product": slug, "who": "you", "action":
+                f"Cold email isn't working: {st['replied']} replies from {st['organisations_emailed']} organisations in "
+                f"{st['days_since_first']} days. Stop new cold emails; phone the best-fit ones instead, starting with "
+                f"the segment the product is built for."}))
     return [a for _, a in sorted(acts, key=lambda x: x[0])]
 
 
@@ -276,9 +296,14 @@ def _best_source(table: dict, p: dict) -> str:
     return f"not enough data; start with {first['source']} (plan priority 1)"
 
 
-def report_markdown(plan: dict, events: list[dict], bad: list[str], today: date, short: bool = False) -> str:
+def _pct(x: float | None) -> str:
+    return "—" if x is None else f"{x:.0%}"
+
+
+def report_markdown(plan: dict, events: list[dict], bad: list[str], today: date, short: bool = False,
+                    email: dict | None = None) -> str:
     f, src, hyp = funnel(plan, events, today), sources(plan, events), hypotheses(plan, events)
-    acts = next_actions(plan, events, today)
+    acts = next_actions(plan, events, today, email)
     start = date.fromisoformat(plan["start"])
     when = (f"starts {start.isoformat()}; showing week 1 targets" if today < start
             else f"week {f['week']} ({f['from']} → {f['to']})")
@@ -296,6 +321,12 @@ def report_markdown(plan: dict, events: list[dict], bad: list[str], today: date,
         if not short:
             L += ["", "Assumptions:"] + [f"- **{h['id']}** ({h['risk']}) {h['status']}: {h['statement']}" for h in hyp[slug]]
         L += [""]
+    if email:
+        L += ["**Email outreach (from Gmail, all senders)**", "", "| Brand | Organisations emailed | Follow-ups | Replied |"
+              " Reply rate | Opted out | Bounced | Since |", "|---|---|---|---|---|---|---|---|"]
+        L += [f"| {k} | {v['organisations_emailed']} | {v['follow_ups']} | {v['replied']} | "
+              f"{_pct(v['reply_rate'])} | "
+              f"{v['opted_out']} | {v['bounced']} | {v['first_sent']} |" for k, v in email.items()] + [""]
     working = [f"{slug}: {h['id']} supported" for slug in hyp for h in hyp[slug] if h["status"] == "supported"]
     working += [f"{slug}: '{s}' reaches conversations" for slug in src for s, row in src[slug].items()
                 if row["orgs"] >= 3 and row[list(plan['products'][slug]['stages'])[1]] / row["orgs"] >= 0.3]
@@ -314,7 +345,8 @@ def report(ctx: Context, events_path: Path | None = None, today: date | None = N
     if not plan:
         return ""
     events, bad = clean_events(plan, load_events(events_path or ctx.root / "var" / "pipeline" / "events.json"))
-    return report_markdown(plan, events, bad, today or ctx.policy.london_now().date(), short=short)
+    from .outreach.history import stats as email_stats
+    return report_markdown(plan, events, bad, today or ctx.policy.london_now().date(), short=short, email=email_stats(ctx))
 
 
 # --- per-product plan documents -------------------------------------------------------------
@@ -384,7 +416,8 @@ def desk_docs(ctx: Context, events_path: Path | None = None, today: date | None 
         out.append({"collection": "plan", "doc_id": slug, "data": doc})
         out += [{"collection": "prospects", "doc_id": r["id"], "data": r} for r in prospects(ctx, slug)]
     events, _ = clean_events(plan, load_events(events_path or ctx.root / "var" / "pipeline" / "events.json"))
-    acts = next_actions(plan, events, today or ctx.policy.london_now().date())
+    from .outreach.history import stats as email_stats
+    acts = next_actions(plan, events, today or ctx.policy.london_now().date(), email_stats(ctx))
     out.append({"collection": "report", "doc_id": "latest",
                 "data": {"generated_at": ctx.policy.london_now().isoformat(timespec="minutes"), "actions": acts[:12]}})
     return out

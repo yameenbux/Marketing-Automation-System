@@ -55,11 +55,30 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("op", choices=["check", "prospects", "report", "docs", "seed"]); p.add_argument("product", nargs="?")
     p.add_argument("--events", help="pipeline events JSON (default var/pipeline/events.json)")
     p.add_argument("--date", help="report as of YYYY-MM-DD (default today, London)")
+    p = sub.add_parser("outreach", help="contact history from Gmail: import sent, sync replies, stats")
+    p.add_argument("op", choices=["import-sent", "sync-replies", "stats"]); p.add_argument("--file")
+    p.add_argument("--product")
     p = sub.add_parser("kill-switch", help="engage or release the global kill switch")
     p.add_argument("state", choices=["on", "off"]); p.add_argument("--reason", default="manual")
 
     a = ap.parse_args(argv)
     ctx = Context.create()
+
+    if a.cmd == "outreach":
+        from .company import company
+        from .outreach import history
+        if a.op == "stats":
+            _print(history.stats(ctx, a.product))
+            return 0
+        data = json.loads(Path(a.file).read_text())
+        if a.op == "import-sent":
+            _print(history.import_sent(ctx, data))
+        else:
+            snd = company(ctx.root)["sender"] if (ctx.root / "config" / "company.json").exists() else {}
+            extra = ctx.root / "var" / "pipeline" / "own_addresses.json"     # private addresses, gitignored
+            own = {snd.get("email", "")} | set(json.loads(extra.read_text()) if extra.exists() else [])
+            _print(history.sync_replies(ctx, data, own - {""}))
+        return 0
 
     if a.cmd == "acq":
         from datetime import date as _date

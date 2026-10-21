@@ -248,3 +248,35 @@ def test_desk_docs_seed_plan_prospects_and_actions(actx):
     assert planned["stages"] and planned["targets"] and planned["assumptions"][0]["id"] == "A1"
     rep = [d for d in docs if d["collection"] == "report"][0]["data"]
     assert rep["actions"][0]["action"].startswith("Log every conversation")
+
+
+def test_cold_email_with_no_replies_triggers_channel_change():
+    email = {"acme": {"organisations_emailed": 40, "days_since_first": 8, "reply_rate": 0.0, "replied": 0}}
+    acts = [a["action"] for a in acq.next_actions(plan(), [], date(2026, 11, 3), email)]
+    assert any(a.startswith("Cold email isn't working: 0 replies from 40") for a in acts)
+    quiet = {"acme": {"organisations_emailed": 40, "days_since_first": 3, "reply_rate": 0.0, "replied": 0}}
+    assert not any("Cold email" in a["action"] for a in acq.next_actions(plan(), [], date(2026, 11, 3), quiet))
+
+
+def test_report_shows_email_table():
+    email = {"acme": {"organisations_emailed": 10, "follow_ups": 2, "replied": 1, "reply_rate": 0.1, "opted_out": 0,
+                      "bounced": 0, "first_sent": "2026-10-13", "days_since_first": 8}}
+    text = acq.report_markdown(plan(), [], [], date(2026, 11, 3), email=email)
+    assert "| acme | 10 | 2 | 1 | 10% | 0 | 0 | 2026-10-13 |" in text
+
+
+def test_dated_commitments_lead_the_actions():
+    p = plan(commitments=[{"date": "2026-11-05", "item": "demo with a real prospect"}])
+    acts = [a["action"] for a in acq.next_actions(p, clean([ev()], p), date(2026, 11, 3))]
+    assert acts[0] == "By 2026-11-05: demo with a real prospect"
+    assert not any("demo with" in a["action"] for a in acq.next_actions(p, clean([ev()], p), date(2026, 11, 20)))
+
+
+def test_private_commitments_merge_from_var_not_config(tmp_path):
+    (tmp_path / "config").mkdir(); (tmp_path / "var" / "pipeline").mkdir(parents=True)
+    (tmp_path / "config" / "acquisition.json").write_text(json.dumps(plan()))
+    assert "commitments" not in acq.load_plan(tmp_path)["products"]["acme"]
+    (tmp_path / "var" / "pipeline" / "commitments.json").write_text(
+        json.dumps({"acme": [{"date": "2026-11-05", "item": "x"}], "unknown": [{"date": "2026-11-05", "item": "y"}]}))
+    p = acq.load_plan(tmp_path)
+    assert p["products"]["acme"]["commitments"] == [{"date": "2026-11-05", "item": "x"}] and "unknown" not in p["products"]

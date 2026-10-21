@@ -1,0 +1,48 @@
+{
+  "_comment": "Legal identity for every brand. Verified against the public Companies House register; never edit by hand without re-checking the register.",
+  "legal_name": "YSB Ventures Ltd",
+  "company_number": "16022339",
+  "registered_in": "England and Wales",
+  "registered_office": "711 Crompton Way, Bolton, England, BL1 8TL",
+  "company_type": "Private limited company",
+  "source": {
+    "url": "https://find-and-update.company-information.service.gov.uk/company/16022339",
+    "checked_on": "2026-10-21",
+    "status_on_check": "Active",
+    "confirmation_statement_due_by": "2026-10-29"
+  },
+  "sender": {
+    "name": "Yameen Bux",
+    "email": "yameen@ysbdesigns.uk",
+    "email_verified": "Gmail send-as address used for all outreach since 13 Oct 2026 (seen in the Sent folder)",
+    "_private": "Other addresses you send from live in var/pipeline/own_addresses.json (gitignored), never here."
+  },
+  "opt_out": "Not relevant? Reply \"no thanks\" and I won't email again.",
+  "brands": {
+    "masjidone": {
+      "name": "MasjidOne",
+      "domain": "masjidone.co.uk",
+      "website": "https://masjidone.co.uk"
+    },
+    "domi": {
+      "name": "Domi",
+      "domain": "domi.ysbdesigns.uk",
+      "website": "https://domi.ysbdesigns.uk"
+    },
+    "booked-in": {
+      "name": "Booked In",
+      "domain": "booked-in.co.uk",
+      "website": "https://booked-in.co.uk"
+    },
+    "tidemark": {
+      "name": "Tidemark",
+      "domain": "tidemark.ysbdesigns.uk",
+      "website": "https://tidemark.ysbdesigns.uk"
+    },
+    "bolton-vouched": {
+      "name": "Bolton Vouched",
+      "domain": "www.boltonvouched.co.uk",
+      "website": "https://www.boltonvouched.co.uk"
+    }
+  }
+}
