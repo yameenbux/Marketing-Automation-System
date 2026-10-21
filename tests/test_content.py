@@ -321,3 +321,10 @@ def test_cta_narration_without_url_is_grammatical(ctx):
     p.facts = [f for f in p.facts if f.kind not in ("url", "cta")]
     cta = TemplateWriter().video_script(p).meta["scenes"][-1]
     assert cta["narration"] == "Find out more about Acme Rota."
+
+
+def test_headline_never_ends_mid_clause():
+    from mas.marketing.writer import _headline
+    h = _headline("Booking by DM means late-night availability questions, and by the time she replies the client has "
+                  "often gone quiet and the slot stays empty.")
+    assert h == "Booking by DM means late-night availability questions"

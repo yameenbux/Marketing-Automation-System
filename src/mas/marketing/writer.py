@@ -198,7 +198,7 @@ def _headline(sentence: str, max_words: int = 20) -> str:
     whole = sentence.strip().rstrip(".")
     if len(whole.split()) <= max_words:
         return whole
-    clauses = [c.strip() for c in re.split(r";|:\s|\s[—–]\s|, because |, so |, which ", whole) if c.strip()]
+    clauses = [c.strip() for c in re.split(r";|:\s|\s[—–]\s|, because |, so |, which |, and (?=by |when |then )", whole) if c.strip()]
     setup = re.match(r"(?i)(plenty of|most|many|other|unlike|while|whereas)\b", clauses[0])
     s = clauses[1] if setup and len(clauses) > 1 else clauses[0]
     if s.lower().startswith(("when ", "if ", "because ", "once ")) and len(clauses) > 1:
