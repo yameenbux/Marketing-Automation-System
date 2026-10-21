@@ -1,0 +1,201 @@
+{
+  "slug": "tidemark",
+  "name": "Tidemark",
+  "scenes": [
+    {
+      "role": "hook",
+      "on_screen": "Tidemark",
+      "narration": "Tidemark is an iPhone weight tracker that focuses on your trend rather than the day-to-day swings on the scale.",
+      "fact_id": "overview-trend-not-noise",
+      "start": 0.0,
+      "dur": 6.2,
+      "lead": 0.9,
+      "captions": [
+        [
+          0.9,
+          2.3995203157894736,
+          "Tidemark is an iPhone weight tracker"
+        ],
+        [
+          2.3995203157894736,
+          3.899040631578947,
+          "that focuses on your trend rather"
+        ],
+        [
+          3.899040631578947,
+          5.398560947368422,
+          "than the day-to-day swings on the"
+        ],
+        [
+          5.398560947368422,
+          5.648481,
+          "scale."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/tidemark/film/audio/vo_01.wav"
+    },
+    {
+      "role": "problem",
+      "on_screen": "A bathroom scale gives one number a day",
+      "narration": "A bathroom scale gives one number a day, and that number can swing with salt, water, sleep or a late meal.",
+      "fact_id": "pain-scale-swings",
+      "start": 6.2,
+      "dur": 5.22,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.5839748571428571,
+          "A bathroom scale gives one number"
+        ],
+        [
+          1.5839748571428571,
+          2.817949714285714,
+          "a day, and that number can"
+        ],
+        [
+          2.817949714285714,
+          4.051924571428571,
+          "swing with salt, water, sleep or"
+        ],
+        [
+          4.051924571428571,
+          4.668911999999999,
+          "a late meal."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/tidemark/film/audio/vo_02.wav"
+    },
+    {
+      "role": "feature",
+      "on_screen": "The trend uses Holt's linear smoothing",
+      "narration": "The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.",
+      "fact_id": "feature-holt-smoothing",
+      "start": 11.42,
+      "dur": 5.64,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.703391714285714,
+          "The trend uses Holt's linear smoothing,"
+        ],
+        [
+          1.703391714285714,
+          3.0567834285714284,
+          "which follows the direction you're heading"
+        ],
+        [
+          3.0567834285714284,
+          4.410175142857142,
+          "rather than trailing behind like a"
+        ],
+        [
+          4.410175142857142,
+          5.086870999999999,
+          "plain moving average."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/tidemark/film/audio/vo_03.wav",
+      "shot": "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop_s2.png"
+    },
+    {
+      "role": "feature",
+      "on_screen": "When a weigh-in jumps, the Trend tab explains why that is normal",
+      "narration": "When a weigh-in jumps, the Trend tab explains why that is normal.",
+      "fact_id": "feature-trend-explains",
+      "start": 17.06,
+      "dur": 3.29,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.5458275000000001,
+          "When a weigh-in jumps, the Trend"
+        ],
+        [
+          1.5458275000000001,
+          2.741655,
+          "tab explains why that is normal."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/tidemark/film/audio/vo_04.wav",
+      "shot": "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop_s4.png"
+    },
+    {
+      "role": "value",
+      "on_screen": "Tidemark reads your numbers properly",
+      "narration": "Tidemark reads your numbers properly: a trend one odd day can't drag far, an honest weekly rate and a plan to hold it against.",
+      "fact_id": "value-read-numbers-properly",
+      "start": 20.35,
+      "dur": 6.21,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.67644,
+          "Tidemark reads your numbers properly: a"
+        ],
+        [
+          1.67644,
+          3.00288,
+          "trend one odd day can't drag"
+        ],
+        [
+          3.00288,
+          4.32932,
+          "far, an honest weekly rate and"
+        ],
+        [
+          4.32932,
+          5.65576,
+          "a plan to hold it against."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/tidemark/film/audio/vo_05.wav"
+    },
+    {
+      "role": "cta",
+      "on_screen": "https://tidemark.ysbdesigns.uk",
+      "narration": "Find out more at the link.",
+      "fact_id": "url-website",
+      "start": 26.56,
+      "dur": 3.2,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.522608,
+          "Find out more at the link."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/tidemark/film/audio/vo_06.wav"
+    }
+  ],
+  "total": 29.76,
+  "assets": {
+    "hero": "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop.png",
+    "sections": [
+      "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop_s1.png",
+      "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop_s2.png",
+      "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop_s3.png",
+      "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop_s4.png",
+      "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/desktop_s5.png"
+    ],
+    "mobile": "file:///home/user/Marketing-Automation-System/assets/tidemark/film/source/mobile.png"
+  },
+  "fact_ids": [
+    "overview-trend-not-noise",
+    "pain-scale-swings",
+    "feature-holt-smoothing",
+    "feature-trend-explains",
+    "value-read-numbers-properly",
+    "url-website"
+  ],
+  "voice": {
+    "model": "en_GB-vctk-medium.onnx",
+    "speaker": 60,
+    "rate": 1.06,
+    "credit": "Piper VCTK voice (speaker p232) \u2014 dataset CC BY 4.0, University of Edinburgh"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "slug": "booked-in",
+  "name": "Booked In",
+  "scenes": [
+    {
+      "role": "hook",
+      "on_screen": "Booked In",
+      "narration": "Booked In is a booking page built for solo beauty professionals.",
+      "fact_id": "overview-booking-page",
+      "start": 0.0,
+      "dur": 4.69,
+      "lead": 0.9,
+      "captions": [
+        [
+          0.9,
+          2.6668276363636365,
+          "Booked In is a booking page"
+        ],
+        [
+          2.6668276363636365,
+          4.139184,
+          "built for solo beauty professionals."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/booked-in/film/audio/vo_01.wav"
+    },
+    {
+      "role": "problem",
+      "on_screen": "Booking by DM means late-night availability questions",
+      "narration": "Booking by DM means late-night availability questions, and by the time she replies the client has often gone quiet and the slot stays empty.",
+      "fact_id": "pain-dm-booking",
+      "start": 4.69,
+      "dur": 8.32,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.204694,
+          "Booking by DM means late-night availability"
+        ],
+        [
+          2.204694,
+          4.059388,
+          "questions, and by the time she"
+        ],
+        [
+          4.059388,
+          5.914082,
+          "replies the client has often gone"
+        ],
+        [
+          5.914082,
+          7.768776,
+          "quiet and the slot stays empty."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/booked-in/film/audio/vo_02.wav"
+    },
+    {
+      "role": "feature",
+      "on_screen": "Changes to prices, hours, photographs or days off go live on her page as soon as she saves them",
+      "narration": "Changes to prices, hours, photographs or days off go live on her page as soon as she saves them.",
+      "fact_id": "feature-live-changes",
+      "start": 13.01,
+      "dur": 6.7,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.1831544210526315,
+          "Changes to prices, hours, photographs or"
+        ],
+        [
+          2.1831544210526315,
+          4.016308842105263,
+          "days off go live on her"
+        ],
+        [
+          4.016308842105263,
+          5.849463263157895,
+          "page as soon as she saves"
+        ],
+        [
+          5.849463263157895,
+          6.154989,
+          "them."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/booked-in/film/audio/vo_03.wav",
+      "shot": null
+    },
+    {
+      "role": "feature",
+      "on_screen": "Double booking is prevented at the database level, so two clients cannot take the same slot",
+      "narration": "Double booking is prevented at the database level, so two clients cannot take the same slot.",
+      "fact_id": "feature-no-double-booking",
+      "start": 19.71,
+      "dur": 6.08,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.29176875,
+          "Double booking is prevented at the"
+        ],
+        [
+          2.29176875,
+          4.2335375,
+          "database level, so two clients cannot"
+        ],
+        [
+          4.2335375,
+          5.5280499999999995,
+          "take the same slot."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/booked-in/film/audio/vo_04.wav",
+      "shot": null
+    },
+    {
+      "role": "value",
+      "on_screen": "There is no commission, no marketplace, and nobody else is advertised on her page",
+      "narration": "There is no commission, no marketplace, and nobody else is advertised on her page.",
+      "fact_id": "value-no-commission",
+      "start": 25.79,
+      "dur": 6.03,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.5492614285714286,
+          "There is no commission, no marketplace,"
+        ],
+        [
+          2.5492614285714286,
+          4.748522857142857,
+          "and nobody else is advertised on"
+        ],
+        [
+          4.748522857142857,
+          5.48161,
+          "her page."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/booked-in/film/audio/vo_05.wav"
+    },
+    {
+      "role": "cta",
+      "on_screen": "Find out more about Booked In.",
+      "narration": "Find out more about Booked In.",
+      "fact_id": null,
+      "start": 31.82,
+      "dur": 3.2,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.963787,
+          "Find out more about Booked In."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/booked-in/film/audio/vo_06.wav"
+    }
+  ],
+  "total": 35.02,
+  "assets": {
+    "hero": null,
+    "sections": [],
+    "mobile": null
+  },
+  "fact_ids": [
+    "overview-booking-page",
+    "pain-dm-booking",
+    "feature-live-changes",
+    "feature-no-double-booking",
+    "value-no-commission"
+  ],
+  "voice": {
+    "model": "en_GB-cori-high.onnx",
+    "speaker": null,
+    "rate": 0.98,
+    "credit": "Piper 'cori' voice \u2014 trained on public-domain LibriVox recordings"
+  }
+}

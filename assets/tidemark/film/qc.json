@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "results": {
+    "film_story.mp4": {
+      "ok": true,
+      "errors": [],
+      "duration_s": 29.77,
+      "size_bytes": 24373522,
+      "sha256": "28806b5a2b91b105c04c7854d716bb344d78465606abe5ffbe0d511d81e9c54f"
+    },
+    "film_square.mp4": {
+      "ok": true,
+      "errors": [],
+      "duration_s": 29.77,
+      "size_bytes": 11977540,
+      "sha256": "fdb4f94ec6eaeea4fed71eff5ce43a8c35c2ed8f4791b51b7ed09127d973c814"
+    },
+    "film_landscape.mp4": {
+      "ok": true,
+      "errors": [],
+      "duration_s": 29.77,
+      "size_bytes": 20576386,
+      "sha256": "cefe56d9f1c9c64167e5ef71336a068aec94182307616773496a0b9c0c6fc602"
+    },
+    "still_01_hook.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "0d2ce6a2ff20f23fd4efd0001ec5bf73c6763a99d1e0b1a0b7ab27f2add0c137"
+    },
+    "still_02_problem.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "766f0cdc3dce7bd5425d6e6325da203ba5e8e82876868e65c6dc48cbecfb1fa9"
+    },
+    "still_03_feature.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "e47af0d71e8fc57d1246fa0b473769145933dfb9f26d1bfbf36e92d00d1d93c1"
+    },
+    "still_04_feature.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "4d0ca16f600b7bc2cdc92a94d8062e979ccc9eb02b9a1bba8905df03cc65d106"
+    },
+    "still_05_value.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "9d4e82be9f65f0e37c2c67c73b3d89713b47ae98cba0f315725beadbf885b996"
+    },
+    "still_06_cta.jpg": {
+      "ok": true,
+      "errors": [],
+      "sha256": "40dcdd1ed09e14540ee596ff6d3724f61a311223b41ccd9bb23fd600c23a6ea8"
+    }
+  }
+}
