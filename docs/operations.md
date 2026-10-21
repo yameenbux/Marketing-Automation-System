@@ -99,3 +99,16 @@ Even then, **no sending integration exists**. That needs a separate, explicit de
 - Back up `var/mas.sqlite` daily. **Never lose the suppression list.**
 - Add a product: add it to `config/repositories.json`, run `mas sync --product <slug>`, write
   `data/products/<slug>/profile.json` (every fact with a verbatim quote), then `mas profile <slug>`.
+
+## Daily loop (live from 22 Oct 2026)
+
+| When (Europe/London, weekdays) | What |
+|---|---|
+| Any time | Owner approves/rejects in the **Approval Desk**: https://claude.ai/artifact/SSsMno35am8MSUXCC8R2JY (profiles first, then posts by slot). |
+| 09:07 | Scheduled task *YSB marketing — morning run*: pre-flight (Metricool connector + ArtifactData must be present, else stop with nothing changed) → read desk decisions → `mas ops morning --decisions var/decisions.json` → submit `var/outbox/metricool/*.json` via Metricool `createScheduledPost` → reseed desk queue → commit `state/ops_state.json`. |
+| 16:37 | Scheduled task *YSB marketing — evening report*: `mas ops evening` + read-only Metricool analytics → `reports/daily/YYYY-MM-DD.md`. |
+
+Settings: `config/settings.ops.json` (committed) sets `dry_run: false`, `live.publishing: true`, max 3 posts/day. Outreach sending stays off.
+Stop everything: create `var/KILL_SWITCH` locally, or set `"kill_switch": true` in `config/settings.ops.json` and push — the next run halts. Or disable the scheduled tasks in claude.ai.
+State: fresh sessions rebuild the DB from `state/ops_state.json` (content, calendar, publications, runs, costs, 30 days of audit). Leads, suppression and outreach are never exported to the repo.
+Only products with a verified account in `config/channels.json` get a live route; today that is MasjidOne → Instagram (masjidone.uk). Everything else is drafted and waits.
