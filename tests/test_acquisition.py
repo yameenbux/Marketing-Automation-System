@@ -280,3 +280,22 @@ def test_private_commitments_merge_from_var_not_config(tmp_path):
         json.dumps({"acme": [{"date": "2026-11-05", "item": "x"}], "unknown": [{"date": "2026-11-05", "item": "y"}]}))
     p = acq.load_plan(tmp_path)
     assert p["products"]["acme"]["commitments"] == [{"date": "2026-11-05", "item": "x"}] and "unknown" not in p["products"]
+
+
+def test_email_stats_fall_back_to_desk_copy_when_no_local_history(actx):
+    assert acq.email_stats(actx) == {}
+    p = actx.root / "var" / "pipeline"; p.mkdir(parents=True, exist_ok=True)
+    (p / "email_stats.json").write_text(json.dumps({"by_brand": {"acme": {"organisations_emailed": 3,
+                                                                         "first_sent": "2020-01-01", "days_since_first": 1}}}))
+    st = acq.email_stats(actx)["acme"]
+    assert st["organisations_emailed"] == 3 and st["days_since_first"] > 1000
+
+
+def test_short_public_report_leaves_out_email_numbers(actx):
+    p = actx.root / "var" / "pipeline"; p.mkdir(parents=True, exist_ok=True)
+    (p / "email_stats.json").write_text(json.dumps({"by_brand": {"acme": {
+        "organisations_emailed": 40, "follow_ups": 0, "replied": 0, "reply_rate": 0.0, "opted_out": 0, "bounced": 0,
+        "first_sent": "2020-01-01", "days_since_first": 9}}}))
+    full, short = acq.report(actx, today=date(2026, 11, 3)), acq.report(actx, today=date(2026, 11, 3), short=True)
+    assert "Email outreach" in full and "Cold email" in full
+    assert short and "Email outreach" not in short and "Cold email" not in short

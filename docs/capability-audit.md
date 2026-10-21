@@ -18,18 +18,21 @@ purchased, published, or sent.
 | Repo discovery (`list_repos`) | ✅ | 19 repos listed (18 public + 1 private) |
 | **Metricool** connector | ✅ read verified | Brand "YBTweetss" → Instagram **masjidone.uk** only |
 | **ElevenLabs** connector | ⚠️ connected, **credits exhausted** | Models listed; on 21 Oct only 47 credits remained, so narration, music and image jobs were refused |
-| **Canva** connector | ⚠️ connected, **AI credits exhausted** | No brand kits; generate-image returned quota_exceeded |
+| **Canva** connector | ⚠️ read/edit works, **AI credits exhausted** | Re-checked 21 Oct evening: search-designs lists your MasjidOne carousels (Days 6–8); still no brand kits; generate-image returned quota_exceeded earlier |
 | Figma | ⚠️ View seat on Starter | Can read, can't meaningfully create |
 | Google Sheets / Drive | ✅ usable | Private lead sheet created (owner-only permissions verified) |
-| Exa, Firecrawl, Gmail, Notion, Resend | connected, not exercised | Listed by the connector registry |
+| **Gmail** connector | ✅ read verified; can also draft and **send** | Read the Sent folder and the drafts list (the sent history is imported into the private contact history). It exposes create_draft, send_message and delete_draft. **Sending is outside the system's policy gate**: the connector itself will send if asked, so the only guard is the rule that no session sends without your explicit authorisation. Scheduled runs don't get it (no connectors attached). |
+| **Google Calendar** connector | ✅ read verified | suggest_time: Fri 23 and Sat 24 Oct are free 09:00–17:00. Nothing created. |
+| Companies House (public register, web) | ✅ verified | YSB Ventures Ltd, 16022339, Active; confirmation statement due by 29 Oct 2026 |
+| Exa, Firecrawl, Notion, Resend | connected, not exercised | Listed by the connector registry |
 | Claude artifacts + claude.ai scheduled tasks | ✅ usable | Approval desk published and its database verified; two weekday runs created (no connectors attached, see integration-gaps) |
 | Docker | ⚠️ client only, no daemon | Dockerfile written but untested |
 
 ## The five status buckets
 
-1. **Installed and verified usable:** local rendering stack, Chromium, Piper, GitHub raw/ls-remote, Metricool (read), repo discovery.
+1. **Installed and verified usable:** local rendering stack, Chromium, Piper, GitHub raw/ls-remote, Metricool (read), repo discovery, Gmail (read), Google Calendar (read), Canva (read).
 2. **Installed but not configured:** Companies House adapter (needs a free key), Docker (needs a daemon), Anthropic API (needs a key).
-3. **Needs authentication or your permission:** Higgsfield, Apollo and Microsoft 365 (`connect_incomplete`); Metricool scheduling (it would post for real); Canva/Figma generation; Google Sheets as a CRM.
+3. **Needs authentication or your permission:** Gmail sending (technically possible, not authorised), X/Twitter (not connected in Metricool), Higgsfield, Apollo and Microsoft 365 (`connect_incomplete`); Metricool scheduling (it would post for real); Canva/Figma generation; Google Sheets as a CRM.
 4. **Available but costs money or credits:** ElevenLabs generations, Exa/Firecrawl requests, Anthropic API, a Metricool plan upgrade if review/approval or API access is needed.
 5. **Unavailable here:** Buffer (not connected), HubSpot (the plugin failed to connect), n8n (not installed), Claude *Desktop* local skills and computer use (they can't be seen from a cloud session).
 

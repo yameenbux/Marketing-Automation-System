@@ -345,8 +345,25 @@ def report(ctx: Context, events_path: Path | None = None, today: date | None = N
     if not plan:
         return ""
     events, bad = clean_events(plan, load_events(events_path or ctx.root / "var" / "pipeline" / "events.json"))
-    from .outreach.history import stats as email_stats
-    return report_markdown(plan, events, bad, today or ctx.policy.london_now().date(), short=short, email=email_stats(ctx))
+    # The short report goes into the committed daily report (public repo): email numbers stay out of it.
+    return report_markdown(plan, events, bad, today or ctx.policy.london_now().date(), short=short,
+                           email=None if short else email_stats(ctx))
+
+
+def email_stats(ctx: Context) -> dict:
+    """Per-brand email numbers: from the local contact history when it has any, otherwise from
+    var/pipeline/email_stats.json ({by_brand: ...}), which scheduled runs copy from the desk's report/email doc.
+    Counts only, no names or addresses."""
+    from .outreach.history import stats
+    local = stats(ctx)
+    if local:
+        return local
+    p = ctx.root / "var" / "pipeline" / "email_stats.json"
+    saved = json.loads(p.read_text(encoding="utf-8")).get("by_brand", {}) if p.exists() else {}
+    for st in saved.values():                       # the saved copy ages: recompute from the first send date
+        if st.get("first_sent"):
+            st["days_since_first"] = (date.today() - date.fromisoformat(st["first_sent"])).days
+    return saved
 
 
 # --- per-product plan documents -------------------------------------------------------------
@@ -416,8 +433,10 @@ def desk_docs(ctx: Context, events_path: Path | None = None, today: date | None 
         out.append({"collection": "plan", "doc_id": slug, "data": doc})
         out += [{"collection": "prospects", "doc_id": r["id"], "data": r} for r in prospects(ctx, slug)]
     events, _ = clean_events(plan, load_events(events_path or ctx.root / "var" / "pipeline" / "events.json"))
-    from .outreach.history import stats as email_stats
-    acts = next_actions(plan, events, today or ctx.policy.london_now().date(), email_stats(ctx))
+    email = email_stats(ctx)
+    acts = next_actions(plan, events, today or ctx.policy.london_now().date(), email)
     out.append({"collection": "report", "doc_id": "latest",
                 "data": {"generated_at": ctx.policy.london_now().isoformat(timespec="minutes"), "actions": acts[:12]}})
+    if email:
+        out.append({"collection": "report", "doc_id": "email", "data": {"by_brand": email}})
     return out
