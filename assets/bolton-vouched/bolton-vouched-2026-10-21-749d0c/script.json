@@ -1,0 +1,47 @@
+{
+  "scenes": [
+    {
+      "role": "hook",
+      "fact_id": "tagline",
+      "on_screen": "Bolton Vouched",
+      "narration": "Bolton Vouched brings together local people, vouched for by Bolton.",
+      "seconds": 5.0
+    },
+    {
+      "role": "problem",
+      "fact_id": "pain-buried-recommendations",
+      "on_screen": "Good recommendations in the local WhatsApp group scroll away under hundreds of messages",
+      "narration": "Good recommendations in the local WhatsApp group scroll away under hundreds of messages, so the next person has to ask all over again.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-one-tap-contact",
+      "on_screen": "Pick a trade and an area, then call or WhatsApp a trader in one tap",
+      "narration": "Pick a trade and an area, then call or WhatsApp a trader in one tap.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-categories",
+      "on_screen": "The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport",
+      "narration": "The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport.",
+      "seconds": 5.0
+    },
+    {
+      "role": "value",
+      "fact_id": "value-no-pay-to-rank",
+      "on_screen": "Nobody can pay to move up the list, and that promise is the heart of the product",
+      "narration": "Nobody can pay to move up the list, and that promise is the heart of the product.",
+      "seconds": 5.0
+    },
+    {
+      "role": "cta",
+      "fact_id": "url-site",
+      "on_screen": "https://boltonvouched.ysbdesigns.uk",
+      "narration": "Find out more at the link.",
+      "seconds": 5.0
+    }
+  ],
+  "target_seconds": 30
+}

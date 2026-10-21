@@ -1,0 +1,53 @@
+{
+  "campaign_id": "tidemark-2026-10-21-749d0c",
+  "product": "tidemark",
+  "objective": "awareness: introduce the product to its target audience with verified facts",
+  "created_at": "2026-10-21T19:04:21+00:00",
+  "input_hash": "e0d4ec78715f02fc54848827789de0d5470be852d756a2b978b84ae268454feb",
+  "profile_commit": "f9be463f63cb0c87c01cd9fda65273988b780c2b",
+  "qc_ok": true,
+  "status": "draft \u2014 unpublished, awaiting human review",
+  "fact_ids": [
+    "overview-trend-not-noise",
+    "pain-scale-swings",
+    "feature-holt-smoothing",
+    "feature-trend-explains",
+    "value-read-numbers-properly",
+    "url-website"
+  ],
+  "files": [
+    "video_story.mp4",
+    "captions_story.srt",
+    "video_square.mp4",
+    "captions_square.srt",
+    "video_landscape.mp4",
+    "captions_landscape.srt",
+    "motion_logo_sting.mp4",
+    "storyboard.png",
+    "thumbnail.jpg",
+    "card_portrait.jpg",
+    "card_square.jpg",
+    "card_story.jpg",
+    "carousel_1.jpg",
+    "carousel_2.jpg",
+    "carousel_3.jpg",
+    "brief.md",
+    "script.md",
+    "script.json",
+    "storyboard.md",
+    "prompts.md",
+    "copy.md",
+    "qc.json",
+    "LICENCES.md"
+  ],
+  "content_ids": [
+    "cnt_f299d0e54c39",
+    "cnt_9cd24fe5021c",
+    "cnt_19bc12e69a90"
+  ],
+  "notes": [
+    "screenshots captured from https://tidemark.ysbdesigns.uk \u2014 page sections are not matched to claims; review that visuals fit the narration"
+  ],
+  "cost_gbp": 0.0,
+  "cost_note": "local rendering and local TTS \u2014 no paid APIs used"
+}
