@@ -1,6 +1,6 @@
 # Portfolio marketing strategy — all five products
 
-**Status:** strategist output, 21 Oct 2026. Built from verified profiles (`data/products/*/profile.json`),
+**Status:** strategist output, 21 Oct 2026; stages refreshed from the READMEs the same evening. Built from verified profiles (`data/products/*/profile.json`),
 competitor research (`competitors.json`, which must be re-verified before any public comparison, per CAP Code
 3.33–3.44), ICPs (`config/icp.json`) and the Metricool baseline. Hypotheses are marked as such.
 
@@ -8,11 +8,11 @@ competitor research (`competitors.json`, which must be re-verified before any pu
 
 | Product | Audience | Stage (README) | Where the audience is | Outbound allowed? | Connected channel |
 |---|---|---|---|---|---|
-| **MasjidOne** | UK masjid committees | Live in a masjid; some parts in development | Instagram, WhatsApp, word of mouth between masājid | Only to corporate subscribers (CIOs, charitable companies) with an LIA; most masājid are individual subscribers | Instagram `masjidone.uk` (~1 follower) |
-| **Domi** | Domiciliary eye-care practices (England) | Working demo, no customers | LinkedIn, optical trade press | Limited companies only, with an LIA | none |
-| **Booked In** | Solo beauty pros (lash, brows, nails) | Built, **not provisioned** (no live payments or email) | Instagram | No: sole traders | none |
-| **Tidemark** | Privacy-minded iPhone users | Built, **not on the App Store yet** | Instagram, App Store | No: consumers | none |
-| **Bolton Vouched** | Bolton residents + local traders | Live | Facebook, local community groups | No: consumers and sole traders | none |
+| **MasjidOne** | UK masjid committees | Live with one customer masjid; signing a second is blocked by a known platform fix; parent-access status contradictory in the README | Instagram, WhatsApp, word of mouth between masājid | Only to corporate subscribers (CIOs, charitable companies) with an LIA; most masājid are individual subscribers | Instagram `masjidone.uk` (~1 follower) |
+| **Domi** | Domiciliary eye-care practices (England) | Working demo plus a live London pilot environment (UK hosting and ICO registration done); no customers; practice paperwork outstanding | LinkedIn, optical trade press | Limited companies only, with an LIA | none |
+| **Booked In** | Solo beauty pros (lash, brows, nails; also barbers and clinics) | Built; email live, **subscription billing not live**; three features not built | Instagram | No: sole traders | none |
+| **Tidemark** | Privacy-minded iPhone users | Built, **no signed build, not on the App Store**; no waitlist | Instagram, App Store | No: consumers | none |
+| **Bolton Vouched** | Bolton residents + local traders | Live at www.boltonvouched.co.uk with Pro (£10/month) built; **2 listings** on 21 Oct | Facebook, local community groups | No: consumers and sole traders | none |
 
 ## What the evidence says about positioning
 

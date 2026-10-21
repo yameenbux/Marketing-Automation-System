@@ -3,7 +3,7 @@
 > Generated from `profile.json` — edit that, not this file. Source: `yameenbux/Boltontradesmen` README.
 
 - **Maker:** YSB Designs, a trading name of YSB Ventures Ltd  
-- **Type:** directory · **Maturity:** live today, with a pre-launch checklist still open  
+- **Type:** directory · **Maturity:** Live and open at www.boltonvouched.co.uk, with reviews, Ask Bolton, price guides and paid Pro built; the policy pages are still drafts pending legal review.  
 - **Approval:** draft
 - **Brand:** primary #6E2616, secondary #9C3A25, accent #B5862C — Warm, neighbourly and plain-spoken, written in British English and scrupulously honest about what is built, what is coming and what is never for sale.
 
@@ -16,10 +16,10 @@
 
 ## Target audience
 
-- For Bolton residents who need a trusted tradesperson, it is free to use with no account and no sign-up.  
-  <sub>`audience-residents` — “| **Residents** | Free. No account, no sign-up |”</sub>
-- For local tradespeople, a basic listing on Bolton Vouched is free, for good.  
-  <sub>`audience-traders` — “| **A basic listing** | Free, for good |”</sub>
+- For Bolton residents who need a trusted tradesperson, it is free, with no account needed to look or call.  
+  <sub>`audience-residents` — “| **Residents** | Free. No account to look or call |”</sub>
+- For local tradespeople, a basic listing is free for good, including the page, Call and WhatsApp buttons, reviews, the review link and QR card, the enquiry count, the Taking on work switch and the website badge.  
+  <sub>`audience-traders` — “| **A basic listing** | Free, for good: the page, Call and WhatsApp, reviews, the review link and QR card, the enquiry count, the *Taking on…”</sub>
 
 ## Pain points addressed
 
@@ -36,8 +36,16 @@
   <sub>`value-no-pay-to-rank` — “**Nobody can pay to move up the list.** That sentence is the product.”</sub>
 - Recommended people are kept where you can find them, sorted by trade and by the BL areas they cover, with a button to call or WhatsApp them.  
   <sub>`value-findable` — “group recommends, sorted by trade and by the BL areas they cover, with what”</sub>
-- Payment never affects ranking: a trader's place in the list will come from reviews only.  
-  <sub>`value-ranking-from-reviews` — “A trader's place in the list will come from reviews only.”</sub>
+- Payment never affects ranking: a trader's place in the list comes from reviews only.  
+  <sub>`value-ranking-from-reviews` — “**Payment never affects ranking.** A trader's place in the list comes from reviews only.”</sub>
+- Pro is offered, never pushed: it appears on the For traders page and the dashboard, and nobody is chased to upgrade.  
+  <sub>`value-pro-not-pushed` — “**Pro is offered, never pushed.** It's on the For traders page and the dashboard; nobody is chased to upgrade.”</sub>
+- The basic listing is free forever, and nobody is removed, hidden or moved down for not paying.  
+  <sub>`value-free-forever` — “**The basic listing is free forever.** Nobody is removed, hidden or moved down for not paying.”</sub>
+- Repeated taps from the same connection on the same day count as one enquiry, so the enquiry count is hard to inflate for or against anyone.  
+  <sub>`value-honest-enquiry-count` — “**One enquiry per connection per day.** Ten taps from the same connection on the same day count once”</sub>
+- Ask Bolton recommendations never touch ranking, scores or badges.  
+  <sub>`value-recommendations-dont-rank` — “Recommendations never touch ranking, scores or badges.”</sub>
 
 ## Verified features
 
@@ -59,12 +67,22 @@
   <sub>`feature-provider-replies` — “signed in and their account is linked to the listing. Then they reply once to each review.”</sub>
 - Traders can show whether they are taking on work or booked up until a date, and this never changes the order or a badge.  
   <sub>`feature-taking-on-work` — “the date), can filter a category list, and never changes the order or a badge.”</sub>
-- The trader dashboard shows enquiries this month and all time, and lets traders edit their description and areas or pause their listing.  
-  <sub>`feature-trader-dashboard` — “**Trader dashboard** at `/platform/provider`: enquiries this month and all time (calls”</sub>
+- The trader dashboard shows enquiries this month and all time.  
+  <sub>`feature-trader-dashboard` — “**Trader dashboard** at `/provider`: enquiries this month and all time (calls and WhatsApps;”</sub>
 - Ask Bolton lets signed-in residents ask the community for a good tradesperson, with answers that must name a live listing in that trade.  
   <sub>`feature-ask-bolton` — “Answers must name a live listing in that”</sub>
-- Price guides show what locals paid for a trade, built only from reviews once that trade has 10 counted reviews.  
-  <sub>`feature-price-guides` — “only from reviews, a trade at a time, once it has 10 counted reviews (published or under”</sub>
+- Price guides are built only from reviews, a trade at a time, once that trade has 10 counted reviews.  
+  <sub>`feature-price-guides` — “only from reviews, a trade at a time, once it has 10 counted reviews”</sub>
+- Pro, the optional paid tier for traders, is live.  
+  <sub>`feature-pro-live` — “email sign-in and Pro are live, so say so plainly.”</sub>
+- Pro traders can send quotes and invoices as links; the customer accepts a quote online and the invoice carries the trader's bank details.  
+  <sub>`feature-pro-quotes-invoices` — “**quotes and invoices** sent as links (`/d/<token>`; the customer accepts a quote online, the invoice carries the trader's bank details)”</sub>
+- Category lists rank any trader with three or more reviews by their quality score, and profiles can filter reviews by Verified job and Group member.  
+  <sub>`feature-quality-ranking` — “Profiles list them with Verified job and Group member filters, and the category list ranks anyone with three or more by their quality score.”</sub>
+- Traders get their own review link, a QR card and a 'Vouched in Bolton' badge for their website.  
+  <sub>`feature-website-badge` — “their review link and QR card, and their "Vouched in Bolton" website badge.”</sub>
+- The directory can be installed to a phone's Home Screen as an app.  
+  <sub>`feature-install-app` — “installs to the Home Screen as an app”</sub>
 
 ## Privacy and data
 
@@ -72,28 +90,32 @@
   <sub>`privacy-numbers-hidden` — “Scrapers reading the page find no phone numbers.”</sub>
 - Looking around keeps nothing: no cookies, no account and no analytics.  
   <sub>`privacy-no-trackers` — “| Someone looks around | Nothing. No cookies, no account, no analytics | Nowhere |”</sub>
+- Traders' numbers are never in the page's HTML, and one connection can open at most 60 numbers an hour.  
+  <sub>`privacy-scrape-limit` — “**The numbers are never in the page's HTML**, and one connection can open at most 60 an hour.”</sub>
+- Data is held in London in its own Supabase project that shares nothing with any other project.  
+  <sub>`privacy-london-data` — “London. Its own project, sharing **nothing** (keys, users, database, storage) with any other project.”</sub>
 
 ## Pricing (as stated in the README)
 
-_Not stated — do not publish prices._
+- Pro costs £10 a month or £100 a year through Stripe, open to any listed trader, and adds job requests, alerts, quotes and invoices, review requests, an ID check, work photos and a monthly report.  
+  <sub>`pricing-pro` — “| **Pro**, optional | £10 a month or £100 a year, through Stripe, for any listed trader: job requests, alerts, quotes and invoices, review r…”</sub>
 
 ## Links
 
-- Bolton Vouched is at boltonvouched.ysbdesigns.uk.  
-  <sub>`url-site` — “| `NEXT_PUBLIC_SITE_URL` | `https://boltonvouched.ysbdesigns.uk`.”</sub>
+- Bolton Vouched is at https://www.boltonvouched.co.uk.  
+  <sub>`url-site` — “| `NEXT_PUBLIC_SITE_URL` | `https://www.boltonvouched.co.uk`.”</sub>
+
+## Calls to action
+
+- Traders can request a listing on the Get listed page without creating an account.  
+  <sub>`cta-get-listed` — “**Get listed** (`/get-listed`) takes a request without an account.”</sub>
 
 ## Known limitations — never market these as done
 
-- The optional paid Pro tier is coming and not built; the dashboard only says it is coming soon, and there is no payment and no badge for sale.  
-  <sub>`limitation-pro-not-built` — “The optional paid tier, **Pro** (see *Free and Verified*). The dashboard only says it's coming soon.”</sub>
-- Pro is not built; it is planned at £10 a month or £100 a year, offered to a trader only after their 5th enquiry.  
-  <sub>`limitation-pro-price-planned` — “| **Pro**, optional (*not built*) | £10 a month or £100 a year, offered to a trader after their 5th enquiry |”</sub>
-- Sign-in by text message is switched off, so residents sign in with Google or an email code instead.  
-  <sub>`limitation-no-phone-sign-in` — “text is switched off: don't tell anyone to sign in with their mobile.”</sub>
+- Sign-in by text message is still switched off, so residents sign in with Google or an email code, and Pro alerts go by email.  
+  <sub>`limitation-no-phone-sign-in` — “**Texts**: sign-in by text and Pro's text alerts need Twilio (see *Phone sign-in*). Until then sign-in is Google or an email code, and alert…”</sub>
 - The policy pages are drafts pending legal review.  
   <sub>`limitation-draft-policies` — “then remove the *Draft — pending legal review* banner”</sub>
-- Profile views are not recorded, so the trader dashboard does not show them.  
-  <sub>`limitation-no-profile-views` — “Profile views aren't recorded, so they aren't shown.”</sub>
 
 ## Competitors
 

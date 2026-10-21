@@ -4,7 +4,7 @@
   "repo": "yameenbux/Boltontradesmen",
   "maker": "YSB Designs, a trading name of YSB Ventures Ltd",
   "product_type": "directory",
-  "maturity": "live today, with a pre-launch checklist still open",
+  "maturity": "Live and open at www.boltonvouched.co.uk, with reviews, Ask Bolton, price guides and paid Pro built; the policy pages are still drafts pending legal review.",
   "approval": {
     "status": "draft",
     "approved_by": null,
@@ -42,19 +42,19 @@
     {
       "id": "audience-residents",
       "kind": "audience",
-      "text": "For Bolton residents who need a trusted tradesperson, it is free to use with no account and no sign-up.",
+      "text": "For Bolton residents who need a trusted tradesperson, it is free, with no account needed to look or call.",
       "source": {
         "path": "README.md",
-        "quote": "| **Residents** | Free. No account, no sign-up |"
+        "quote": "| **Residents** | Free. No account to look or call |"
       }
     },
     {
       "id": "audience-traders",
       "kind": "audience",
-      "text": "For local tradespeople, a basic listing on Bolton Vouched is free, for good.",
+      "text": "For local tradespeople, a basic listing is free for good, including the page, Call and WhatsApp buttons, reviews, the review link and QR card, the enquiry count, the Taking on work switch and the website badge.",
       "source": {
         "path": "README.md",
-        "quote": "| **A basic listing** | Free, for good |"
+        "quote": "| **A basic listing** | Free, for good: the page, Call and WhatsApp, reviews, the review link and QR card, the enquiry count, the *Taking on work* switch and the website badge |"
       }
     },
     {
@@ -105,10 +105,10 @@
     {
       "id": "value-ranking-from-reviews",
       "kind": "value_prop",
-      "text": "Payment never affects ranking: a trader's place in the list will come from reviews only.",
+      "text": "Payment never affects ranking: a trader's place in the list comes from reviews only.",
       "source": {
         "path": "README.md",
-        "quote": "A trader's place in the list will come from reviews only."
+        "quote": "**Payment never affects ranking.** A trader's place in the list comes from reviews only."
       }
     },
     {
@@ -195,10 +195,10 @@
     {
       "id": "feature-trader-dashboard",
       "kind": "feature",
-      "text": "The trader dashboard shows enquiries this month and all time, and lets traders edit their description and areas or pause their listing.",
+      "text": "The trader dashboard shows enquiries this month and all time.",
       "source": {
         "path": "README.md",
-        "quote": "**Trader dashboard** at `/platform/provider`: enquiries this month and all time (calls"
+        "quote": "**Trader dashboard** at `/provider`: enquiries this month and all time (calls and WhatsApps;"
       }
     },
     {
@@ -213,10 +213,10 @@
     {
       "id": "feature-price-guides",
       "kind": "feature",
-      "text": "Price guides show what locals paid for a trade, built only from reviews once that trade has 10 counted reviews.",
+      "text": "Price guides are built only from reviews, a trade at a time, once that trade has 10 counted reviews.",
       "source": {
         "path": "README.md",
-        "quote": "only from reviews, a trade at a time, once it has 10 counted reviews (published or under"
+        "quote": "only from reviews, a trade at a time, once it has 10 counted reviews"
       }
     },
     {
@@ -238,30 +238,30 @@
       }
     },
     {
-      "id": "limitation-pro-not-built",
-      "kind": "limitation",
-      "text": "The optional paid Pro tier is coming and not built; the dashboard only says it is coming soon, and there is no payment and no badge for sale.",
+      "id": "feature-pro-live",
+      "kind": "feature",
+      "text": "Pro, the optional paid tier for traders, is live.",
       "source": {
         "path": "README.md",
-        "quote": "The optional paid tier, **Pro** (see *Free and Verified*). The dashboard only says it's coming soon."
+        "quote": "email sign-in and Pro are live, so say so plainly."
       }
     },
     {
-      "id": "limitation-pro-price-planned",
-      "kind": "limitation",
-      "text": "Pro is not built; it is planned at £10 a month or £100 a year, offered to a trader only after their 5th enquiry.",
+      "id": "pricing-pro",
+      "kind": "pricing",
+      "text": "Pro costs £10 a month or £100 a year through Stripe, open to any listed trader, and adds job requests, alerts, quotes and invoices, review requests, an ID check, work photos and a monthly report.",
       "source": {
         "path": "README.md",
-        "quote": "| **Pro**, optional (*not built*) | £10 a month or £100 a year, offered to a trader after their 5th enquiry |"
+        "quote": "| **Pro**, optional | £10 a month or £100 a year, through Stripe, for any listed trader: job requests, alerts, quotes and invoices, review requests, ID check, work photos and a monthly report (`lib/pro-features.ts`). The admin can grant *founding Pro* free for a set time |"
       }
     },
     {
       "id": "limitation-no-phone-sign-in",
       "kind": "limitation",
-      "text": "Sign-in by text message is switched off, so residents sign in with Google or an email code instead.",
+      "text": "Sign-in by text message is still switched off, so residents sign in with Google or an email code, and Pro alerts go by email.",
       "source": {
         "path": "README.md",
-        "quote": "text is switched off: don't tell anyone to sign in with their mobile."
+        "quote": "**Texts**: sign-in by text and Pro's text alerts need Twilio (see *Phone sign-in*). Until then sign-in is Google or an email code, and alerts go by email."
       }
     },
     {
@@ -274,21 +274,111 @@
       }
     },
     {
-      "id": "limitation-no-profile-views",
-      "kind": "limitation",
-      "text": "Profile views are not recorded, so the trader dashboard does not show them.",
+      "id": "url-site",
+      "kind": "url",
+      "text": "Bolton Vouched is at https://www.boltonvouched.co.uk.",
       "source": {
         "path": "README.md",
-        "quote": "Profile views aren't recorded, so they aren't shown."
+        "quote": "| `NEXT_PUBLIC_SITE_URL` | `https://www.boltonvouched.co.uk`."
       }
     },
     {
-      "id": "url-site",
-      "kind": "url",
-      "text": "Bolton Vouched is at boltonvouched.ysbdesigns.uk.",
+      "id": "feature-pro-quotes-invoices",
+      "kind": "feature",
+      "text": "Pro traders can send quotes and invoices as links; the customer accepts a quote online and the invoice carries the trader's bank details.",
       "source": {
         "path": "README.md",
-        "quote": "| `NEXT_PUBLIC_SITE_URL` | `https://boltonvouched.ysbdesigns.uk`."
+        "quote": "**quotes and invoices** sent as links (`/d/<token>`; the customer accepts a quote online, the invoice carries the trader's bank details)"
+      }
+    },
+    {
+      "id": "value-pro-not-pushed",
+      "kind": "value_prop",
+      "text": "Pro is offered, never pushed: it appears on the For traders page and the dashboard, and nobody is chased to upgrade.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Pro is offered, never pushed.** It's on the For traders page and the dashboard; nobody is chased to upgrade."
+      }
+    },
+    {
+      "id": "value-free-forever",
+      "kind": "value_prop",
+      "text": "The basic listing is free forever, and nobody is removed, hidden or moved down for not paying.",
+      "source": {
+        "path": "README.md",
+        "quote": "**The basic listing is free forever.** Nobody is removed, hidden or moved down for not paying."
+      }
+    },
+    {
+      "id": "feature-quality-ranking",
+      "kind": "feature",
+      "text": "Category lists rank any trader with three or more reviews by their quality score, and profiles can filter reviews by Verified job and Group member.",
+      "source": {
+        "path": "README.md",
+        "quote": "Profiles list them with Verified job and Group member filters, and the category list ranks anyone with three or more by their quality score."
+      }
+    },
+    {
+      "id": "cta-get-listed",
+      "kind": "cta",
+      "text": "Traders can request a listing on the Get listed page without creating an account.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Get listed** (`/get-listed`) takes a request without an account."
+      }
+    },
+    {
+      "id": "feature-website-badge",
+      "kind": "feature",
+      "text": "Traders get their own review link, a QR card and a 'Vouched in Bolton' badge for their website.",
+      "source": {
+        "path": "README.md",
+        "quote": "their review link and QR card, and their \"Vouched in Bolton\" website badge."
+      }
+    },
+    {
+      "id": "feature-install-app",
+      "kind": "feature",
+      "text": "The directory can be installed to a phone's Home Screen as an app.",
+      "source": {
+        "path": "README.md",
+        "quote": "installs to the Home Screen as an app"
+      }
+    },
+    {
+      "id": "privacy-scrape-limit",
+      "kind": "privacy",
+      "text": "Traders' numbers are never in the page's HTML, and one connection can open at most 60 numbers an hour.",
+      "source": {
+        "path": "README.md",
+        "quote": "**The numbers are never in the page's HTML**, and one connection can open at most 60 an hour."
+      }
+    },
+    {
+      "id": "value-honest-enquiry-count",
+      "kind": "value_prop",
+      "text": "Repeated taps from the same connection on the same day count as one enquiry, so the enquiry count is hard to inflate for or against anyone.",
+      "source": {
+        "path": "README.md",
+        "quote": "**One enquiry per connection per day.** Ten taps from the same connection on the same day count once"
+      }
+    },
+    {
+      "id": "value-recommendations-dont-rank",
+      "kind": "value_prop",
+      "text": "Ask Bolton recommendations never touch ranking, scores or badges.",
+      "source": {
+        "path": "README.md",
+        "quote": "Recommendations never touch ranking, scores or badges."
+      }
+    },
+    {
+      "id": "privacy-london-data",
+      "kind": "privacy",
+      "text": "Data is held in London in its own Supabase project that shares nothing with any other project.",
+      "source": {
+        "path": "README.md",
+        "quote": "London. Its own project, sharing **nothing** (keys, users, database, storage) with any other project."
       }
     }
   ]

@@ -2,7 +2,20 @@
   "_comment": "30-day customer-acquisition plan as data. No personal data here: prospects come from the lead database, conversations from the approval desk. Every message cites verified fact IDs and must pass the validator (tests enforce it). Targets are per week of the plan.",
   "start": "2026-10-22",
   "days": 30,
-  "sources": ["referral", "in_person", "post", "email", "phone", "linkedin_manual", "whatsapp_group", "facebook_group", "instagram", "website_inbound", "event", "other"],
+  "sources": [
+    "referral",
+    "in_person",
+    "post",
+    "email",
+    "phone",
+    "linkedin_manual",
+    "whatsapp_group",
+    "facebook_group",
+    "instagram",
+    "website_inbound",
+    "event",
+    "other"
+  ],
   "products": {
     "masjidone": {
       "priority": 1,
@@ -19,85 +32,237 @@
         "who": "A UK masjid that is a registered charity and runs an evening madrasah, where the office keeps registers, fees and family records by hand or across several tools.",
         "where": "Within driving distance of Bolton first (Bolton, Blackburn, Manchester, Preston, Oldham, Rochdale, Burnley), so you can demo in person.",
         "buyer": "The masjid committee decides; the madrasah head and office administrator feel the pain and will champion it.",
-        "disqualify": ["No madrasah or classes", "Already committed to another masjid platform in the last 12 months", "No one on the committee willing to meet"],
-        "evidence_fact_ids": ["audience-uk-masajid", "audience-committees", "cta-request-demo"]
+        "disqualify": [
+          "No madrasah or classes",
+          "Already committed to another masjid platform in the last 12 months",
+          "No one on the committee willing to meet"
+        ],
+        "evidence_fact_ids": [
+          "audience-uk-masajid",
+          "audience-committees",
+          "cta-request-demo"
+        ]
       },
       "value_proposition": {
         "headline": "One system for the madrasah and the congregation: the child in tonight's register is the same family record the office already holds.",
-        "fact_ids": ["value-one-family-record", "value-madrasah-operations", "pain-family-known-three-times", "feature-missed-register-flag", "value-local-support"],
-        "do_not_lead_with": ["Zero-commission donations and Gift Aid (a competitor advertises both)", "Parent access or Hifz/sabaq progress (README contradicts itself on status)"]
+        "fact_ids": [
+          "value-one-family-record",
+          "value-madrasah-operations",
+          "pain-family-known-three-times",
+          "feature-missed-register-flag",
+          "value-local-support"
+        ],
+        "do_not_lead_with": [
+          "Zero-commission donations and Gift Aid (a competitor advertises both)",
+          "Parent access or Hifz/sabaq progress (README contradicts itself on status)",
+          "That MasjidOne is the only product that runs the whole masjid (its README says plenty of products do the congregation side, and do it well)"
+        ]
       },
       "assumptions": [
-        {"id": "M-A1", "risk": "highest", "statement": "Madrasah admin (registers, fees, family records) is a top-three problem for the committee, painful enough to change systems.",
-         "test": "Ask in each discovery conversation, before showing anything: 'What takes the office the most time each week?' Record whether madrasah admin comes up unprompted.",
-         "min_sample": 8, "success_ratio": 0.6,
-         "if_contradicted": "Stop leading with the madrasah. Re-run discovery around what they did name (often prayer-time screens or the website) and check MasjidOne's facts support it before pitching."},
-        {"id": "M-A2", "risk": "high", "statement": "Committees will pay a banded subscription plus the £499 setup fee (waived on twelve months prepaid).",
-         "test": "In every demo, state the price structure plainly and ask 'Is that within what the committee would approve?' Record yes / no / needs committee.",
-         "min_sample": 5, "success_ratio": 0.4,
-         "if_contradicted": "Test the setup fee as the objection: offer the prepaid waiver first. If price still fails, collect the figure they would approve before changing anything."},
-        {"id": "M-A3", "risk": "high", "statement": "Referrals and in-person visits reach decision-makers far better than letters, email or social media.",
-         "test": "Every conversation is logged with its source; compare conversation rate per source after 30 contacts.",
-         "min_sample": 10, "success_ratio": 0.5,
-         "if_contradicted": "Shift effort to whichever source converts best in the dashboard's source table."},
-        {"id": "M-A4", "risk": "high", "statement": "The masjid already running MasjidOne will introduce you to neighbouring masājid and take a reference call.",
-         "test": "Ask the committee in week 1 for two introductions and permission for one reference call.",
-         "min_sample": 1, "success_ratio": 1.0,
-         "if_contradicted": "Ask what would make them comfortable recommending it; fix that first, because a product its first masjid won't vouch for will not sell to the second."},
-        {"id": "M-A5", "risk": "medium", "statement": "Moving existing rolls and family records is not a deal-breaker.",
-         "test": "Ask what they use today and whether they can export it (spreadsheet or CSV).",
-         "min_sample": 5, "success_ratio": 0.6,
-         "if_contradicted": "Offer to do the first import by hand for early masājid and time how long it takes."}
+        {
+          "id": "M-A1",
+          "risk": "highest",
+          "statement": "Madrasah admin (registers, fees, family records) is a top-three problem for the committee, painful enough to change systems.",
+          "test": "Ask in each discovery conversation, before showing anything: 'What takes the office the most time each week?' Record whether madrasah admin comes up unprompted.",
+          "min_sample": 8,
+          "success_ratio": 0.6,
+          "if_contradicted": "Stop leading with the madrasah. Re-run discovery around what they did name (often prayer-time screens or the website) and check MasjidOne's facts support it before pitching."
+        },
+        {
+          "id": "M-A2",
+          "risk": "high",
+          "statement": "Committees will pay a banded subscription plus the £499 setup fee (waived on twelve months prepaid).",
+          "test": "In every demo, state the price structure plainly and ask 'Is that within what the committee would approve?' Record yes / no / needs committee.",
+          "min_sample": 5,
+          "success_ratio": 0.4,
+          "if_contradicted": "Test the setup fee as the objection: offer the prepaid waiver first. If price still fails, collect the figure they would approve before changing anything."
+        },
+        {
+          "id": "M-A3",
+          "risk": "high",
+          "statement": "Referrals and in-person visits reach decision-makers far better than letters, email or social media.",
+          "test": "Every conversation is logged with its source; compare conversation rate per source after 30 contacts.",
+          "min_sample": 10,
+          "success_ratio": 0.5,
+          "if_contradicted": "Shift effort to whichever source converts best in the dashboard's source table."
+        },
+        {
+          "id": "M-A4",
+          "risk": "high",
+          "statement": "The masjid already running MasjidOne will introduce you to neighbouring masājid and take a reference call.",
+          "test": "Ask the committee in week 1 for two introductions and permission for one reference call.",
+          "min_sample": 1,
+          "success_ratio": 1.0,
+          "if_contradicted": "Ask what would make them comfortable recommending it; fix that first, because a product its first masjid won't vouch for will not sell to the second."
+        },
+        {
+          "id": "M-A5",
+          "risk": "medium",
+          "statement": "Moving existing rolls and family records is not a deal-breaker.",
+          "test": "Ask what they use today and whether they can export it (spreadsheet or CSV).",
+          "min_sample": 5,
+          "success_ratio": 0.6,
+          "if_contradicted": "Offer to do the first import by hand for early masājid and time how long it takes."
+        }
       ],
       "prerequisites": [
-        {"id": "M-P1", "blocks": "paying", "item": "ICO registration and a data processing agreement: the README says both are promised before a masjid is invoiced, and neither is done.", "owner": "you", "done": false},
-        {"id": "M-P2", "blocks": "pilot", "item": "Confirm parent-access and Hifz/sabaq progress status (the README contradicts itself) so you never demo or promise something unbuilt.", "owner": "you", "done": false},
-        {"id": "M-P3", "blocks": "website_inbound", "item": "Deploy the demo-request form's email service; today it opens the visitor's own mail client, so web enquiries can be lost.", "owner": "you", "done": false},
-        {"id": "M-P4", "blocks": "pilot", "item": "Approve the MasjidOne profile in the approval desk.", "owner": "you", "done": false}
+        {
+          "id": "M-P5",
+          "blocks": "pilot",
+          "item": "A known platform fix is needed before a second masjid can be signed (README: 'Blocking the moment a second masjid is signed'). Schedule it before proposing any pilot.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "M-P1",
+          "blocks": "paying",
+          "item": "ICO registration and a data processing agreement: the README says both are promised before a masjid is invoiced, and neither is done.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "M-P2",
+          "blocks": "pilot",
+          "item": "Resolve the README's contradiction: one section says parent access and Hifz/sabaq progress are in development, another says both are built. Never demo or promise either until it is settled.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "M-P3",
+          "blocks": "website_inbound",
+          "item": "Deploy the demo-request form's email service; today it opens the visitor's own mail client, so web enquiries can be lost.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "M-P4",
+          "blocks": "pilot",
+          "item": "Approve the MasjidOne profile in the approval desk.",
+          "owner": "you",
+          "done": false
+        }
       ],
       "channels": [
-        {"source": "referral", "priority": 1, "who_acts": "you", "how": "Ask the masjid already using MasjidOne for two introductions; they make the first contact.", "compliance": "Not unsolicited marketing: the introducer contacts them, or they ask to hear from you."},
-        {"source": "in_person", "priority": 2, "who_acts": "you", "how": "Visit Bolton-area masājid at office hours or after Jumu'ah; ask for the secretary or madrasah head and leave the one-page summary.", "compliance": "No PECR restriction on face-to-face contact. Respect a no."},
-        {"source": "post", "priority": 3, "who_acts": "you (system drafts)", "how": "Letter addressed 'To the Committee' at the address on the Charity Commission register, followed by a visit or call a week later.", "compliance": "Post is outside PECR. Addressed to a role, not a named person, so no personal data is processed. Honour any request to stop."},
-        {"source": "email", "priority": 4, "who_acts": "you, after approval", "how": "Only to the leads the eligibility engine marks eligible (corporate subscriber, generic address).", "compliance": "Blocked until your sender identity and opt-out are set in config/outreach.json. Unincorporated masājid are individual subscribers under PECR: no unsolicited email."},
-        {"source": "phone", "priority": 5, "who_acts": "you", "how": "Call the masjid office number to ask who handles the madrasah.", "compliance": "Screen the number against TPS/CTPS first; don't call if it is registered or if they object."},
-        {"source": "instagram", "priority": 6, "who_acts": "system drafts, you approve", "how": "Two posts a week as proof the product is real when a committee member looks you up. Not expected to generate leads at about 1 follower.", "compliance": "Approval desk; live publishing only after approval."}
+        {
+          "source": "referral",
+          "priority": 1,
+          "who_acts": "you",
+          "how": "Ask the masjid already using MasjidOne for two introductions; they make the first contact.",
+          "compliance": "Not unsolicited marketing: the introducer contacts them, or they ask to hear from you."
+        },
+        {
+          "source": "in_person",
+          "priority": 2,
+          "who_acts": "you",
+          "how": "Visit Bolton-area masājid at office hours or after Jumu'ah; ask for the secretary or madrasah head and leave the one-page summary.",
+          "compliance": "No PECR restriction on face-to-face contact. Respect a no."
+        },
+        {
+          "source": "post",
+          "priority": 3,
+          "who_acts": "you (system drafts)",
+          "how": "Letter addressed 'To the Committee' at the address on the Charity Commission register, followed by a visit or call a week later.",
+          "compliance": "Post is outside PECR. Addressed to a role, not a named person, so no personal data is processed. Honour any request to stop."
+        },
+        {
+          "source": "email",
+          "priority": 4,
+          "who_acts": "you, after approval",
+          "how": "Only to the leads the eligibility engine marks eligible (corporate subscriber, generic address).",
+          "compliance": "Blocked until your sender identity and opt-out are set in config/outreach.json. Unincorporated masājid are individual subscribers under PECR: no unsolicited email."
+        },
+        {
+          "source": "phone",
+          "priority": 5,
+          "who_acts": "you",
+          "how": "Call the masjid office number to ask who handles the madrasah.",
+          "compliance": "Screen the number against TPS/CTPS first; don't call if it is registered or if they object."
+        },
+        {
+          "source": "instagram",
+          "priority": 6,
+          "who_acts": "system drafts, you approve",
+          "how": "Two posts a week as proof the product is real when a committee member looks you up. Not expected to generate leads at about 1 follower.",
+          "compliance": "Approval desk; live publishing only after approval."
+        }
       ],
-      "content": {"post_days": [1, 3], "post_time": "12:30", "hypothesis": "M-A3",
-                   "why": "Credibility for prospects who check Instagram after a letter or visit; measured by whether conversations mention it, not by views."},
+      "content": {
+        "post_days": [1, 3],
+        "post_time": "12:30",
+        "hypothesis": "M-A3",
+        "why": "Credibility for prospects who check Instagram after a letter or visit; measured by whether conversations mention it, not by views."
+      },
       "targets": {
-        "contacted":    [8, 10, 10, 8],
+        "contacted": [8, 10, 10, 8],
         "conversation": [3, 4, 4, 4],
-        "qualified":    [2, 3, 3, 3],
-        "demo":         [1, 2, 2, 2],
-        "pilot":        [0, 0, 1, 1],
-        "paying":       [0, 0, 0, 1]
+        "qualified": [2, 3, 3, 3],
+        "demo": [1, 2, 2, 2],
+        "pilot": [0, 0, 1, 1],
+        "paying": [0, 0, 0, 1]
       },
       "targets_note": "Paying in week 4 is a stretch and only possible once M-P1 is done; otherwise count a signed letter of intent as the week-4 win.",
       "messages": [
-        {"id": "masjidone-letter-core", "use": "Letter or eligible email: the core paragraph", "platform": "email",
-         "fact_ids": ["pain-family-known-three-times", "value-madrasah-operations", "value-one-family-record", "cta-request-demo", "url-website"],
-         "text": "The office often holds the same family in separate places and can only connect them from memory. MasjidOne runs the madrasah's daily operations — the register, the sabaq heard and the fee due — in the same system as the congregation side, so the child in an evening register is the same record the congregation side already holds. Masjid committees can request a demo at https://masjidone.co.uk"},
-        {"id": "masjidone-office-hook", "use": "Opening line for a visit or call with the office", "platform": "email",
-         "fact_ids": ["feature-missed-register-flag", "value-local-support", "cta-request-demo"],
-         "text": "When a teacher marks the evening register, the office knows by the next morning which class did not. There is no overseas or outsourced support desk; you speak to the team who wrote the system. Committees can request a demo."},
-        {"id": "masjidone-control", "use": "When the committee worries about depending on a supplier", "platform": "email",
-         "fact_ids": ["feature-self-service-content", "pain-waiting-on-support", "integration-stripe", "cta-request-demo"],
-         "text": "A masjid should not have to open a ticket just to change its own prayer times. The masjid changes its own jamāʿah times, notices, fee rates and access straight away in the portal, and payments go through the masjid's own Stripe account. Request a demo to see it."}
+        {
+          "id": "masjidone-letter-core",
+          "use": "Letter or eligible email: the core paragraph",
+          "platform": "email",
+          "fact_ids": [
+            "pain-family-known-three-times",
+            "value-madrasah-operations",
+            "value-one-family-record",
+            "cta-request-demo",
+            "url-website"
+          ],
+          "text": "The office often holds the same family in separate places and can only connect them from memory. MasjidOne runs the madrasah's daily operations — the register, the sabaq heard and the fee due — in the same system as the congregation side, so the child in an evening register is the same record the congregation side already holds. Masjid committees can request a demo at https://masjidone.co.uk"
+        },
+        {
+          "id": "masjidone-office-hook",
+          "use": "Opening line for a visit or call with the office",
+          "platform": "email",
+          "fact_ids": [
+            "feature-missed-register-flag",
+            "value-local-support",
+            "cta-request-demo"
+          ],
+          "text": "When a teacher marks the evening register, the office knows by the next morning which class did not. There is no overseas or outsourced support desk; you speak to the team who wrote the system. Committees can request a demo."
+        },
+        {
+          "id": "masjidone-control",
+          "use": "When the committee worries about depending on a supplier",
+          "platform": "email",
+          "fact_ids": [
+            "feature-self-service-content",
+            "pain-waiting-on-support",
+            "integration-stripe",
+            "cta-request-demo"
+          ],
+          "text": "A masjid should not have to open a ticket just to change its own prayer times. The masjid changes its own jamāʿah times, notices, fee rates and access straight away in the portal, and payments go through the masjid's own Stripe account. Request a demo to see it."
+        }
       ],
       "demo": {
-        "assets": ["https://masjidone.co.uk/demo/ (walkthrough with invented data)", "assets/masjidone/film/ (cinematic film)", "assets/masjidone/masjidone-2026-10-21-2fad1a/ (campaign pack: video, cards, storyboard)"],
-        "flow": ["Ask the discovery questions first; only demo once M-A1 has been answered.",
-                 "Office view: one family record shared by the madrasah and congregation sides (value-one-family-record).",
-                 "Teacher view: mark a register; show the next-morning missed-register flag (feature-missed-register-flag).",
-                 "Fees configured in the madrasah portal (feature-madrasah-portal).",
-                 "Self-service: change a jamāʿah time live (feature-self-service-content).",
-                 "Price structure: two plans banded by madrasah size; £499 setup, waived when twelve months are prepaid (pricing-bands, pricing-setup-fee). Ask the M-A2 question.",
-                 "Close: propose a pilot with their own classes and a date to decide."],
-        "never_show": ["Parent access or Hifz/sabaq progress until M-P2 confirms the status", "The screen heartbeat (still in development)"]
+        "assets": [
+          "https://masjidone.co.uk/demo/ (walkthrough with invented data)",
+          "assets/masjidone/film/ (cinematic film)",
+          "assets/masjidone/masjidone-2026-10-21-2fad1a/ (campaign pack: video, cards, storyboard)"
+        ],
+        "flow": [
+          "Ask the discovery questions first; only demo once M-A1 has been answered.",
+          "Open the demo with the committee's own masjid name (feature-demo-own-name).",
+          "Office view: one family record shared by the madrasah and congregation sides (value-one-family-record).",
+          "Teacher view: mark a register; show the next-morning missed-register flag (feature-missed-register-flag).",
+          "Fees configured in the madrasah portal (feature-madrasah-portal).",
+          "Self-service: change a jamāʿah time live (feature-self-service-content).",
+          "Price: two plans, four bands by pupil count; yearly is the same rate twelve times over, not a discount; the £499 setup fee is waived when twelve months are prepaid (pricing-four-bands-two-plans, pricing-yearly-not-discounted, pricing-setup-fee). Never quote the retired £79/£179 flat rates. Ask the M-A2 question.",
+          "Close: propose a pilot with their own classes and a date to decide."
+        ],
+        "never_show": [
+          "Parent access or Hifz/sabaq progress until M-P2 confirms the status",
+          "The screen heartbeat (still in development)"
+        ]
       },
       "discovery_questions": [
         "How do you run the madrasah week today: registers, fees, contacting parents?",
+        "Roughly how many pupils are in the madrasah? (It sets the pricing band.)",
         "What takes the office the most time each week?",
         "When a family has children in classes and parents in the congregation, where does each part live?",
         "Who decides on new systems, and when does the committee next meet?",
@@ -105,7 +270,6 @@
       ],
       "pilot_offer": "Run one or more of your own classes in MasjidOne for an agreed period, with weekly check-ins and you doing any setup. At the end the committee decides. Real pupil data only after M-P1 (ICO registration and data processing agreement) is done."
     },
-
     "domi": {
       "priority": 2,
       "mode": "active",
@@ -114,79 +278,210 @@
         "conversation": "A two-way conversation with the owner, director or practice manager",
         "qualified": "England domiciliary eye care, more than one clinician, and cancellations are a stated cost",
         "demo": "Working demo walked through with the decision-maker",
-        "pilot": "Design partner: agreed to a structured trial on invented data and regular feedback",
+        "pilot": "A design partner on invented data, or a signed pilot on the live London environment (real patients only once D-P1 is done)",
         "paying": "Paid (not expected within 30 days: Domi can't hold real patient data yet)"
       },
       "icp": {
         "who": "An England-based domiciliary optometry practice run as a limited company, with several clinicians on the road and a waiting list.",
         "where": "England only (Domi models English sight-test rules only).",
         "buyer": "The owner or director; the practice manager who builds the diary is the day-to-day champion.",
-        "disqualify": ["Scotland, Wales or Northern Ireland", "Single-clinician sole trader (routing and refills matter less, and they are individual subscribers under PECR)", "Almost all visits are NHS sight tests booked under 48 hours ahead (see D-A2)"],
-        "evidence_fact_ids": ["audience-eyecare", "audience-services"]
+        "disqualify": [
+          "Scotland, Wales or Northern Ireland",
+          "Single-clinician sole trader (routing and refills matter less, and they are individual subscribers under PECR)",
+          "Almost all visits are NHS sight tests booked under 48 hours ahead (see D-A2)"
+        ],
+        "evidence_fact_ids": [
+          "audience-eyecare",
+          "audience-services"
+        ]
       },
       "value_proposition": {
-        "headline": "Plenty of systems keep a diary; Domi acts on the gap. When a patient cancels, it texts the best-matched person on the waiting list and books the first yes.",
-        "fact_ids": ["value-act-on-gap", "overview-refill", "pain-cancellations", "feature-cancel-by-text", "feature-book-by-road", "feature-income-mileage"],
-        "do_not_lead_with": ["Replacing the practice management system (incumbents lead on eGOS; Domi still lodges PCSE notifications by hand)", "Same-day refills of NHS sight tests (PCSE needs 48 hours' notice)"]
+        "headline": "Plenty of systems keep a diary; Domi acts on the gap. When a patient cancels it works out who could take the slot, then gives the office a ranked call list, texts an offer, or books the best match straight in, alongside Opticabase.",
+        "fact_ids": [
+          "value-act-on-gap",
+          "overview-refill",
+          "pain-cancellations",
+          "feature-three-fill-modes",
+          "feature-cancel-by-text",
+          "feature-book-by-road",
+          "feature-income-mileage",
+          "integration-opticabase"
+        ],
+        "do_not_lead_with": [
+          "Replacing Opticabase or the practice system: Opticabase stays the record for eye tests and claims, and changes made in Domi are copied across by hand",
+          "Automatic PCSE notifications (still lodged by hand until PCSE accepts Domi as a connected system)",
+          "Same-day refills of NHS sight tests (PCSE needs 48 working hours' notice)"
+        ]
       },
       "assumptions": [
-        {"id": "D-A1", "risk": "highest", "statement": "Cancellations happen often enough, and cost enough, that a practice would pay to refill them.",
-         "test": "Ask: 'In a typical week, how many visits cancel per clinician, and what happens to that time?' Record their numbers and whether they call it a cost.",
-         "min_sample": 6, "success_ratio": 0.5,
-         "if_contradicted": "Reposition around route planning and booking by road (feature-book-by-road, feature-route-planning) and test that instead."},
-        {"id": "D-A2", "risk": "highest", "statement": "Enough cancelled slots can legally be refilled: private visits, or NHS visits cancelled at least 48 hours ahead.",
-         "test": "Ask the NHS/private split and how much notice cancellations usually give.",
-         "min_sample": 5, "success_ratio": 0.5,
-         "if_contradicted": "The refill engine only fits private or longer-notice work; target private-heavy practices or other home-visit services (hearing, foot care) and re-check the facts before pitching them."},
-        {"id": "D-A3", "risk": "high", "statement": "Practices will run Domi alongside their existing practice system rather than demand a full replacement or integration.",
-         "test": "Ask what they use for the diary and records, and whether a separate refill and route tool is acceptable.",
-         "min_sample": 5, "success_ratio": 0.6,
-         "if_contradicted": "Find out which integration matters most and size it before building."},
-        {"id": "D-A4", "risk": "medium", "statement": "Practices will invest time as design partners before Domi can hold real patient data.",
-         "test": "Offer a structured two-week design-partner review on invented data.",
-         "min_sample": 4, "success_ratio": 0.5,
-         "if_contradicted": "Real-data readiness (D-P1) becomes the first job before more selling."}
+        {
+          "id": "D-A1",
+          "risk": "highest",
+          "statement": "Cancellations happen often enough, and cost enough, that a practice would pay to refill them.",
+          "test": "Ask: 'In a typical week, how many visits cancel per clinician, and what happens to that time?' Record their numbers and whether they call it a cost.",
+          "min_sample": 6,
+          "success_ratio": 0.5,
+          "if_contradicted": "Reposition around route planning and booking by road (feature-book-by-road, feature-route-planning) and test that instead."
+        },
+        {
+          "id": "D-A2",
+          "risk": "highest",
+          "statement": "Enough cancelled slots can legally be refilled: private visits, or NHS visits cancelled at least 48 hours ahead.",
+          "test": "Ask the NHS/private split and how much notice cancellations usually give.",
+          "min_sample": 5,
+          "success_ratio": 0.5,
+          "if_contradicted": "The refill engine only fits private or longer-notice work; target private-heavy practices or other home-visit services (hearing, foot care) and re-check the facts before pitching them."
+        },
+        {
+          "id": "D-A3",
+          "risk": "high",
+          "statement": "Practices will run Domi alongside Opticabase (or their current system), importing its daily CSV and copying bookings back by hand until the two can talk.",
+          "test": "Ask what they use for the diary and records, and whether a daily CSV import plus copying Domi's bookings back by hand is acceptable for a pilot.",
+          "min_sample": 5,
+          "success_ratio": 0.6,
+          "if_contradicted": "Find out which integration matters most and size it before building."
+        },
+        {
+          "id": "D-A4",
+          "risk": "medium",
+          "statement": "Practices will invest time as design partners before Domi can hold real patient data.",
+          "test": "Offer a structured two-week design-partner review on invented data.",
+          "min_sample": 4,
+          "success_ratio": 0.5,
+          "if_contradicted": "Real-data readiness (D-P1) becomes the first job before more selling."
+        }
       ],
       "prerequisites": [
-        {"id": "D-P1", "blocks": "paying", "item": "Before real patients: a permanent UK database with tested backups, real accounts and compliance paperwork (from the README).", "owner": "you", "done": false},
-        {"id": "D-P3", "blocks": "email", "item": "Set sender identity and opt-out in config/outreach.json before any email.", "owner": "you", "done": false},
-        {"id": "D-P4", "blocks": "pilot", "item": "Approve the Domi profile in the approval desk.", "owner": "you", "done": false}
+        {
+          "id": "D-P1",
+          "blocks": "paying",
+          "item": "UK hosting, real accounts and ICO registration are done (README). Before the first real patient: the DPIA (drafted), the practice's data processing agreement and a DSPT check; processor DPAs; encrypting the offline copy on clinicians' phones; hardening; Cyber Essentials for NHS buyers.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "D-P3",
+          "blocks": "email",
+          "item": "Set sender identity and opt-out in config/outreach.json before any email.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "D-P4",
+          "blocks": "pilot",
+          "item": "Approve the Domi profile in the approval desk.",
+          "owner": "you",
+          "done": false
+        }
       ],
       "channels": [
-        {"source": "phone", "priority": 1, "who_acts": "you", "how": "Call the practice number and ask for the owner or practice manager; offer a 15-minute conversation about cancellations, not a demo.", "compliance": "Live calls to businesses are allowed unless the number is on CTPS/TPS or they object. Screen first."},
-        {"source": "email", "priority": 2, "who_acts": "you, after approval", "how": "The 5 practices the engine marks eligible (limited company, generic address).", "compliance": "Blocked until D-P3. Sole traders are excluded automatically."},
-        {"source": "linkedin_manual", "priority": 3, "who_acts": "you", "how": "Connect with owners and practice managers personally and write each message yourself; join optometry discussions.", "compliance": "Manual only: LinkedIn's terms forbid automated connection requests, messages and scraping."},
-        {"source": "post", "priority": 4, "who_acts": "you (system drafts)", "how": "Letter to the practice (role-addressed) before a follow-up call.", "compliance": "Post is outside PECR; role-addressed."},
-        {"source": "event", "priority": 5, "who_acts": "you", "how": "Optical trade events and press (e.g. Optometry Today) for later; not a 30-day channel.", "compliance": "—"}
+        {
+          "source": "phone",
+          "priority": 1,
+          "who_acts": "you",
+          "how": "Call the practice number and ask for the owner or practice manager; offer a 15-minute conversation about cancellations, not a demo.",
+          "compliance": "Live calls to businesses are allowed unless the number is on CTPS/TPS or they object. Screen first."
+        },
+        {
+          "source": "email",
+          "priority": 2,
+          "who_acts": "you, after approval",
+          "how": "The 5 practices the engine marks eligible (limited company, generic address).",
+          "compliance": "Blocked until D-P3. Sole traders are excluded automatically."
+        },
+        {
+          "source": "linkedin_manual",
+          "priority": 3,
+          "who_acts": "you",
+          "how": "Connect with owners and practice managers personally and write each message yourself; join optometry discussions.",
+          "compliance": "Manual only: LinkedIn's terms forbid automated connection requests, messages and scraping."
+        },
+        {
+          "source": "post",
+          "priority": 4,
+          "who_acts": "you (system drafts)",
+          "how": "Letter to the practice (role-addressed) before a follow-up call.",
+          "compliance": "Post is outside PECR; role-addressed."
+        },
+        {
+          "source": "event",
+          "priority": 5,
+          "who_acts": "you",
+          "how": "Optical trade events and press (e.g. Optometry Today) for later; not a 30-day channel.",
+          "compliance": "—"
+        }
       ],
-      "content": {"post_days": [], "hypothesis": null, "why": "No connected account and no evidence that social posts reach practice owners. No content until a channel is connected and a hypothesis needs it."},
+      "content": {
+        "post_days": [],
+        "hypothesis": null,
+        "why": "No connected account and no evidence that social posts reach practice owners. No content until a channel is connected and a hypothesis needs it."
+      },
       "targets": {
-        "contacted":    [6, 8, 8, 6],
+        "contacted": [6, 8, 8, 6],
         "conversation": [2, 3, 3, 3],
-        "qualified":    [1, 2, 2, 2],
-        "demo":         [1, 1, 2, 2],
-        "pilot":        [0, 0, 1, 1],
-        "paying":       [0, 0, 0, 0]
+        "qualified": [1, 2, 2, 2],
+        "demo": [1, 1, 2, 2],
+        "pilot": [0, 0, 1, 1],
+        "paying": [0, 0, 0, 0]
       },
       "targets_note": "Paying is zero by design until D-P1. The 30-day win is two design partners and clear answers on D-A1 and D-A2.",
       "messages": [
-        {"id": "domi-core", "use": "Email or letter core paragraph", "platform": "email",
-         "fact_ids": ["pain-cancellations", "value-act-on-gap", "feature-cancel-by-text", "url-demo"],
-         "text": "A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round. Plenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes. Patients can cancel by texting CANCEL, which starts the refill with no staff involved. Try the working demo: https://app.domi.ysbdesigns.uk"},
-        {"id": "domi-roads", "use": "If refills don't land (D-A1 or D-A2 contradicted)", "platform": "email",
-         "fact_ids": ["feature-book-by-road", "feature-route-planning", "feature-income-mileage", "url-website"],
-         "text": "New visits are booked where they add the least driving, weighed against how soon the patient needs to be seen. Route planning puts visits that haven't started in the order that drives least, and Domi reports per-clinician mileage and utilisation. Find out more at https://domi.ysbdesigns.uk"}
+        {
+          "id": "domi-core",
+          "use": "Email or letter core paragraph",
+          "platform": "email",
+          "fact_ids": [
+            "pain-cancellations",
+            "value-act-on-gap",
+            "url-demo"
+          ],
+          "text": "A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round. Domi acts on the gap in the way the practice chooses: a ranked call list for the office, an offer by text that books the first yes, or booking the best match straight in. Try the working demo: https://app.domi.ysbdesigns.uk"
+        },
+        {
+          "id": "domi-opticabase",
+          "use": "When they ask how it fits with their practice system",
+          "platform": "email",
+          "fact_ids": [
+            "integration-opticabase",
+            "url-website"
+          ],
+          "text": "Opticabase stays the record for eye tests and claims. A daily CSV export imports cleanly into Domi, matched by Opticabase ID; for now, bookings made in Domi are copied back to Opticabase by hand. Find out more at https://domi.ysbdesigns.uk"
+        },
+        {
+          "id": "domi-roads",
+          "use": "If refills don't land (D-A1 or D-A2 contradicted)",
+          "platform": "email",
+          "fact_ids": [
+            "feature-book-by-road",
+            "feature-route-planning",
+            "feature-income-mileage",
+            "url-website"
+          ],
+          "text": "New visits are booked where they add the least driving, weighed against how soon the patient needs to be seen. Route planning puts visits that haven't started in the order that drives least, and Domi reports per-clinician mileage and utilisation. Find out more at https://domi.ysbdesigns.uk"
+        }
       ],
       "demo": {
-        "assets": ["https://app.domi.ysbdesigns.uk (working demo, invented patients; wake it first)", "assets/domi/film/ (cinematic film)", "assets/domi/domi-2026-10-21-749d0c/ (campaign pack)"],
-        "flow": ["Open the hosted demo a few minutes beforehand: it sleeps when idle.",
-                 "Discovery questions first (D-A1, D-A2, D-A3).",
-                 "Cancel a visit by text and watch the refill rank candidates with reasons (feature-refill-engine, feature-cancel-by-text).",
-                 "Book a new visit by road (feature-book-by-road) and show route planning.",
-                 "Clinician phone view and offline notes (feature-clinician-app, feature-offline).",
-                 "Recovered income, refills and mileage reports (feature-income-mileage).",
-                 "Be upfront: working demo, no customers yet, not for real patient data until D-P1. Offer the design-partner trial."],
-        "never_show": ["Hearing-care workflows as built (ready to set up, not built)", "Automatic PCSE notifications (lodged by hand)"]
+        "assets": [
+          "https://app.domi.ysbdesigns.uk (working demo, invented patients; wake it first)",
+          "assets/domi/film/ (cinematic film)",
+          "assets/domi/domi-2026-10-21-749d0c/ (campaign pack)"
+        ],
+        "flow": [
+          "Open the hosted demo a few minutes beforehand: it sleeps when idle.",
+          "Discovery questions first (D-A1, D-A2, D-A3).",
+          "Cancel a visit and show the three fill modes: Phone them (a ranked call list), Text an offer, Book instantly (value-act-on-gap, feature-three-fill-modes).",
+          "Book a new visit by road and show route planning (feature-book-by-road, feature-route-planning).",
+          "NHS visits: the PCSE notice rules are enforced and refused bookings need the ICB's approval recorded (feature-pcse-notice-rules, feature-pcse-icb-approval).",
+          "Three confirmation calls per visit (feature-confirmation-calls).",
+          "Opticabase: the daily CSV import (integration-opticabase), and be clear that Domi's bookings are copied back by hand.",
+          "Recovered income, refills and mileage reports (feature-income-mileage).",
+          "Be upfront: no customers yet; real patients only after D-P1. Offer the design-partner trial, then the signed pilot."
+        ],
+        "never_show": [
+          "Hearing-care workflows as built (ready to set up, not built)",
+          "Automatic PCSE sending (lodged by hand)",
+          "Two-way Opticabase sync (copied by hand)"
+        ]
       },
       "discovery_questions": [
         "How many clinicians are on the road, and how is the diary built today?",
@@ -195,9 +490,8 @@
         "What happens to a cancelled slot today?",
         "Would a separate refill and route tool alongside your current system be acceptable?"
       ],
-      "pilot_offer": "Design partner: two weeks using the working demo with invented patients modelled on a typical week of yours, a 30-minute review each week, and first say on what gets built next. No real patient data until D-P1."
+      "pilot_offer": "Two steps. First, a design-partner trial on the working demo with invented patients modelled on a typical week of yours. Then a signed pilot on the live London environment, with a pilot results view built from your own diary figures, never estimates (feature-pilot-results). Real patients only once D-P1's paperwork is done."
     },
-
     "bolton-vouched": {
       "priority": 3,
       "mode": "active",
@@ -207,73 +501,204 @@
         "listed": "Trader consented and the listing is live",
         "enquiry": "Resident enquiries delivered to listed traders (log the count from the trader dashboard)",
         "review": "Resident reviews left",
-        "paying": "Paid (zero by design: Pro is not built)"
+        "paying": "A listed trader subscribes to Pro (£10 a month or £100 a year): offered, never pushed"
       },
       "icp": {
         "who": "Supply: Bolton tradespeople already recommended in the Bolton Tradesmen WhatsApp group, in the trades residents ask for most. Demand: Bolton residents (BL1–BL7) in local community groups.",
         "where": "Bolton only.",
         "buyer": "Traders join free; residents use it free. Revenue (Pro) is a later test, not a 30-day goal.",
-        "disqualify": ["Gas or boiler work without a Gas Safe check", "Driving instructors without a DVSA ADI check", "Anyone who hasn't consented after reading how they'll appear"],
-        "evidence_fact_ids": ["audience-traders", "audience-residents", "overview-whatsapp-recommended", "feature-gas-safe-required", "feature-consent"]
+        "disqualify": [
+          "Gas or boiler work without a Gas Safe check",
+          "Driving instructors without a DVSA ADI check",
+          "Anyone who hasn't consented after reading how they'll appear"
+        ],
+        "evidence_fact_ids": [
+          "audience-traders",
+          "audience-residents",
+          "overview-whatsapp-recommended",
+          "feature-gas-safe-required",
+          "feature-consent"
+        ]
       },
       "value_proposition": {
-        "headline": "Traders: a free basic listing, for good, where nobody can pay to move up the list and your number is hidden from scrapers. Residents: recommended people you can actually find again, free, with no sign-up.",
-        "fact_ids": ["audience-traders", "value-no-pay-to-rank", "privacy-numbers-hidden", "value-findable", "audience-residents", "pain-buried-recommendations"],
-        "do_not_lead_with": ["'Vetted' or 'checked' traders as a blanket claim (checks are per listing)", "Pro features or pricing (not built)"]
+        "headline": "Traders: a free basic listing, for good, where nobody can pay to move up the list and your number is never in the page. Residents: recommended people you can actually find again, free, with no account needed to look or call.",
+        "fact_ids": [
+          "audience-traders",
+          "value-free-forever",
+          "value-no-pay-to-rank",
+          "privacy-numbers-hidden",
+          "value-findable",
+          "audience-residents",
+          "pain-buried-recommendations"
+        ],
+        "do_not_lead_with": [
+          "'Vetted' or 'checked' traders as a blanket claim (checks are per listing)",
+          "Pro as a way to rank higher (payment never affects ranking)"
+        ]
       },
       "assumptions": [
-        {"id": "B-A1", "risk": "highest", "statement": "Traders recommended in the group will consent to a listing when invited.",
-         "test": "Track invited versus listed.",
-         "min_sample": 10, "success_ratio": 0.6,
-         "if_contradicted": "Ask the ones who declined why (privacy, cold calls, effort) and address that first."},
-        {"id": "B-A2", "risk": "highest", "statement": "Residents will use the directory instead of asking the group, producing enquiries for listed traders.",
-         "test": "Enquiries from trader dashboards, logged weekly (the site deliberately has no analytics).",
-         "min_sample": 1, "success_ratio": 1.0,
-         "if_contradicted": "Coverage is probably too thin: concentrate on three to five trades until each has several listings."},
-        {"id": "B-A3", "risk": "high", "statement": "Group admins will allow a post about Bolton Vouched.",
-         "test": "Ask the admin of each group before posting; record yes or no.",
-         "min_sample": 3, "success_ratio": 0.5,
-         "if_contradicted": "Use offline channels: noticeboards, local shops, local press."},
-        {"id": "B-A4", "risk": "medium", "statement": "A trade needs several listings before residents find it useful.",
-         "test": "Compare enquiries per trade against listings per trade.",
-         "min_sample": 3, "success_ratio": 0.5,
-         "if_contradicted": "Spread recruitment across more trades."}
+        {
+          "id": "B-A1",
+          "risk": "highest",
+          "statement": "Traders recommended in the group will consent to a listing when invited.",
+          "test": "Track invited versus listed.",
+          "min_sample": 10,
+          "success_ratio": 0.6,
+          "if_contradicted": "Ask the ones who declined why (privacy, cold calls, effort) and address that first."
+        },
+        {
+          "id": "B-A2",
+          "risk": "highest",
+          "statement": "Residents will use the directory instead of asking the group, producing enquiries for listed traders.",
+          "test": "Enquiries from trader dashboards, logged weekly (the site deliberately has no analytics).",
+          "min_sample": 1,
+          "success_ratio": 1.0,
+          "if_contradicted": "Coverage is probably too thin: concentrate on three to five trades until each has several listings."
+        },
+        {
+          "id": "B-A3",
+          "risk": "high",
+          "statement": "Group admins will allow a post about Bolton Vouched.",
+          "test": "Ask the admin of each group before posting; record yes or no.",
+          "min_sample": 3,
+          "success_ratio": 0.5,
+          "if_contradicted": "Use offline channels: noticeboards, local shops, local press."
+        },
+        {
+          "id": "B-A4",
+          "risk": "medium",
+          "statement": "A trade needs several listings before residents find it useful.",
+          "test": "Compare enquiries per trade against listings per trade.",
+          "min_sample": 3,
+          "success_ratio": 0.5,
+          "if_contradicted": "Spread recruitment across more trades."
+        },
+        {
+          "id": "B-A5",
+          "risk": "medium",
+          "statement": "Listed traders who get enquiries will pay for Pro's quotes, invoices and job requests.",
+          "test": "After a trader's first enquiries, ask whether quotes and invoices as links would save them time. Never push.",
+          "min_sample": 5,
+          "success_ratio": 0.2,
+          "if_contradicted": "Keep Pro available but stop discussing it; the free listing is the product."
+        }
       ],
       "prerequisites": [
-        {"id": "B-P1", "blocks": "facebook_group", "item": "The policy pages are drafts pending legal review; get them reviewed before a wide public push.", "owner": "you", "done": false},
-        {"id": "B-P2", "blocks": "contacted", "item": "List the Bolton WhatsApp and Facebook groups you belong to, and ask each admin for permission.", "owner": "you", "done": false},
-        {"id": "B-P3", "blocks": "listed", "item": "Approve the Bolton Vouched profile in the approval desk.", "owner": "you", "done": false}
+        {
+          "id": "B-P1",
+          "blocks": "facebook_group",
+          "item": "The policy pages are still drafts pending legal review; get them reviewed before a wide public push.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "B-P4",
+          "blocks": "facebook_group",
+          "item": "The README's launch checklist still lists ICO registration; confirm it is done (the site holds residents' and traders' personal data).",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "B-P2",
+          "blocks": "contacted",
+          "item": "List the Bolton WhatsApp and Facebook groups you belong to, and ask each admin for permission.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "B-P3",
+          "blocks": "listed",
+          "item": "Approve the Bolton Vouched profile in the approval desk.",
+          "owner": "you",
+          "done": false
+        }
       ],
       "channels": [
-        {"source": "whatsapp_group", "priority": 1, "who_acts": "you", "how": "With the admin's agreement, post once in the Bolton Tradesmen group inviting recommended traders to reply if they want a free listing; send the consent link to those who ask.", "compliance": "Traders are mostly sole traders (individual subscribers): no unsolicited one-to-one marketing messages. An open invitation they answer makes the follow-up solicited."},
-        {"source": "in_person", "priority": 2, "who_acts": "you", "how": "Ask traders you know or meet; show them how their listing will look.", "compliance": "Face to face; consent link only when they agree."},
-        {"source": "facebook_group", "priority": 3, "who_acts": "you", "how": "Resident-facing post in local community groups you belong to, with admin permission.", "compliance": "Posted by you, never automated; respect group rules."},
-        {"source": "other", "priority": 4, "who_acts": "you", "how": "Noticeboards, local shops, local press story ('a directory where nobody can pay to move up').", "compliance": "—"}
+        {
+          "source": "whatsapp_group",
+          "priority": 1,
+          "who_acts": "you",
+          "how": "With the admin's agreement, post once in the Bolton Tradesmen group inviting recommended traders to request a free listing at /get-listed (no account needed).",
+          "compliance": "Traders are mostly sole traders (individual subscribers): no unsolicited one-to-one marketing messages. An open invitation they act on themselves is solicited."
+        },
+        {
+          "source": "in_person",
+          "priority": 2,
+          "who_acts": "you",
+          "how": "Ask traders you know or meet; show them how their listing will look.",
+          "compliance": "Face to face; consent link only when they agree."
+        },
+        {
+          "source": "facebook_group",
+          "priority": 3,
+          "who_acts": "you",
+          "how": "Resident-facing post in local community groups you belong to, with admin permission.",
+          "compliance": "Posted by you, never automated; respect group rules."
+        },
+        {
+          "source": "other",
+          "priority": 4,
+          "who_acts": "you",
+          "how": "Noticeboards, local shops, local press story ('a directory where nobody can pay to move up').",
+          "compliance": "—"
+        }
       ],
-      "content": {"post_days": [], "hypothesis": null, "why": "No connected page. Group posts are written and posted by you, using the messages below."},
-      "targets": {
-        "contacted":    [12, 10, 10, 8],
-        "conversation": [8, 7, 7, 5],
-        "listed":       [5, 6, 6, 5],
-        "enquiry":      [0, 3, 5, 8],
-        "review":       [0, 1, 2, 3],
-        "paying":       [0, 0, 0, 0]
+      "content": {
+        "post_days": [],
+        "hypothesis": null,
+        "why": "No connected page. Group posts are written and posted by you, using the messages below."
       },
-      "targets_note": "Supply first: enquiries only follow once several trades have listings.",
+      "targets": {
+        "contacted": [12, 10, 10, 8],
+        "conversation": [8, 7, 7, 5],
+        "listed": [5, 6, 6, 5],
+        "enquiry": [0, 3, 5, 8],
+        "review": [0, 1, 2, 3],
+        "paying": [0, 0, 0, 1]
+      },
+      "targets_note": "Supply first: the live directory has 2 listings and no home or trades listings at all. Enquiries only follow once several trades have listings. Paying (Pro) is a week-4 stretch and must never be pushed.",
       "messages": [
-        {"id": "bv-trader-invite", "use": "Group post inviting traders to opt in", "platform": "facebook",
-         "fact_ids": ["audience-traders", "value-no-pay-to-rank", "privacy-numbers-hidden", "feature-consent", "url-site"],
-         "text": "For local tradespeople, a basic listing on Bolton Vouched is free, for good. Nobody can pay to move up the list, and traders' phone numbers are never in the page's HTML, so scrapers reading the page find no phone numbers. Every trader has agreed to be listed after reading exactly how they will appear. Reply if you'd like a listing. Find out more: https://boltonvouched.ysbdesigns.uk"},
-        {"id": "bv-resident", "use": "Resident-facing post in a community group", "platform": "facebook",
-         "fact_ids": ["pain-buried-recommendations", "value-findable", "audience-residents", "url-site"],
-         "text": "Good recommendations in the local WhatsApp group scroll away under hundreds of messages, so the next person has to ask all over again. Bolton Vouched keeps recommended people where you can find them, sorted by trade and by the BL areas they cover, with a button to call or WhatsApp them. Free to use with no account and no sign-up: https://boltonvouched.ysbdesigns.uk"}
+        {
+          "id": "bv-trader-invite",
+          "use": "Group post inviting traders to request a listing",
+          "platform": "facebook",
+          "fact_ids": [
+            "value-free-forever",
+            "value-no-pay-to-rank",
+            "privacy-numbers-hidden",
+            "cta-get-listed",
+            "url-site"
+          ],
+          "text": "The basic listing on Bolton Vouched is free forever, and nobody is removed, hidden or moved down for not paying. Nobody can pay to move up the list, and traders' phone numbers are never in the page's HTML. Traders can request a listing without an account: https://www.boltonvouched.co.uk/get-listed"
+        },
+        {
+          "id": "bv-resident",
+          "use": "Resident-facing post in a community group (only once several trades have listings)",
+          "platform": "facebook",
+          "fact_ids": [
+            "pain-buried-recommendations",
+            "value-findable",
+            "audience-residents",
+            "url-site"
+          ],
+          "text": "Good recommendations in the local WhatsApp group scroll away under hundreds of messages, so the next person has to ask all over again. Bolton Vouched keeps recommended people where you can find them, sorted by trade and by the BL areas they cover, with a button to call or WhatsApp them. Free, with no account needed to look or call: https://www.boltonvouched.co.uk"
+        }
       ],
       "demo": {
-        "assets": ["https://boltonvouched.ysbdesigns.uk (live)", "assets/bolton-vouched/film/ (cinematic film)", "assets/bolton-vouched/bolton-vouched-2026-10-21-749d0c/ (campaign pack)"],
-        "flow": ["For a trader: show a live listing in their trade, the checks shown, the call/WhatsApp buttons, and that numbers are not in the page's HTML.",
-                 "Show the trader dashboard: enquiries this month, edit description and areas, pause listing.",
-                 "Explain consent: they read exactly how they'll appear before it goes live."],
-        "never_show": ["Pro tier or a price (not built)"]
+        "assets": [
+          "https://www.boltonvouched.co.uk (live)",
+          "assets/bolton-vouched/film/ (cinematic film)",
+          "assets/bolton-vouched/bolton-vouched-2026-10-21-749d0c/ (campaign pack)"
+        ],
+        "flow": [
+          "For a trader: show a live listing in their trade, the checks shown, the call/WhatsApp buttons, and that numbers are not in the page's HTML.",
+          "Show the trader dashboard: enquiries this month, edit description and areas, pause listing.",
+          "Explain consent: they read exactly how they'll appear before it goes live.",
+          "If a trader asks about Pro: £10 a month or £100 a year for job requests, alerts, quotes and invoices, review requests, an ID check, work photos and a monthly report (pricing-pro). Offered, never pushed."
+        ],
+        "never_show": [
+          "Any suggestion that Pro affects ranking"
+        ]
       },
       "discovery_questions": [
         "Where do most of your new jobs come from today?",
@@ -281,22 +706,42 @@
         "Which BL areas do you cover?",
         "Would you tell customers you're on Bolton Vouched so they can leave a review?"
       ],
-      "pilot_offer": "Free listing, for good. Ask each listed trader to point happy customers to leave a review."
+      "pilot_offer": "Free listing, for good. Ask each listed trader to point happy customers to leave a review, using their review link and QR card.",
+      "baseline": "21 Oct 2026, live directory: 2 listings (airport transfers, minibus hire); every home and trades category shows 'soon'."
     },
-
     "booked-in": {
       "priority": 4,
       "mode": "readiness",
-      "launch_prerequisites": ["Provision live email and payments (README: not provisioned)", "Add a waitlist form with explicit consent on the product site (you; the marketing system has no write access to product repos)"],
-      "allowed_now": ["Collect waitlist sign-ups with explicit consent", "Keep the verified profile in sync"],
-      "not_allowed_now": ["Outreach (buyers are sole traders: individual subscribers)", "Scheduled content", "New creative production"]
+      "launch_prerequisites": [
+        "Make subscription billing live: the Stripe path has never run against a live provider (email is now live)",
+        "Add a waitlist with explicit consent: none exists (the README's 'waiting list' is a Pro+ feature for her clients)"
+      ],
+      "allowed_now": [
+        "Collect waitlist sign-ups with explicit consent",
+        "Keep the verified profile in sync"
+      ],
+      "not_allowed_now": [
+        "Outreach (buyers are sole traders: individual subscribers)",
+        "Scheduled content",
+        "New creative production"
+      ]
     },
     "tidemark": {
       "priority": 5,
       "mode": "readiness",
-      "launch_prerequisites": ["App Store approval", "Add a waitlist or TestFlight sign-up with explicit consent (you)"],
-      "allowed_now": ["Collect waitlist sign-ups with explicit consent", "Keep the verified profile in sync"],
-      "not_allowed_now": ["Outreach (consumers)", "Scheduled content", "New creative production"]
+      "launch_prerequisites": [
+        "A signed iPhone build, then App Store approval (no signed build exists yet)",
+        "Add a waitlist or TestFlight sign-up with explicit consent: the site has no sign-up form today"
+      ],
+      "allowed_now": [
+        "Collect waitlist sign-ups with explicit consent",
+        "Keep the verified profile in sync"
+      ],
+      "not_allowed_now": [
+        "Outreach (consumers)",
+        "Scheduled content",
+        "New creative production"
+      ]
     }
   }
 }

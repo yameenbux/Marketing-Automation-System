@@ -18,7 +18,7 @@ Evidence (verified facts):
 - `feature-missed-register-flag`: When a teacher marks the evening register, the office knows by the next morning which class did not.
 - `value-local-support`: There is no overseas or outsourced support desk; masājid speak to the team who wrote the system and can fix it.
 
-Don't lead with: Zero-commission donations and Gift Aid (a competitor advertises both); Parent access or Hifz/sabaq progress (README contradicts itself on status)
+Don't lead with: Zero-commission donations and Gift Aid (a competitor advertises both); Parent access or Hifz/sabaq progress (README contradicts itself on status); That MasjidOne is the only product that runs the whole masjid (its README says plenty of products do the congregation side, and do it well)
 
 ## Biggest unresolved assumptions
 | ID | Risk | Assumption | How we test it | Decision rule |
@@ -30,8 +30,9 @@ Don't lead with: Zero-commission donations and Gift Aid (a competitor advertises
 | M-A5 | medium | Moving existing rolls and family records is not a deal-breaker. | Ask what they use today and whether they can export it (spreadsheet or CSV). | Needs 5 answers; ≥60% supporting. If not: Offer to do the first import by hand for early masājid and time how long it takes. |
 
 ## Prerequisites (yours)
+- [ ] **M-P5** blocks *pilot*: A known platform fix is needed before a second masjid can be signed (README: 'Blocking the moment a second masjid is signed'). Schedule it before proposing any pilot.
 - [ ] **M-P1** blocks *paying*: ICO registration and a data processing agreement: the README says both are promised before a masjid is invoiced, and neither is done.
-- [ ] **M-P2** blocks *pilot*: Confirm parent-access and Hifz/sabaq progress status (the README contradicts itself) so you never demo or promise something unbuilt.
+- [ ] **M-P2** blocks *pilot*: Resolve the README's contradiction: one section says parent access and Hifz/sabaq progress are in development, another says both are built. Never demo or promise either until it is settled.
 - [ ] **M-P3** blocks *website_inbound*: Deploy the demo-request form's email service; today it opens the visitor's own mail client, so web enquiries can be lost.
 - [ ] **M-P4** blocks *pilot*: Approve the MasjidOne profile in the approval desk.
 
@@ -74,21 +75,23 @@ Paying in week 4 is a stretch and only possible once M-P1 is done; otherwise cou
 
 ## Discovery questions
 1. How do you run the madrasah week today: registers, fees, contacting parents?
-2. What takes the office the most time each week?
-3. When a family has children in classes and parents in the congregation, where does each part live?
-4. Who decides on new systems, and when does the committee next meet?
-5. What would you need to see to try something new with one class?
+2. Roughly how many pupils are in the madrasah? (It sets the pricing band.)
+3. What takes the office the most time each week?
+4. When a family has children in classes and parents in the congregation, where does each part live?
+5. Who decides on new systems, and when does the committee next meet?
+6. What would you need to see to try something new with one class?
 
 ## Demo
 Assets: https://masjidone.co.uk/demo/ (walkthrough with invented data); assets/masjidone/film/ (cinematic film); assets/masjidone/masjidone-2026-10-21-2fad1a/ (campaign pack: video, cards, storyboard)
 
 1. Ask the discovery questions first; only demo once M-A1 has been answered.
-2. Office view: one family record shared by the madrasah and congregation sides (value-one-family-record).
-3. Teacher view: mark a register; show the next-morning missed-register flag (feature-missed-register-flag).
-4. Fees configured in the madrasah portal (feature-madrasah-portal).
-5. Self-service: change a jamāʿah time live (feature-self-service-content).
-6. Price structure: two plans banded by madrasah size; £499 setup, waived when twelve months are prepaid (pricing-bands, pricing-setup-fee). Ask the M-A2 question.
-7. Close: propose a pilot with their own classes and a date to decide.
+2. Open the demo with the committee's own masjid name (feature-demo-own-name).
+3. Office view: one family record shared by the madrasah and congregation sides (value-one-family-record).
+4. Teacher view: mark a register; show the next-morning missed-register flag (feature-missed-register-flag).
+5. Fees configured in the madrasah portal (feature-madrasah-portal).
+6. Self-service: change a jamāʿah time live (feature-self-service-content).
+7. Price: two plans, four bands by pupil count; yearly is the same rate twelve times over, not a discount; the £499 setup fee is waived when twelve months are prepaid (pricing-four-bands-two-plans, pricing-yearly-not-discounted, pricing-setup-fee). Never quote the retired £79/£179 flat rates. Ask the M-A2 question.
+8. Close: propose a pilot with their own classes and a date to decide.
 
 Never show: Parent access or Hifz/sabaq progress until M-P2 confirms the status; The screen heartbeat (still in development)
 

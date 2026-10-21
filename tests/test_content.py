@@ -190,6 +190,9 @@ def test_stale_fact_blocks_revalidation(ctx):
 @pytest.mark.parametrize("text,blocked", [
     ("Upgrade to Pro for more enquiries.", True),
     ("Pro is coming soon.", False),
+    ("Pro costs £10 a month or £100 a year for quotes and invoices.", False),
+    ("Go Pro to rank higher.", True),
+    ("Pro gets you more jobs.", True),
     ("Get a featured listing today.", True),
     ("Every trader is fully vetted.", True),
     ("All tradespeople are DBS-checked.", True),
@@ -275,6 +278,8 @@ def test_tidemark_blocks_prescription_medicine_names(text):
 
 @pytest.mark.parametrize("text,blocked", [
     ("Domi texts the best-matched person on the waiting list.", False),
+    ("Book instantly books the best match straight in.", False),
+    ("The best matching software for opticians.", True),
     ("The best scheduling app for opticians.", True),
     ("The only weight tracker that shows the trend.", True),
     ("A uniquely simple booking page.", True),

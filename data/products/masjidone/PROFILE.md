@@ -3,7 +3,7 @@
 > Generated from `profile.json` — edit that, not this file. Source: `yameenbux/MasjidOne` README.
 
 - **Maker:** not stated  
-- **Type:** b2b_saas · **Maturity:** Live in a masjid today; some parts still tagged in development  
+- **Type:** b2b_saas · **Maturity:** Live with one customer masjid; the madrasah portal and congregation side are running, parent access status is disputed within the README, and onboarding a second masjid is blocked by a known fix.  
 - **Approval:** draft
 - **Brand:** primary #0C2A21, secondary #2C4C40, accent #C0A46A — Plain-spoken, candid and community-minded, careful never to overclaim and respectful of Islamic terminology.
 
@@ -11,8 +11,8 @@
 
 - MasjidOne is one system that brings together a masjid's madrasah and its congregation.  
   <sub>`overview-one-system` — “**One system for a masjid's madrasah and its congregation.**”</sub>
-- Registers, fees and parent access sit on one side, with prayer times, a congregation app, the website, hall screens and donations on the other.  
-  <sub>`overview-two-sides` — “Registers, fees and parent access on one side. Prayer times, a congregation”</sub>
+- Registers and fees sit on the madrasah side, with prayer times, a congregation app, the website, hall screens and donations on the congregation side.  
+  <sub>`overview-two-sides` — “Registers, fees and parent access on one side. Prayer times, a congregation app, the website, the hall screens and donations on the other.”</sub>
 
 ## Target audience
 
@@ -20,8 +20,6 @@
   <sub>`audience-uk-masajid` — “Built in Bolton, for masājid across the UK.”</sub>
 - The website is designed for masjid committees who want to see what they would be buying and ask for a demo.  
   <sub>`audience-committees` — “The marketing site. Its job is to give a masjid committee somewhere to”</sub>
-- Teachers, parents and the masjid office each get their own separate view, so a parent only ever sees their own children.  
-  <sub>`audience-roles` — “The doors are deliberately separate. A parent is not a smaller administrator —”</sub>
 
 ## Pain points addressed
 
@@ -57,6 +55,8 @@
   <sub>`feature-donations` — “| `/mosque-donations/` | 0% commission and Gift Aid |”</sub>
 - The masjid changes its own jamāʿah times, notices, fee rates and access straight away in the portal.  
   <sub>`feature-self-service-content` — “| A wrong jamāʿah time, a notice, a fee rate, who has access | **The masjid**, in the portal | Immediately |”</sub>
+- The demo can be opened with the committee's own masjid name shown.  
+  <sub>`feature-demo-own-name` — “the committee sees their own name”</sub>
 
 ## Integrations
 
@@ -69,6 +69,12 @@
 
 - Each masjid's data is separated by the database itself, so an administrator only ever reaches their own masjid's records.  
   <sub>`privacy-row-level-security` — “| **Row Level Security** | The database refuses the wrong rows; it is not an `if` statement in the app |”</sub>
+- When MasjidOne support staff enter a masjid they do not belong to, a support-access entry is written to that masjid's own audit trail.  
+  <sub>`privacy-support-access-audited` — “Refuses a masjid you neither belong to nor administer, and writes `masjidone_support_access` into **their** audit trail when it is the latte…”</sub>
+- MasjidOne's support console requires platform administrators to complete a second sign-in factor.  
+  <sub>`privacy-support-console-2fa` — “Requires `is_aal2()` — a completed second factor, so the console has a real authenticator step”</sub>
+- Marketing and demo imagery never publishes a real child's record or a family's fee history.  
+  <sub>`privacy-no-real-child-data-published` — “no real child's record or family's fee history is ever published.”</sub>
 
 ## Pricing (as stated in the README)
 
@@ -76,6 +82,14 @@
   <sub>`pricing-bands` — “**Pricing is banded by the size of the madrasah** — four bands by pupil count,”</sub>
 - A one-off setup fee of £499 applies, waived when twelve months are prepaid.  
   <sub>`pricing-setup-fee` — “the app, the screens and donations). Setup is **£499 once**, waived on twelve”</sub>
+- Yearly billing is the monthly rate twelve times over, not a discount; only the setup fee is waived.  
+  <sub>`pricing-yearly-not-discounted` — “Yearly billing is the same rate shown twelve times over, not a discount.”</sub>
+- Bands are not per-pupil pricing: the price changes only at renewal, and only when the madrasah crosses a band threshold.  
+  <sub>`pricing-band-changes-at-renewal` — “A band is **not** per-pupil pricing: the figure changes only at renewal, and only on crossing a threshold.”</sub>
+- The old flat prices of £79 and £179 are no longer current and should not be quoted; prices now come from the banded table.  
+  <sub>`pricing-old-flat-rates-retired` — “This README printed `£79` and `£179` until 8 October 2026 — the flat rates”</sub>
+- There are four pricing bands by pupil count, across the two plans.  
+  <sub>`pricing-four-bands-two-plans` — “**Pricing is banded by the size of the madrasah** — four bands by pupil count,”</sub>
 
 ## Links
 
@@ -83,15 +97,19 @@
   <sub>`url-website` — “console is served from `masjidone.co.uk`; a masjid's portal is served from”</sub>
 - A demonstration walkthrough at /demo/ shows the office, teacher, parent and app views using invented data.  
   <sub>`url-demo` — “`/demo/` is a sales walkthrough built from invented data in `lib/demo-data.ts`.”</sub>
+- Customer support is reached at support@masjidone.co.uk.  
+  <sub>`url-support-email` — “customer support reaches `support@masjidone.co.uk`”</sub>
 
 ## Calls to action
 
 - Masjid committees can request a demo; MasjidOne is sold through a conversation rather than self-serve sign-up.  
   <sub>`cta-request-demo` — “a demo. It is not a self-serve signup — nobody buys this without a”</sub>
+- The support route is live, and enquiries can be sent to info@masjidone.co.uk.  
+  <sub>`cta-enquiries-email` — “**The support route is live.** Enquiries reach `info@masjidone.co.uk` and”</sub>
 
 ## Known limitations — never market these as done
 
-- Parent access and Hifz and sabaq progress are described as in development in one section, though a later section says both are built; confirm status before promoting them.  
+- The README contradicts itself. One section says parent access and Hifz and sabaq progress are in development and tagged as such. Another says both are built and that only the screen heartbeat is still tagged. Confirm their status before promoting either.  
   <sub>`limitation-parent-access-status` — “What is still in development is *parent access* — the half a”</sub>
 - The screen heartbeat is still tagged as in development and appears only in the demo.  
   <sub>`limitation-screen-heartbeat` — “Today **one thing carries the tag: the screen heartbeat**, and it is in the”</sub>
@@ -99,6 +117,10 @@
   <sub>`limitation-demo-form-worker` — “**Resend's REST API**, which sends the email. **Written and tested, not yet”</sub>
 - ICO registration and the data processing agreement are commitments promised before a masjid is invoiced, not yet completed facts.  
   <sub>`limitation-compliance-pending` — “data processing agreement are promised *before a masjid is invoiced*.”</sub>
+- A known platform change has to be made before a second masjid can be signed.  
+  <sub>`limitation-second-masjid-blocker` — “Blocking the moment a second masjid is signed.”</sub>
+- Other products already cover the congregation side well, so MasjidOne should not be described as the only product that runs the whole masjid.  
+  <sub>`limitation-competitors-congregation-side` — “Plenty of products do the congregation side, and do it well.”</sub>
 
 ## Competitors
 

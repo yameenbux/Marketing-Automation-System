@@ -4,7 +4,7 @@
   "repo": "yameenbux/MasjidOne",
   "maker": null,
   "product_type": "b2b_saas",
-  "maturity": "Live in a masjid today; some parts still tagged in development",
+  "maturity": "Live with one customer masjid; the madrasah portal and congregation side are running, parent access status is disputed within the README, and onboarding a second masjid is blocked by a known fix.",
   "approval": {
     "status": "draft",
     "approved_by": null,
@@ -33,10 +33,10 @@
     {
       "id": "overview-two-sides",
       "kind": "overview",
-      "text": "Registers, fees and parent access sit on one side, with prayer times, a congregation app, the website, hall screens and donations on the other.",
+      "text": "Registers and fees sit on the madrasah side, with prayer times, a congregation app, the website, hall screens and donations on the congregation side.",
       "source": {
         "path": "README.md",
-        "quote": "Registers, fees and parent access on one side. Prayer times, a congregation"
+        "quote": "Registers, fees and parent access on one side. Prayer times, a congregation app, the website, the hall screens and donations on the other."
       }
     },
     {
@@ -55,15 +55,6 @@
       "source": {
         "path": "README.md",
         "quote": "The marketing site. Its job is to give a masjid committee somewhere to"
-      }
-    },
-    {
-      "id": "audience-roles",
-      "kind": "audience",
-      "text": "Teachers, parents and the masjid office each get their own separate view, so a parent only ever sees their own children.",
-      "source": {
-        "path": "README.md",
-        "quote": "The doors are deliberately separate. A parent is not a smaller administrator —"
       }
     },
     {
@@ -258,7 +249,7 @@
     {
       "id": "limitation-parent-access-status",
       "kind": "limitation",
-      "text": "Parent access and Hifz and sabaq progress are described as in development in one section, though a later section says both are built; confirm status before promoting them.",
+      "text": "The README contradicts itself. One section says parent access and Hifz and sabaq progress are in development and tagged as such. Another says both are built and that only the screen heartbeat is still tagged. Confirm their status before promoting either.",
       "source": {
         "path": "README.md",
         "quote": "What is still in development is *parent access* — the half a"
@@ -289,6 +280,114 @@
       "source": {
         "path": "README.md",
         "quote": "data processing agreement are promised *before a masjid is invoiced*."
+      }
+    },
+    {
+      "id": "limitation-second-masjid-blocker",
+      "kind": "limitation",
+      "text": "A known platform change has to be made before a second masjid can be signed.",
+      "source": {
+        "path": "README.md",
+        "quote": "Blocking the moment a second masjid is signed."
+      }
+    },
+    {
+      "id": "pricing-yearly-not-discounted",
+      "kind": "pricing",
+      "text": "Yearly billing is the monthly rate twelve times over, not a discount; only the setup fee is waived.",
+      "source": {
+        "path": "README.md",
+        "quote": "Yearly billing is the same rate shown twelve times over, not a discount."
+      }
+    },
+    {
+      "id": "pricing-band-changes-at-renewal",
+      "kind": "pricing",
+      "text": "Bands are not per-pupil pricing: the price changes only at renewal, and only when the madrasah crosses a band threshold.",
+      "source": {
+        "path": "README.md",
+        "quote": "A band is **not** per-pupil pricing: the figure changes only at renewal, and only on crossing a threshold."
+      }
+    },
+    {
+      "id": "pricing-old-flat-rates-retired",
+      "kind": "pricing",
+      "text": "The old flat prices of £79 and £179 are no longer current and should not be quoted; prices now come from the banded table.",
+      "source": {
+        "path": "README.md",
+        "quote": "This README printed `£79` and `£179` until 8 October 2026 — the flat rates"
+      }
+    },
+    {
+      "id": "pricing-four-bands-two-plans",
+      "kind": "pricing",
+      "text": "There are four pricing bands by pupil count, across the two plans.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Pricing is banded by the size of the madrasah** — four bands by pupil count,"
+      }
+    },
+    {
+      "id": "privacy-support-access-audited",
+      "kind": "privacy",
+      "text": "When MasjidOne support staff enter a masjid they do not belong to, a support-access entry is written to that masjid's own audit trail.",
+      "source": {
+        "path": "README.md",
+        "quote": "Refuses a masjid you neither belong to nor administer, and writes `masjidone_support_access` into **their** audit trail when it is the latter"
+      }
+    },
+    {
+      "id": "privacy-support-console-2fa",
+      "kind": "privacy",
+      "text": "MasjidOne's support console requires platform administrators to complete a second sign-in factor.",
+      "source": {
+        "path": "README.md",
+        "quote": "Requires `is_aal2()` — a completed second factor, so the console has a real authenticator step"
+      }
+    },
+    {
+      "id": "privacy-no-real-child-data-published",
+      "kind": "privacy",
+      "text": "Marketing and demo imagery never publishes a real child's record or a family's fee history.",
+      "source": {
+        "path": "README.md",
+        "quote": "no real child's record or family's fee history is ever published."
+      }
+    },
+    {
+      "id": "cta-enquiries-email",
+      "kind": "cta",
+      "text": "The support route is live, and enquiries can be sent to info@masjidone.co.uk.",
+      "source": {
+        "path": "README.md",
+        "quote": "**The support route is live.** Enquiries reach `info@masjidone.co.uk` and"
+      }
+    },
+    {
+      "id": "url-support-email",
+      "kind": "url",
+      "text": "Customer support is reached at support@masjidone.co.uk.",
+      "source": {
+        "path": "README.md",
+        "quote": "customer support reaches `support@masjidone.co.uk`"
+      }
+    },
+    {
+      "id": "feature-demo-own-name",
+      "kind": "feature",
+      "text": "The demo can be opened with the committee's own masjid name shown.",
+      "source": {
+        "path": "README.md",
+        "quote": "the committee sees their own name"
+      }
+    },
+    {
+      "id": "limitation-competitors-congregation-side",
+      "kind": "limitation",
+      "text": "Other products already cover the congregation side well, so MasjidOne should not be described as the only product that runs the whole masjid.",
+      "source": {
+        "path": "README.md",
+        "quote": "Plenty of products do the congregation side, and do it well."
       }
     }
   ]

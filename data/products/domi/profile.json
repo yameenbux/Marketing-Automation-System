@@ -4,7 +4,7 @@
   "repo": "yameenbux/audiologydomi",
   "maker": "YSB Ventures Ltd",
   "product_type": "b2b_saas",
-  "maturity": "working demo",
+  "maturity": "Working demo plus a live London pilot environment. It has no customers or patients yet, and the compliance paperwork is outstanding.",
   "approval": {
     "status": "draft",
     "approved_by": null,
@@ -33,10 +33,10 @@
     {
       "id": "overview-refill",
       "kind": "overview",
-      "text": "When a patient cancels, Domi texts the best-matched person on the waiting list and books the first one who says yes.",
+      "text": "When a patient cancels, Domi works out who on the waiting list could take the slot, then either gives the office a ranked call list, texts the best match and books the first yes, or books them straight in.",
       "source": {
         "path": "README.md",
-        "quote": "patient cancels, Domi texts the best-matched person on the waiting list and books"
+        "quote": "It either hands the office a ranked call list (many home-visit patients never answer a text), texts the best match and books the first yes, or books them straight in."
       }
     },
     {
@@ -78,10 +78,10 @@
     {
       "id": "value-act-on-gap",
       "kind": "value_prop",
-      "text": "Plenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes.",
+      "text": "Domi acts on the gap in the way the practice chooses: a ranked call list for the office, an offer by text that books the first yes, or booking the best match straight in.",
       "source": {
         "path": "README.md",
-        "quote": "Plenty of systems keep a diary. What Domi does differently is **act on the gap**:"
+        "quote": "That's a ranked call list for the office, an offer by text that books the first yes, or booking the best match straight in."
       }
     },
     {
@@ -159,7 +159,7 @@
     {
       "id": "feature-reminders",
       "kind": "feature",
-      "text": "Every visit gets a day-before reminder text, and a CANCEL reply refills that slot a day ahead.",
+      "text": "A CANCEL reply to a reminder refills that slot a day ahead.",
       "source": {
         "path": "README.md",
         "quote": "A CANCEL reply refills that slot a day ahead"
@@ -204,7 +204,7 @@
     {
       "id": "limitation-no-real-data",
       "kind": "limitation",
-      "text": "The demo is not for real patient data: it keeps everything in memory and holds invented patients only.",
+      "text": "The demo is not for real patient data.",
       "source": {
         "path": "README.md",
         "quote": "**The demo is not for real patient data.** It keeps everything in memory, holds"
@@ -213,10 +213,10 @@
     {
       "id": "limitation-hosting",
       "kind": "limitation",
-      "text": "Before real patients, Domi still needs a permanent UK database with tested backups, along with real accounts and compliance paperwork.",
+      "text": "Before the first real patient, the paperwork with the practice is still to do: the DPIA (drafted), the data processing agreement and a check that the practice's DSPT is in place.",
       "source": {
         "path": "README.md",
-        "quote": "**A permanent UK database:** managed Postgres in London, encrypted, with daily backups and a restore that has actually been tested."
+        "quote": "**The paperwork with the practice:** the DPIA (drafted), the data processing agreement, and a check that their DSPT is in place."
       }
     },
     {
@@ -240,10 +240,10 @@
     {
       "id": "limitation-pcse-manual",
       "kind": "limitation",
-      "text": "PCSE notifications are still lodged by hand; sending them automatically is on the roadmap.",
+      "text": "PCSE notifications are still lodged by hand; sending them automatically waits on PCSE accepting Domi as a connected system.",
       "source": {
         "path": "README.md",
-        "quote": "Sending them to PCSE automatically is on the roadmap"
+        "quote": "Sending to PCSE automatically waits on PCSE accepting Domi as a connected system"
       }
     },
     {
@@ -252,16 +252,16 @@
       "text": "Scotland, Wales and Northern Ireland have their own sight-test rules, which Domi doesn't model yet.",
       "source": {
         "path": "README.md",
-        "quote": "Ireland have their own rules, which Domi doesn't model yet."
+        "quote": "Scotland, Wales and Northern Ireland have their own rules, which Domi doesn't"
       }
     },
     {
       "id": "limitation-nhs-same-day",
       "kind": "limitation",
-      "text": "NHS sight tests can't fill a same-day gap: PCSE needs a pre-visit notification at least 48 hours ahead.",
+      "text": "NHS sight tests can't fill a same-day gap.",
       "source": {
         "path": "README.md",
-        "quote": "home needs a pre-visit notification (PVN) to PCSE at least 48 hours ahead"
+        "quote": "**NHS sight tests can't fill a same-day gap.** In England, an NHS sight test at"
       }
     },
     {
@@ -289,6 +289,114 @@
       "source": {
         "path": "README.md",
         "quote": "demo at [app.domi.ysbdesigns.uk](https://app.domi.ysbdesigns.uk/?brand=domi)"
+      }
+    },
+    {
+      "id": "feature-three-fill-modes",
+      "kind": "feature",
+      "text": "With Phone them, the office gets a ranked call list, best match first, with numbers ready, and logs each outcome in one tap.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Phone them** (for practices whose patients don't text; the demo's default is *Text an offer*): the office gets a ranked call list, best match first, with numbers ready, and logs *no answer*, *not interested* or *booked* in one tap."
+      }
+    },
+    {
+      "id": "feature-pcse-notice-rules",
+      "kind": "feature",
+      "text": "Each NHS sight test visit gets its PCSE notice rule: 48 working hours, 3 weeks for three or more patients at one address, and never more than 8 weeks ahead.",
+      "source": {
+        "path": "README.md",
+        "quote": "Each NHS sight test visit (one address on one day) gets its notice rule: 48 working hours, 3 weeks for three or more at one address, never more than 8 weeks ahead."
+      }
+    },
+    {
+      "id": "feature-pcse-icb-approval",
+      "kind": "feature",
+      "text": "Bookings that can't meet the PCSE notice are refused unless the ICB's approval is recorded.",
+      "source": {
+        "path": "README.md",
+        "quote": "Bookings that can't meet the notice are refused unless the ICB's approval is recorded."
+      }
+    },
+    {
+      "id": "feature-confirmation-calls",
+      "kind": "feature",
+      "text": "Each visit gets three confirmation calls: when it's booked, in the week before with a 3-hour arrival window from the planned route, and on the working day before.",
+      "source": {
+        "path": "README.md",
+        "quote": "Each visit gets three calls: **CC1** when it's booked (the date only), **CC2** in the week before (a 3-hour arrival window worked out from the planned route), and **CC3** on the working day before (date, time and address)."
+      }
+    },
+    {
+      "id": "integration-opticabase",
+      "kind": "integration",
+      "text": "Domi works alongside Opticabase, which stays the record for eye tests and claims: a daily CSV export imports cleanly, matched by Opticabase ID.",
+      "source": {
+        "path": "README.md",
+        "quote": "Opticabase stays the record for eye tests and claims. A daily CSV export imports cleanly, matched by Opticabase ID:"
+      }
+    },
+    {
+      "id": "limitation-opticabase-manual",
+      "kind": "limitation",
+      "text": "Domi and Opticabase can't talk to each other yet, so bookings, moves and cancellations made in Domi are copied across to Opticabase by hand from a checklist.",
+      "source": {
+        "path": "README.md",
+        "quote": "The two systems can't talk to each other yet, so that copying is done by hand"
+      }
+    },
+    {
+      "id": "feature-pilot-results",
+      "kind": "feature",
+      "text": "Pilot results use figures from the diary or from what the office records, never estimates.",
+      "source": {
+        "path": "README.md",
+        "quote": "Every number comes from the diary or from what the office records, never from an estimate"
+      }
+    },
+    {
+      "id": "privacy-uk-database",
+      "kind": "privacy",
+      "text": "Live data sits in a permanent UK database, Supabase Postgres in London, with daily backups and a tested restore.",
+      "source": {
+        "path": "README.md",
+        "quote": "**A permanent UK database:** Supabase Postgres in London (Pro plan, daily backups), with a restore tested by `scripts/restore-test.sh`."
+      }
+    },
+    {
+      "id": "overview-live-pilot-environment",
+      "kind": "overview",
+      "text": "An environment is set up for a first pilot practice; it holds no patients until that pilot is signed.",
+      "source": {
+        "path": "README.md",
+        "quote": "set up > for a first pilot practice. It holds no patients until that pilot is signed"
+      }
+    },
+    {
+      "id": "privacy-ico",
+      "kind": "privacy",
+      "text": "ICO registration is listed as done.",
+      "source": {
+        "path": "README.md",
+        "quote": "- **ICO registration.** Still to do before the first real patient:"
+      }
+    },
+    {
+      "id": "feature-two-factor",
+      "kind": "feature",
+      "text": "Staff sign in with a password and then a six-digit authenticator code.",
+      "source": {
+        "path": "README.md",
+        "quote": "Password (scrypt) then a six-digit authenticator code (TOTP)."
+      }
+    },
+    {
+      "id": "feature-patient-import",
+      "kind": "feature",
+      "text": "Practices can import patients from a CSV saved from Google Sheets or Excel, up to 5,000 rows.",
+      "source": {
+        "path": "README.md",
+        "quote": "Upload a CSV saved from Google Sheets or Excel (up to 5,000 rows)."
       }
     }
   ]

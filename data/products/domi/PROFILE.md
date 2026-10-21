@@ -3,7 +3,7 @@
 > Generated from `profile.json` — edit that, not this file. Source: `yameenbux/audiologydomi` README.
 
 - **Maker:** YSB Ventures Ltd  
-- **Type:** b2b_saas · **Maturity:** working demo  
+- **Type:** b2b_saas · **Maturity:** Working demo plus a live London pilot environment. It has no customers or patients yet, and the compliance paperwork is outstanding.  
 - **Approval:** draft
 - **Brand:** primary #1E4D40, secondary #15241F, accent #E07B4F — Plain-spoken, practical and scrupulously honest about what is and isn't built, written for busy home-visit practices in British English.
 
@@ -11,8 +11,10 @@
 
 - Domi is a diary for home-visit healthcare that refills itself when patients cancel.  
   <sub>`tagline` — “**Home-visit diaries that refill themselves.**”</sub>
-- When a patient cancels, Domi texts the best-matched person on the waiting list and books the first one who says yes.  
-  <sub>`overview-refill` — “patient cancels, Domi texts the best-matched person on the waiting list and books”</sub>
+- When a patient cancels, Domi works out who on the waiting list could take the slot, then either gives the office a ranked call list, texts the best match and books the first yes, or books them straight in.  
+  <sub>`overview-refill` — “It either hands the office a ranked call list (many home-visit patients never answer a text), texts the best match and books the first yes, …”</sub>
+- An environment is set up for a first pilot practice; it holds no patients until that pilot is signed.  
+  <sub>`overview-live-pilot-environment` — “set up > for a first pilot practice. It holds no patients until that pilot is signed”</sub>
 
 ## Target audience
 
@@ -30,8 +32,8 @@
 
 ## Value proposition
 
-- Plenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes.  
-  <sub>`value-act-on-gap` — “Plenty of systems keep a diary. What Domi does differently is **act on the gap**:”</sub>
+- Domi acts on the gap in the way the practice chooses: a ranked call list for the office, an offer by text that books the first yes, or booking the best match straight in.  
+  <sub>`value-act-on-gap` — “That's a ranked call list for the office, an offer by text that books the first yes, or booking the best match straight in.”</sub>
 - Patients see the practice's own name in every text, on the booking page and on invoices, never Domi's.  
   <sub>`value-own-name` — “**Patients see the practice, not Domi.** Every patient text, the booking page and invoices use the practice's name”</sub>
 
@@ -51,20 +53,40 @@
   <sub>`feature-offline` — “notes and visit updates made without signal sync in order when it returns. Signing out wipes the copy”</sub>
 - An online referral form replaces callback forms and paper, and accepting a referral creates the patient record and a waiting-list place.  
   <sub>`feature-referral-form` — “accepting one creates the patient record and a waiting-list place and texts whoever gave a mobile”</sub>
-- Every visit gets a day-before reminder text, and a CANCEL reply refills that slot a day ahead.  
+- A CANCEL reply to a reminder refills that slot a day ahead.  
   <sub>`feature-reminders` — “A CANCEL reply refills that slot a day ahead”</sub>
 - Domi reports recovered income and cancellations refilled, plus per-clinician mileage and utilisation downloadable as CSV.  
   <sub>`feature-income-mileage` — “Recovered income, cancellations refilled, average time to refill and income still unfilled, from the office's own fee per visit”</sub>
+- With Phone them, the office gets a ranked call list, best match first, with numbers ready, and logs each outcome in one tap.  
+  <sub>`feature-three-fill-modes` — “**Phone them** (for practices whose patients don't text; the demo's default is *Text an offer*): the office gets a ranked call list, best ma…”</sub>
+- Each NHS sight test visit gets its PCSE notice rule: 48 working hours, 3 weeks for three or more patients at one address, and never more than 8 weeks ahead.  
+  <sub>`feature-pcse-notice-rules` — “Each NHS sight test visit (one address on one day) gets its notice rule: 48 working hours, 3 weeks for three or more at one address, never m…”</sub>
+- Bookings that can't meet the PCSE notice are refused unless the ICB's approval is recorded.  
+  <sub>`feature-pcse-icb-approval` — “Bookings that can't meet the notice are refused unless the ICB's approval is recorded.”</sub>
+- Each visit gets three confirmation calls: when it's booked, in the week before with a 3-hour arrival window from the planned route, and on the working day before.  
+  <sub>`feature-confirmation-calls` — “Each visit gets three calls: **CC1** when it's booked (the date only), **CC2** in the week before (a 3-hour arrival window worked out from t…”</sub>
+- Pilot results use figures from the diary or from what the office records, never estimates.  
+  <sub>`feature-pilot-results` — “Every number comes from the diary or from what the office records, never from an estimate”</sub>
+- Staff sign in with a password and then a six-digit authenticator code.  
+  <sub>`feature-two-factor` — “Password (scrypt) then a six-digit authenticator code (TOTP).”</sub>
+- Practices can import patients from a CSV saved from Google Sheets or Excel, up to 5,000 rows.  
+  <sub>`feature-patient-import` — “Upload a CSV saved from Google Sheets or Excel (up to 5,000 rows).”</sub>
 
 ## Integrations
 
 - Leads from the practice's Facebook ad forms can arrive in Domi via a connector such as Zapier, Make or Meta's own webhook.  
   <sub>`integration-facebook-leads` — “A connector (Zapier or Make's Facebook Lead Ads trigger, or Meta's own webhook) posts each lead to”</sub>
+- Domi works alongside Opticabase, which stays the record for eye tests and claims: a daily CSV export imports cleanly, matched by Opticabase ID.  
+  <sub>`integration-opticabase` — “Opticabase stays the record for eye tests and claims. A daily CSV export imports cleanly, matched by Opticabase ID:”</sub>
 
 ## Privacy and data
 
 - From a patient's record, the office can download everything held about them or erase their details on request, in line with UK GDPR.  
   <sub>`privacy-gdpr` — “From the record: download everything held about a patient (subject access), or erase their details on request.”</sub>
+- Live data sits in a permanent UK database, Supabase Postgres in London, with daily backups and a tested restore.  
+  <sub>`privacy-uk-database` — “**A permanent UK database:** Supabase Postgres in London (Pro plan, daily backups), with a restore tested by `scripts/restore-test.sh`.”</sub>
+- ICO registration is listed as done.  
+  <sub>`privacy-ico` — “- **ICO registration.** Still to do before the first real patient:”</sub>
 
 ## Pricing (as stated in the README)
 
@@ -81,22 +103,24 @@ _Not stated — do not publish prices._
 
 - Domi is a working demo and is not yet used by any practice.  
   <sub>`limitation-not-used` — “**Everything in green is built, tested and working in the demo. Domi is not yet”</sub>
-- The demo is not for real patient data: it keeps everything in memory and holds invented patients only.  
+- The demo is not for real patient data.  
   <sub>`limitation-no-real-data` — “**The demo is not for real patient data.** It keeps everything in memory, holds”</sub>
-- Before real patients, Domi still needs a permanent UK database with tested backups, along with real accounts and compliance paperwork.  
-  <sub>`limitation-hosting` — “**A permanent UK database:** managed Postgres in London, encrypted, with daily backups and a restore that has actually been tested.”</sub>
+- Before the first real patient, the paperwork with the practice is still to do: the DPIA (drafted), the data processing agreement and a check that the practice's DSPT is in place.  
+  <sub>`limitation-hosting` — “**The paperwork with the practice:** the DPIA (drafted), the data processing agreement, and a check that their DSPT is in place.”</sub>
 - Domi has no customers yet, so there are no testimonials or logos to show.  
   <sub>`limitation-no-customers` — “Domi has none yet, so no testimonials, logos or "trusted”</sub>
 - Hearing care is ready to set up rather than built for, and Noah 4 integration is not built.  
   <sub>`limitation-ready-to-set-up` — “| **Hearing care** | Ready to set up | Hearing tests, fittings, wax removal and aid reviews as visit types; audiogram records set up with th…”</sub>
-- PCSE notifications are still lodged by hand; sending them automatically is on the roadmap.  
-  <sub>`limitation-pcse-manual` — “Sending them to PCSE automatically is on the roadmap”</sub>
+- PCSE notifications are still lodged by hand; sending them automatically waits on PCSE accepting Domi as a connected system.  
+  <sub>`limitation-pcse-manual` — “Sending to PCSE automatically waits on PCSE accepting Domi as a connected system”</sub>
 - Scotland, Wales and Northern Ireland have their own sight-test rules, which Domi doesn't model yet.  
-  <sub>`limitation-nations` — “Ireland have their own rules, which Domi doesn't model yet.”</sub>
-- NHS sight tests can't fill a same-day gap: PCSE needs a pre-visit notification at least 48 hours ahead.  
-  <sub>`limitation-nhs-same-day` — “home needs a pre-visit notification (PVN) to PCSE at least 48 hours ahead”</sub>
+  <sub>`limitation-nations` — “Scotland, Wales and Northern Ireland have their own rules, which Domi doesn't”</sub>
+- NHS sight tests can't fill a same-day gap.  
+  <sub>`limitation-nhs-same-day` — “**NHS sight tests can't fill a same-day gap.** In England, an NHS sight test at”</sub>
 - The hosted demo runs on a free plan that sleeps when idle and takes a short while to wake.  
   <sub>`limitation-demo-sleeps` — “On the free plan it **sleeps after 15 minutes without visits** and takes about”</sub>
+- Domi and Opticabase can't talk to each other yet, so bookings, moves and cancellations made in Domi are copied across to Opticabase by hand from a checklist.  
+  <sub>`limitation-opticabase-manual` — “The two systems can't talk to each other yet, so that copying is done by hand”</sub>
 
 ## Competitors
 

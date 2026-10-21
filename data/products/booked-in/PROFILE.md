@@ -3,7 +3,7 @@
 > Generated from `profile.json` — edit that, not this file. Source: `yameenbux/Peony-Beauty-Platform` README.
 
 - **Maker:** YSB Designs  
-- **Type:** b2b_saas · **Maturity:** Built and tested, not yet provisioned (no live email or payments)  
+- **Type:** b2b_saas · **Maturity:** Built and tested with live email; subscription billing not yet live, and three features not built.  
 - **Approval:** draft
 - **Brand:** primary #43192A, secondary #8E2F43, accent #B8465C — Warm, plain-spoken and candid, written in British English for working beauty professionals rather than technologists, and careful never to oversell.
 
@@ -22,6 +22,8 @@
   <sub>`audience-lash-technicians` — “A lash technician's diary lives in her Instagram DMs.”</sub>
 - It serves both technicians who travel to clients and those who work from home, a rented chair or a shop.  
   <sub>`audience-mobile-and-fixed` — “The other half works from a room at home, a chair rented in a salon, or a shop”</sub>
+- It isn't only for lash and brow studios: a man booking a skin fade or a sports-therapy clinic doesn't get a pink page.  
+  <sub>`audience-other-trades` — “A man booking a skin fade does not want a pink page; nor does a sports-therapy clinic.”</sub>
 
 ## Pain points addressed
 
@@ -40,6 +42,8 @@
   <sub>`value-no-commission` — “No commission, no marketplace, and nobody else advertised on her page.”</sub>
 - Bookings arrive while she is working, so she no longer has to be the bottleneck.  
   <sub>`value-not-the-bottleneck` — “She never has to be the bottleneck. Bookings arrive while she is working on”</sub>
+- A single client coming back one extra time in a year covers the subscription several times over.  
+  <sub>`value-rebooking-pays-for-itself` — “A single client coming back one extra time in a year covers the subscription several times over.”</sub>
 
 ## Verified features
 
@@ -61,10 +65,27 @@
   <sub>`feature-remembered-address` — “An address a client gives once is remembered against her record, so a regular”</sub>
 - The Share tab creates Instagram Story cards from her real diary in a tap, showing only times long enough for the chosen treatment.  
   <sub>`feature-story-cards` — “The **Share** tab draws one from her real diary in a tap”</sub>
-- Story cards use her own brand: she picks one colour, can add a logo, and can switch between light and dark layouts.  
-  <sub>`feature-card-branding` — “She gives one colour and the rest of the palette”</sub>
+- She can add one colour of her own on top of her trade's palette, and the rest of the card's colours are derived from it.  
+  <sub>`feature-card-branding` — “she can give one colour on top of that, from which the rest is derived in HSL”</sub>
 - The card preview sits inside an Instagram-style frame so she can see what will be covered before she posts.  
   <sub>`feature-story-preview` — “The preview sits inside Instagram's own frame”</sub>
+- On Pro+, the insurance pack gathers every dated patch test and appointment for a client into one record of the kind an insurer asks for after a reaction.  
+  <sub>`feature-insurance-pack` — “**the insurance pack**: every dated patch test and every appointment for one client, in one call, as the record an insurer asks for after a …”</sub>
+- Pro includes deposits, paid straight to her and never through Booked In.  
+  <sub>`feature-deposits` — “Pro also carries **deposits** — paid straight to her, never through us —”</sub>
+- Her page's palette comes from her trade, set at signup, with no decision for her to make.  
+  <sub>`feature-trade-palettes` — “So the palette comes from her trade now, set at signup, with no decision for her to make.”</sub>
+- A colour palette that fails the readability checks is rejected rather than shipped.  
+  <sub>`feature-readable-colours` — “a palette that fails any of them is **rejected rather than shipped**”</sub>
+- Patch-test checks are switched on automatically at signup according to her trade.  
+  <sub>`feature-patch-test-default-on` — “It is turned on from the trade at signup, because a setting that arrives switched off is a setting nobody finds.”</sub>
+- Her page will not accept a client address that is just a town, without a house number or postcode.  
+  <sub>`feature-client-address-check` — “will not accept a town without a number or a postcode”</sub>
+
+## Integrations
+
+- Booking emails go out from the verified booked-in.co.uk domain through Resend, and real confirmations have reached real inboxes.  
+  <sub>`integration-email-resend` — “`booked-in.co.uk` is verified > with Resend and real confirmations have been delivered to real inboxes”</sub>
 
 ## Privacy and data
 
@@ -75,21 +96,27 @@
 
 ## Pricing (as stated in the README)
 
-- There is a free tier, and Pro costs ten pounds a month.  
-  <sub>`pricing-free-and-pro` — “What is in the free tier, what Pro adds at ten pounds a month”</sub>
-- Every booking page carries a small "Powered by Booked In" footer on every plan; Pro removes the Booked In mark from Story cards only.  
-  <sub>`pricing-powered-by` — “Free cards carry a small Booked In mark; Pro cards do not.”</sub>
+- There are three tiers: Free, Pro at ten pounds a month, and Pro+ at twenty-four pounds.  
+  <sub>`pricing-free-and-pro` — “what Free gives her, what Pro adds at ten pounds a month, what Pro+ adds at twenty-four”</sub>
+- Every booking page carries "Powered by Booked In" on every plan, including Pro, while no Story card carries the Booked In mark on any plan.  
+  <sub>`pricing-powered-by` — “**No card carries our mark any more**, on any plan. It used to come off at Pro; `028` removed it altogether. The booking page still carries …”</sub>
+- Pro+ costs £24 and adds the waiting list that fills a cancellation within the minute.  
+  <sub>`pricing-pro-plus` — “At £24 it adds the waiting list that fills a cancellation within the minute”</sub>
+- The patch-test rule is included free on every plan; paid tiers sell the chasing and paperwork, not the safety rule.  
+  <sub>`pricing-patch-test-free` — “**The patch-test rule itself is free and always will be**”</sub>
 
 ## Known limitations — never market these as done
 
-- Nothing has been provisioned yet: no email has been sent and no payment has been taken against a live provider.  
-  <sub>`limitation-not-provisioned` — “No email has ever actually been sent and no payment has ever”</sub>
-- Deposits, custom domains, rescheduling and direct publishing to Instagram are not built and must not be promoted as features.  
-  <sub>`limitation-not-built` — “**Deposits, a custom domain, rescheduling and publishing straight to”</sub>
-- Instagram publishing and deposits both depend on third-party approval processes, so neither should be promised.  
-  <sub>`limitation-third-party-approval` — “Both are gated on somebody else's approval queue rather”</sub>
+- Email is now live, but subscription billing is not: the Stripe path has never run against a live payment provider.  
+  <sub>`limitation-not-provisioned` — “**Email is live. Subscription billing is not.**”</sub>
+- A custom domain per studio, rescheduling and publishing straight to Instagram are not built and must not be described as features.  
+  <sub>`limitation-not-built` — “**A custom domain per studio, rescheduling and publishing straight to > Instagram are not built.**”</sub>
+- Publishing to Instagram depends on a third party's approval queue rather than on code, so it should not be promised.  
+  <sub>`limitation-third-party-approval` — “`platform/INTEGRATIONS.md` sets out what Instagram publishing needs. It is > gated on somebody else's approval queue rather than on code”</sub>
 - Booked In has not yet been tested on real Safari.  
   <sub>`limitation-safari-untested` — “installed in the environment this was built in, so **real Safari has never”</sub>
+- Booked In cannot verify that a deposit has arrived, so she marks it as received herself.  
+  <sub>`limitation-deposit-unverified` — “nothing here can verify a > deposit arrived, so she marks it received”</sub>
 
 ## Competitors
 

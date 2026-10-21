@@ -6,25 +6,30 @@
 Per-product plans (generated from `config/acquisition.json`; edit the config, then `mas acq docs`):
 [MasjidOne](masjidone.md) · [Domi](domi.md) · [Bolton Vouched](bolton-vouched.md)
 
-## What the evidence says before you start
-- **MasjidOne can't be invoiced yet.** Its own README promises ICO registration and a data processing agreement
-  before a masjid is invoiced. Start those in week 1 or the week-4 sale cannot happen. The demo-request form also
-  only opens the visitor's mail client, so web enquiries can be lost.
-- **Domi's headline may not apply to most of its market.** NHS sight tests need a pre-visit notification 48 hours
-  ahead, so same-day or day-before refills only fit private work or longer-notice cancellations. That is assumption
-  D-A2, and it is the first thing to find out. Domi also can't hold real patient data yet, so a pilot means a
-  design partner on invented data, and paying customers within 30 days are zero by design.
-- **Bolton Vouched has nothing to sell yet.** Pro isn't built. The 30-day outcome is supply (traders listed) and
-  then demand (enquiries delivered). Paying customers are zero by design.
+## What the evidence says before you start (READMEs re-read 21 Oct, evening)
+- **MasjidOne can't take a second masjid yet.** Its README says a known platform fix is "Blocking the moment a
+  second masjid is signed". That gates any pilot (prerequisite M-P5). It also can't be invoiced until ICO
+  registration and the data processing agreement are done, and the demo-request form still only opens the
+  visitor's mail client. Parent-access status is still contradictory inside the README: never demo it.
+- **Domi is closer to a real pilot than it was.** UK hosting, real accounts and ICO registration are done, and a
+  live London environment is set up for a first pilot practice. What remains before a real patient is the
+  practice paperwork (DPIA, DPA, DSPT check), processor DPAs, encrypting phones' offline copy and hardening.
+  Refills are no longer text-only: phone list, text offer or book instantly. It works alongside Opticabase, with
+  bookings copied back by hand. NHS sight tests still can't fill a same-day gap (D-A2 is still the first question).
+- **Bolton Vouched now has something to sell, but almost nothing listed.** Pro is live (£10 a month or £100 a
+  year, offered, never pushed). The site moved to www.boltonvouched.co.uk (the old ysbdesigns address no
+  longer responds). The live directory had **2 listings** on 21 Oct and every home and trades category says
+  "soon". Supply is the whole game for the first fortnight.
+- **Booked In and Tidemark stay in readiness.** Booked In: email is live, subscription billing isn't, and there's
+  no launch waitlist. Tidemark: no signed iPhone build yet, and the site has no sign-up form.
 - **Distribution is the bottleneck.** The only connected social account has about 1 follower. Acquisition here is
-  relationships: referrals, visits, phone calls, letters. Content is kept to two MasjidOne posts a week, as proof
-  for prospects who look you up.
+  relationships: referrals, visits, phone calls, letters. Content is kept to two MasjidOne posts a week.
 
 ## Week by week
 
 | Week | MasjidOne (priority 1) | Domi (priority 2) | Bolton Vouched (priority 3) |
 |---|---|---|---|
-| 1 · 22–28 Oct | Ask the live masjid for two introductions and a reference call (M-A4). Visit three Bolton masājid. Post five letters to the top-ranked prospects. Start ICO registration. | Screen the top 6 numbers against TPS/CTPS, then call. Ask about cancellations, notice and the NHS/private split (D-A1, D-A2). | Ask the group admins for permission. One invitation post; send consent links only to traders who reply. |
+| 1 · 22–28 Oct | Ask the live masjid for two introductions and a reference call (M-A4). Visit three Bolton masājid. Post five letters to the top-ranked prospects. Start ICO registration. | Screen the top 6 numbers against TPS/CTPS, then call. Ask about cancellations, notice and the NHS/private split (D-A1, D-A2). | Ask the group admins for permission. One invitation post pointing recommended traders to /get-listed (no account needed). |
 | 2 · 29 Oct–4 Nov | Demos for the qualified conversations; ask the price question every time (M-A2). Follow up letters with a visit or call. | Demo to the practices that confirmed the pain. Offer the design-partner trial. | Keep listing traders. A resident-facing post once at least 3 trades have 2+ listings. |
 | 3 · 5–11 Nov | Propose a pilot to the warmest masjid. Confirm the parent-access status first (M-P2). | First design partner. If D-A1/D-A2 fail, switch to the route-planning message. | Ask listed traders to point customers to reviews. Log enquiries from trader dashboards weekly. |
 | 4 · 12–18 Nov | Pilot running. Paying customer only if ICO and DPA are done; otherwise a signed letter of intent. | Second design partner. Decide whether to build real-data hosting (D-P1) or reposition. | Compare enquiries per trade against listings (B-A4) and recruit where demand is. |
