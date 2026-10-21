@@ -148,7 +148,7 @@ def test_end_to_end_dry_run_publish_and_idempotency(ctx):
     r1 = run_publishing(ctx)
     assert r1[0]["status"] == "simulated"
     outbox = json.loads(open(r1[0]["path"]).read())
-    assert outbox["tool"] == "createScheduledPostForReview"
+    assert outbox["tool"] == "createScheduledPost"
     assert json.loads(outbox["args"]["info"])["providers"] == [{"network": "instagram"}]
     assert ctx.store.get_content(cid)["status"] == "approved"   # nothing actually scheduled
     assert not (ctx.root / "var/outbox/metricool").exists()
@@ -334,3 +334,31 @@ def test_headline_splits_compound_sentences():
     from mas.marketing.writer import _headline
     assert _headline("A bathroom scale gives one number a day, and that number can swing with salt, water, sleep or "
                      "a late meal.") == "A bathroom scale gives one number a day"
+
+
+def test_instagram_payload_has_media_and_type(ctx):
+    approve_profile(ctx, "acme", "tester")
+    _, out = _produce(ctx)
+    approve_content(ctx, out[0]["content_id"], "tester")
+    r = run_publishing(ctx)[0]
+    payload = json.loads(open(r["path"]).read())
+    info = json.loads(payload["args"]["info"])
+    assert info["media"] == ["https://media.example.test/repo/assets/acme/film/still_01_hook.jpg"]
+    assert info["instagramData"]["type"] == "POST"
+    assert payload["args"]["blogId"] == "123"
+    assert "utm_" not in info["text"]                       # no UTM noise in Instagram captions
+
+
+def test_instagram_without_media_is_blocked(ctx):
+    (ctx.root / "assets/acme/film/still_01_hook.jpg").unlink()
+    approve_profile(ctx, "acme", "tester")
+    _, out = _produce(ctx)
+    approve_content(ctx, out[0]["content_id"], "tester")
+    assert run_publishing(ctx)[0]["status"] == "blocked"
+
+
+def test_utm_tagging_for_link_networks():
+    from mas.publishing.media import tag_links
+    t = tag_links("See https://acmerota.example.co.uk/demo now", "linkedin", "acme", "cnt_1")
+    assert "utm_source=linkedin" in t and "utm_campaign=acme-organic" in t and "utm_content=cnt_1" in t
+    assert tag_links("https://x.example.co.uk", "instagram", "acme", "c") == "https://x.example.co.uk"

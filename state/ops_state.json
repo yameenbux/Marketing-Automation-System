@@ -1,0 +1,2503 @@
+{
+ "exported_at": "2026-10-21T18:42:00+00:00",
+ "tables": {
+  "audit": [
+   {
+    "action": "cleanup",
+    "detail": "{}",
+    "id": 92,
+    "integration": "local",
+    "outcome": "ok",
+    "reason": "removed unapproved duplicate calendar drafts from pre-idempotency runs",
+    "ts": "2026-10-21 17:10:25"
+   },
+   {
+    "action": "cleanup",
+    "detail": "{}",
+    "id": 224,
+    "integration": "local",
+    "outcome": "ok",
+    "reason": "cleared never-approved test drafts before go-live; calendar rebuilt from 2026-10-22",
+    "ts": "2026-10-21 18:40:02"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"MasjidOne\"}",
+    "id": 1,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:22:54+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"audiologydomi\"}",
+    "id": 2,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:22:55+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"Peony-Beauty-Platform\"}",
+    "id": 3,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:22:56+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"Tidemark-Fitness\"}",
+    "id": 4,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:22:57+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 5,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:13+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 6,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:20+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 7,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:24+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 8,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:25+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 9,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:27+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 10,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:29+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 100}",
+    "id": 11,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:30+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 12,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:32+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 13,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:34+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"story\"}",
+    "id": 14,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:33:35+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"square\"}",
+    "id": 15,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:34:25+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"landscape\"}",
+    "id": 16,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:34:57+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"sting\"}",
+    "id": 17,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:35:44+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 18,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:21+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 19,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:32+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 20,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:37+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 21,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:38+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 22,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:40+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 23,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:42+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 100}",
+    "id": 24,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:44+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 25,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:46+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 26,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:48+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"story\"}",
+    "id": 27,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:36:50+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"square\"}",
+    "id": 28,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:37:44+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"landscape\"}",
+    "id": 29,
+    "integration": "local_render",
+    "outcome": "blocked",
+    "reason": "daily limit max_renders_per_day=6 reached",
+    "ts": "2026-10-21T16:38:18+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"sting\"}",
+    "id": 30,
+    "integration": "local_render",
+    "outcome": "blocked",
+    "reason": "daily limit max_renders_per_day=6 reached",
+    "ts": "2026-10-21T16:38:18+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 31,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:31+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 32,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:43+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 33,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:47+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 34,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 35,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:51+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 36,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:53+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 100}",
+    "id": 37,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:55+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 38,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:56+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 39,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:38:58+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"story\"}",
+    "id": 40,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:39:00+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"square\"}",
+    "id": 41,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:39:52+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"landscape\"}",
+    "id": 42,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:40:25+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"sting\"}",
+    "id": 43,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:41:20+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"MasjidOne\"}",
+    "id": 44,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:46:48+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"audiologydomi\"}",
+    "id": 45,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:46:49+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"Peony-Beauty-Platform\"}",
+    "id": 46,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:46:50+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"Tidemark-Fitness\"}",
+    "id": 47,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:46:51+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 48,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:08+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 49,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:21+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 50,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:25+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 51,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:26+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 52,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:28+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 53,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:30+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 54,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:32+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 55,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:33+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"story\"}",
+    "id": 56,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:47:35+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"square\"}",
+    "id": 57,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:48:18+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"landscape\"}",
+    "id": 58,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:48:44+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"sting\"}",
+    "id": 59,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:49:25+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"repo\": \"Boltontradesmen\"}",
+    "id": 60,
+    "integration": "github_public",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T16:59:15+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 61,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:17+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 62,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:38+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 83}",
+    "id": 63,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:43+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 158}",
+    "id": 64,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 136}",
+    "id": 65,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:52+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 66,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:54+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 123}",
+    "id": 67,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:56+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 68,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:05:58+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-2268df\", \"fmt\": \"story\"}",
+    "id": 69,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:06:00+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-2268df\", \"fmt\": \"square\"}",
+    "id": 70,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:06:45+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-2268df\", \"fmt\": \"landscape\"}",
+    "id": 71,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:07:13+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-2268df\", \"fmt\": \"sting\"}",
+    "id": 72,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:07:55+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 73,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:07:58+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 74,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:14+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 75,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:19+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 106}",
+    "id": 76,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:21+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 139}",
+    "id": 77,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:23+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 65}",
+    "id": 78,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:25+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 126}",
+    "id": 79,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:27+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 80,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:28+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-4844f4\", \"fmt\": \"story\"}",
+    "id": 81,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:08:30+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-4844f4\", \"fmt\": \"square\"}",
+    "id": 82,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:09:10+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-4844f4\", \"fmt\": \"landscape\"}",
+    "id": 83,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:09:33+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-4844f4\", \"fmt\": \"sting\"}",
+    "id": 84,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:11+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 64}",
+    "id": 85,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:15+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 140}",
+    "id": 86,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:17+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 96}",
+    "id": 87,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:18+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 92}",
+    "id": 88,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:20+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 82}",
+    "id": 89,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:21+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 43}",
+    "id": 90,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:23+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-e0ece5\", \"fmt\": \"story\"}",
+    "id": 91,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:24+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-e0ece5\", \"fmt\": \"square\"}",
+    "id": 93,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:10:58+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-e0ece5\", \"fmt\": \"landscape\"}",
+    "id": 94,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:11:21+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-e0ece5\", \"fmt\": \"sting\"}",
+    "id": 95,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:11:52+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 67}",
+    "id": 96,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:11:55+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 134}",
+    "id": 97,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:11:57+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 68}",
+    "id": 98,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:11:58+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 133}",
+    "id": 99,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:12:00+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 81}",
+    "id": 100,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:12:02+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 101,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:12:04+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"bolton-vouched-2026-10-21-0c721f\", \"fmt\": \"story\"}",
+    "id": 102,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:12:06+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 103,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:12:54+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 104,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:06+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 105,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:10+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 106,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:11+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 107,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:13+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 108,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:15+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 109,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:16+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 110,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:18+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"story\"}",
+    "id": 111,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:13:20+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"square\"}",
+    "id": 112,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:14:14+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"masjidone-2026-10-21-2fad1a\", \"fmt\": \"landscape\"}",
+    "id": 113,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:14:55+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 114,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:26:41+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 115,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:26:43+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 116,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:26:45+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 117,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:26:47+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 118,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:26:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 119,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:26:51+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 120,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:26:52+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 121,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:27:03+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 122,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:31:40+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 123,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:31:41+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 124,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:31:43+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 125,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:31:45+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 126,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:31:47+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 127,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:31:49+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 128,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:31:51+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 129,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:01+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 83}",
+    "id": 130,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:09+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 158}",
+    "id": 131,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:10+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 136}",
+    "id": 132,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:12+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 133,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:14+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 123}",
+    "id": 134,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:16+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 135,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:18+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 136,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:20+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 137,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:34+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 64}",
+    "id": 138,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:41+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 140}",
+    "id": 139,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:44+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 96}",
+    "id": 140,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 92}",
+    "id": 141,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:52+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 82}",
+    "id": 142,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:55+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 30}",
+    "id": 143,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:32:58+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 144,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:05+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 106}",
+    "id": 145,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:07+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 139}",
+    "id": 146,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:09+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 65}",
+    "id": 147,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:11+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 126}",
+    "id": 148,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:12+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 149,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:14+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 150,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:16+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 151,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:29+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 67}",
+    "id": 152,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:37+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 134}",
+    "id": 153,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:39+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 68}",
+    "id": 154,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:41+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 133}",
+    "id": 155,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:42+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 81}",
+    "id": 156,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:44+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 157,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:33:46+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 158,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 83}",
+    "id": 159,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 64}",
+    "id": 160,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 158}",
+    "id": 161,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:52+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 80}",
+    "id": 162,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:52+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 140}",
+    "id": 163,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:53+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 146}",
+    "id": 164,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:55+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 136}",
+    "id": 165,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:56+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 96}",
+    "id": 166,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:59+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 167,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:35:59+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 168,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:00+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 123}",
+    "id": 169,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:02+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 141}",
+    "id": 170,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:02+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 92}",
+    "id": 171,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:05+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 172,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:05+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 173,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:07+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 174,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:07+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 175,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:10+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 82}",
+    "id": 176,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:11+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 30}",
+    "id": 177,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:16+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://masjidone.co.uk\"}",
+    "id": 178,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:21+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 179,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:22+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"story\"}",
+    "id": 180,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:26+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"masjidone\", \"fmt\": \"story\"}",
+    "id": 181,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:32+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"domi\", \"fmt\": \"story\"}",
+    "id": 182,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:36:32+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"domi\", \"fmt\": \"square\"}",
+    "id": 183,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:42:46+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"masjidone\", \"fmt\": \"square\"}",
+    "id": 184,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:43:21+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"square\"}",
+    "id": 185,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:44:04+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"domi\", \"fmt\": \"landscape\"}",
+    "id": 186,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:46:09+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"masjidone\", \"fmt\": \"landscape\"}",
+    "id": 187,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:46:54+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"landscape\"}",
+    "id": 188,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:48:44+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"domi\", \"fmt\": \"portrait\"}",
+    "id": 189,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:51:55+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 190,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:52:01+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 106}",
+    "id": 191,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:52:08+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 139}",
+    "id": 192,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:52:15+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 65}",
+    "id": 193,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:52:28+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 126}",
+    "id": 194,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:52:36+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 195,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:52:50+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 196,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:52:55+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 197,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:10+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"masjidone\", \"fmt\": \"portrait\"}",
+    "id": 198,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:11+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 67}",
+    "id": 199,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:15+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 134}",
+    "id": 200,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:17+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"story\"}",
+    "id": 201,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:19+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 68}",
+    "id": 202,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:20+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 133}",
+    "id": 203,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:23+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 81}",
+    "id": 204,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:26+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 205,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:29+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"bolton-vouched\", \"fmt\": \"story\"}",
+    "id": 206,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:53:41+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"portrait\"}",
+    "id": 207,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:56:12+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"square\"}",
+    "id": 208,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:57:29+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"story\"}",
+    "id": 209,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:57:40+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"bolton-vouched\", \"fmt\": \"square\"}",
+    "id": 210,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T17:59:19+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"landscape\"}",
+    "id": 211,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:00:22+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"bolton-vouched\", \"fmt\": \"landscape\"}",
+    "id": 212,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:02:57+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"square\"}",
+    "id": 213,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:04:51+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"portrait\"}",
+    "id": 214,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:04:56+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 215,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:06:17+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 216,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:06:32+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"story\"}",
+    "id": 217,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:06:39+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"bolton-vouched\", \"fmt\": \"portrait\"}",
+    "id": 218,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:08:29+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"landscape\"}",
+    "id": 219,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:09:11+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"square\"}",
+    "id": 220,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:10:20+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"landscape\"}",
+    "id": 221,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:12:21+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"booked-in\", \"fmt\": \"portrait\"}",
+    "id": 222,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:15:20+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"film\": \"tidemark\", \"fmt\": \"portrait\"}",
+    "id": 223,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:15:28+00:00"
+   }
+  ],
+  "campaigns": [
+   {
+    "created_at": "2026-10-21T16:35:47+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/masjidone/masjidone-2026-10-21-2fad1a\"}",
+    "id": "masjidone-2026-10-21-2fad1a",
+    "objective": "Introduce MasjidOne to UK masjid committees and drive demo requests",
+    "product": "masjidone",
+    "status": "draft"
+   },
+   {
+    "created_at": "2026-10-21T17:07:58+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/domi/domi-2026-10-21-2268df\"}",
+    "id": "domi-2026-10-21-2268df",
+    "objective": "Introduce Domi to domiciliary eye-care practices and drive demo visits",
+    "product": "domi",
+    "status": "draft"
+   },
+   {
+    "created_at": "2026-10-21T17:10:15+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/tidemark/tidemark-2026-10-21-4844f4\"}",
+    "id": "tidemark-2026-10-21-4844f4",
+    "objective": "Build pre-launch awareness for Tidemark among privacy-minded iPhone users",
+    "product": "tidemark",
+    "status": "draft"
+   },
+   {
+    "created_at": "2026-10-21T17:11:55+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/booked-in/booked-in-2026-10-21-e0ece5\"}",
+    "id": "booked-in-2026-10-21-e0ece5",
+    "objective": "Build pre-launch awareness of Booked In among solo beauty professionals",
+    "product": "booked-in",
+    "status": "draft"
+   }
+  ],
+  "content": [
+   {
+    "body": "{\"text\": \"The office often holds the same family in separate places and can only connect them from memory.\\n\\nMasjidOne is built for that:\\n\\u2022 The madrasah portal holds the masjid's roll, classes, staff and households, with registers and fees configured.\\n\\u2022 When a teacher marks the evening register, the office knows by the next morning which class did not.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-family-known-three-times\", \"feature-madrasah-portal\", \"feature-missed-register-flag\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-22T12:00:00+01:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-22T12:00+01:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "9c89e1fa102a90184b1b1ce013186efc4db886170e32aa25aaa5cd496f219ae5",
+    "id": "cnt_d2494c1512b8",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "masjidone",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"A bathroom scale gives one number a day, and that number can swing with salt, water, sleep or a late meal.\\n\\nTidemark is built for that:\\n\\u2022 Logging opens on your last weight with minus and plus steppers, so most weigh-ins take a tap or two.\\n\\u2022 Reminders never show a number, and the dose reminder doesn't even name the medication.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-scale-swings\", \"feature-quick-logging\", \"feature-discreet-reminders\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-22T13:30:00+01:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"tidemark|2026-10-22T13:30+01:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "9cbd3be91b28fb7a25604a7ce8a06913c4c3a65a6dad0cf4891e8a26d034ec79",
+    "id": "cnt_5bebb6a64f1a",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "tidemark",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Good recommendations in the local WhatsApp group scroll away under hundreds of messages, so the next person has to ask all over again.\\n\\nBolton Vouched is built for that:\\n\\u2022 Gas and boiler listings cannot go live without a Gas Safe check, and driving instructors need a DVSA ADI check.\\n\\u2022 Every trader on Bolton Vouched has agreed to be listed, after reading exactly how they will appear.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-buried-recommendations\", \"feature-gas-safe-required\", \"feature-consent\", \"url-site\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-22T15:00:00+01:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"bolton-vouched|2026-10-22T15:00+01:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "ce0fc9f6ca8febbcb0a3ad2bf3151d9fb560b3459099b4377367c0fae751bc95",
+    "id": "cnt_3e8f4546d76c",
+    "kind": "social_post",
+    "platform": "facebook",
+    "product": "bolton-vouched",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Booking by DM means late-night availability questions, and by the time she replies the client has often gone quiet and the slot stays empty.\\n\\nBooked In is built for that:\\n\\u2022 Treatments that need a patch test cannot be booked by someone who has not had one in time, and the patch-test booking itself becomes the record.\\n\\u2022 She chooses whether clients come to her, she travels to them, or both, and her page and diary adapt to match.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-dm-booking\", \"feature-patch-test\", \"feature-venue-options\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-23T12:00:00+01:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"booked-in|2026-10-23T12:00+01:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "f5cf999ebc94ee72d8a0fd7141a2a245063b2a7b197cefa7f6ef405c6b12159e",
+    "id": "cnt_c065c0b5ad3e",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "booked-in",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Patients on the waiting list who would happily take a freed slot often never hear about it.\\n\\nDomi is built for that:\\n\\u2022 The clinician app works offline, syncing notes and visit updates in order when signal returns.\\n\\u2022 An online referral form replaces callback forms and paper, and accepting a referral creates the patient record and a waiting-list place.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-waiting-list\", \"feature-offline\", \"feature-referral-form\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-23T13:30:00+01:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"domi|2026-10-23T13:30+01:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "ef4064c91d781f1bd0e843d9a801b434c27a953d245f2c8f85ba9d08fb487340",
+    "id": "cnt_a6ec6d2cf743",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "domi",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Feature spotlight \\u2014 MasjidOne\\n\\nThe congregation app brings times, reminders, notices and giving to iOS and Android.\\n\\nMasjidOne runs the madrasah's daily operations \\u2014 the register, the sabaq heard and the fee due \\u2014 in the same system as the congregation side.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-congregation-app\", \"value-madrasah-operations\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-23T15:00:00+01:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-23T15:00+01:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "8f4e2f8e528ff6583c15c2b5c0bf7435662faaa1b13f7c1883f758401310a4ef",
+    "id": "cnt_a737ca197ece",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "masjidone",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Feature spotlight \\u2014 Tidemark\\n\\nThe medication log records what you took and never suggests a dose or a change of dose; Tidemark is a record, not medical advice.\\n\\nThe target line is a guide, not a verdict, and nothing in the app scolds you.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-medication-record\", \"value-guide-not-verdict\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-26T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"tidemark|2026-10-26T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "a2fa20f5b61685770bd3b9f395fb99cf149591e9c4939d771035b134616ebd91",
+    "id": "cnt_bc03636f1d19",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "tidemark",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Feature spotlight \\u2014 Bolton Vouched\\n\\nAsk Bolton lets signed-in residents ask the community for a good tradesperson, with answers that must name a live listing in that trade.\\n\\nPayment never affects ranking: a trader's place in the list will come from reviews only.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-ask-bolton\", \"value-ranking-from-reviews\", \"url-site\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-26T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"bolton-vouched|2026-10-26T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "061daac9bf5fbf3cd3fdc55400d3b98508d3b085d10e201aa9ed45d86c4c051f",
+    "id": "cnt_30ac68f097df",
+    "kind": "social_post",
+    "platform": "facebook",
+    "product": "bolton-vouched",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Feature spotlight \\u2014 Booked In\\n\\nChanges to prices, hours, photographs or days off go live on her page as soon as she saves them.\\n\\nBookings arrive while she is working, so she no longer has to be the bottleneck.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-live-changes\", \"value-not-the-bottleneck\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-26T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"booked-in|2026-10-26T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "6ee4a85a53628a787fa6bbf1dd193812b336708826ea8472ae7445e1e00b7bf1",
+    "id": "cnt_44044ff091b0",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "booked-in",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Feature spotlight \\u2014 Domi\\n\\nRoute planning puts visits that haven't started in the order that drives least, from the clinician's home base and back.\\n\\nPlenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-route-planning\", \"value-act-on-gap\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-27T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"domi|2026-10-27T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "4f72e727e8ddb7607b13899b7c11d6391c47954e8e5f1026ffb38fa6f86597c8",
+    "id": "cnt_b9eb17e93c09",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "domi",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How MasjidOne works:\\n\\n\\u2192 The masjid changes its own jam\\u0101\\u02bfah times, notices, fee rates and access straight away in the portal.\\n\\u2192 Every masjid gets four surfaces: a website, in-masjid screens, a congregation app and a madrasah portal, in its own colours and on its own domain.\\n\\u2192 Prayer-time screens run from one timetable across every screen in the masjid.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-self-service-content\", \"feature-four-surfaces\", \"feature-prayer-screens\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-27T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-27T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "021dbf9fdca924d1ac70d8b0ff19148fe6a16aa95a746c8b57ad29fb365880c7",
+    "id": "cnt_7d1334730d49",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "masjidone",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Tidemark works:\\n\\n\\u2192 The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.\\n\\u2192 When a weigh-in jumps, the Trend tab explains why that is normal.\\n\\u2192 You can export a backup or CSV to wherever you choose, and backups can be locked with a password.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-holt-smoothing\", \"feature-trend-explains\", \"feature-protected-backups\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-27T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"tidemark|2026-10-27T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "c10e6ea960538011d15870a86aa86c6ebd2754b5473adcbd7dc6052d6f3014fe",
+    "id": "cnt_babedf1466f7",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "tidemark",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Bolton Vouched works:\\n\\n\\u2192 Reviews take one screen of taps, can be edited for 14 days and can carry an optional private proof photo or PDF.\\n\\u2192 Traders linked to their listing can reply once to each review.\\n\\u2192 Traders can show whether they are taking on work or booked up until a date, and this never changes the order or a badge.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-review-proof\", \"feature-provider-replies\", \"feature-taking-on-work\", \"url-site\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-28T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"bolton-vouched|2026-10-28T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "71b76b4892303c405d8e4610cac391880002f51ba65d48d446e59e391aec9cc2",
+    "id": "cnt_c47848afdbfb",
+    "kind": "social_post",
+    "platform": "facebook",
+    "product": "bolton-vouched",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Booked In works:\\n\\n\\u2192 Story cards use her own brand: she picks one colour, can add a logo, and can switch between light and dark layouts.\\n\\u2192 The card preview sits inside an Instagram-style frame so she can see what will be covered before she posts.\\n\\u2192 Double booking is prevented at the database level, so two clients cannot take the same slot.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-card-branding\", \"feature-story-preview\", \"feature-no-double-booking\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-28T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"booked-in|2026-10-28T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "ae0426876ff22dc3306df459931e38d19d27a25af9c23ec61ca60675606344d3",
+    "id": "cnt_3bd5583cc0b6",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "booked-in",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Domi works:\\n\\n\\u2192 A phone-first clinician view shows today's round with drive times, patient records, quick notes and an On my way text to the patient.\\n\\u2192 Every visit gets a day-before reminder text, and a CANCEL reply refills that slot a day ahead.\\n\\u2192 Domi reports recovered income and cancellations refilled, plus per-clinician mileage and utilisation downloadable as CSV.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-clinician-app\", \"feature-reminders\", \"feature-income-mileage\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-28T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"domi|2026-10-28T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "d3f2a8ba32b8b66dd4c7052f835e4abee75d6611fb6777c60b8af3c63a3fb271",
+    "id": "cnt_7a6e76fe63a4",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "domi",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Each masjid's data is separated by the database itself, so an administrator only ever reaches their own masjid's records.\\n\\nThe child in an evening register is the same record the congregation side already holds.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"privacy_trust\", \"fact_ids\": [\"privacy-row-level-security\", \"value-one-family-record\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-29T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-29T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "fbd42ffb6a356b42e749d0970aa3112521c424413334f7cf514ab3ea083de2ff",
+    "id": "cnt_6e00b21b6d92",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "masjidone",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Buying Plus sends nothing of yours, and there are no analytics, ads, crash SDKs or accounts.\\n\\nTidemark reads your numbers properly: a trend one odd day can't drag far, an honest weekly rate and a plan to hold it against.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"privacy_trust\", \"fact_ids\": [\"privacy-no-analytics\", \"value-read-numbers-properly\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-29T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"tidemark|2026-10-29T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "f54e785d687f4f156dc3309afcd0ec3d132fb9b545b0a77aa6777fa93ebce5c1",
+    "id": "cnt_5f4fc47d2cdc",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "tidemark",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Traders' phone numbers are never in the page's HTML, so scrapers reading the page find no phone numbers.\\n\\nNobody can pay to move up the list, and that promise is the heart of the product.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"privacy_trust\", \"fact_ids\": [\"privacy-numbers-hidden\", \"value-no-pay-to-rank\", \"url-site\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-29T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"bolton-vouched|2026-10-29T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "44e6db5e5df78b509613f095d1c66abdcb27c11cdd828a3f156bf955c5b203a0",
+    "id": "cnt_e12f5992a120",
+    "kind": "social_post",
+    "platform": "facebook",
+    "product": "bolton-vouched",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Row level security keeps each studio's client list separate from every other studio's.\\n\\nThere is no commission, no marketplace, and nobody else is advertised on her page.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"privacy_trust\", \"fact_ids\": [\"privacy-studio-isolation\", \"value-no-commission\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-30T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"booked-in|2026-10-30T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "d28d2060f0eba12042c4901139fd3a57d5e98996a4ab94ad27698ffbbe8b11e7",
+    "id": "cnt_5a153c2a40d8",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "booked-in",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"From a patient's record, the office can download everything held about them or erase their details on request, in line with UK GDPR.\\n\\nPatients see the practice's own name in every text, on the booking page and on invoices, never Domi's.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"privacy_trust\", \"fact_ids\": [\"privacy-gdpr\", \"value-own-name\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-10-30T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"domi|2026-10-30T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "c0ceb93db43b738bc0a6eeafe5fcb0213d067b3c769fcd72b25b863ec296349d",
+    "id": "cnt_f81d8144c671",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "domi",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Behind the build: MasjidOne\\n\\nMasjidOne is one system that brings together a masjid's madrasah and its congregation.\\nOne thing we cared about: donations carry zero commission and support Gift Aid.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"behind_the_build\", \"fact_ids\": [\"overview-one-system\", \"feature-donations\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-30T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-30T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "68c03b72730e253e7dff3c231e3733cd7be17846070b509aa0ea9e815fb42301",
+    "id": "cnt_a267e9cfe366",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "masjidone",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Behind the build: Tidemark\\n\\nTidemark is an iPhone weight tracker that focuses on your trend rather than the day-to-day swings on the scale.\\nOne thing we cared about: every restore takes a snapshot first, and the snapshot is kept for 30 days in case you need it.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"behind_the_build\", \"fact_ids\": [\"overview-trend-not-noise\", \"feature-undo-and-snapshots\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-02T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"tidemark|2026-11-02T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "368b2cbb46053b039e4a11d4fc6f07e1b0a6fe4c700879bd3e956e5458565ad5",
+    "id": "cnt_60e6b22ae83d",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "tidemark",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Behind the build: Bolton Vouched\\n\\nBolton Vouched gathers the tradespeople that Bolton's WhatsApp group recommends in one place, alongside the checks that have been made on them.\\nOne thing we cared about: price guides show what locals paid for a trade, built only from reviews once that trade has 10 counted reviews.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"behind_the_build\", \"fact_ids\": [\"overview-whatsapp-recommended\", \"feature-price-guides\", \"url-site\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-02T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"bolton-vouched|2026-11-02T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "3b95dddd95f4646750c476f6ebb704ce3b3e2a7e6f6051518942c445f65da51d",
+    "id": "cnt_44d8389f59ef",
+    "kind": "social_post",
+    "platform": "facebook",
+    "product": "bolton-vouched",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Behind the build: Booked In\\n\\nBooked In is a booking page built for solo beauty professionals.\\nOne thing we cared about: the Share tab creates Instagram Story cards from her real diary in a tap, showing only times long enough for the chosen treatment.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"behind_the_build\", \"fact_ids\": [\"overview-booking-page\", \"feature-story-cards\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-02T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"booked-in|2026-11-02T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "062c1f58c0d3e2b4ec707ccbff147fe674c882cd8339b5cc3473a050db5ad3b1",
+    "id": "cnt_172df07d3c29",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "booked-in",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Behind the build: Domi\\n\\nWhen a patient cancels, Domi texts the best-matched person on the waiting list and books the first one who says yes.\\nOne thing we cared about: patients can cancel by texting CANCEL, which starts the refill with no staff involved.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"behind_the_build\", \"fact_ids\": [\"overview-refill\", \"feature-cancel-by-text\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-03T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"domi|2026-11-03T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "56392f5286fa517a201ddbe4a9e6048d45815b4784aaeaa04c8635a204c685f9",
+    "id": "cnt_6740c50f8c4d",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "domi",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Many mas\\u0101jid run their week across several tools that do not talk to each other.\\n\\nMasjidOne is built for that:\\n\\u2022 Donations carry zero commission and support Gift Aid.\\n\\u2022 The masjid changes its own jam\\u0101\\u02bfah times, notices, fee rates and access straight away in the portal.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-disconnected-tools\", \"feature-donations\", \"feature-self-service-content\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-11-03T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-11-03T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "23a7be64191f707896bc1f3d924f4e60a6c281495cced3702ecc8328edfc7ce4",
+    "id": "cnt_b7e74d8d3c27",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "masjidone",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Seeing the number go up on a bad day, even when you are doing everything right, is when many people give up.\\n\\nTidemark is built for that:\\n\\u2022 Every restore takes a snapshot first, and the snapshot is kept for 30 days in case you need it.\\n\\u2022 The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-giving-up\", \"feature-undo-and-snapshots\", \"feature-holt-smoothing\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-03T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"tidemark|2026-11-03T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "3408b2e1c2d3d4c804e2b392ee12eaaa07b878bdb323cb6651531ce76ffea630",
+    "id": "cnt_44f71b3a4bfb",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "tidemark",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Every week someone in the Bolton Tradesmen WhatsApp group asks whether anyone knows a good tradesperson.\\n\\nBolton Vouched is built for that:\\n\\u2022 Residents can leave a review by signing in with Google or a code sent to their email.\\n\\u2022 The trader dashboard shows enquiries this month and all time, and lets traders edit their description and areas or pause their listing.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-anyone-know\", \"feature-reviews\", \"feature-trader-dashboard\", \"url-site\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-04T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"bolton-vouched|2026-11-04T12:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "f3c5e90133bec03aaee7052cc0616116709b02001648f8ebc10cdc052fc0e185",
+    "id": "cnt_51e164327c92",
+    "kind": "social_post",
+    "platform": "facebook",
+    "product": "bolton-vouched",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"The rebooking reminder a studio means to send often never gets sent.\\n\\nBooked In is built for that:\\n\\u2022 Rebooking is off until she switches it on, and it skips clients who already have an appointment or have opted out.\\n\\u2022 A technician working from home is never asked to publish her home address on her page.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-rebooking-forgotten\", \"feature-rebooking-safeguards\", \"feature-home-address-privacy\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-04T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"booked-in|2026-11-04T13:30+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "41b4b20670159da2a5e6c0d245ee7bb4e25c209ffe6ea3cd8e7b2bd232c1c1f9",
+    "id": "cnt_8e76b9571e6b",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "booked-in",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round.\\n\\nDomi is built for that:\\n\\u2022 The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each.\\n\\u2022 New visits are booked where they add the least driving, weighed against how soon the patient needs to be seen.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-cancellations\", \"feature-refill-engine\", \"feature-book-by-road\", \"url-website\"], \"planned_destinations\": [], \"scheduled_for\": \"2026-11-04T15:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"domi|2026-11-04T15:00+00:00\"}",
+    "campaign_id": null,
+    "created_at": "2026-10-21T18:40:02+00:00",
+    "fingerprint": "70a188b2586c9d407474dde6272a00f35a432aaf6e754bd0cd589e4fd08d6782",
+    "id": "cnt_c1d4d9ab9e11",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "domi",
+    "status": "validated",
+    "updated_at": "2026-10-21T18:40:02+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   }
+  ],
+  "costs": [],
+  "publications": [],
+  "runs": [
+   {
+    "finished_at": "2026-10-21T16:46:52+00:00",
+    "idempotency_key": "planner:2026-10-21",
+    "started_at": "2026-10-21T16:46:48+00:00",
+    "status": "ok",
+    "summary": "{\"plan\": \"/home/user/Marketing-Automation-System/var/plans/2026-10-21.json\"}",
+    "workflow": "planner"
+   }
+  ],
+  "sync_state": [
+   {
+    "content_hash": null,
+    "etag": null,
+    "fetched_at": "2026-10-21T16:46:49+00:00",
+    "path": "README.md",
+    "repo": "yameenbux/MasjidOne",
+    "sha": "3ef2c78cde2e2996d41501f31c7f35a650e037c1"
+   },
+   {
+    "content_hash": null,
+    "etag": null,
+    "fetched_at": "2026-10-21T16:46:50+00:00",
+    "path": "README.md",
+    "repo": "yameenbux/audiologydomi",
+    "sha": "f1fdc67c8ccf8564923c654c133faa7cd7f593a8"
+   },
+   {
+    "content_hash": null,
+    "etag": null,
+    "fetched_at": "2026-10-21T16:46:51+00:00",
+    "path": "README.md",
+    "repo": "yameenbux/Peony-Beauty-Platform",
+    "sha": "3a614a05fad6fd96fff1d39e39f98f7c5998daa1"
+   },
+   {
+    "content_hash": null,
+    "etag": null,
+    "fetched_at": "2026-10-21T16:46:52+00:00",
+    "path": "README.md",
+    "repo": "yameenbux/Tidemark-Fitness",
+    "sha": "bf237844d9f692b3c85d91e1cf5fddc924dc5f3f"
+   },
+   {
+    "content_hash": null,
+    "etag": null,
+    "fetched_at": "2026-10-21T16:59:16+00:00",
+    "path": "README.md",
+    "repo": "yameenbux/Boltontradesmen",
+    "sha": "3a20e4f49e84502fc713987a13736a85b766f9f1"
+   }
+  ]
+ }
+}

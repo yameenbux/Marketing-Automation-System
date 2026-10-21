@@ -137,8 +137,9 @@ def approve_profile(ctx: Context, slug: str, approver: str) -> dict:
 def run_publishing(ctx: Context, when: datetime | None = None) -> list[dict]:
     settings = ctx.settings.data
     pub = Publisher(ctx.policy, ctx.store, ctx.root,
-                    metricool_blog_id=settings.get("metricool", {}).get("blog_id"),
-                    reviewer=settings.get("metricool", {}).get("reviewer_email"))
+                    metricool_blog_id=str(settings.get("metricool", {}).get("blog_id") or "") or None,
+                    reviewer=settings.get("metricool", {}).get("reviewer_email"),
+                    media_base=settings.get("media", {}).get("base_url"))
     when = when or (ctx.policy.london_now() + timedelta(days=1)).replace(hour=12, minute=0, second=0, microsecond=0)
     out = []
     for row in ctx.store.q("SELECT id, body FROM content WHERE status='approved' ORDER BY created_at"):

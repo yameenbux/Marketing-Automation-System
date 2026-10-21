@@ -103,3 +103,19 @@ def test_secrets_in_settings_file_rejected(root):
 def test_unregistered_secret_name_rejected():
     with pytest.raises(KeyError):
         Settings.secret("PATH")
+
+
+def test_ops_settings_layer_and_local_override(root):
+    import json as _j
+    (root / "config" / "settings.ops.json").write_text(_j.dumps({"dry_run": False, "live": {"publishing": True}}))
+    s = Settings.load(root)
+    assert s["dry_run"] is False and s["live"]["publishing"] is True
+    (root / "config" / "settings.json").write_text(_j.dumps({"dry_run": True}))
+    assert Settings.load(root)["dry_run"] is True              # local file wins over ops
+
+
+def test_env_dry_run_beats_ops(root, monkeypatch):
+    import json as _j
+    (root / "config" / "settings.ops.json").write_text(_j.dumps({"dry_run": False}))
+    monkeypatch.setenv("MAS_DRY_RUN", "1")
+    assert Settings.load(root)["dry_run"] is True

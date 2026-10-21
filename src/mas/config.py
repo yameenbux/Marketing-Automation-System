@@ -68,6 +68,10 @@ class Settings:
     def load(cls, root: Path | None = None, overrides: dict | None = None) -> "Settings":
         root = Path(root or ROOT)
         data = copy.deepcopy(DEFAULTS)
+        # settings.ops.json (committed: operating mode for scheduled runs) then settings.json (local, gitignored).
+        for ops in [root / "config" / "settings.ops.json"]:
+            if ops.exists():
+                data = _merge(data, json.loads(ops.read_text(encoding="utf-8")))
         path = root / "config" / "settings.json"
         if path.exists():
             loaded = json.loads(path.read_text(encoding="utf-8"))

@@ -42,27 +42,42 @@ def idempotency_key(content_id: str, destination: str, scheduled_for: str) -> st
     return hashlib.sha256(f"{content_id}|{destination}|{scheduled_for}".encode()).hexdigest()[:32]
 
 
-def metricool_payload(text: str, network: str, scheduled_for: str, blog_id: str, reviewer: str,
-                      media_urls: list[str] | None = None) -> dict:
-    info = {
+def metricool_payload(text: str, network: str, scheduled_for: str, blog_id: str, reviewer: str | None,
+                      media_urls: list[str] | None = None, post_type: str = "POST") -> dict:
+    """Exact argument shape for the Metricool connector. Human approval already happened in the approval desk,
+    so the default is a direct scheduled post (`createScheduledPost`); set a reviewer to route it through
+    Metricool's own review flow instead (needs a Metricool plan with team management)."""
+    info: dict = {
         "text": text,
         "providers": [{"network": network}],
         "autoPublish": True,
+        "draft": False,
         "media": media_urls or [],
         "publicationDate": {"dateTime": scheduled_for[:19], "timezone": "Europe/London"},
+        "shortener": False,
+        "firstCommentText": "",
     }
-    return {"tool": "createScheduledPostForReview",
-            "args": {"blogId": blog_id, "date": scheduled_for, "info": json.dumps(info),
-                     "reviewers": reviewer, "approvalSystem": "any"},
-            "note": "Media must be public HTTPS URLs; local render paths are listed in 'local_media' for upload first."}
+    if network == "instagram":
+        info["instagramData"] = {"type": post_type, "showReelOnFeed": True, "isAiGenerated": False}
+    elif network == "facebook":
+        info["facebookData"] = {"type": "POST" if post_type == "POST" else "REEL"}
+    elif network == "linkedin":
+        info["linkedinData"] = {"type": "post", "previewIncluded": True}
+    elif network == "twitter":
+        info["twitterData"] = {"tags": []}
+    args = {"blogId": blog_id, "date": scheduled_for, "info": json.dumps(info)}
+    if reviewer:
+        return {"tool": "createScheduledPostForReview", "args": args | {"reviewers": reviewer, "approvalSystem": "any"}}
+    return {"tool": "createScheduledPost", "args": args}
 
 
 class Publisher:
     def __init__(self, policy: Policy, store: Store, root: Path, metricool_blog_id: str | None = None,
-                 reviewer: str | None = None):
+                 reviewer: str | None = None, media_base: str | None = None):
         self.policy, self.store, self.root = policy, store, root
         self.blog_id = metricool_blog_id
         self.reviewer = reviewer
+        self.media_base = media_base
 
     def schedule(self, content_id: str, destination: str, scheduled_for: str,
                  local_media: list[str] | None = None) -> PublishResult:
@@ -91,9 +106,20 @@ class Publisher:
             self._record(key, content_id, destination, "blocked", scheduled_for, {"reason": decision.reason})
             return PublishResult("blocked", key, decision.reason)
 
-        payload = metricool_payload(item["body"]["text"], network, scheduled_for,
-                                    self.blog_id or "<METRICOOL_BLOG_ID>", self.reviewer or "<REVIEWER_EMAIL>")
+        from .media import public_url, still_for, tag_links
+        body = item["body"]
+        media = body.get("media_urls") or ([public_url(self.media_base, still_for(self.root, item["product"], body.get("pillar")))]
+                                           if self.media_base else [])
+        media = [m for m in media if m]
+        if network == "instagram" and not media:
+            self._record(key, content_id, destination, "blocked", scheduled_for, {"reason": "instagram needs media"})
+            return PublishResult("blocked", key, "Instagram posts need an image or video; none is hosted for this item")
+        text = tag_links(body["text"], network, item["product"], content_id)
+        payload = metricool_payload(text, network, scheduled_for, self.blog_id or "<METRICOOL_BLOG_ID>", self.reviewer,
+                                    media, body.get("post_type", "POST"))
         payload["local_media"] = local_media or []
+        payload["content_id"] = content_id
+        payload["product"] = item["product"]
         payload["idempotency_key"] = key
 
         sub = "metricool" if decision.live else "dry-run"

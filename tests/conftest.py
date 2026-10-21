@@ -66,6 +66,11 @@ def root(tmp_path):
     (pdir / "sources").mkdir(parents=True)
     (pdir / "profile.json").write_text(json.dumps(PROFILE))
     (pdir / "sources" / "README.md").write_text(README)
+    film = tmp_path / "assets" / "acme" / "film"
+    film.mkdir(parents=True)
+    (film / "still_01_hook.jpg").write_bytes(b"jpg")
+    (tmp_path / "config" / "settings.json").write_text(json.dumps(
+        {"media": {"base_url": "https://media.example.test/repo"}, "metricool": {"blog_id": "123"}}))
     return tmp_path
 
 

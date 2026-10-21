@@ -46,6 +46,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--channel", default="email"); p.add_argument("--consent")
     sub.add_parser("report", help="Workflow G: daily report")
     sub.add_parser("tick", help="run whatever is due now (call every 15–30 min)")
+    p = sub.add_parser("ops", help="scheduled runs: morning (plan, calendar, approvals, schedule) / evening (report)")
+    p.add_argument("run", choices=["morning", "evening"]); p.add_argument("--decisions", help="desk decisions JSON")
+    p = sub.add_parser("state", help="persist operational state across sessions"); p.add_argument("op", choices=["export", "import"])
+    p = sub.add_parser("desk", help="approval desk queue / apply decisions"); p.add_argument("op", choices=["queue", "apply"])
+    p.add_argument("--file")
     p = sub.add_parser("kill-switch", help="engage or release the global kill switch")
     p.add_argument("state", choices=["on", "off"]); p.add_argument("--reason", default="manual")
 
@@ -128,6 +133,19 @@ def main(argv: list[str] | None = None) -> int:
         text, path = build(ctx)
         print(text)
         print(f"(saved to {path})")
+    elif a.cmd == "ops":
+        from . import ops
+        _print(ops.morning(ctx, Path(a.decisions) if a.decisions else None) if a.run == "morning" else ops.evening(ctx))
+    elif a.cmd == "state":
+        from . import ops
+        _print(str(ops.export_state(ctx)) if a.op == "export" else ops.import_state(ctx))
+    elif a.cmd == "desk":
+        from . import ops
+        if a.op == "queue":
+            web = ctx.settings.data.get("media", {}).get("repo_web")
+            _print(ops.desk_queue(ctx, web))
+        else:
+            _print(ops.apply_decisions(ctx, json.loads(Path(a.file).read_text())))
     elif a.cmd == "tick":
         from .scheduler import tick
         _print(tick(ctx))
