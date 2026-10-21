@@ -1,0 +1,67 @@
+1
+00:00:00,150 --> 00:00:02,947
+MasjidOne is one system that brings together
+
+2
+00:00:02,947 --> 00:00:05,344
+a masjid's madrasah and its congregation.
+
+3
+00:00:06,240 --> 00:00:08,138
+Many masājid run their week across several
+
+4
+00:00:08,138 --> 00:00:10,037
+tools that do not talk to each
+
+5
+00:00:10,037 --> 00:00:10,308
+other.
+
+6
+00:00:11,210 --> 00:00:13,854
+Every masjid gets four surfaces: a website,
+
+7
+00:00:13,854 --> 00:00:16,498
+in-masjid screens, a congregation app and a
+
+8
+00:00:16,498 --> 00:00:19,142
+madrasah portal, in its own colours and
+
+9
+00:00:19,142 --> 00:00:20,653
+on its own domain.
+
+10
+00:00:21,550 --> 00:00:24,452
+The madrasah portal holds the masjid's roll,
+
+11
+00:00:24,452 --> 00:00:27,355
+classes, staff and households, with registers and
+
+12
+00:00:27,355 --> 00:00:28,184
+fees configured.
+
+13
+00:00:29,080 --> 00:00:31,464
+MasjidOne runs the madrasah's daily operations —
+
+14
+00:00:31,464 --> 00:00:33,848
+the register, the sabaq heard and the
+
+15
+00:00:33,848 --> 00:00:36,232
+fee due — in the same system
+
+16
+00:00:36,232 --> 00:00:37,595
+as the congregation side.
+
+17
+00:00:38,490 --> 00:00:39,888
+Find out more at the link.

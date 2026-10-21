@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      # CI never has live credentials and can never publish or send.
+      MAS_DRY_RUN: "1"
+      MAS_KILL_SWITCH: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: System packages (ffmpeg for media tests, Inter font)
+        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-inter
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Secret scan
+        run: python scripts/scan_secrets.py
+      - name: Tests
+        run: pytest -q
+      - name: Dependency audit
+        run: pip-audit --skip-editable || echo "::warning::pip-audit reported issues"

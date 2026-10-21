@@ -1,0 +1,14 @@
+{
+  "_comment": "Publishing destinations per product, as verified in the capability audit. Only list accounts you control.",
+  "metricool": {
+    "brand_label": "YBTweetss",
+    "blog_id_env_note": "Metricool brand id is not a secret but is kept out of the public repo; set it in config/settings.json under metricool.blog_id",
+    "verified_networks": {"instagram": "masjidone.uk"}
+  },
+  "products": {
+    "masjidone": [{"destination": "metricool:instagram", "account": "masjidone.uk", "verified": true}],
+    "domi": [],
+    "booked-in": [],
+    "tidemark": []
+  }
+}

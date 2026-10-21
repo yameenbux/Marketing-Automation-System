@@ -1,0 +1,295 @@
+{
+  "slug": "tidemark",
+  "name": "Tidemark",
+  "repo": "yameenbux/Tidemark-Fitness",
+  "maker": "YSB Ventures Ltd.",
+  "product_type": "b2c_app",
+  "maturity": "Built and tested; not yet on the App Store (Apple Developer enrolment in review)",
+  "approval": {
+    "status": "draft",
+    "approved_by": null,
+    "approved_at": null
+  },
+  "brand": {
+    "primary_color": "#2A1E45",
+    "secondary_color": "#4B2E73",
+    "accent_color": "#FF6B5E",
+    "tone": "Plain-spoken, calm and candid: it explains what the app does and doesn't do, avoids hype and refuses to scold.",
+    "color_source": {
+      "path": "README.md",
+      "quote": "![Expo](https://img.shields.io/badge/Expo-SDK%2057-2A1E45?style=flat-square&labelColor=2A1E45&color=4B2E73)"
+    }
+  },
+  "facts": [
+    {
+      "id": "overview-trend-not-noise",
+      "kind": "overview",
+      "text": "Tidemark is an iPhone weight tracker that focuses on your trend rather than the day-to-day swings on the scale.",
+      "source": {
+        "path": "README.md",
+        "quote": "**A weight tracker that shows the trend, not the noise.**"
+      }
+    },
+    {
+      "id": "overview-on-your-phone",
+      "kind": "overview",
+      "text": "Your weigh-ins, your trend and your plan live on your phone and nowhere else.",
+      "source": {
+        "path": "README.md",
+        "quote": "Weigh-ins, the trend and your plan, on your phone and nowhere else."
+      }
+    },
+    {
+      "id": "audience-losing-weight",
+      "kind": "audience",
+      "text": "Tidemark is designed for people who are trying to lose weight and want a clearer read on their weigh-ins.",
+      "source": {
+        "path": "README.md",
+        "quote": "what it does for someone trying to lose weight"
+      }
+    },
+    {
+      "id": "audience-medication-users",
+      "kind": "audience",
+      "text": "It also suits people who take a regular medication dose and want a simple record of when they took it.",
+      "source": {
+        "path": "README.md",
+        "quote": "on a dose day, one tap marks the dose taken"
+      }
+    },
+    {
+      "id": "audience-privacy-minded",
+      "kind": "audience",
+      "text": "It is for people who would rather keep their health data on their own device, with no account to create.",
+      "source": {
+        "path": "README.md",
+        "quote": "No account, no server, and nothing leaves the phone unless you send it."
+      }
+    },
+    {
+      "id": "pain-scale-swings",
+      "kind": "pain_point",
+      "text": "A bathroom scale gives one number a day, and that number can swing with salt, water, sleep or a late meal.",
+      "source": {
+        "path": "README.md",
+        "quote": "that number swings by a kilo or more with salt, water, sleep and a late meal"
+      }
+    },
+    {
+      "id": "pain-giving-up",
+      "kind": "pain_point",
+      "text": "Seeing the number go up on a bad day, even when you are doing everything right, is when many people give up.",
+      "source": {
+        "path": "README.md",
+        "quote": "sees it go *up* on a Tuesday and decides it isn't working. That is the day most"
+      }
+    },
+    {
+      "id": "value-read-numbers-properly",
+      "kind": "value_prop",
+      "text": "Tidemark reads your numbers properly: a trend one odd day can't drag far, an honest weekly rate and a plan to hold it against.",
+      "source": {
+        "path": "README.md",
+        "quote": "a trend that one odd day can't drag far, an honest weekly"
+      }
+    },
+    {
+      "id": "value-guide-not-verdict",
+      "kind": "value_prop",
+      "text": "The target line is a guide, not a verdict, and nothing in the app scolds you.",
+      "source": {
+        "path": "README.md",
+        "quote": "**The target line is a guide, not a verdict.** That sentence is the product."
+      }
+    },
+    {
+      "id": "feature-holt-smoothing",
+      "kind": "feature",
+      "text": "The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.",
+      "source": {
+        "path": "README.md",
+        "quote": "rather than trailing a week behind it the way a plain moving average does."
+      }
+    },
+    {
+      "id": "feature-trend-explains",
+      "kind": "feature",
+      "text": "When a weigh-in jumps, the Trend tab explains why that is normal.",
+      "source": {
+        "path": "README.md",
+        "quote": "When a weigh-in jumps, the Trend tab explains why that's normal, and nothing"
+      }
+    },
+    {
+      "id": "feature-quick-logging",
+      "kind": "feature",
+      "text": "Logging opens on your last weight with minus and plus steppers, so most weigh-ins take a tap or two.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Logging opens on your last weight**, with − and + steppers. Most weigh-ins"
+      }
+    },
+    {
+      "id": "feature-discreet-reminders",
+      "kind": "feature",
+      "text": "Reminders never show a number, and the dose reminder doesn't even name the medication.",
+      "source": {
+        "path": "README.md",
+        "quote": "The dose reminder doesn't even name the medication."
+      }
+    },
+    {
+      "id": "feature-medication-record",
+      "kind": "feature",
+      "text": "The medication log records what you took and never suggests a dose or a change of dose; Tidemark is a record, not medical advice.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Tidemark is a record, not medical advice.** The medication log never suggests"
+      }
+    },
+    {
+      "id": "feature-protected-backups",
+      "kind": "feature",
+      "text": "You can export a backup or CSV to wherever you choose, and backups can be locked with a password.",
+      "source": {
+        "path": "README.md",
+        "quote": "A file you choose where to put. Backups can be locked with a password"
+      }
+    },
+    {
+      "id": "feature-undo-and-snapshots",
+      "kind": "feature",
+      "text": "Every restore takes a snapshot first, and the snapshot is kept for 30 days in case you need it.",
+      "source": {
+        "path": "README.md",
+        "quote": "The snapshot taken before the restore is kept for 30 days"
+      }
+    },
+    {
+      "id": "privacy-data-not-collected",
+      "kind": "privacy",
+      "text": "Tidemark treats its 'Data Not Collected' privacy label as a commitment: it holds only while nothing in the app sends data anywhere.",
+      "source": {
+        "path": "README.md",
+        "quote": "**\"Data Not Collected\" is a commitment, not a description.** It stays true"
+      }
+    },
+    {
+      "id": "privacy-no-analytics",
+      "kind": "privacy",
+      "text": "Buying Plus sends nothing of yours, and there are no analytics, ads, crash SDKs or accounts.",
+      "source": {
+        "path": "README.md",
+        "quote": "buying Plus sends nothing of yours; there are no analytics, ads, crash SDKs or accounts"
+      }
+    },
+    {
+      "id": "pricing-free-core",
+      "kind": "pricing",
+      "text": "Tidemark is free to download and the whole core is free; Tidemark Plus adds optional extras.",
+      "source": {
+        "path": "README.md",
+        "quote": "One app, free to download. The whole core is free; **Tidemark Plus** adds the"
+      }
+    },
+    {
+      "id": "pricing-plus-tiers",
+      "kind": "pricing",
+      "text": "Tidemark Plus is £2.99 a month, £19.99 a year or £49.99 once.",
+      "source": {
+        "path": "README.md",
+        "quote": "What's free, what's in Tidemark Plus at £2.99 a month, £19.99 a year or £49.99 once, and what is not built yet"
+      }
+    },
+    {
+      "id": "pricing-launch-offer",
+      "kind": "pricing",
+      "text": "For the first 90 days there is a launch offer: yearly Plus at £11.99 for the first year, then £19.99.",
+      "source": {
+        "path": "README.md",
+        "quote": "yearly at £11.99 for the first year, then £19.99, for the first 90 days"
+      }
+    },
+    {
+      "id": "limitation-not-on-app-store",
+      "kind": "limitation",
+      "text": "Tidemark is built and tested but is not on the App Store yet; the Apple Developer enrolment is in review and the site says 'Coming soon to the App Store'.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Everything in green is built, tested and working. It is not on the App Store"
+      }
+    },
+    {
+      "id": "limitation-unproven-on-device",
+      "kind": "limitation",
+      "text": "Buying and restoring Plus, iOS file encryption while locked and production hardening are written and unit-tested but not yet proven on a device.",
+      "source": {
+        "path": "README.md",
+        "quote": "Plus, iOS file encryption while the phone is locked, and the production"
+      }
+    },
+    {
+      "id": "limitation-health-widgets-backups-untested",
+      "kind": "limitation",
+      "text": "Apple Health sync, widgets and automatic backups are built but have not yet run on a phone, so they should be treated as in development.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Apple Health sync, the widgets and automatic backups are built, and the"
+      }
+    },
+    {
+      "id": "limitation-no-icloud-watch",
+      "kind": "limitation",
+      "text": "iCloud sync and an Apple Watch app are not built and must not be described as features.",
+      "source": {
+        "path": "README.md",
+        "quote": "**iCloud sync and an Apple Watch app are not built.** Don't describe them"
+      }
+    },
+    {
+      "id": "limitation-no-device-sync",
+      "kind": "limitation",
+      "text": "There is no sync between devices; a new phone gets your data from an iPhone backup or a Tidemark backup file.",
+      "source": {
+        "path": "README.md",
+        "quote": "**No sync between devices.** A new phone gets your data from an iPhone backup,"
+      }
+    },
+    {
+      "id": "limitation-data-loss-without-backup",
+      "kind": "limitation",
+      "text": "If you lose the phone without a backup, the data is gone, so the app reminds you to back up.",
+      "source": {
+        "path": "README.md",
+        "quote": "**Lose the phone without a backup and the data is gone.** The app reminds you"
+      }
+    },
+    {
+      "id": "limitation-web-build-not-product",
+      "kind": "limitation",
+      "text": "The web build is the owner's private test tool, not a product, and is not offered to anyone.",
+      "source": {
+        "path": "README.md",
+        "quote": "The web build of the app: the owner's private test tool, not a product."
+      }
+    },
+    {
+      "id": "url-website",
+      "kind": "url",
+      "text": "The Tidemark website at tidemark.ysbdesigns.uk covers what the app does, Free and Plus, support questions and the privacy policy.",
+      "source": {
+        "path": "README.md",
+        "quote": "The website: what Tidemark does, Free and Plus, support questions and the full privacy policy."
+      }
+    },
+    {
+      "id": "url-privacy-policy",
+      "kind": "url",
+      "text": "The privacy policy is published at tidemark.ysbdesigns.uk/privacy.html.",
+      "source": {
+        "path": "README.md",
+        "quote": "privacy.html     the privacy policy, served at /privacy.html"
+      }
+    }
+  ]
+}

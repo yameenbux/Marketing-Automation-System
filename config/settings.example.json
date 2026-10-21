@@ -1,0 +1,32 @@
+{
+  "_comment": "Copy to config/settings.json to override. Live flags default to false and must be switched on by a human.",
+  "timezone": "Europe/London",
+  "operating_hours": {"days": [0, 1, 2, 3, 4], "start": "09:00", "end": "17:00"},
+  "schedule": {"daily_planner": "09:00", "daily_report": "16:30"},
+  "dry_run": true,
+  "kill_switch": false,
+  "integrations": {
+    "github_public": {"enabled": true},
+    "local_render": {"enabled": true},
+    "piper_tts": {"enabled": true},
+    "playwright_screenshots": {"enabled": true, "allowed_hosts": []},
+    "anthropic_llm": {"enabled": false},
+    "metricool_outbox": {"enabled": true},
+    "companies_house": {"enabled": false},
+    "email_sending": {"enabled": false}
+  },
+  "live": {
+    "publishing": false,
+    "outreach_sending": false
+  },
+  "limits": {
+    "monthly_budget_gbp": 50,
+    "monthly_llm_budget_gbp": 5,
+    "max_github_requests_per_run": 120,
+    "max_renders_per_day": 6,
+    "max_posts_per_day": 3,
+    "max_drafts_per_day": 20,
+    "max_outreach_per_day": 0
+  },
+  "github": {"owner": "yameenbux", "max_file_bytes": 400000}
+}

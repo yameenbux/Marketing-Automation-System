@@ -1,0 +1,36 @@
+{
+  "_comment": "Outbound rules per product. Everything defaults to blocked. A human must fill in sender identity, opt-out mechanism and a Legitimate Interests Assessment (LIA) before ANY draft can become eligible. This is not legal advice — check current ICO guidance on PECR and UK GDPR.",
+  "sender": {
+    "legal_name": null,
+    "postal_address": null,
+    "reply_to": null,
+    "opt_out_instructions": null
+  },
+  "research_max_age_days": 180,
+  "products": {
+    "masjidone": {
+      "allowed_channels": ["email"],
+      "lia_documented": false,
+      "lia_reference": null,
+      "note": "Most masājid are unincorporated associations or charitable trusts = INDIVIDUAL subscribers under PECR → no unsolicited email. Only CIOs / charitable companies (corporate subscribers) can be emailed, and only with an LIA if the address names a person."
+    },
+    "domi": {
+      "allowed_channels": ["email"],
+      "lia_documented": false,
+      "lia_reference": null,
+      "note": "Target limited companies running home-visit services. Many domiciliary practitioners are sole traders = individual subscribers → blocked."
+    },
+    "booked-in": {
+      "allowed_channels": [],
+      "lia_documented": false,
+      "lia_reference": null,
+      "note": "Audience is solo beauty professionals — overwhelmingly sole traders (individual subscribers). Organic social only. Also not provisioned for live sign-ups."
+    },
+    "tidemark": {
+      "allowed_channels": [],
+      "lia_documented": false,
+      "lia_reference": null,
+      "note": "Consumer app. No outbound prospecting; organic and App Store only."
+    }
+  }
+}

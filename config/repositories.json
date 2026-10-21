@@ -1,0 +1,160 @@
+{
+  "_comment": "Product repositories. Read-only sources of product knowledge. Discovered 2026-10-21 via the account's repository list; classification from README content \u2014 confirm 'needs_confirmation' entries.",
+  "owner": "yameenbux",
+  "products": [
+    {
+      "slug": "masjidone",
+      "name": "MasjidOne",
+      "owner": "yameenbux",
+      "repo": "MasjidOne",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://masjidone.co.uk",
+      "demo_url": null,
+      "notes": "B2B SaaS for mas\u0101jid/madrasahs. Has pricing and a live website.",
+      "last_successful_sync": "2026-10-21T16:46:49+00:00",
+      "last_synced_commit": "4d76350005336446c6159a78e347d5f303e9cf33"
+    },
+    {
+      "slug": "domi",
+      "name": "Domi",
+      "owner": "yameenbux",
+      "repo": "audiologydomi",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://domi.ysbdesigns.uk",
+      "demo_url": "https://app.domi.ysbdesigns.uk/?brand=domi",
+      "notes": "B2B SaaS for home-visit healthcare. Working demo, no customers yet.",
+      "last_successful_sync": "2026-10-21T16:46:50+00:00",
+      "last_synced_commit": "32080b358fb0bbcce0dcfaeb89382aa340fc3ca4"
+    },
+    {
+      "slug": "booked-in",
+      "name": "Booked In",
+      "owner": "yameenbux",
+      "repo": "Peony-Beauty-Platform",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": null,
+      "demo_url": null,
+      "notes": "Booking page for solo beauty professionals. README: not provisioned (no live email/payments).",
+      "last_successful_sync": "2026-10-21T16:46:51+00:00",
+      "last_synced_commit": "141f36e484e3a9354edb576f3edb9b05b1c5720e"
+    },
+    {
+      "slug": "tidemark",
+      "name": "Tidemark",
+      "owner": "yameenbux",
+      "repo": "Tidemark-Fitness",
+      "default_branch": "main",
+      "category": "saas_product",
+      "enabled": true,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://tidemark.ysbdesigns.uk",
+      "demo_url": null,
+      "notes": "B2C iPhone weight tracker. Not yet on the App Store.",
+      "last_successful_sync": "2026-10-21T16:46:52+00:00",
+      "last_synced_commit": "f9be463f63cb0c87c01cd9fda65273988b780c2b"
+    },
+    {
+      "slug": "bolton-vouched",
+      "name": "Bolton Vouched",
+      "owner": "yameenbux",
+      "repo": "Boltontradesmen",
+      "default_branch": "main",
+      "category": "needs_confirmation",
+      "enabled": false,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": null,
+      "demo_url": null,
+      "notes": "Local tradespeople directory. Confirm whether this is a product you market.",
+      "last_successful_sync": null
+    },
+    {
+      "slug": "ysb-designs",
+      "name": "YSB Designs (agency)",
+      "owner": "yameenbux",
+      "repo": "ysbdesignsportfolio",
+      "default_branch": "main",
+      "category": "agency",
+      "enabled": false,
+      "approved_paths": [
+        "README.md"
+      ],
+      "website": "https://ysbdesigns.uk",
+      "demo_url": null,
+      "notes": "Agency portfolio \u2014 services, not a SaaS. Enable if you want agency marketing.",
+      "last_successful_sync": null
+    }
+  ],
+  "excluded": [
+    {
+      "repo": "Hairbychrissy",
+      "reason": "client project"
+    },
+    {
+      "repo": "DiamondPlumbing",
+      "reason": "client project"
+    },
+    {
+      "repo": "Luxescentuk",
+      "reason": "client project"
+    },
+    {
+      "repo": "aquavape-rebrand",
+      "reason": "client project"
+    },
+    {
+      "repo": "Venetiancompany",
+      "reason": "speculative pitch sample"
+    },
+    {
+      "repo": "BuxTravel",
+      "reason": "client project"
+    },
+    {
+      "repo": "Taiyabah-Mosque-Website-Rebrand",
+      "reason": "charity client project (related to MasjidOne but not the product)"
+    },
+    {
+      "repo": "Taiyabah-Mosque-App",
+      "reason": "charity client project"
+    },
+    {
+      "repo": "Taiyabah-Masjid-HomeSmartScreen",
+      "reason": "charity client project"
+    },
+    {
+      "repo": "Taiyabah-Mosque-Interactive-Screens",
+      "reason": "charity client project"
+    },
+    {
+      "repo": "YameenBux",
+      "reason": "GitHub profile README"
+    },
+    {
+      "repo": "Marketing-Automation-System",
+      "reason": "this repository"
+    },
+    {
+      "repo": "ybhomelab",
+      "reason": "private; not a product"
+    }
+  ]
+}

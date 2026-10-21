@@ -1,0 +1,18 @@
+# UNTESTED in the build environment (no Docker daemon was available). See docs/operations.md.
+# No ports are published: nothing in this system listens on the network.
+services:
+  mas:
+    build: .
+    restart: unless-stopped
+    env_file: .env            # optional; create from .env.example — never commit it
+    environment:
+      TZ: Europe/London
+    volumes:
+      - ./var:/app/var        # SQLite state, audit log, outbox, reports
+      - ./assets:/app/assets  # rendered campaigns
+      - ./models:/app/models  # Piper voice (download per docs/operations.md)
+      - ./config/settings.json:/app/config/settings.json:ro
+    read_only: false
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
