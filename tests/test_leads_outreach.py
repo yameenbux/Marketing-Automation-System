@@ -126,7 +126,29 @@ def test_channel_not_allowed_for_product(ctx):
 def test_missing_sender_identity_blocks(ctx):
     c = cfg()
     c["sender"] = {}
-    assert assess(ctx.store, c, "acme", lead(), "email").rules == ["SENDER_ID"]
+    e = assess(ctx.store, c, "acme", lead(), "email")
+    assert e.status == "blocked" and e.rules[-1] == "SENDER_ID"
+    assert e.lead_status == "eligible" and "CORPORATE_ROLE_ADDR" in e.rules     # per-lead verdict still recorded
+
+
+def test_missing_sender_still_records_pecr_block(ctx):
+    c = cfg()
+    c["sender"] = {}
+    e = assess(ctx.store, c, "acme", lead(subscriber_type="unincorporated"), "email")
+    assert e.status == "blocked" and e.lead_status == "blocked" and "PECR_REG22" in e.rules
+
+
+def test_missing_sender_drafts_but_cannot_approve_or_send(root):
+    c = cfg()
+    c["sender"] = {}
+    (root / "config" / "outreach.json").write_text(json.dumps(c))
+    x = Context.create(root=root, db=":memory:")
+    lid, _ = add_lead(x.store, "acme", lead(), ICP)
+    r = drafts.prepare(x, lid)
+    assert r["status"] == "blocked" and "[SENDER LEGAL NAME]" in r["draft"]
+    with pytest.raises(PermissionError):
+        sender.approve(x, r["outreach_id"], "tester")
+    assert sender.send(x, r["outreach_id"])["sent"] is False
 
 
 def test_stale_research_needs_review(ctx):
@@ -224,3 +246,12 @@ def test_companies_house_maps_legal_form(ctx, monkeypatch):
 def test_companies_house_disabled_by_default(ctx, monkeypatch):
     monkeypatch.setenv("COMPANIES_HOUSE_API_KEY", "test-key-123456")
     assert companies_house.search(ctx.policy, "x", transport=lambda u, h: 1 / 0) == []
+
+
+def test_redraft_over_limit_keeps_existing_draft(root):
+    (root / "config" / "outreach.json").write_text(json.dumps(cfg()))
+    c = Context.create(root=root, db=":memory:", overrides={"limits": {"max_drafts_per_day": 1}})
+    lid, _ = add_lead(c.store, "acme", lead(), ICP)
+    first = drafts.prepare(c, lid)["draft"]
+    again = drafts.prepare(c, lid)                       # over the daily limit
+    assert again["status"] == "blocked" and again["draft"] == first

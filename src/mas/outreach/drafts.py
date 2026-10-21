@@ -25,15 +25,18 @@ def prepare(ctx: Context, lead_id: str, channel: str = "email", consent_record: 
     cfg = load_outreach_config(ctx.root)
     decision = assess(ctx.store, cfg, product, lead, channel, consent_record)
 
-    existing = ctx.store.conn.execute("SELECT id FROM outreach WHERE lead_id=? AND product=? AND channel=?",
+    existing = ctx.store.conn.execute("SELECT id, draft FROM outreach WHERE lead_id=? AND product=? AND channel=?",
                                       (lead_id, product, channel)).fetchone()
     oid = existing["id"] if existing else new_id("out")
 
     draft_text, status = None, decision.status if decision.status != "eligible" else "draft"
-    if decision.status in ("eligible", "manual_review"):
+    # Draft whenever the lead itself passes (or needs review), even if a sender gate blocks sending:
+    # a blocked item can never be approved or sent (sender.approve / sender.send re-check).
+    if decision.status in ("eligible", "manual_review") or decision.lead_status in ("eligible", "manual_review"):
         if ctx.policy.authorize(Action.DRAFT_OUTREACH, "local_render", detail={"lead": lead_id}).allowed:
             draft_text = _compose(ctx, product, lead, cfg)
-        else:
+        else:   # keep any draft already written; a refused re-draft must not destroy earlier work
+            draft_text = existing["draft"] if existing else None
             status, decision.reasons = "blocked", decision.reasons + ["draft limit / kill switch"]
     with ctx.store.tx() as c:
         c.execute("INSERT INTO outreach(id, lead_id, product, channel, status, decision, draft, created_at)"
@@ -43,6 +46,11 @@ def prepare(ctx: Context, lead_id: str, channel: str = "email", consent_record: 
     ctx.store.audit("eligibility", "outreach", "ok", f"{lead.company}: {decision.status}",
                     {"lead": lead_id, "rules": decision.rules})
     return {"outreach_id": oid, "status": status, "decision": decision.as_dict(), "draft": draft_text}
+
+
+def _second_person(reason: str) -> str:
+    """Research notes say 'its website…'; a letter to the organisation says 'your website…'."""
+    return "your " + reason[4:] if reason.lower().startswith("its ") else reason
 
 
 def _compose(ctx: Context, product: str, lead, cfg: dict) -> str:
@@ -56,7 +64,7 @@ def _compose(ctx: Context, product: str, lead, cfg: dict) -> str:
         "",
         "Hello,",
         "",
-        f"I'm getting in touch because {lead.qualification_reason.rstrip('.')}.",
+        f"I'm getting in touch because {_second_person(lead.qualification_reason.rstrip('.'))}.",
         "",
         *([used[0].text, ""] if used else []),
         f"{prof.name} may help:",

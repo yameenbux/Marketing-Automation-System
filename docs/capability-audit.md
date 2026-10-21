@@ -20,7 +20,9 @@ purchased, published, or sent.
 | **ElevenLabs** connector | ⚠️ connected, **credits exhausted** | Models listed; on 21 Oct only 47 credits remained, so narration, music and image jobs were refused |
 | **Canva** connector | ⚠️ connected, **AI credits exhausted** | No brand kits; generate-image returned quota_exceeded |
 | Figma | ⚠️ View seat on Starter | Can read, can't meaningfully create |
-| Exa, Firecrawl, Google Sheets/Drive/Docs, Gmail, Notion, Resend | connected, not exercised | Listed by the connector registry |
+| Google Sheets / Drive | ✅ usable | Private lead sheet created (owner-only permissions verified) |
+| Exa, Firecrawl, Gmail, Notion, Resend | connected, not exercised | Listed by the connector registry |
+| Claude artifacts + claude.ai scheduled tasks | ✅ usable | Approval desk published and its database verified; two weekday runs created (no connectors attached, see integration-gaps) |
 | Docker | ⚠️ client only, no daemon | Dockerfile written but untested |
 
 ## The five status buckets

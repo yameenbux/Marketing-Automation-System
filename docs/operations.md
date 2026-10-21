@@ -105,8 +105,8 @@ Even then, **no sending integration exists**. That needs a separate, explicit de
 | When (Europe/London, weekdays) | What |
 |---|---|
 | Any time | Owner approves/rejects in the **Approval Desk**: https://claude.ai/artifact/SSsMno35am8MSUXCC8R2JY (profiles first, then posts by slot). |
-| 09:07 | Scheduled task *YSB marketing — morning run*: pre-flight (Metricool connector + ArtifactData must be present, else stop with nothing changed) → read desk decisions → `mas ops morning --decisions var/decisions.json` → submit `var/outbox/metricool/*.json` via Metricool `createScheduledPost` → reseed desk queue → commit `state/ops_state.json`. |
-| 16:37 | Scheduled task *YSB marketing — evening report*: `mas ops evening` + read-only Metricool analytics → `reports/daily/YYYY-MM-DD.md`. |
+| 09:00 | Scheduled task *YSB marketing — morning run*: pre-flight (Metricool connector + ArtifactData must be present, else stop with nothing changed) → read desk decisions → `mas ops morning --decisions var/decisions.json` → submit `var/outbox/metricool/*.json` via Metricool `createScheduledPost` → reseed desk queue → commit `state/ops_state.json`. |
+| 16:30 | Scheduled task *YSB marketing — evening report*: `mas ops evening` + read-only Metricool analytics → `reports/daily/YYYY-MM-DD.md`. |
 
 Settings: `config/settings.ops.json` (committed) sets `dry_run: false`, `live.publishing: true`, max 3 posts/day. Outreach sending stays off.
 Stop everything: create `var/KILL_SWITCH` locally, or set `"kill_switch": true` in `config/settings.ops.json` and push — the next run halts. Or disable the scheduled tasks in claude.ai.

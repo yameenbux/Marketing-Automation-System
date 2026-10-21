@@ -37,6 +37,7 @@ class Eligibility:
     reasons: list[str] = field(default_factory=list)
     rules: list[str] = field(default_factory=list)
     checked_at: str = field(default_factory=now_iso)
+    lead_status: str | None = None    # verdict on the lead alone, recorded even when a sender gate blocks
 
     def as_dict(self) -> dict:
         return asdict(self)
@@ -72,12 +73,22 @@ def _assess(store, cfg, product, lead: Lead, channel, consent, today) -> Eligibi
     if channel != "email":
         return Eligibility("blocked", [f"unsupported channel {channel}"], ["UNSUPPORTED"])
 
-    reasons, rules = [], []
+    verdict = _lead_checks(pcfg, cfg, lead, consent, today)
+    verdict.lead_status = verdict.status
     sender = cfg.get("sender", {})
     missing = [k for k in ("legal_name", "postal_address", "reply_to", "opt_out_instructions") if not sender.get(k)]
-    if missing:
-        return Eligibility("blocked", [f"sender identification/opt-out not configured: {missing}"], ["SENDER_ID"])
+    if missing:   # the lead-level verdict is still recorded; nothing can be sent until the sender is identified
+        return Eligibility("blocked", verdict.reasons + [f"sender identification/opt-out not configured: {missing}"],
+                           verdict.rules + ["SENDER_ID"], lead_status=verdict.status)
+    if verdict.status == "eligible":
+        verdict.reasons.append("sender ID and opt-out configured")
+        verdict.rules.append("SENDER_ID_OK")
+    return verdict
 
+
+def _lead_checks(pcfg, cfg, lead: Lead, consent, today) -> Eligibility:
+    """PECR / UK GDPR checks that depend only on the lead (not on sender configuration)."""
+    reasons, rules = [], []
     if not lead.contact_email:
         return Eligibility("blocked", ["no business email address on record"], ["NO_ADDRESS"])
     dom = email_domain(lead.contact_email)
@@ -115,4 +126,4 @@ def _assess(store, cfg, product, lead: Lead, channel, consent, today) -> Eligibi
 
     if "STALE_RESEARCH" in rules:
         return Eligibility("manual_review", reasons, rules)
-    return Eligibility("eligible", reasons + ["sender ID and opt-out configured"], rules + ["SENDER_ID_OK"])
+    return Eligibility("eligible", reasons, rules)
