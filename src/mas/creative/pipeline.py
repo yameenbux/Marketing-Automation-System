@@ -106,6 +106,11 @@ def produce_campaign(ctx: Context, slug: str, objective: str, formats: list[str]
     shots: dict[str, Image.Image] = {}
     urls = product_urls(prof)
     hosts = {u.split("/")[2] for u in urls}
+    from ..github_sync.sync import load_registry
+    reg_entry = next((e for e in load_registry(ctx.root)["products"] if e["slug"] == slug), {})
+    if capture and reg_entry.get("screenshots") is False:
+        capture = False
+        notes.append("screenshots disabled for this product: " + reg_entry.get("screenshots_note", "see registry"))
     if capture and urls and ctx.settings.integration_enabled("playwright_screenshots"):
         try:
             desk = screenshots.capture(ctx.policy, urls[0], out / "source" / "site_desktop.png", hosts,

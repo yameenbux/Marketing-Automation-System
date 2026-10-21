@@ -212,3 +212,105 @@ def test_bolton_vouched_guardrails(text, blocked):
 def test_social_proof_rule_targets_customer_counts(ctx, text, blocked):
     r = validate(text, product=prof(ctx), platform="linkedin", fact_ids=["feat-swap"])
     assert any("social proof" in e for e in r.errors) == blocked, r.errors
+
+
+def _second_product(root):
+    """Add a second synthetic product so the calendar has a portfolio to rotate."""
+    import shutil
+    src, dst = root / "data/products/acme", root / "data/products/beta"
+    shutil.copytree(src, dst)
+    d = json.loads((dst / "profile.json").read_text())
+    d["slug"], d["name"] = "beta", "Beta Rota"
+    (dst / "profile.json").write_text(json.dumps(d))
+    reg = json.loads((root / "config/repositories.json").read_text())
+    reg["products"].append(dict(reg["products"][0], slug="beta", name="Beta Rota", repo="beta"))
+    (root / "config/repositories.json").write_text(json.dumps(reg))
+    ch = json.loads((root / "config/channels.json").read_text())
+    ch["products"]["beta"] = []
+    ch["primary_platform"] = {"acme": "instagram", "beta": "linkedin"}
+    (root / "config/channels.json").write_text(json.dumps(ch))
+
+
+def test_calendar_rotates_whole_portfolio(root):
+    from datetime import date
+    from mas.context import Context
+    from mas.marketing.calendar import build_calendar
+    _second_product(root)
+    c = Context.create(root=root, db=":memory:", overrides={"limits": {"max_posts_per_day": 2}})
+    cal = build_calendar(c, date(2026, 11, 2), weeks=1)          # Monday
+    slots = cal["slots"]
+    assert len(slots) == 10                                      # 5 weekdays × 2
+    assert {s["date"] for s in slots} == {f"2026-11-0{d}" for d in range(2, 7)}   # no weekend
+    for d in {s["date"] for s in slots}:
+        assert len({s["product"] for s in slots if s["date"] == d}) == 2          # one post per product per day
+    assert {s["product"] for s in slots} == {"acme", "beta"}
+    beta = [s for s in slots if s["product"] == "beta"]
+    assert all(s["platform"] == "linkedin" and s["publish_route"].startswith("draft-only") for s in beta)
+    assert all(s["status"] in ("validated", "duplicate of existing draft") for s in slots), slots
+    acme_items = [c.store.get_content(s["content_id"]) for s in slots if s["product"] == "acme"]
+    assert acme_items[0]["body"]["scheduled_for"].startswith("2026-11-02T12:00")
+    assert len({i["body"]["pillar"] for i in acme_items}) >= 3   # pillars rotate
+
+
+def test_calendar_slot_time_used_when_publishing(root):
+    from datetime import date
+    from mas.context import Context
+    from mas.marketing.calendar import build_calendar
+    c = Context.create(root=root, db=":memory:")
+    approve_profile(c, "acme", "tester")
+    cal = build_calendar(c, date(2026, 11, 2), weeks=1)
+    cid = cal["slots"][0]["content_id"]
+    approve_content(c, cid, "tester")
+    r = [x for x in run_publishing(c) if x["content_id"] == cid][0]
+    row = c.store.q("SELECT scheduled_for FROM publications WHERE idempotency_key=?", (r["key"],))[0]
+    assert row["scheduled_for"].startswith("2026-11-02T12:00")
+
+
+@pytest.mark.parametrize("text", ["Track your Mounjaro dose", "Perfect for Wegovy users", "GLP-1 tracker"])
+def test_tidemark_blocks_prescription_medicine_names(text):
+    import re
+    from mas.marketing.validator import GUARDRAILS
+    assert any(re.search(p, text.lower(), re.I) for p, _ in GUARDRAILS["tidemark"])
+
+
+@pytest.mark.parametrize("text,blocked", [
+    ("Domi texts the best-matched person on the waiting list.", False),
+    ("The best scheduling app for opticians.", True),
+    ("The only weight tracker that shows the trend.", True),
+    ("A uniquely simple booking page.", True),
+])
+def test_superlative_and_exclusivity_rules(ctx, text, blocked):
+    r = validate(text, product=prof(ctx), platform="linkedin", fact_ids=["feat-swap"])
+    hit = any(("superlative" in e or "exclusivity" in e) for e in r.errors)
+    assert hit == blocked, r.errors
+
+
+def test_excluded_fact_never_used_even_when_avoid_exhausts_kind(ctx):
+    p = prof(ctx)
+    all_overview = {f.id for f in p.by_kind("overview")}
+    d = TemplateWriter().social_post(p, "instagram", "behind_the_build", avoid=all_overview, exclude={"overview"})
+    assert d is None or "overview" not in d.fact_ids
+
+
+def test_calendar_rerun_is_idempotent(root):
+    from datetime import date
+    from mas.context import Context
+    from mas.marketing.calendar import build_calendar
+    c = Context.create(root=root, db=":memory:")
+    a = build_calendar(c, date(2026, 11, 2), weeks=1)
+    n = c.store.q("SELECT COUNT(*) n FROM content")[0]["n"]
+    b = build_calendar(c, date(2026, 11, 2), weeks=1)
+    assert c.store.q("SELECT COUNT(*) n FROM content")[0]["n"] == n
+    assert [s["content_id"] for s in a["slots"]] == [s["content_id"] for s in b["slots"]]
+
+
+@pytest.mark.parametrize("sentence,expected", [
+    ("Plenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes.",
+     "Domi acts on the gap by finding who fits it, asking them by text and booking the first yes"),
+    ("A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round.",
+     "A cancellation costs a home-visit practice more than a clinic"),
+    ("Staff swap shifts from their phone.", "Staff swap shifts from their phone"),
+])
+def test_headline_keeps_the_point(sentence, expected):
+    from mas.marketing.writer import _headline
+    assert _headline(sentence) == expected

@@ -69,9 +69,12 @@ def run_production(ctx: Context, plan: dict | None = None) -> list[dict]:
             if not action.startswith(("produce_post:", "draft_only:")):
                 continue
             pillar = action.split(":", 1)[1]
-            platforms = [d.split(":", 1)[1] for d in pp["destinations"]] or ["linkedin"]
+            primary = json.loads((ctx.root / "config" / "channels.json").read_text()).get("primary_platform", {})
+            platforms = [d.split(":", 1)[1] for d in pp["destinations"]] or [primary.get(pp["slug"], "linkedin")]
             for platform in platforms:
-                draft = writer.social_post(prof, platform, pillar, avoid=set(pp["avoid_fact_ids"]))
+                from .marketing.validator import guardrail_blocked_facts
+                draft = writer.social_post(prof, platform, pillar, avoid=set(pp["avoid_fact_ids"]),
+                                           exclude=guardrail_blocked_facts(prof))
                 if draft is None:
                     out.append({"product": pp["slug"], "pillar": pillar, "status": "skipped (not enough facts)"})
                     continue
@@ -139,7 +142,9 @@ def run_publishing(ctx: Context, when: datetime | None = None) -> list[dict]:
     when = when or (ctx.policy.london_now() + timedelta(days=1)).replace(hour=12, minute=0, second=0, microsecond=0)
     out = []
     for row in ctx.store.q("SELECT id, body FROM content WHERE status='approved' ORDER BY created_at"):
-        for dest in json.loads(row["body"]).get("planned_destinations", []):
-            r = pub.schedule(row["id"], dest, when.isoformat(timespec="seconds"))
+        body = json.loads(row["body"])
+        slot_time = body.get("scheduled_for") or when.isoformat(timespec="seconds")   # calendar slot wins
+        for dest in body.get("planned_destinations", []):
+            r = pub.schedule(row["id"], dest, slot_time)
             out.append({"content_id": row["id"], "destination": dest, **r.__dict__})
     return out

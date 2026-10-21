@@ -1,0 +1,91 @@
+{
+  "product": "tidemark",
+  "researched_at": "2026-10-21",
+  "method": "WebSearch/WebFetch of public pages",
+  "status": "research — re-verify before any public comparative claim (CAP Code 3.33–3.44)",
+  "notes": "Prices are from UK App Store pages (GBP) unless stated; App Store privacy labels are developer-declared and the pages note Apple has not verified them. Individual developer names deliberately not recorded.",
+  "competitors": [
+    {
+      "name": "Happy Scale",
+      "url": "https://apps.apple.com/gb/app/happy-scale/id532430574",
+      "category": "direct",
+      "what_they_offer": "An iPhone weight tracker whose listing says it 'uses sophisticated math to learn the true trend of your progress', with moving-average options to smooth day-to-day fluctuations. Developer: Front Pocket Software LLC.",
+      "pricing": "Free with in-app purchases (UK): Deluxe £1.99/month, Deluxe £11.49/year (free trial listed), Premium or Deluxe Lifetime £39.99; optional tips £0.99–£9.99",
+      "sources": ["https://apps.apple.com/gb/app/happy-scale/id532430574"],
+      "overlap": "Same core idea: a smoothed trend instead of the raw daily number, free core with a paid tier including a one-off lifetime option.",
+      "gap_vs_tidemark": "Account requirement not mentioned on its page. Its privacy label lists 'Data Not Linked to You' (purchases, user content, user ID, usage data, diagnostics), not 'Data Not Collected'. A medication/dose log is not mentioned on its page."
+    },
+    {
+      "name": "Libra Weight Manager",
+      "url": "https://apps.apple.com/gb/app/libra-weight-manager/id1644353761",
+      "category": "direct",
+      "what_they_offer": "A weight tracker with an interactive chart; release notes mention optional trend values for body composition and a forecast line to a goal date. The listing mentions syncing across devices via 'Libra Cloud'.",
+      "pricing": "Free with in-app purchases (UK): Pro £1.99/month, Pro £17.99/year",
+      "sources": ["https://apps.apple.com/gb/app/libra-weight-manager/id1644353761"],
+      "overlap": "Trend-focused weight tracking with goal forecasting, free core plus paid Pro.",
+      "gap_vs_tidemark": "Its smoothing method is not described on the page. Its privacy label lists Data Linked to You (health & fitness, email, name, user ID, user content, sensitive info) and it describes a cloud sync service; whether sign-in is mandatory is not stated on the page."
+    },
+    {
+      "name": "Weightics: Weight Trend",
+      "url": "https://apps.apple.com/gb/app/weightics-weight-trend/id6748548319",
+      "category": "direct",
+      "what_they_offer": "A weight tracker that combines readings into 'a smoothed trend' (from the third weigh-in), with a user-selectable Smooth / Balanced / Responsive trend setting. The listing says 'No ads, no account' and that it stores measurements on the iPhone.",
+      "pricing": "Free with in-app purchases (UK): Premium Annual £29.99; other Premium items £4.99 and £59.99 (page says monthly, annual or lifetime options exist but does not label which price is which)",
+      "sources": ["https://apps.apple.com/gb/app/weightics-weight-trend/id6748548319"],
+      "overlap": "Very close: smoothed trend, no account, on-device storage, freemium with lifetime option. Closest positioning overlap found.",
+      "gap_vs_tidemark": "Privacy label is 'Data Not Linked to You' (purchase history, user ID for analytics and app functionality) rather than 'Data Not Collected'; listing names RevenueCat for purchases. Medication/dose log and password-protected backups are not mentioned on its page."
+    },
+    {
+      "name": "Insightful Weight",
+      "url": "https://apps.apple.com/gb/app/insightful-weight/id6753638635",
+      "category": "direct",
+      "what_they_offer": "Reads weight entries from Apple Health and charts trend analysis with predictions and confidence intervals computed on the iPhone. The listing says it has 'no servers, no accounts, and no tracking' and runs offline.",
+      "pricing": "Free (no in-app purchases mentioned on the page)",
+      "sources": ["https://apps.apple.com/gb/app/insightful-weight/id6753638635"],
+      "overlap": "Same privacy stance (privacy label 'Data Not Collected', no account, no server) and trend focus.",
+      "gap_vs_tidemark": "Appears to depend on Apple Health as the data source; its own logging, backups/export and a medication log are not mentioned on its page. Smoothing method not named."
+    },
+    {
+      "name": "MacroFactor",
+      "url": "https://apps.apple.com/gb/app/macrofactor-macro-tracker/id1553503471",
+      "category": "partial",
+      "what_they_offer": "A macro tracker and nutrition coach (Stronger By Science Technologies LLC) whose listing includes a 'Weight Trend insight that cuts through the noise of daily fluctuations' alongside food logging and adaptive calorie targets.",
+      "pricing": "Subscription only, 7-day free trial, no free tier. US listing: $11.99/month, $47.99/half year, $71.99/year. UK IAPs include monthly £8.49–£10.99, semiannual £41.99, annual £62.99",
+      "sources": [
+        "https://apps.apple.com/gb/app/macrofactor-macro-tracker/id1553503471"
+      ],
+      "overlap": "Trend weight as the headline number rather than the daily scale reading.",
+      "gap_vs_tidemark": "Paid-only with no free tier per its listing. Privacy label lists Data Linked to You including health & fitness, email, name and user ID, some for analytics and marketing. Weight trend is one feature inside a nutrition-tracking app."
+    },
+    {
+      "name": "Withings app",
+      "url": "https://apps.apple.com/gb/app/withings/id542701020",
+      "category": "partial",
+      "what_they_offer": "Companion app for Withings scales and devices covering weight, body composition, activity, sleep and blood pressure; the listing describes a body composition view with a status after each weigh-in and older notes mention BodyPath goal-trajectory updates.",
+      "pricing": "Free; Withings+ £9.99/month or £99.99/year; ECG cardiologist review £59.99 (UK in-app purchases)",
+      "sources": ["https://apps.apple.com/gb/app/withings/id542701020"],
+      "overlap": "Weight history and progress-over-time views for people weighing regularly.",
+      "gap_vs_tidemark": "Trend smoothing is not described on its page. The page implies an account/profile; privacy label lists Data Linked to You including health, name, email, user ID and precise location. Oriented to Withings hardware."
+    },
+    {
+      "name": "Apple Health (built-in)",
+      "url": "https://www.apple.com/uk/health/",
+      "category": "substitute",
+      "what_they_offer": "Built into iPhone; Apple says it 'provides interactive charts and advanced trend analysis' and that health data is stored on the device, with iCloud-synced Health data encrypted (end to end with two-factor authentication).",
+      "pricing": "Included with iPhone (no price stated on the fetched pages)",
+      "sources": [
+        "https://www.apple.com/uk/health/",
+        "https://support.apple.com/en-gb/104997"
+      ],
+      "overlap": "Free, already on the phone, strong privacy messaging; many users will log weight here by default.",
+      "gap_vs_tidemark": "Neither fetched Apple page mentions a smoothed weight trend line, a weekly rate or a weight plan; body weight is not specifically discussed on those pages."
+    }
+  ],
+  "positioning_takeaways": [
+    "'Trend not noise' is not unique: Happy Scale, Weightics, Insightful Weight and MacroFactor all advertise smoothing out daily fluctuations on their listings, so messaging should lean on how the trend is explained (why a jump is normal, guide-not-verdict tone) rather than on having a trend at all.",
+    "No-account, on-device positioning is shared by at least Weightics and Insightful Weight; of the listings fetched, only Insightful Weight showed 'Data Not Collected'. Tidemark could appear in a small group with that label, but claims like 'the only' would not be supported.",
+    "Pricing context (UK listings): Happy Scale £11.49/year or £39.99 lifetime, Libra £17.99/year, Weightics £29.99/year, MacroFactor £62.99/year. Tidemark Plus at £19.99/year / £49.99 once sits mid-range; lifetime is above Happy Scale's £39.99.",
+    "None of the fetched competitor listings mentioned a medication/dose log with discreet reminders, or password-protected backups with restore snapshots; these may be the clearest differentiators, worded as 'not mentioned by the apps we checked'.",
+    "Apple Health is the default substitute and markets privacy strongly; position Tidemark as reading the numbers (trend, weekly rate, plan) rather than as more private than Apple Health."
+  ]
+}

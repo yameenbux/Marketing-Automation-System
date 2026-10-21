@@ -21,6 +21,8 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("sync", help="sync approved docs from public product repos"); p.add_argument("--product")
     p = sub.add_parser("plan", help="Workflow A: daily plan"); p.add_argument("--force", action="store_true")
     sub.add_parser("produce", help="Workflow B+C: write and validate today's planned posts")
+    p = sub.add_parser("calendar", help="portfolio content calendar for all products (validated drafts)")
+    p.add_argument("--weeks", type=int, default=2); p.add_argument("--start", help="YYYY-MM-DD (default tomorrow)")
     p = sub.add_parser("campaign", help="Workflow B: full creative pack (video, graphics, copy)")
     p.add_argument("product"); p.add_argument("--objective", required=True)
     p.add_argument("--formats", default="story,square,landscape"); p.add_argument("--no-narration", action="store_true")
@@ -64,6 +66,11 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "produce":
         from .workflows import run_production
         _print(run_production(ctx))
+    elif a.cmd == "calendar":
+        from datetime import date
+        from .marketing.calendar import build_calendar, render_markdown
+        cal = build_calendar(ctx, date.fromisoformat(a.start) if a.start else None, a.weeks)
+        print(render_markdown(cal))
     elif a.cmd == "campaign":
         from .creative.pipeline import produce_campaign
         r = produce_campaign(ctx, a.product, a.objective, a.formats.split(","), narration=not a.no_narration,

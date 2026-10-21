@@ -1,5 +1,5 @@
 {
-  "_comment": "Product repositories. Read-only sources of product knowledge. Discovered 2026-10-21 via the account's repository list; classification from README content \u2014 confirm 'needs_confirmation' entries.",
+  "_comment": "Product repositories. Read-only sources of product knowledge. Discovered 2026-10-21 via the account's repository list; classification from README content — confirm 'needs_confirmation' entries.",
   "owner": "yameenbux",
   "products": [
     {
@@ -15,7 +15,7 @@
       ],
       "website": "https://masjidone.co.uk",
       "demo_url": null,
-      "notes": "B2B SaaS for mas\u0101jid/madrasahs. Has pricing and a live website.",
+      "notes": "B2B SaaS for masājid/madrasahs. Has pricing and a live website.",
       "last_successful_sync": "2026-10-21T16:46:49+00:00",
       "last_synced_commit": "4d76350005336446c6159a78e347d5f303e9cf33"
     },
@@ -85,7 +85,9 @@
       "demo_url": null,
       "notes": "Local tradespeople directory for Bolton (confirmed in scope by owner 2026-10-21).",
       "last_successful_sync": "2026-10-21T16:59:16+00:00",
-      "last_synced_commit": "68434942f3bc46ce0cabd720f85cedbeb5db17bb"
+      "last_synced_commit": "68434942f3bc46ce0cabd720f85cedbeb5db17bb",
+      "screenshots": false,
+      "screenshots_note": "Live listings show real tradespeople's names and numbers; they consented to a listing, not to appearing in ads."
     },
     {
       "slug": "ysb-designs",
@@ -100,7 +102,7 @@
       ],
       "website": "https://ysbdesigns.uk",
       "demo_url": null,
-      "notes": "Agency portfolio \u2014 services, not a SaaS. Enable if you want agency marketing.",
+      "notes": "Agency portfolio — services, not a SaaS. Enable if you want agency marketing.",
       "last_successful_sync": null
     }
   ],

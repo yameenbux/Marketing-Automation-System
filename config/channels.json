@@ -19,5 +19,13 @@
     "booked-in": [],
     "tidemark": [],
     "bolton-vouched": []
+  },
+  "_primary_platform_note": "Where each product's audience is; used for drafts even when no account is connected yet.",
+  "primary_platform": {
+    "masjidone": "instagram",
+    "domi": "linkedin",
+    "booked-in": "instagram",
+    "tidemark": "instagram",
+    "bolton-vouched": "facebook"
   }
 }

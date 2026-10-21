@@ -147,9 +147,9 @@ KIND_TITLES = [("overview", "Overview"), ("audience", "Target audience"), ("pain
                ("url", "Links"), ("cta", "Calls to action"), ("limitation", "Known limitations — never market these as done")]
 
 
-def render_markdown(p: Profile) -> str:
+def render_markdown(p: Profile, root: Path | None = None) -> str:
     """Human-readable profile for review/approval. Generated — edit profile.json, not this file."""
-    d = p.data
+    d = dict(p.data, _root=str(root or "."))
     lines = [f"# {p.name}", "",
              f"> Generated from `profile.json` — edit that, not this file. Source: `{d.get('repo')}` README.",
              "", f"- **Maker:** {d.get('maker') or 'not stated'}  ",
@@ -169,5 +169,18 @@ def render_markdown(p: Profile) -> str:
             mark = "" if f.status == "verified" else f" **[{f.status.upper()}]**"
             lines.append(f"- {f.text}{mark}  \n  <sub>`{f.id}` — “{f.quote[:140]}{'…' if len(f.quote) > 140 else ''}”</sub>")
         lines.append("")
-    lines += ["## Competitors", "", "_Not yet researched. Add only from permitted sources with citations._", ""]
+    comp_path = Path(d.get("_root", ".")) / "data" / "products" / p.slug / "competitors.json"
+    lines += ["## Competitors", ""]
+    if comp_path.exists():
+        c = json.loads(comp_path.read_text(encoding="utf-8"))
+        lines += [f"_{c.get('status', 'research')} — researched {c.get('researched_at')} via {c.get('method')}._", ""]
+        for comp in c.get("competitors", []):
+            src = ", ".join(comp.get("sources", [])[:2])
+            lines.append(f"- **{comp.get('name')}** ({comp.get('category')}) — {comp.get('what_they_offer')} "
+                         f"Pricing: {comp.get('pricing') or 'not published'}. <sub>{src}</sub>")
+        if c.get("positioning_takeaways"):
+            lines += ["", "**Positioning takeaways (hypotheses):**"] + [f"- {t}" for t in c["positioning_takeaways"]]
+        lines.append("")
+    else:
+        lines += ["_Not yet researched. Add only from permitted sources with citations._", ""]
     return "\n".join(lines)

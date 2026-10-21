@@ -1,0 +1,89 @@
+{
+  "product": "booked-in",
+  "researched_at": "2026-10-21",
+  "method": "WebSearch/WebFetch of public pages",
+  "status": "research — re-verify before any public comparative claim (CAP Code 3.33–3.44)",
+  "competitors": [
+    {
+      "name": "Fresha",
+      "url": "https://www.fresha.com",
+      "category": "direct",
+      "what_they_offer": "Booking and business software for salons and independents, with a consumer marketplace where clients search for nearby venues. Has an 'Independent' plan for one bookable team member.",
+      "pricing": "Fetched page displayed USD (likely geo-served; UK GBP prices not confirmed): Independent $19.95/month (one bookable team member); Team $14.95 per team member/month. Direct, Instagram and Facebook booking links free. Marketplace new clients: 20% one-time commission, minimum $6 per client; no fee on returning clients. Online card payments 2.79% + $0.20. Paid add-ons listed separately.",
+      "sources": [
+        "https://www.fresha.com/pricing",
+        "https://fresha.com/lp/en/bt/beauty-salons"
+      ],
+      "overlap": "Free booking links for Instagram bio; aimed partly at solo professionals; online booking and diary.",
+      "gap_vs_booked_in": "Runs a marketplace with a commission on new marketplace clients. Whether other businesses appear on an individual pro's booking page is not mentioned on the pages fetched (consumer search is location-based). Patch-test enforcement not mentioned on the pages fetched."
+    },
+    {
+      "name": "Booksy",
+      "url": "https://biz.booksy.com/en-gb",
+      "category": "direct",
+      "what_they_offer": "Booking app and business software for beauty and barber professionals, with a client-facing marketplace and an optional 'Boost' promotion feature.",
+      "pricing": "£40/month (all features), 7-day free trial, extra team members £5/month each. Boost: free to turn on, one-time 30% fee (minimum £5) on a Boost client's first visit; marketplace bookings free when Boost is off. Mobile Payments 1.29% + 20p; Tap to Pay 0.99% + 20p. 500 SMS marketing messages/month included, then 5p each. Prices subject to VAT.",
+      "sources": [
+        "https://biz.booksy.com/en-gb/pricing"
+      ],
+      "overlap": "Same target trades (lash, nail, brow, barbers); client self-booking; UK GBP pricing.",
+      "gap_vs_booked_in": "Monthly fee is higher than Booked In's stated £10 Pro; optional marketplace commission via Boost. Whether competitors are shown on a pro's own page is not mentioned on the page fetched."
+    },
+    {
+      "name": "Treatwell",
+      "url": "https://www.treatwell.co.uk/partners/",
+      "category": "direct",
+      "what_they_offer": "Hair and beauty marketplace plus salon software (diary, Treatwell Pay, AI Receptionist). Describes itself as partnered with over 150,000 salons across Europe, with half a million customers searching daily.",
+      "pricing": "Monthly fee referenced but amount not stated on the pages fetched (null for subscription). Plans: Freelancer and Advanced. 35% commission on first bookings from new marketplace clients ('subject to location'); 0% on repeat bookings; no commission on direct bookings (calls, texts, WhatsApp, own social 'Book Now' buttons). Online prepayments 2.5% + VAT.",
+      "sources": [
+        "https://www.treatwell.co.uk/partners/pricing/",
+        "https://www.treatwell.co.uk/partners/"
+      ],
+      "overlap": "Has a 'Freelancer' plan aimed at independents; social 'Book Now' links commission-free.",
+      "gap_vs_booked_in": "Marketplace-led model with the highest first-booking commission seen in this research (35%). Whether other venues appear on a partner's page is not mentioned on the pages fetched."
+    },
+    {
+      "name": "Square Appointments",
+      "url": "https://squareup.com/gb/en/appointments",
+      "category": "partial",
+      "what_they_offer": "Appointment booking and payments software from Square, with free and paid plans per location.",
+      "pricing": "Free £0 (single location); Plus £29/month per location; Premium £69/month per location. In-person card 1.75% (Free) / 1.6% (Plus, Premium); online UK cards 1.4% + 25p. No booking commission listed on the page fetched.",
+      "sources": [
+        "https://squareup.com/gb/en/appointments/pricing"
+      ],
+      "overlap": "Free plan for a single-location solo pro; no marketplace commission listed.",
+      "gap_vs_booked_in": "General-purpose rather than beauty-specific; Instagram Story cards and patch-test gating not mentioned on the page fetched."
+    },
+    {
+      "name": "Setmore",
+      "url": "https://www.setmore.com",
+      "category": "substitute",
+      "what_they_offer": "General appointment scheduling with a branded booking page and app, free plan for up to 4 users.",
+      "pricing": "Prices shown in USD. Free $0 (up to 4 users; excludes SMS reminders, deposits, removing Setmore branding). Pro shown as $5 per user/month billed annually, but the page also shows conflicting figures ('$12 and $5 user / month', '$125 user/month') — re-verify. No commission or transaction fees mentioned on the page fetched.",
+      "sources": [
+        "https://www.setmore.com/pricing"
+      ],
+      "overlap": "Free branded booking page usable as an Instagram bio link; no marketplace.",
+      "gap_vs_booked_in": "Generic, not beauty-specific; patch-test records and Story cards not mentioned on the page fetched."
+    },
+    {
+      "name": "Acuity Scheduling",
+      "url": "https://acuityscheduling.com",
+      "category": "substitute",
+      "what_they_offer": "Online appointment scheduling software with calendar-based plans and integrations with payment providers.",
+      "pricing": "USD, excluding taxes: Starter $16/month annual or $20/month monthly (1 calendar); Standard $27/$34 (up to 6); Premium $55/$69 (up to 36). 7-day free trial. No commission mentioned; payments via Stripe, Square, PayPal or Venmo (their fees not stated).",
+      "sources": [
+        "https://acuityscheduling.com/pricing"
+      ],
+      "overlap": "Single-calendar plan suits a solo pro; no marketplace.",
+      "gap_vs_booked_in": "No free plan seen and no GBP pricing on the page fetched; beauty-specific features not mentioned on the page fetched."
+    }
+  ],
+  "positioning_takeaways": [
+    "The three beauty-marketplace players fetched all charge a one-time commission on new marketplace clients (Fresha 20% min $6 [USD page], Booksy Boost 30% min £5, Treatwell 35% 'subject to location'), while each says direct/social-link bookings carry no commission. So 'no commission' alone is not unique for Instagram-link bookings; the clearer difference is that Booked In has no marketplace at all.",
+    "We could not confirm from fetched pages whether Fresha, Booksy or Treatwell show other businesses on a pro's own booking page — the 'nobody else advertised on her page' contrast must not be stated as a fact about any named competitor until verified on live profile pages.",
+    "On price, Booked In's stated £10/month Pro sits below Booksy's published £40/month and Square's £29 Plus, but Square has a £0 plan and Setmore a $0 plan — avoid 'cheapest' claims; 'simple flat price, no commission' is safer.",
+    "None of the pages fetched mention patch-test enforcement or Instagram Story card generation from the diary; these are candidate differentiators but absence on a pricing page is not proof the feature is missing — hedge as 'not something we saw advertised'.",
+    "Fresha and Setmore pages were served in USD and Treatwell's subscription fee was not published on the pages fetched; re-check UK GBP figures before any comparative pricing claim (CAP Code 3.33–3.44)."
+  ]
+}

@@ -57,6 +57,7 @@ The machine must be on and online at those times. Nothing listens on the network
 ```bash
 mas profile masjidone                  # read every fact; edit data/products/masjidone/profile.json if wrong
 mas approve-profile masjidone --by "Yameen"
+mas calendar --weeks 2                 # plan the next fortnight across all products
 mas content --status validated         # list drafts that passed validation
 mas show <content_id>
 mas approve <content_id> --by "Yameen" # re-validates at approval time

@@ -13,13 +13,14 @@ from .writer import PLATFORM_LIMITS
 # Claims we can't substantiate for any product without evidence we don't have.
 UNSUBSTANTIATED = [
     (r"#\s?1\b|\bnumber one\b", "ranking claim"),
-    (r"\b(?:the )?best\b|\bleading\b|\bworld[- ]class\b|\bunrivalled\b", "superlative"),
+    (r"\b(?:the )?best\b(?![- ]matched)|\bleading\b|\bworld[- ]class\b|\bunrivalled\b", "superlative"),
     (r"\bguarantee[ds]?\b", "guarantee"),
     (r"\btrusted by\b|\bused by\b|\bloved by\b|\b(?:hundreds|thousands|millions|dozens) of (?:happy |satisfied )?"
      r"(?:customers|users|clients|businesses|traders|tradespeople|people|families|masjids|mas\u0101jid|masajid|"
      r"practices|salons|downloads|reviews|members|residents)\b", "social proof without customers"),
     (r"\btestimonial\b|[\"“][^\"”]{10,}[\"”]\s*[—–-]\s*[A-Z]", "testimonial"),
     (r"\baward[- ]winning\b", "award claim"),
+    (r"\bthe only\b|\bunique(?:ly)?\b|\bfirst (?:ever|of its kind)\b|\bunlike (?:any|other)\b", "exclusivity claim (competitor research shows overlap)"),
     (r"\b100\s?%", "absolute percentage"),
     (r"\blose weight\b|\bweight[- ]loss results?\b|\bburn fat\b|\bcure\b|\bclinically\b", "health outcome claim"),
     (r"\bGDPR[- ]compliant\b|\bfully compliant\b|\bNHS[- ]approved\b", "compliance/endorsement claim"),
@@ -27,7 +28,9 @@ UNSUBSTANTIATED = [
 
 # Product guardrails from each profile's limitations. Phrases that would imply something unbuilt/unlaunched.
 GUARDRAILS: dict[str, list[tuple[str, str]]] = {
-    "tidemark": [(r"\bavailable (?:now )?on the app store\b|\bdownload (?:it )?(?:now|today)\b", "not yet on the App Store"),
+    "tidemark": [(r"\b(?:mounjaro|wegovy|ozempic|saxenda|semaglutide|tirzepatide|liraglutide|orlistat|glp-?1)\b",
+                  "never name or promote prescription-only medicines (Human Medicines Regs / CAP Code s.12)"),
+                 (r"\bavailable (?:now )?on the app store\b|\bdownload (?:it )?(?:now|today)\b", "not yet on the App Store"),
                  (r"\bicloud sync\b|\bapple watch\b", "not built"),
                  (r"\bapple health\b|\bwidgets?\b|\bautomatic backups?\b", "in development — say so explicitly")],
     "booked-in": [(r"\bdeposits?\b|\bcustom domains?\b|\breschedul", "not built"),
@@ -150,3 +153,14 @@ def validate(text: str, *, product: Profile, platform: str, fact_ids: list[str],
     if not product.approved:
         r.warnings.append("product profile not yet human-approved — content cannot be approved until it is")
     return r
+
+
+def guardrail_blocked_facts(product: Profile) -> set[str]:
+    """Verified facts whose own wording trips a product guardrail or claim rule — the writer should skip them."""
+    blocked = set()
+    for f in product.facts:
+        text = f.text.lower()
+        if any(re.search(p, text, re.I) for p, _ in GUARDRAILS.get(product.slug, [])) or \
+                any(re.search(p, f.text, re.I) for p, _ in UNSUBSTANTIATED):
+            blocked.add(f.id)
+    return blocked

@@ -75,10 +75,13 @@ class TemplateWriter:
     """Facts-only copywriter. `avoid` holds fact IDs used recently, to reduce repetition."""
 
     def social_post(self, p: Profile, platform: str, pillar: str, avoid: set[str] = frozenset(),
-                    offset: int = 0) -> Draft | None:
-        pains, feats = p.by_kind("pain_point"), p.by_kind("feature")
-        values, privacy = p.by_kind("value_prop"), p.by_kind("privacy")
-        overview = p.by_kind("overview")
+                    offset: int = 0, exclude: set[str] = frozenset()) -> Draft | None:
+        """`avoid` is a soft preference (recently used); `exclude` is hard (never cite these facts)."""
+        def k(kind: str) -> list[Fact]:
+            return [f for f in p.by_kind(kind) if f.id not in exclude]
+        pains, feats = k("pain_point"), k("feature")
+        values, privacy = k("value_prop"), k("privacy")
+        overview = k("overview")
         used: list[Fact] = []
         lines: list[str] = []
 
@@ -188,13 +191,17 @@ class TemplateWriter:
         return Draft(p.slug, "blog_outline", "blog", "education", "\n".join(lines), ids + cta_ids)
 
 
-def _headline(sentence: str, max_words: int = 9) -> str:
+def _headline(sentence: str, max_words: int = 20) -> str:
+    """Short sentences stay whole. Long ones keep their main clause; for 'Plenty of X do A; we do B'
+    contrasts the second clause is the point, so that one is used."""
     whole = sentence.strip().rstrip(".")
-    if len(whole.split()) <= 14:
-        return whole                       # short enough: never cut a sentence into a fragment
-    s = re.split(r"[,;:—–]| so | because | which ", whole, maxsplit=1)[0]
-    if s.lower().startswith(("when ", "if ", "because ", "while ", "once ")):
-        s = whole                          # a subordinate clause alone is a fragment
+    if len(whole.split()) <= max_words:
+        return whole
+    clauses = [c.strip() for c in re.split(r";|\s[—–]\s|, because |, so |, which ", whole) if c.strip()]
+    setup = re.match(r"(?i)(plenty of|most|many|other|unlike|while|whereas)\b", clauses[0])
+    s = clauses[1] if setup and len(clauses) > 1 else clauses[0]
+    if s.lower().startswith(("when ", "if ", "because ", "once ")) and len(clauses) > 1:
+        s = whole
     words = s.split()
     return " ".join(words[:max_words]) + ("…" if len(words) > max_words else "")
 

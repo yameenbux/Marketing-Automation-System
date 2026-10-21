@@ -36,6 +36,7 @@ sending integration at all.
 | `github_sync/` | product knowledge sync | REST API → raw + ls-remote fallback; ETag cache, pagination, retries, rate limits, per-run request budget; docs-only allowlist; path-traversal-proof |
 | `products/profile.py` | source of truth | facts carry quotes; status verified / stale / invalid / unverifiable |
 | `marketing/planner.py` | **strategist** | readiness score is evidence-based and explained |
+| `marketing/calendar.py` | **strategist (scheduling)** | portfolio calendar: round-robin across all products, idempotent slots, guardrail-blocked facts excluded |
 | `marketing/writer.py` | **content writer** | deterministic, facts-only; posts, video scripts, emails, blog outlines |
 | `marketing/validator.py` | **QA** | unsupported numbers, superlatives, social proof, health/compliance claims, per-product guardrails from limitations, link hosts, platform limits, UK spelling |
 | `creative/` | **creative director + video producer** | brand tokens with WCAG contrast, graphics, kinetic-type video, captions, SRT, logo sting, storyboard sheet, QC |

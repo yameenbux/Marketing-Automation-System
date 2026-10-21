@@ -1,0 +1,75 @@
+{
+  "product": "masjidone",
+  "researched_at": "2026-10-21",
+  "method": "WebSearch/WebFetch of public pages",
+  "status": "research — re-verify before any public comparative claim (CAP Code 3.33–3.44)",
+  "competitors": [
+    {
+      "name": "IBEAMS (IBEUK)",
+      "url": "https://ibeuk.org/",
+      "category": "partial",
+      "what_they_offer": "Cloud management system for maktabs, madrasahs and Islamic private schools covering attendance, fees (outstanding balances, reminders), a parent portal showing attendance, invoices and communications, and student records.",
+      "pricing": "Published in GBP per month: Basic £15 (up to 50 students), Standard £30 (up to 150), Enterprise £60 (unlimited); unlimited teachers, email support, no set-up fee. Add-ons include Student Diary £10/month, phone & Telegram support £10/month, remove ads £5/month.",
+      "sources": ["https://ibeuk.org/", "https://ibeuk.org/pricing/"],
+      "overlap": "Madrasah side: registers/attendance, fees, parent access.",
+      "gap_vs_masjidone": "Prayer times, congregation app, masjid website, hall screens and donations are not mentioned on the pages fetched. Phone support is a paid add-on (£10/month) per its pricing page."
+    },
+    {
+      "name": "Teach 'n Go",
+      "url": "https://www.teachngo.com/solutions/islamic-school-software",
+      "category": "partial",
+      "what_they_offer": "General class-management platform with an Islamic school/Qur'an programme page: per-session attendance, invoices/receipts and fee tracking, a parent and learner portal, recurring evening/weekend scheduling, announcements, mobile app, 24 languages including Arabic.",
+      "pricing": null,
+      "sources": ["https://www.teachngo.com/solutions/islamic-school-software"],
+      "overlap": "Madrasah side: registers, fees, parent access, family communications.",
+      "gap_vs_masjidone": "Prayer times, donations and mosque/congregation apps are not mentioned on the page fetched; it is a general education tool rather than masjid-specific. Pricing not shown on that page (14-day free trial advertised)."
+    },
+    {
+      "name": "Masjidbox",
+      "url": "https://www.masjidbox.com/",
+      "category": "direct",
+      "what_they_offer": "Suite of mosque products: Screens (digital signage with prayer times, countdown, announcements, donation campaigns), branded Applications, web Pages with custom domain, Donations, widgets, social visuals and calendars, plus a worshipper app (Masjidbox One).",
+      "pricing": "Published in EUR per month: Screens Free €0 / Silver €29; Applications Free €0 / Silver €29; Pages Free €0 / Silver €15; Global plan (all three) €62. Donations listed as free with a '0% platform fee' (Stripe/bank transfer fees may apply). Annual billing advertised as '1 month free'.",
+      "sources": ["https://www.masjidbox.com/", "https://www.masjidbox.com/pricing", "https://masjidbox.com/donations", "https://masjidbox.com/changelog/gift-aid-auto-claim-is-now-live-for-every-uk-mosque-2026-06-03"],
+      "overlap": "Congregation side almost entirely: prayer-time screens, congregation app, website on own domain, donations with 0% platform fee, UK Gift Aid (monthly reports; changelog dated 3 June 2026 says automatic HMRC Gift Aid claiming is live for eligible UK mosques).",
+      "gap_vs_masjidone": "Madrasah management (registers, fees, parent access, one family record) is not mentioned on the pages fetched. UK presence beyond UK customers/Gift Aid is not stated; pricing is in EUR."
+    },
+    {
+      "name": "MosqueApp Ltd",
+      "url": "https://mosqueapp.co.uk/",
+      "category": "direct",
+      "what_they_offer": "UK company (High Wycombe) building custom-branded iOS/Android apps for mosques with prayer times, Adhan and push notifications, donations (Sadaqah, Zakat, appeals) and live streaming; also offers app-synced display screens and mosque websites.",
+      "pricing": "Figures not published. Site states no subscription fees: a one-off build cost plus a small annual hosting and maintenance fee; quote/demo required.",
+      "sources": ["https://mosqueapp.co.uk/"],
+      "overlap": "Congregation app, prayer times, notices/notifications, donations, display screens, website; UK-based team.",
+      "gap_vs_masjidone": "A 'Madrassa Module' is described as a future feature, so madrasah registers, fees and parent access are not available per the page fetched. Gift Aid and commission terms not mentioned on the page fetched."
+    },
+    {
+      "name": "MAWAQIT",
+      "url": "https://mawaqit.net/en/",
+      "category": "substitute",
+      "what_they_offer": "Non-profit, open-source prayer-time platform; its app lists mosque-set Salah and iqamah timetables, Azan notifications, Qibla, Hijri calendar, mosque search and donation options, with admins able to manage Iqama, Ramadan and Eid schedules.",
+      "pricing": "App listing states '100% Free and without any Ads, no subscription needed'.",
+      "sources": ["https://apps.apple.com/us/app/-/id1460522683", "https://mawaqit.net/en/"],
+      "overlap": "Prayer times, congregation app notifications, some donation options.",
+      "gap_vs_masjidone": "Madrasah management, branded website and Gift Aid are not mentioned on the pages fetched. (Mosque display screens were referenced in search snippets but not confirmed on a fetched page.) Free pricing makes it a strong substitute for the prayer-times part."
+    },
+    {
+      "name": "easyDonate",
+      "url": "https://easydonate.uk/",
+      "category": "substitute",
+      "what_they_offer": "UK donation platform for charities and organisations: in-person donation kiosks, online donations and Gift Aid (Standard and Small Donations Scheme) with HMRC-ready reports.",
+      "pricing": "No figures published on the homepage; it states 'We don't work on any percentages or commission, you keep all the donations you make.'",
+      "sources": ["https://easydonate.uk/"],
+      "overlap": "Donations with no commission and Gift Aid.",
+      "gap_vs_masjidone": "Madrasah management, prayer times, congregation app, website and screens are not mentioned on the page fetched; it is not mosque-specific."
+    }
+  ],
+  "positioning_takeaways": [
+    "On the pages fetched, no competitor appeared to combine madrasah management (registers, fees, parent access) with congregation tools; madrasah tools (IBEAMS, Teach 'n Go) and congregation tools (Masjidbox, MosqueApp, MAWAQIT) appear to sit in separate products — this supports the 'one system / one family record' message, but must be re-verified before any comparative claim.",
+    "'0% commission and Gift Aid' is unlikely to be a differentiator on its own: Masjidbox advertises a 0% platform fee and automatic UK Gift Aid claiming, and easyDonate says it takes no commission. Lead with integration, not fee.",
+    "Price anchors are low on single-purpose tools: IBEAMS starts at £15/month with no set-up fee, Masjidbox has free tiers, MAWAQIT is free. MasjidOne's £499 setup fee will need justifying by the joined-up madrasah + congregation value and direct UK support.",
+    "MosqueApp Ltd is the closest UK-based like-for-like on the congregation side and lists a madrasah module as a future feature — MasjidOne's window to claim 'built madrasah portal' is real but may narrow; also avoid promoting parent access as done until its status is confirmed.",
+    "Support model may differentiate: IBEAMS charges £10/month for phone support, whereas MasjidOne's profile states masājid speak directly to the team who wrote the system — usable as a hedged, non-comparative claim about MasjidOne itself."
+  ]
+}
