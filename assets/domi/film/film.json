@@ -1,0 +1,211 @@
+{
+  "slug": "domi",
+  "name": "Domi",
+  "scenes": [
+    {
+      "role": "hook",
+      "on_screen": "Domi",
+      "narration": "Domi is a diary for home-visit healthcare that refills itself when patients cancel.",
+      "fact_id": "tagline",
+      "start": 0.0,
+      "dur": 6.15,
+      "lead": 0.9,
+      "captions": [
+        [
+          0.9,
+          3.070172769230769,
+          "Domi is a diary for home-visit"
+        ],
+        [
+          3.070172769230769,
+          5.240345538461539,
+          "healthcare that refills itself when patients"
+        ],
+        [
+          5.240345538461539,
+          5.602041000000001,
+          "cancel."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/domi/film/audio/vo_01.wav"
+    },
+    {
+      "role": "problem",
+      "on_screen": "A cancellation costs a home-visit practice more than a clinic",
+      "narration": "A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round.",
+      "fact_id": "pain-cancellations",
+      "start": 6.15,
+      "dur": 9.6,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.1491461379310346,
+          "A cancellation costs a home-visit practice"
+        ],
+        [
+          2.1491461379310346,
+          3.9482922758620695,
+          "more than a clinic, because the"
+        ],
+        [
+          3.9482922758620695,
+          5.747438413793104,
+          "clinician is already on the road"
+        ],
+        [
+          5.747438413793104,
+          7.546584551724139,
+          "and the gap is too short"
+        ],
+        [
+          7.546584551724139,
+          9.045873,
+          "to fill by ringing round."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/domi/film/audio/vo_02.wav"
+    },
+    {
+      "role": "feature",
+      "on_screen": "The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each",
+      "narration": "The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each.",
+      "fact_id": "feature-refill-engine",
+      "start": 15.75,
+      "dur": 8.18,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.5338368,
+          "The refill engine ranks candidates by"
+        ],
+        [
+          2.5338368,
+          4.7176735999999995,
+          "clinical priority, locality, days waiting and"
+        ],
+        [
+          4.7176735999999995,
+          6.901510399999999,
+          "preferred clinician, and shows the reasons"
+        ],
+        [
+          6.901510399999999,
+          7.629455999999999,
+          "for each."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/domi/film/audio/vo_03.wav",
+      "shot": "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop_s2.png"
+    },
+    {
+      "role": "feature",
+      "on_screen": "Patients can cancel by texting CANCEL, which starts the refill with no staff involved",
+      "narration": "Patients can cancel by texting CANCEL, which starts the refill with no staff involved.",
+      "fact_id": "feature-cancel-by-text",
+      "start": 23.93,
+      "dur": 5.89,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.489552857142857,
+          "Patients can cancel by texting CANCEL,"
+        ],
+        [
+          2.489552857142857,
+          4.629105714285713,
+          "which starts the refill with no"
+        ],
+        [
+          4.629105714285713,
+          5.342289999999999,
+          "staff involved."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/domi/film/audio/vo_04.wav",
+      "shot": "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop_s4.png"
+    },
+    {
+      "role": "value",
+      "on_screen": "Domi acts on the gap by finding who fits it, asking them by text and booking the first yes",
+      "narration": "Plenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes.",
+      "fact_id": "value-act-on-gap",
+      "start": 29.82,
+      "dur": 7.88,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          2.0246230400000003,
+          "Plenty of systems keep a diary;"
+        ],
+        [
+          2.0246230400000003,
+          3.6992460800000004,
+          "Domi acts on the gap by"
+        ],
+        [
+          3.6992460800000004,
+          5.37386912,
+          "finding who fits it, asking them"
+        ],
+        [
+          5.37386912,
+          7.04849216,
+          "by text and booking the first"
+        ],
+        [
+          7.04849216,
+          7.327596000000001,
+          "yes."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/domi/film/audio/vo_05.wav"
+    },
+    {
+      "role": "cta",
+      "on_screen": "https://domi.ysbdesigns.uk",
+      "narration": "Find out more at the link.",
+      "fact_id": "url-website",
+      "start": 37.7,
+      "dur": 3.2,
+      "lead": 0.35,
+      "captions": [
+        [
+          0.35,
+          1.8709069999999999,
+          "Find out more at the link."
+        ]
+      ],
+      "audio": "/home/user/Marketing-Automation-System/assets/domi/film/audio/vo_06.wav"
+    }
+  ],
+  "total": 40.9,
+  "assets": {
+    "hero": "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop.png",
+    "sections": [
+      "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop_s1.png",
+      "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop_s2.png",
+      "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop_s3.png",
+      "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop_s4.png",
+      "file:///home/user/Marketing-Automation-System/assets/domi/film/source/desktop_s5.png"
+    ],
+    "mobile": "file:///home/user/Marketing-Automation-System/assets/domi/film/source/mobile.png"
+  },
+  "fact_ids": [
+    "tagline",
+    "pain-cancellations",
+    "feature-refill-engine",
+    "feature-cancel-by-text",
+    "value-act-on-gap",
+    "url-website"
+  ],
+  "voice": {
+    "model": "en_GB-alba-medium.onnx",
+    "speaker": null,
+    "rate": 1.0,
+    "credit": "Piper 'alba' voice \u2014 dataset CC BY 4.0, University of Edinburgh"
+  }
+}
