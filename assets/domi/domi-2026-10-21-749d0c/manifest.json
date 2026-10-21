@@ -1,0 +1,53 @@
+{
+  "campaign_id": "domi-2026-10-21-749d0c",
+  "product": "domi",
+  "objective": "awareness: introduce the product to its target audience with verified facts",
+  "created_at": "2026-10-21T19:00:22+00:00",
+  "input_hash": "93731d88e7b7bc97e0ea9b27ff6c08f6587489fe0d0723474f5b67fbd6ab5d4d",
+  "profile_commit": "32080b358fb0bbcce0dcfaeb89382aa340fc3ca4",
+  "qc_ok": true,
+  "status": "draft \u2014 unpublished, awaiting human review",
+  "fact_ids": [
+    "tagline",
+    "pain-cancellations",
+    "feature-refill-engine",
+    "feature-cancel-by-text",
+    "value-act-on-gap",
+    "url-website"
+  ],
+  "files": [
+    "video_story.mp4",
+    "captions_story.srt",
+    "video_square.mp4",
+    "captions_square.srt",
+    "video_landscape.mp4",
+    "captions_landscape.srt",
+    "motion_logo_sting.mp4",
+    "storyboard.png",
+    "thumbnail.jpg",
+    "card_portrait.jpg",
+    "card_square.jpg",
+    "card_story.jpg",
+    "carousel_1.jpg",
+    "carousel_2.jpg",
+    "carousel_3.jpg",
+    "brief.md",
+    "script.md",
+    "script.json",
+    "storyboard.md",
+    "prompts.md",
+    "copy.md",
+    "qc.json",
+    "LICENCES.md"
+  ],
+  "content_ids": [
+    "cnt_6178a390407b",
+    "cnt_38b276936459",
+    "cnt_89473f14a6c3"
+  ],
+  "notes": [
+    "screenshots captured from https://domi.ysbdesigns.uk \u2014 page sections are not matched to claims; review that visuals fit the narration"
+  ],
+  "cost_gbp": 0.0,
+  "cost_note": "local rendering and local TTS \u2014 no paid APIs used"
+}

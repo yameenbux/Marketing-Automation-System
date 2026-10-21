@@ -1,0 +1,47 @@
+{
+  "scenes": [
+    {
+      "role": "hook",
+      "fact_id": "tagline",
+      "on_screen": "Domi",
+      "narration": "Domi is a diary for home-visit healthcare that refills itself when patients cancel.",
+      "seconds": 5.0
+    },
+    {
+      "role": "problem",
+      "fact_id": "pain-cancellations",
+      "on_screen": "A cancellation costs a home-visit practice more than a clinic",
+      "narration": "A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-refill-engine",
+      "on_screen": "The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each",
+      "narration": "The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-cancel-by-text",
+      "on_screen": "Patients can cancel by texting CANCEL, which starts the refill with no staff involved",
+      "narration": "Patients can cancel by texting CANCEL, which starts the refill with no staff involved.",
+      "seconds": 5.0
+    },
+    {
+      "role": "value",
+      "fact_id": "value-act-on-gap",
+      "on_screen": "Domi acts on the gap by finding who fits it, asking them by text and booking the first yes",
+      "narration": "Plenty of systems keep a diary; Domi acts on the gap by finding who fits it, asking them by text and booking the first yes.",
+      "seconds": 5.0
+    },
+    {
+      "role": "cta",
+      "fact_id": "url-website",
+      "on_screen": "https://domi.ysbdesigns.uk",
+      "narration": "Find out more at the link.",
+      "seconds": 5.0
+    }
+  ],
+  "target_seconds": 30
+}

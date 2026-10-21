@@ -1,0 +1,59 @@
+1
+00:00:00,150 --> 00:00:02,369
+Booked In is a booking page built
+
+2
+00:00:02,369 --> 00:00:03,637
+for solo beauty professionals.
+
+3
+00:00:04,540 --> 00:00:06,746
+Booking by DM means late-night availability questions,
+
+4
+00:00:06,746 --> 00:00:08,952
+and by the time she replies the
+
+5
+00:00:08,952 --> 00:00:11,157
+client has often gone quiet and the
+
+6
+00:00:11,157 --> 00:00:12,103
+slot stays empty.
+
+7
+00:00:13,000 --> 00:00:15,093
+Changes to prices, hours, photographs or days
+
+8
+00:00:15,093 --> 00:00:17,187
+off go live on her page as
+
+9
+00:00:17,187 --> 00:00:18,682
+soon as she saves them.
+
+10
+00:00:19,580 --> 00:00:21,695
+Double booking is prevented at the database
+
+11
+00:00:21,695 --> 00:00:23,810
+level, so two clients cannot take the
+
+12
+00:00:23,810 --> 00:00:24,414
+same slot.
+
+13
+00:00:25,310 --> 00:00:27,814
+There is no commission, no marketplace, and
+
+14
+00:00:27,814 --> 00:00:30,318
+nobody else is advertised on her page.
+
+15
+00:00:31,220 --> 00:00:32,722
+Find out more about Booked In.

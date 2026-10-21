@@ -1,0 +1,47 @@
+{
+  "scenes": [
+    {
+      "role": "hook",
+      "fact_id": "overview-booking-page",
+      "on_screen": "Booked In",
+      "narration": "Booked In is a booking page built for solo beauty professionals.",
+      "seconds": 5.0
+    },
+    {
+      "role": "problem",
+      "fact_id": "pain-dm-booking",
+      "on_screen": "Booking by DM means late-night availability questions",
+      "narration": "Booking by DM means late-night availability questions, and by the time she replies the client has often gone quiet and the slot stays empty.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-live-changes",
+      "on_screen": "Changes to prices, hours, photographs or days off go live on her page as soon as she saves them",
+      "narration": "Changes to prices, hours, photographs or days off go live on her page as soon as she saves them.",
+      "seconds": 5.0
+    },
+    {
+      "role": "feature",
+      "fact_id": "feature-no-double-booking",
+      "on_screen": "Double booking is prevented at the database level, so two clients cannot take the same slot",
+      "narration": "Double booking is prevented at the database level, so two clients cannot take the same slot.",
+      "seconds": 5.0
+    },
+    {
+      "role": "value",
+      "fact_id": "value-no-commission",
+      "on_screen": "There is no commission, no marketplace, and nobody else is advertised on her page",
+      "narration": "There is no commission, no marketplace, and nobody else is advertised on her page.",
+      "seconds": 5.0
+    },
+    {
+      "role": "cta",
+      "fact_id": null,
+      "on_screen": "Find out more about Booked In.",
+      "narration": "Find out more about Booked In.",
+      "seconds": 5.0
+    }
+  ],
+  "target_seconds": 30
+}

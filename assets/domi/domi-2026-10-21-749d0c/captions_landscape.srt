@@ -1,0 +1,67 @@
+1
+00:00:00,150 --> 00:00:02,547
+Domi is a diary for home-visit healthcare
+
+2
+00:00:02,547 --> 00:00:04,601
+that refills itself when patients cancel.
+
+3
+00:00:05,500 --> 00:00:07,536
+A cancellation costs a home-visit practice more
+
+4
+00:00:07,536 --> 00:00:09,571
+than a clinic, because the clinician is
+
+5
+00:00:09,571 --> 00:00:11,607
+already on the road and the gap
+
+6
+00:00:11,607 --> 00:00:13,643
+is too short to fill by ringing
+
+7
+00:00:13,643 --> 00:00:13,933
+round.
+
+8
+00:00:14,830 --> 00:00:17,428
+The refill engine ranks candidates by clinical
+
+9
+00:00:17,428 --> 00:00:20,026
+priority, locality, days waiting and preferred clinician,
+
+10
+00:00:20,026 --> 00:00:22,253
+and shows the reasons for each.
+
+11
+00:00:23,150 --> 00:00:25,521
+Patients can cancel by texting CANCEL, which
+
+12
+00:00:25,521 --> 00:00:27,891
+starts the refill with no staff involved.
+
+13
+00:00:28,790 --> 00:00:30,768
+Plenty of systems keep a diary; Domi
+
+14
+00:00:30,768 --> 00:00:32,745
+acts on the gap by finding who
+
+15
+00:00:32,745 --> 00:00:34,723
+fits it, asking them by text and
+
+16
+00:00:34,723 --> 00:00:35,853
+booking the first yes.
+
+17
+00:00:36,750 --> 00:00:38,113
+Find out more at the link.
