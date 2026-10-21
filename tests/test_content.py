@@ -328,3 +328,9 @@ def test_headline_never_ends_mid_clause():
     h = _headline("Booking by DM means late-night availability questions, and by the time she replies the client has "
                   "often gone quiet and the slot stays empty.")
     assert h == "Booking by DM means late-night availability questions"
+
+
+def test_headline_splits_compound_sentences():
+    from mas.marketing.writer import _headline
+    assert _headline("A bathroom scale gives one number a day, and that number can swing with salt, water, sleep or "
+                     "a late meal.") == "A bathroom scale gives one number a day"
