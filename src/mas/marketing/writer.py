@@ -24,6 +24,7 @@ HASHTAGS = {
     "domi": ["#domiciliary", "#homevisits", "#eyecare", "#healthtech"],
     "booked-in": ["#beautybusiness", "#lashtech", "#bookingpage", "#solobusiness"],
     "tidemark": ["#weighttracker", "#privacyfirst", "#iphoneapp"],
+    "bolton-vouched": ["#Bolton", "#BoltonTrades", "#LocalTrades", "#SupportLocal"],
 }
 
 

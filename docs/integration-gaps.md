@@ -3,7 +3,7 @@
 | # | Gap | Impact | What closes it | Cost |
 |---|---|---|---|---|
 | 1 | **This repo is PUBLIC** and is named `Marketing-Automation-System`, not `ysb-marketing-automation` | Lead data, reports and outbox files must never be committed here (`.gitignore` blocks them), and scheduled CI on a public repo would expose logs | GitHub → Settings → General: rename to `ysb-marketing-automation`, then Danger Zone → change visibility to **Private** | £0 |
-| 2 | **Only one social account is connected** (Instagram `masjidone.uk` via Metricool) | Domi, Booked In and Tidemark can only produce drafts | Connect each product's accounts in Metricool, then add them to `config/channels.json` | Depends on your Metricool plan (free plan limits brands) |
+| 2 | **Only one social account is connected** (Instagram `masjidone.uk` via Metricool) | Domi, Booked In, Tidemark and Bolton Vouched can only produce drafts | Connect each product's accounts in Metricool, then add them to `config/channels.json` | Depends on your Metricool plan (free plan limits brands) |
 | 3 | **Metricool can't be called from Python**, only through the claude.ai connector | Publishing is a two-step hand-off: the system writes `var/outbox/metricool/*.json` and a Claude session or you submit it | Run a weekday Claude scheduled task that reads the outbox and calls `createScheduledPostForReview` (see operations.md); or a Metricool API token (Advanced plan) | £0 or plan upgrade |
 | 4 | **Media must be public URLs** for Metricool | Videos and images are local files | Upload to Cloudflare R2 (free tier) or attach them by hand in Metricool | £0 |
 | 5 | **No LLM at runtime** | Copy is assembled from verified fact sentences: accurate but plain | Optional: Anthropic API key with the £5/month LLM cap (not built yet), or polish copy during approval | ~£1–3/month at the planned volume |
@@ -16,3 +16,4 @@
 | 12 | **Docker untested** | — | Run `docker compose up --build` on your machine and report any errors | £0 |
 | 13 | **Lottie export** not implemented | Motion graphics ship as MP4 only | Add if a site or app actually needs Lottie | £0 |
 | 14 | **MasjidOne parent access status** contradicts itself in the README; the live site says it's built | The validator blocks "parent access" claims | Confirm, then fix the README; the profile follows on next sync | £0 |
+| 15 | **Bolton Vouched has no outbound route** (residents and sole-trader tradespeople are individual subscribers under PECR) | Growth is organic: social, local Facebook/WhatsApp community groups you're a member of (posted by you, not automated) | Connect a Bolton Vouched Instagram/Facebook page in Metricool | £0 |

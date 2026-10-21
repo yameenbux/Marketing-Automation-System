@@ -13,7 +13,7 @@ purchased, published, or sent.
 | Python 3.13, Pillow 12, FFmpeg 6.1 (H.264/AAC/xfade), Inter fonts | ✅ usable | Rendered 3 videos + 10 stills |
 | Headless Chromium (Playwright 1.56) | ✅ usable | Screenshotted masjidone.co.uk, domi.ysbdesigns.uk |
 | Piper TTS, British "alba" voice | ✅ usable (licence caveat) | Generated narration for the sample video |
-| Public GitHub docs via raw.githubusercontent.com + `git ls-remote` | ✅ usable | Synced 4 READMEs with commit SHAs |
+| Public GitHub docs via raw.githubusercontent.com + `git ls-remote` | ✅ usable | Synced 5 READMEs with commit SHAs |
 | GitHub REST API for *other* repos | ❌ blocked **here** | 403 from this session's proxy; should work on your machine |
 | Repo discovery (`list_repos`) | ✅ | 19 repos listed (18 public + 1 private) |
 | **Metricool** connector | ✅ read verified | Brand "YBTweetss" → Instagram **masjidone.uk** only |

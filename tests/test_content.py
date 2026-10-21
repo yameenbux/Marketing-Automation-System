@@ -185,3 +185,20 @@ def test_stale_fact_blocks_revalidation(ctx):
     assert validate_content(ctx, cid)["status"] == "rejected"
     with pytest.raises(PermissionError):
         approve_content(ctx, cid, "tester")
+
+
+@pytest.mark.parametrize("text,blocked", [
+    ("Upgrade to Pro for more enquiries.", True),
+    ("Pro is coming soon.", False),
+    ("Get a featured listing today.", True),
+    ("Every trader is fully vetted.", True),
+    ("All tradespeople are DBS-checked.", True),
+    ("Reviews are coming soon.", True),
+    ("Pick a trade and an area, then call or WhatsApp them in one tap.", False),
+    ("Bolton's professional plumbers.", False),
+])
+def test_bolton_vouched_guardrails(text, blocked):
+    import re
+    from mas.marketing.validator import GUARDRAILS
+    hit = any(re.search(p, text.lower(), re.I) for p, _ in GUARDRAILS["bolton-vouched"])
+    assert hit == blocked, text

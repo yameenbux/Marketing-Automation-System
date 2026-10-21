@@ -1,6 +1,6 @@
 # YSB marketing automation
 
-Marketing system for the YSB products (MasjidOne, Domi, Booked In, Tidemark). It reads each product's
+Marketing system for the YSB products (MasjidOne, Domi, Booked In, Tidemark, Bolton Vouched). It reads each product's
 **public README**, turns it into a profile of **quote-verified facts**, and produces social copy, short-form
 video (9:16, 1:1, 16:9), graphics and outreach drafts from those facts only. Everything is validated in code
 and held for human approval. **Dry-run by default; nothing is published or sent without you.**

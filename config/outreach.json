@@ -9,13 +9,17 @@
   "research_max_age_days": 180,
   "products": {
     "masjidone": {
-      "allowed_channels": ["email"],
+      "allowed_channels": [
+        "email"
+      ],
       "lia_documented": false,
       "lia_reference": null,
       "note": "Most masājid are unincorporated associations or charitable trusts = INDIVIDUAL subscribers under PECR → no unsolicited email. Only CIOs / charitable companies (corporate subscribers) can be emailed, and only with an LIA if the address names a person."
     },
     "domi": {
-      "allowed_channels": ["email"],
+      "allowed_channels": [
+        "email"
+      ],
       "lia_documented": false,
       "lia_reference": null,
       "note": "Target limited companies running home-visit services. Many domiciliary practitioners are sole traders = individual subscribers → blocked."
@@ -31,6 +35,12 @@
       "lia_documented": false,
       "lia_reference": null,
       "note": "Consumer app. No outbound prospecting; organic and App Store only."
+    },
+    "bolton-vouched": {
+      "allowed_channels": [],
+      "lia_documented": false,
+      "lia_reference": null,
+      "note": "Two-sided local directory. Residents are consumers and tradespeople are overwhelmingly sole traders, so both are INDIVIDUAL subscribers under PECR: no unsolicited email or texts. Traders join via personal consent links sent by the admin (a relationship, not automated marketing). Organic social and local community channels only."
     }
   }
 }

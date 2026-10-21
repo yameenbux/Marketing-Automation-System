@@ -76,15 +76,16 @@
       "owner": "yameenbux",
       "repo": "Boltontradesmen",
       "default_branch": "main",
-      "category": "needs_confirmation",
-      "enabled": false,
+      "category": "saas_product",
+      "enabled": true,
       "approved_paths": [
         "README.md"
       ],
       "website": null,
       "demo_url": null,
-      "notes": "Local tradespeople directory. Confirm whether this is a product you market.",
-      "last_successful_sync": null
+      "notes": "Local tradespeople directory for Bolton (confirmed in scope by owner 2026-10-21).",
+      "last_successful_sync": "2026-10-21T16:59:16+00:00",
+      "last_synced_commit": "68434942f3bc46ce0cabd720f85cedbeb5db17bb"
     },
     {
       "slug": "ysb-designs",
