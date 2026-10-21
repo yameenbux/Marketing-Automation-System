@@ -15,7 +15,9 @@ UNSUBSTANTIATED = [
     (r"#\s?1\b|\bnumber one\b", "ranking claim"),
     (r"\b(?:the )?best\b|\bleading\b|\bworld[- ]class\b|\bunrivalled\b", "superlative"),
     (r"\bguarantee[ds]?\b", "guarantee"),
-    (r"\btrusted by\b|\bused by\b|\bloved by\b|\bthousands of\b|\bhundreds of\b", "social proof without customers"),
+    (r"\btrusted by\b|\bused by\b|\bloved by\b|\b(?:hundreds|thousands|millions|dozens) of (?:happy |satisfied )?"
+     r"(?:customers|users|clients|businesses|traders|tradespeople|people|families|masjids|mas\u0101jid|masajid|"
+     r"practices|salons|downloads|reviews|members|residents)\b", "social proof without customers"),
     (r"\btestimonial\b|[\"“][^\"”]{10,}[\"”]\s*[—–-]\s*[A-Z]", "testimonial"),
     (r"\baward[- ]winning\b", "award claim"),
     (r"\b100\s?%", "absolute percentage"),

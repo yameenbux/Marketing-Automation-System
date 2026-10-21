@@ -6,7 +6,7 @@ video (9:16, 1:1, 16:9), graphics and outreach drafts from those facts only. Eve
 and held for human approval. **Dry-run by default; nothing is published or sent without you.**
 
 ```bash
-pip install -e ".[tts,dev]" && pytest -q   # 126 tests
+pip install -e ".[tts,dev]" && pytest -q   # 137 tests
 mas status                                 # mode, kill switch, profile verification
 mas sync                                   # pull approved docs from the product repos (read-only)
 mas plan && mas produce                    # daily plan → validated drafts

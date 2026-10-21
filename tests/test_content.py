@@ -202,3 +202,13 @@ def test_bolton_vouched_guardrails(text, blocked):
     from mas.marketing.validator import GUARDRAILS
     hit = any(re.search(p, text.lower(), re.I) for p, _ in GUARDRAILS["bolton-vouched"])
     assert hit == blocked, text
+
+
+@pytest.mark.parametrize("text,blocked", [
+    ("Join thousands of happy customers.", True),
+    ("Used by hundreds of traders across Bolton.", True),
+    ("Recommendations scroll away under hundreds of messages.", False),
+])
+def test_social_proof_rule_targets_customer_counts(ctx, text, blocked):
+    r = validate(text, product=prof(ctx), platform="linkedin", fact_ids=["feat-swap"])
+    assert any("social proof" in e for e in r.errors) == blocked, r.errors

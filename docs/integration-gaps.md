@@ -17,3 +17,4 @@
 | 13 | **Lottie export** not implemented | Motion graphics ship as MP4 only | Add if a site or app actually needs Lottie | £0 |
 | 14 | **MasjidOne parent access status** contradicts itself in the README; the live site says it's built | The validator blocks "parent access" claims | Confirm, then fix the README; the profile follows on next sync | £0 |
 | 15 | **Bolton Vouched has no outbound route** (residents and sole-trader tradespeople are individual subscribers under PECR) | Growth is organic: social, local Facebook/WhatsApp community groups you're a member of (posted by you, not automated) | Connect a Bolton Vouched Instagram/Facebook page in Metricool | £0 |
+| 16 | **Bolton Vouched README: diagram 02 alt text is out of date** (says community questions and trader dashboards are "coming and not built"; the text says they're live) | The profile follows the text, so only Pro is treated as unbuilt | Update the alt text in the Boltontradesmen repo | £0 |
