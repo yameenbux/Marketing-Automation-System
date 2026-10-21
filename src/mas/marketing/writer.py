@@ -157,7 +157,8 @@ class TemplateWriter:
             scenes.append({"role": "value", "fact_id": v.id, "on_screen": _headline(v.text), "narration": v.text})
         cta, cta_ids = cta_line(p)
         scenes.append({"role": "cta", "fact_id": cta_ids[0] if cta_ids else None,
-                       "on_screen": cta.replace("Find out more: ", ""), "narration": f"{cta.split(':')[0]} at the link."})
+                       "on_screen": cta.replace("Find out more: ", ""),
+                       "narration": "Find out more at the link." if cta_ids else cta})
         per = round(seconds / len(scenes), 2)
         for s in scenes:
             s["seconds"] = per
@@ -197,7 +198,7 @@ def _headline(sentence: str, max_words: int = 20) -> str:
     whole = sentence.strip().rstrip(".")
     if len(whole.split()) <= max_words:
         return whole
-    clauses = [c.strip() for c in re.split(r";|\s[—–]\s|, because |, so |, which ", whole) if c.strip()]
+    clauses = [c.strip() for c in re.split(r";|:\s|\s[—–]\s|, because |, so |, which ", whole) if c.strip()]
     setup = re.match(r"(?i)(plenty of|most|many|other|unlike|while|whereas)\b", clauses[0])
     s = clauses[1] if setup and len(clauses) > 1 else clauses[0]
     if s.lower().startswith(("when ", "if ", "because ", "once ")) and len(clauses) > 1:

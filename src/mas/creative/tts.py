@@ -29,14 +29,17 @@ def available(voice: Path = DEFAULT_VOICE) -> bool:
     return voice.exists()
 
 
-def synthesize(policy: Policy, text: str, out: Path, voice: Path = DEFAULT_VOICE) -> Path | None:
+def synthesize(policy: Policy, text: str, out: Path, voice: Path = DEFAULT_VOICE, speaker: int | None = None,
+               length_scale: float | None = None) -> Path | None:
     if not available(voice):
         return None
     if not policy.authorize(Action.SYNTH_AUDIO, "piper_tts", detail={"chars": len(text)}).allowed:
         return None
     out.parent.mkdir(parents=True, exist_ok=True)
     proc = subprocess.run(  # noqa: S603 — fixed argv; text goes via stdin, never the command line
-        [sys.executable, "-m", "piper", "-m", str(voice), "-f", str(out)],
+        [sys.executable, "-m", "piper", "-m", str(voice), "-f", str(out)]
+        + (["-s", str(int(speaker))] if speaker is not None else [])
+        + (["--length-scale", f"{float(length_scale):.3f}"] if length_scale else []),
         input=text, text=True, capture_output=True, timeout=120, check=False)
     if proc.returncode != 0 or not out.exists():
         raise RuntimeError(f"piper failed: {proc.stderr[-400:]}")

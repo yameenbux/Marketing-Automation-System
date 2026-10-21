@@ -1,0 +1,25 @@
+/* MasjidOne — "Lantern & lattice". Inscriptional capitals, brass on deep masjid green, lamp glow. */
+:root { --bg: #0C2A21; --ink: #EFE7D2; --accent: #C9A866; --muted: #9DB3A6; --deep: #071C16;
+  --cap-font: "Instrument Sans"; --cap-bg: rgba(7, 28, 22, .78); --cap-ink: #EFE7D2; --cap-radius: 0; --vignette: .6; }
+#stage { background: radial-gradient(ellipse at 50% 30%, #163B2F 0%, #0C2A21 55%, #071C16 100%); }
+.headline, .big { font-family: "Marcellus", serif; font-weight: 400; letter-spacing: .01em; color: var(--ink); }
+.eyebrow { font-family: "Instrument Sans"; font-weight: 600; letter-spacing: .32em; }
+.eyebrow::before { content: ""; display: inline-block; width: calc(var(--u)*6); height: 1px; background: var(--accent); vertical-align: middle; margin-right: calc(var(--u)*1.6); }
+.lattice { position: absolute; inset: -10%; width: 120%; height: 120%; }
+.lattice path { fill: none; stroke: var(--accent); stroke-width: .6; stroke-linejoin: round; }
+.lattice.faint path { opacity: .16; }
+.role-hook .center { background: radial-gradient(ellipse at 50% 50%, rgba(7,28,22,.85) 0%, transparent 60%); }
+.brand { font-family: "Marcellus"; font-size: calc(var(--u)*11); letter-spacing: .14em; text-transform: uppercase; }
+.rule { height: 1px; background: var(--accent); margin: calc(var(--u)*3) auto; }
+.tools { position: absolute; inset: 0; }
+.tool { position: absolute; padding: calc(var(--u)*1.6) calc(var(--u)*2.4); border: 1px solid rgba(201,168,102,.55); font: 600 calc(var(--u)*2.8) "Instrument Sans"; color: var(--ink); background: rgba(7,28,22,.7); white-space: nowrap; }
+.tools svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tools line { stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 8; }
+.window { position: relative; height: 100%; aspect-ratio: 1; }
+.window .pane { position: absolute; inset: 0; overflow: hidden; }
+.window .pane img { width: 160%; margin-left: -30%; display: block; }
+.window svg { position: absolute; inset: -2%; width: 104%; height: 104%; }
+.window svg path { fill: none; stroke: var(--accent); stroke-width: 1.2; }
+.big { font-size: calc(var(--u)*7.6); line-height: 1.12; text-transform: uppercase; letter-spacing: .04em; }
+.f-landscape .big { font-size: calc(var(--u)*7); }
+.url { font-family: "Instrument Sans"; font-weight: 600; font-size: calc(var(--u)*4.6); color: var(--accent); letter-spacing: .02em; }

@@ -1,24 +1,49 @@
 # Creative production workflow
 
-```
-mas campaign masjidone --objective "Introduce MasjidOne to UK masjid committees and drive demo requests"
-```
+There are two renderers:
 
-| Step | What happens | Tool | Cost |
-|---|---|---|---|
-| 1 | Load the profile; every fact re-verified against the synced README | `products/profile.py` | £0 |
-| 2 | Script: hook → problem → 2 features → value → CTA, one scene per fact | `writer.video_script` | £0 |
-| 3 | **Validate the script before rendering** (aborts on any error) | `validator.py` | £0 |
-| 4 | Brief, storyboard table, optional generative prompts, social copy (validated and stored as content) | `pipeline._write_docs` | £0 |
-| 5 | Screenshots of the product's own site: desktop hero, 6 scrolled sections (near-blank ones discarded), mobile | Playwright (SSRF-guarded) | £0 |
-| 6 | Narration, one clip per scene so captions sync exactly | Piper, en_GB alba | £0 |
-| 7 | Frames: kinetic word-by-word headlines, screenshot cards sliding in, burned-in captions, crossfades, progress bar | Pillow | £0 |
-| 8 | Encode to H.264 / yuv420p / AAC with faststart, at 9:16, 1:1 and 16:9 | FFmpeg | £0 |
-| 9 | Logo sting (motion sample), storyboard sheet from real keyframes, thumbnail, 3 cards, 3-slide carousel | Pillow / FFmpeg | £0 |
-| 10 | QC: resolution, codec, pixel format, audio present, duration window, file hashes, blank-image detection, WCAG contrast | `qc.py` | £0 |
-| 11 | `manifest.json` with input hash, so unchanged inputs are never re-rendered | `pipeline.py` | £0 |
+| | `mas film <product>`: **cinematic (primary)** | `mas campaign <product>`: template pack |
+|---|---|---|
+| Look | A distinct art direction per product | One shared template |
+| Engine | HTML/CSS/SVG timeline captured frame by frame in Chromium | Pillow frames |
+| Output | 9:16, 1:1, 16:9 films + 4:5 carousel stills | 3 videos + cards + carousel + copy pack |
 
-**Cost per finished campaign pack: £0** (≈2.5–3 minutes of CPU on 4 cores for 3 video formats plus 8 stills).
+## Art directions (`src/mas/creative/motion/styles/`)
+
+| Product | Concept | Type | Signature motion | Transition | Camera and texture | Voice | Score |
+|---|---|---|---|---|---|---|---|
+| MasjidOne | Lantern & lattice | Marcellus + Instrument Sans | 8-point *khatam* lattice draws itself, then becomes a window onto the real site | lattice iris | crane, lamp-glow leaks, grain | VCTK p226 | **no music**: courtyard ambience (breeze, birdsong, water), out of respect for audiences who avoid music |
+| Domi | The round | IBM Plex Sans Condensed + Plex Mono | cancelled slot struck through → route line across the map → CANCEL text → slot refilled | route-line wipe | drone drift, handheld | Alba | 100 bpm plucked arpeggios |
+| Booked In | Link in bio | Bodoni Moda italic + Jost | late-night DMs pile up and fade to "Seen" → Save → Live → one slot, two clients, one booking | bloom flash | rack-focus bokeh, push-ins | Cori | 84 bpm lo-fi electric piano and snaps |
+| Tidemark | Signal from noise | Manrope + JetBrains Mono | noisy weigh-ins → Holt trend glides through, moving average lags | tide-wave wipe | lateral dolly, sine waves | VCTK p232 | 60 bpm tidal pads, heartbeat, bells |
+| Bolton Vouched | Shopfront signwriting | Alfa Slab One + Work Sans | shutter rolls up on a signwritten sign → group-chat asks scroll away → 43 counter + 7 group stamps → £ coin bounces off the list | roller shutter | handheld, stamp-impact shake, brick bond | Northern English male | 112 bpm strummed folk, claps, horns |
+
+Rules every style follows:
+- **Words on screen come from verified facts.** Scripts are validated before rendering.
+- **Real UI only from the product's own site** (Playwright, SSRF-guarded). Bolton Vouched screenshots are disabled
+  because live listings show real traders.
+- **Dramatised scenes are labelled "Illustration"** (chats, DMs, diaries, charts, maps).
+- **No fake UI presented as real, no fake customers, no outcome claims.** Tidemark's illustrative chart is
+  deliberately near-level, so it implies no weight-loss result.
+- Long headlines auto-fit the space above the visual. Captions are burned in, and the audio is loudness-normalised
+  to −16 LUFS with the music ducked under the voice.
+
+## Connectors: what was attempted (21 Oct 2026)
+
+| Connector | Attempted | Result |
+|---|---|---|
+| ElevenLabs | 5 narrations, 4 music beds, 1 ambience, 5 stills | **Quota exhausted** (47 credits left of 31,105). Only the ambience succeeded (~17 credits), and it's mixed into the MasjidOne bed |
+| Canva | 5 AI images | **Credit quota exceeded**, nothing generated |
+| Figma | — | View seat on Starter, can't create |
+
+Everything planned for those connectors is produced locally instead (Piper voices, procedural music, procedural
+visuals). Top up ElevenLabs to replace the voices: the voice IDs chosen per product are listed in
+`docs/integration-gaps.md`.
+
+## Cost per film
+
+£0 local, plus whatever you choose to spend on connectors. CPU time is about 0.25 s per 1080p frame, so a 36-second
+film takes about 5 minutes per format.
 
 ## Output: `assets/<product>/<campaign_id>/`
 

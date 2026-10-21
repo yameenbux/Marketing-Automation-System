@@ -17,8 +17,8 @@ purchased, published, or sent.
 | GitHub REST API for *other* repos | ❌ blocked **here** | 403 from this session's proxy; should work on your machine |
 | Repo discovery (`list_repos`) | ✅ | 19 repos listed (18 public + 1 private) |
 | **Metricool** connector | ✅ read verified | Brand "YBTweetss" → Instagram **masjidone.uk** only |
-| **ElevenLabs** connector | ✅ connected, 💷 credits | TTS v4, Veo 3.1, Kling, Seedance, Music v2.5 available |
-| **Canva** connector | ✅ connected | No brand kits set up |
+| **ElevenLabs** connector | ⚠️ connected, **credits exhausted** | Models listed; on 21 Oct only 47 credits remained, so narration, music and image jobs were refused |
+| **Canva** connector | ⚠️ connected, **AI credits exhausted** | No brand kits; generate-image returned quota_exceeded |
 | Figma | ⚠️ View seat on Starter | Can read, can't meaningfully create |
 | Exa, Firecrawl, Google Sheets/Drive/Docs, Gmail, Notion, Resend | connected, not exercised | Listed by the connector registry |
 | Docker | ⚠️ client only, no daemon | Dockerfile written but untested |

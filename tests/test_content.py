@@ -314,3 +314,10 @@ def test_calendar_rerun_is_idempotent(root):
 def test_headline_keeps_the_point(sentence, expected):
     from mas.marketing.writer import _headline
     assert _headline(sentence) == expected
+
+
+def test_cta_narration_without_url_is_grammatical(ctx):
+    p = prof(ctx)
+    p.facts = [f for f in p.facts if f.kind not in ("url", "cta")]
+    cta = TemplateWriter().video_script(p).meta["scenes"][-1]
+    assert cta["narration"] == "Find out more about Acme Rota."

@@ -27,6 +27,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("product"); p.add_argument("--objective", required=True)
     p.add_argument("--formats", default="story,square,landscape"); p.add_argument("--no-narration", action="store_true")
     p.add_argument("--no-screenshots", action="store_true"); p.add_argument("--force", action="store_true")
+    p = sub.add_parser("film", help="cinematic film in the product's own art direction (HTML motion engine)")
+    p.add_argument("product"); p.add_argument("--formats", default="story,square,landscape,portrait")
+    p.add_argument("--fps", type=int, default=30); p.add_argument("--no-screenshots", action="store_true")
     p = sub.add_parser("profile", help="show a product profile and fact verification"); p.add_argument("product")
     p = sub.add_parser("approve-profile"); p.add_argument("product"); p.add_argument("--by", required=True)
     p = sub.add_parser("content", help="list content"); p.add_argument("--status")
@@ -75,6 +78,10 @@ def main(argv: list[str] | None = None) -> int:
         from .creative.pipeline import produce_campaign
         r = produce_campaign(ctx, a.product, a.objective, a.formats.split(","), narration=not a.no_narration,
                              capture=not a.no_screenshots, force=a.force)
+        _print(r.__dict__)
+    elif a.cmd == "film":
+        from .creative.motion.film import render_film
+        r = render_film(ctx, a.product, a.formats.split(","), a.fps, capture=not a.no_screenshots)
         _print(r.__dict__)
     elif a.cmd == "profile":
         from .products.profile import load_profile
