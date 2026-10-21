@@ -3,16 +3,18 @@
 Marketing system for the YSB products (MasjidOne, Domi, Booked In, Tidemark, Bolton Vouched). It reads each product's
 **public README**, turns it into a profile of **quote-verified facts**, and produces social copy, short-form
 video (9:16, 1:1, 16:9), graphics and outreach drafts from those facts only. Everything is validated in code
-and held for human approval. **Live publishing is on (`config/settings.ops.json`), but every post needs your yes in the approval desk; outreach can't be sent at all.** Start with [docs/final-report.md](docs/final-report.md).
+and held for human approval. **Live publishing is on (`config/settings.ops.json`), but every post needs your yes in the approval desk; outreach can't be sent at all.** **Current focus: the [30-day customer-acquisition plan](docs/acquisition/README.md).** Build status: [docs/final-report.md](docs/final-report.md).
 
 ```bash
-pip install -e ".[tts,dev]" && pytest -q   # 179 tests
+pip install -e ".[tts,dev]" && pytest -q   # 202 tests
 mas status                                 # mode, kill switch, profile verification
 mas sync                                   # pull approved docs from the product repos (read-only)
 mas plan && mas produce                    # daily plan → validated drafts
 mas calendar --weeks 2                     # portfolio calendar: all 5 products, validated drafts
 mas campaign masjidone --objective "..."   # full creative pack → assets/masjidone/<id>/
-mas report                                 # what actually happened today
+mas acq report                             # customer acquisition: funnel vs target, sources, next actions
+mas acq prospects masjidone                # ranked prospects with permitted contact methods
+mas report                                 # daily report (acquisition first)
 mas kill-switch on                         # stop everything
 ```
 

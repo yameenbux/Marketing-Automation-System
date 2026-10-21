@@ -51,11 +51,34 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("state", help="persist operational state across sessions"); p.add_argument("op", choices=["export", "import"])
     p = sub.add_parser("desk", help="approval desk queue / apply decisions"); p.add_argument("op", choices=["queue", "apply"])
     p.add_argument("--file")
+    p = sub.add_parser("acq", help="customer acquisition: plan checks, prospects, pipeline report, plan docs")
+    p.add_argument("op", choices=["check", "prospects", "report", "docs", "seed"]); p.add_argument("product", nargs="?")
+    p.add_argument("--events", help="pipeline events JSON (default var/pipeline/events.json)")
+    p.add_argument("--date", help="report as of YYYY-MM-DD (default today, London)")
     p = sub.add_parser("kill-switch", help="engage or release the global kill switch")
     p.add_argument("state", choices=["on", "off"]); p.add_argument("--reason", default="manual")
 
     a = ap.parse_args(argv)
     ctx = Context.create()
+
+    if a.cmd == "acq":
+        from datetime import date as _date
+        from . import acquisition as acq
+        if a.op == "check":
+            problems = acq.check_plan(ctx.root)
+            _print({"ok": not problems, "problems": problems})
+            return 1 if problems else 0
+        if a.op == "prospects":
+            _print(acq.prospects(ctx, a.product) if a.product else
+                   {s: acq.prospects(ctx, s) for s in acq.active(acq.load_plan(ctx.root))})
+        elif a.op == "report":
+            print(acq.report(ctx, Path(a.events) if a.events else None,
+                             _date.fromisoformat(a.date) if a.date else None))
+        elif a.op == "seed":
+            _print(acq.desk_docs(ctx, Path(a.events) if a.events else None))
+        elif a.op == "docs":
+            _print([str(x) for x in acq.write_docs(ctx.root)])
+        return 0
 
     if a.cmd == "status":
         from .products.profile import list_profiles, load_profile

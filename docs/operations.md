@@ -112,3 +112,10 @@ Settings: `config/settings.ops.json` (committed) sets `dry_run: false`, `live.pu
 Stop everything: create `var/KILL_SWITCH` locally, or set `"kill_switch": true` in `config/settings.ops.json` and push — the next run halts. Or disable the scheduled tasks in claude.ai.
 State: fresh sessions rebuild the DB from `state/ops_state.json` (content, calendar, publications, runs, costs, 30 days of audit). Leads, suppression and outreach are never exported to the repo.
 Only products with a verified account in `config/channels.json` get a live route; today that is MasjidOne → Instagram (masjidone.uk). Everything else is drafted and waits.
+
+## Customer acquisition (from 22 Oct 2026)
+The desk's default tab is now **Pipeline**: weekly targets per stage, first-touch source attribution, assumption
+tests and "Do next". Log each conversation in **Log a conversation**. Content is created only where
+`config/acquisition.json` names an assumption that needs it (MasjidOne Instagram, Tuesdays and Thursdays); Domi,
+Bolton Vouched, Booked In and Tidemark get no scheduled posts. Plan: [docs/acquisition/README.md](acquisition/README.md).
+Commands: `mas acq check | prospects [slug] | report [--events FILE] | docs | seed`.

@@ -34,7 +34,7 @@ def prepare(ctx: Context, lead_id: str, channel: str = "email", consent_record: 
     # a blocked item can never be approved or sent (sender.approve / sender.send re-check).
     if decision.status in ("eligible", "manual_review") or decision.lead_status in ("eligible", "manual_review"):
         if ctx.policy.authorize(Action.DRAFT_OUTREACH, "local_render", detail={"lead": lead_id}).allowed:
-            draft_text = _compose(ctx, product, lead, cfg)
+            draft_text = _compose(ctx, product, lead, cfg, channel)
         else:   # keep any draft already written; a refused re-draft must not destroy earlier work
             draft_text = existing["draft"] if existing else None
             status, decision.reasons = "blocked", decision.reasons + ["draft limit / kill switch"]
@@ -43,7 +43,7 @@ def prepare(ctx: Context, lead_id: str, channel: str = "email", consent_record: 
                   " VALUES (?,?,?,?,?,?,?,?) ON CONFLICT(lead_id, product, channel) DO UPDATE SET"
                   " status=excluded.status, decision=excluded.decision, draft=excluded.draft",
                   (oid, lead_id, product, channel, status, json.dumps(decision.as_dict()), draft_text, now_iso()))
-    ctx.store.audit("eligibility", "outreach", "ok", f"{lead.company}: {decision.status}",
+    ctx.store.audit("eligibility", "outreach", "ok", f"{lead_id}: {decision.status}",
                     {"lead": lead_id, "rules": decision.rules})
     return {"outreach_id": oid, "status": status, "decision": decision.as_dict(), "draft": draft_text}
 
@@ -53,16 +53,18 @@ def _second_person(reason: str) -> str:
     return "your " + reason[4:] if reason.lower().startswith("its ") else reason
 
 
-def _compose(ctx: Context, product: str, lead, cfg: dict) -> str:
+def _compose(ctx: Context, product: str, lead, cfg: dict, channel: str = "email") -> str:
     prof = load_profile(ctx.root, product)
     pains, feats = prof.by_kind("pain_point"), prof.by_kind("feature")
     used = (pains[:1] + feats[:2])
     cta, cta_ids = cta_line(prof)
     s = cfg["sender"]
+    addressee = cfg["products"].get(product, {}).get("post_addressee", "The Manager")
+    opening = ([f"Subject: {prof.name} — for {lead.company}", "", "Hello,"] if channel == "email"
+               else [f"To: {addressee}, {lead.company}", "[REGISTERED ADDRESS — from the public register]", "",
+                     f"Dear {addressee.removeprefix('The ').lower()},"])
     body = [
-        f"Subject: {prof.name} — for {lead.company}",
-        "",
-        "Hello,",
+        *opening,
         "",
         f"I'm getting in touch because {_second_person(lead.qualification_reason.rstrip('.'))}.",
         "",

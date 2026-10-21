@@ -10,19 +10,23 @@
   "products": {
     "masjidone": {
       "allowed_channels": [
-        "email"
+        "email",
+        "post"
       ],
       "lia_documented": false,
       "lia_reference": null,
-      "note": "Most masājid are unincorporated associations or charitable trusts = INDIVIDUAL subscribers under PECR → no unsolicited email. Only CIOs / charitable companies (corporate subscribers) can be emailed, and only with an LIA if the address names a person."
+      "note": "Most masājid are unincorporated associations or charitable trusts = INDIVIDUAL subscribers under PECR → no unsolicited email. Only CIOs / charitable companies (corporate subscribers) can be emailed, and only with an LIA if the address names a person.",
+      "post_addressee": "The Committee"
     },
     "domi": {
       "allowed_channels": [
-        "email"
+        "email",
+        "post"
       ],
       "lia_documented": false,
       "lia_reference": null,
-      "note": "Target limited companies running home-visit services. Many domiciliary practitioners are sole traders = individual subscribers → blocked."
+      "note": "Target limited companies running home-visit services. Many domiciliary practitioners are sole traders = individual subscribers → blocked.",
+      "post_addressee": "The Practice Manager"
     },
     "booked-in": {
       "allowed_channels": [],

@@ -1,5 +1,5 @@
 {
- "exported_at": "2026-10-21T18:42:00+00:00",
+ "exported_at": "2026-10-21T20:23:15+00:00",
  "tables": {
   "audit": [
    {
@@ -2017,6 +2017,402 @@
     "outcome": "live",
     "reason": "allowed",
     "ts": "2026-10-21T18:15:28+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 225,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:25+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://domi.ysbdesigns.uk\"}",
+    "id": 262,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:43+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 83}",
+    "id": 263,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:47+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 158}",
+    "id": 264,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:49+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 136}",
+    "id": 265,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:51+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 86}",
+    "id": 266,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:53+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 123}",
+    "id": 267,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:55+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 268,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:57+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-749d0c\", \"fmt\": \"story\"}",
+    "id": 269,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:57:58+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-749d0c\", \"fmt\": \"square\"}",
+    "id": 321,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:58:51+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-749d0c\", \"fmt\": \"landscape\"}",
+    "id": 373,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T18:59:28+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"domi-2026-10-21-749d0c\", \"fmt\": \"sting\"}",
+    "id": 374,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:19+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 64}",
+    "id": 375,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:22+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 140}",
+    "id": 376,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:24+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 96}",
+    "id": 377,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:26+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 92}",
+    "id": 378,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:27+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 82}",
+    "id": 379,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:29+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 30}",
+    "id": 380,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:31+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-749d0c\", \"fmt\": \"story\"}",
+    "id": 381,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:00:32+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-749d0c\", \"fmt\": \"square\"}",
+    "id": 382,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:01:07+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-749d0c\", \"fmt\": \"landscape\"}",
+    "id": 383,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:01:33+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"booked-in-2026-10-21-749d0c\", \"fmt\": \"sting\"}",
+    "id": 384,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:05+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 385,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:08+00:00"
+   },
+   {
+    "action": "fetch_external",
+    "detail": "{\"url\": \"https://tidemark.ysbdesigns.uk\"}",
+    "id": 386,
+    "integration": "playwright_screenshots",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:24+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 111}",
+    "id": 387,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:28+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 106}",
+    "id": 388,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:30+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 139}",
+    "id": 389,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:31+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 65}",
+    "id": 390,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:33+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 126}",
+    "id": 391,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:35+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 392,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:38+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-749d0c\", \"fmt\": \"story\"}",
+    "id": 393,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:02:39+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-749d0c\", \"fmt\": \"square\"}",
+    "id": 394,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:03:18+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-749d0c\", \"fmt\": \"landscape\"}",
+    "id": 395,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:03:42+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"tidemark-2026-10-21-749d0c\", \"fmt\": \"sting\"}",
+    "id": 396,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:19+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 67}",
+    "id": 397,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:22+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 134}",
+    "id": 398,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:23+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 68}",
+    "id": 399,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:25+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 133}",
+    "id": 400,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:26+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 81}",
+    "id": 401,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:28+00:00"
+   },
+   {
+    "action": "synth_audio",
+    "detail": "{\"chars\": 26}",
+    "id": 402,
+    "integration": "piper_tts",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:30+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"bolton-vouched-2026-10-21-749d0c\", \"fmt\": \"story\"}",
+    "id": 403,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:04:31+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"bolton-vouched-2026-10-21-749d0c\", \"fmt\": \"square\"}",
+    "id": 404,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:05:13+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"bolton-vouched-2026-10-21-749d0c\", \"fmt\": \"landscape\"}",
+    "id": 405,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:05:45+00:00"
+   },
+   {
+    "action": "render",
+    "detail": "{\"campaign\": \"bolton-vouched-2026-10-21-749d0c\", \"fmt\": \"sting\"}",
+    "id": 406,
+    "integration": "local_render",
+    "outcome": "live",
+    "reason": "allowed",
+    "ts": "2026-10-21T19:06:25+00:00"
    }
   ],
   "campaigns": [
@@ -2051,11 +2447,43 @@
     "objective": "Build pre-launch awareness of Booked In among solo beauty professionals",
     "product": "booked-in",
     "status": "draft"
+   },
+   {
+    "created_at": "2026-10-21T19:00:22+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/domi/domi-2026-10-21-749d0c\"}",
+    "id": "domi-2026-10-21-749d0c",
+    "objective": "awareness: introduce the product to its target audience with verified facts",
+    "product": "domi",
+    "status": "draft"
+   },
+   {
+    "created_at": "2026-10-21T19:02:08+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/booked-in/booked-in-2026-10-21-749d0c\"}",
+    "id": "booked-in-2026-10-21-749d0c",
+    "objective": "awareness: introduce the product to its target audience with verified facts",
+    "product": "booked-in",
+    "status": "draft"
+   },
+   {
+    "created_at": "2026-10-21T19:04:21+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/tidemark/tidemark-2026-10-21-749d0c\"}",
+    "id": "tidemark-2026-10-21-749d0c",
+    "objective": "awareness: introduce the product to its target audience with verified facts",
+    "product": "tidemark",
+    "status": "draft"
+   },
+   {
+    "created_at": "2026-10-21T19:06:28+00:00",
+    "data": "{\"path\": \"/home/user/Marketing-Automation-System/assets/bolton-vouched/bolton-vouched-2026-10-21-749d0c\"}",
+    "id": "bolton-vouched-2026-10-21-749d0c",
+    "objective": "awareness: introduce the product to its target audience with verified facts",
+    "product": "bolton-vouched",
+    "status": "draft"
    }
   ],
   "content": [
    {
-    "body": "{\"text\": \"The office often holds the same family in separate places and can only connect them from memory.\\n\\nMasjidOne is built for that:\\n\\u2022 The madrasah portal holds the masjid's roll, classes, staff and households, with registers and fees configured.\\n\\u2022 When a teacher marks the evening register, the office knows by the next morning which class did not.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-family-known-three-times\", \"feature-madrasah-portal\", \"feature-missed-register-flag\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-22T12:00:00+01:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-22T12:00+01:00\"}",
+    "body": "{\"text\":\"The office often holds the same family in separate places and can only connect them from memory.\\n\\nMasjidOne is built for that:\\n\\u2022 The madrasah portal holds the masjid's roll, classes, staff and households, with registers and fees configured.\\n\\u2022 When a teacher marks the evening register, the office knows by the next morning which class did not.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\",\"pillar\":\"problem_solution\",\"fact_ids\":[\"pain-family-known-three-times\",\"feature-madrasah-portal\",\"feature-missed-register-flag\",\"url-website\"],\"planned_destinations\":[\"metricool:instagram\"],\"scheduled_for\":\"2026-10-22T12:00:00+01:00\",\"calendar_start\":\"2026-10-22\",\"calendar_slot\":\"masjidone|2026-10-22T12:00+01:00\",\"hypothesis\":\"M-A3\"}",
     "campaign_id": null,
     "created_at": "2026-10-21T18:40:02+00:00",
     "fingerprint": "9c89e1fa102a90184b1b1ce013186efc4db886170e32aa25aaa5cd496f219ae5",
@@ -2076,8 +2504,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "tidemark",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2089,8 +2517,8 @@
     "kind": "social_post",
     "platform": "facebook",
     "product": "bolton-vouched",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2102,8 +2530,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "booked-in",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2115,8 +2543,8 @@
     "kind": "social_post",
     "platform": "linkedin",
     "product": "domi",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2128,8 +2556,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "masjidone",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2141,8 +2569,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "tidemark",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2154,8 +2582,8 @@
     "kind": "social_post",
     "platform": "facebook",
     "product": "bolton-vouched",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2167,8 +2595,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "booked-in",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2180,12 +2608,12 @@
     "kind": "social_post",
     "platform": "linkedin",
     "product": "domi",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
-    "body": "{\"text\": \"How MasjidOne works:\\n\\n\\u2192 The masjid changes its own jam\\u0101\\u02bfah times, notices, fee rates and access straight away in the portal.\\n\\u2192 Every masjid gets four surfaces: a website, in-masjid screens, a congregation app and a madrasah portal, in its own colours and on its own domain.\\n\\u2192 Prayer-time screens run from one timetable across every screen in the masjid.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-self-service-content\", \"feature-four-surfaces\", \"feature-prayer-screens\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-27T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-27T13:30+00:00\"}",
+    "body": "{\"text\":\"How MasjidOne works:\\n\\n\\u2192 The masjid changes its own jam\\u0101\\u02bfah times, notices, fee rates and access straight away in the portal.\\n\\u2192 Every masjid gets four surfaces: a website, in-masjid screens, a congregation app and a madrasah portal, in its own colours and on its own domain.\\n\\u2192 Prayer-time screens run from one timetable across every screen in the masjid.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\",\"pillar\":\"how_it_works\",\"fact_ids\":[\"feature-self-service-content\",\"feature-four-surfaces\",\"feature-prayer-screens\",\"url-website\"],\"planned_destinations\":[\"metricool:instagram\"],\"scheduled_for\":\"2026-10-27T13:30:00+00:00\",\"calendar_start\":\"2026-10-22\",\"calendar_slot\":\"masjidone|2026-10-27T13:30+00:00\",\"hypothesis\":\"M-A3\"}",
     "campaign_id": null,
     "created_at": "2026-10-21T18:40:02+00:00",
     "fingerprint": "021dbf9fdca924d1ac70d8b0ff19148fe6a16aa95a746c8b57ad29fb365880c7",
@@ -2206,8 +2634,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "tidemark",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:36+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2219,8 +2647,8 @@
     "kind": "social_post",
     "platform": "facebook",
     "product": "bolton-vouched",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2232,8 +2660,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "booked-in",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2245,12 +2673,12 @@
     "kind": "social_post",
     "platform": "linkedin",
     "product": "domi",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
-    "body": "{\"text\": \"Each masjid's data is separated by the database itself, so an administrator only ever reaches their own masjid's records.\\n\\nThe child in an evening register is the same record the congregation side already holds.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"privacy_trust\", \"fact_ids\": [\"privacy-row-level-security\", \"value-one-family-record\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-10-29T12:00:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-10-29T12:00+00:00\"}",
+    "body": "{\"text\":\"Each masjid's data is separated by the database itself, so an administrator only ever reaches their own masjid's records.\\n\\nThe child in an evening register is the same record the congregation side already holds.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\",\"pillar\":\"privacy_trust\",\"fact_ids\":[\"privacy-row-level-security\",\"value-one-family-record\",\"url-website\"],\"planned_destinations\":[\"metricool:instagram\"],\"scheduled_for\":\"2026-10-29T12:00:00+00:00\",\"calendar_start\":\"2026-10-22\",\"calendar_slot\":\"masjidone|2026-10-29T12:00+00:00\",\"hypothesis\":\"M-A3\"}",
     "campaign_id": null,
     "created_at": "2026-10-21T18:40:02+00:00",
     "fingerprint": "fbd42ffb6a356b42e749d0970aa3112521c424413334f7cf514ab3ea083de2ff",
@@ -2271,8 +2699,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "tidemark",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2284,8 +2712,8 @@
     "kind": "social_post",
     "platform": "facebook",
     "product": "bolton-vouched",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2297,8 +2725,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "booked-in",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2310,8 +2738,8 @@
     "kind": "social_post",
     "platform": "linkedin",
     "product": "domi",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2323,8 +2751,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "masjidone",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2336,8 +2764,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "tidemark",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2349,8 +2777,8 @@
     "kind": "social_post",
     "platform": "facebook",
     "product": "bolton-vouched",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2362,8 +2790,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "booked-in",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2375,12 +2803,12 @@
     "kind": "social_post",
     "platform": "linkedin",
     "product": "domi",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
-    "body": "{\"text\": \"Many mas\\u0101jid run their week across several tools that do not talk to each other.\\n\\nMasjidOne is built for that:\\n\\u2022 Donations carry zero commission and support Gift Aid.\\n\\u2022 The masjid changes its own jam\\u0101\\u02bfah times, notices, fee rates and access straight away in the portal.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-disconnected-tools\", \"feature-donations\", \"feature-self-service-content\", \"url-website\"], \"planned_destinations\": [\"metricool:instagram\"], \"scheduled_for\": \"2026-11-03T13:30:00+00:00\", \"calendar_start\": \"2026-10-22\", \"calendar_slot\": \"masjidone|2026-11-03T13:30+00:00\"}",
+    "body": "{\"text\":\"Many mas\\u0101jid run their week across several tools that do not talk to each other.\\n\\nMasjidOne is built for that:\\n\\u2022 Donations carry zero commission and support Gift Aid.\\n\\u2022 The masjid changes its own jam\\u0101\\u02bfah times, notices, fee rates and access straight away in the portal.\\n\\nFind out more: https://masjidone.co.uk\\n\\n#masjid #madrasah #mosque #UKmasjid\",\"pillar\":\"problem_solution\",\"fact_ids\":[\"pain-disconnected-tools\",\"feature-donations\",\"feature-self-service-content\",\"url-website\"],\"planned_destinations\":[\"metricool:instagram\"],\"scheduled_for\":\"2026-11-03T13:30:00+00:00\",\"calendar_start\":\"2026-10-22\",\"calendar_slot\":\"masjidone|2026-11-03T13:30+00:00\",\"hypothesis\":\"M-A3\"}",
     "campaign_id": null,
     "created_at": "2026-10-21T18:40:02+00:00",
     "fingerprint": "23a7be64191f707896bc1f3d924f4e60a6c281495cced3702ecc8328edfc7ce4",
@@ -2401,8 +2829,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "tidemark",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:37+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2414,8 +2842,8 @@
     "kind": "social_post",
     "platform": "facebook",
     "product": "bolton-vouched",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2427,8 +2855,8 @@
     "kind": "social_post",
     "platform": "instagram",
     "product": "booked-in",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    },
    {
@@ -2440,8 +2868,164 @@
     "kind": "social_post",
     "platform": "linkedin",
     "product": "domi",
-    "status": "validated",
-    "updated_at": "2026-10-21T18:40:02+00:00",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"A cancellation costs a home-visit practice more than a clinic, because the clinician is already on the road and the gap is too short to fill by ringing round.\\n\\nDomi is built for that:\\n\\u2022 The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each.\\n\\u2022 Patients can cancel by texting CANCEL, which starts the refill with no staff involved.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-cancellations\", \"feature-refill-engine\", \"feature-cancel-by-text\", \"url-website\"], \"campaign_id\": \"domi-2026-10-21-749d0c\"}",
+    "campaign_id": "domi-2026-10-21-749d0c",
+    "created_at": "2026-10-21T18:57:25+00:00",
+    "fingerprint": "24ed1632d01c1abb7bb2d0fdf9c8b32b2550a6986800838016c9b7ddd2a52403",
+    "id": "cnt_6178a390407b",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "domi",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Domi works:\\n\\n\\u2192 The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each.\\n\\u2192 Patients can cancel by texting CANCEL, which starts the refill with no staff involved.\\n\\u2192 New visits are booked where they add the least driving, weighed against how soon the patient needs to be seen.\\n\\nFind out more: https://domi.ysbdesigns.uk\\n\\n#domiciliary #homevisits #eyecare #healthtech\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-refill-engine\", \"feature-cancel-by-text\", \"feature-book-by-road\", \"url-website\"], \"campaign_id\": \"domi-2026-10-21-749d0c\"}",
+    "campaign_id": "domi-2026-10-21-749d0c",
+    "created_at": "2026-10-21T18:57:25+00:00",
+    "fingerprint": "dd8fdaf95cb410bd93716cd9105c4925a181f4d227b0db4763bc64d75ecc8021",
+    "id": "cnt_38b276936459",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "domi",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"The refill engine ranks candidates by clinical priority, locality, days waiting and preferred clinician, and shows the reasons for each.\\n\\nFind out more: https://domi.ysbdesigns.uk\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-refill-engine\", \"value-act-on-gap\", \"url-website\"], \"campaign_id\": \"domi-2026-10-21-749d0c\"}",
+    "campaign_id": "domi-2026-10-21-749d0c",
+    "created_at": "2026-10-21T18:57:25+00:00",
+    "fingerprint": "d2678b715370262aee60a8811a9cb983a7cba86f4f9c91c699738ed629006841",
+    "id": "cnt_89473f14a6c3",
+    "kind": "social_post",
+    "platform": "x",
+    "product": "domi",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Booking by DM means late-night availability questions, and by the time she replies the client has often gone quiet and the slot stays empty.\\n\\nBooked In is built for that:\\n\\u2022 Changes to prices, hours, photographs or days off go live on her page as soon as she saves them.\\n\\u2022 Double booking is prevented at the database level, so two clients cannot take the same slot.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-dm-booking\", \"feature-live-changes\", \"feature-no-double-booking\"], \"campaign_id\": \"booked-in-2026-10-21-749d0c\"}",
+    "campaign_id": "booked-in-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:00:22+00:00",
+    "fingerprint": "cf9758eb00158acb46aeeeeb14cabc1e84f8133957283ccedc8820f578c2bba2",
+    "id": "cnt_494ee4b255e0",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "booked-in",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Booked In works:\\n\\n\\u2192 Changes to prices, hours, photographs or days off go live on her page as soon as she saves them.\\n\\u2192 Double booking is prevented at the database level, so two clients cannot take the same slot.\\n\\u2192 Pro includes Rebooking, which emails a client once when she is about due for her next treatment, with a link straight to a free time.\\n\\nFind out more about Booked In.\\n\\n#beautybusiness #lashtech #bookingpage #solobusiness\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-live-changes\", \"feature-no-double-booking\", \"feature-rebooking\"], \"campaign_id\": \"booked-in-2026-10-21-749d0c\"}",
+    "campaign_id": "booked-in-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:00:22+00:00",
+    "fingerprint": "a0456e6517ccc62812f2e213c3434711eb55fd709db6c87838cd5231bf50c42d",
+    "id": "cnt_d38d5a904b81",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "booked-in",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Changes to prices, hours, photographs or days off go live on her page as soon as she saves them.\\n\\nFind out more about Booked In.\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-live-changes\", \"value-no-commission\"], \"campaign_id\": \"booked-in-2026-10-21-749d0c\"}",
+    "campaign_id": "booked-in-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:00:22+00:00",
+    "fingerprint": "4651385d471f3bb672ef10fcde97ba86f16efc4a68bf159d3e0f8fb5ae11c6ba",
+    "id": "cnt_cdac37075094",
+    "kind": "social_post",
+    "platform": "x",
+    "product": "booked-in",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"A bathroom scale gives one number a day, and that number can swing with salt, water, sleep or a late meal.\\n\\nTidemark is built for that:\\n\\u2022 The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.\\n\\u2022 When a weigh-in jumps, the Trend tab explains why that is normal.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-scale-swings\", \"feature-holt-smoothing\", \"feature-trend-explains\", \"url-website\"], \"campaign_id\": \"tidemark-2026-10-21-749d0c\"}",
+    "campaign_id": "tidemark-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:02:08+00:00",
+    "fingerprint": "a2579d6825702cde9f6170036b3e75730158791be18417cc2aa81f9ec97a4aaa",
+    "id": "cnt_f299d0e54c39",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "tidemark",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Tidemark works:\\n\\n\\u2192 The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.\\n\\u2192 When a weigh-in jumps, the Trend tab explains why that is normal.\\n\\u2192 Logging opens on your last weight with minus and plus steppers, so most weigh-ins take a tap or two.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\\n\\n#weighttracker #privacyfirst #iphoneapp\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-holt-smoothing\", \"feature-trend-explains\", \"feature-quick-logging\", \"url-website\"], \"campaign_id\": \"tidemark-2026-10-21-749d0c\"}",
+    "campaign_id": "tidemark-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:02:08+00:00",
+    "fingerprint": "d2f79b46d04bc0eb6d56ff3ae52b0c60892b61bed9415923093f043f35b30581",
+    "id": "cnt_9cd24fe5021c",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "tidemark",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"The trend uses Holt's linear smoothing, which follows the direction you're heading rather than trailing behind like a plain moving average.\\n\\nFind out more: https://tidemark.ysbdesigns.uk\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-holt-smoothing\", \"value-read-numbers-properly\", \"url-website\"], \"campaign_id\": \"tidemark-2026-10-21-749d0c\"}",
+    "campaign_id": "tidemark-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:02:08+00:00",
+    "fingerprint": "7dc0556251bb08be031c174ea877201a7a6d2e2e02478d1b82bdf98f2ba28d26",
+    "id": "cnt_19bc12e69a90",
+    "kind": "social_post",
+    "platform": "x",
+    "product": "tidemark",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Good recommendations in the local WhatsApp group scroll away under hundreds of messages, so the next person has to ask all over again.\\n\\nBolton Vouched is built for that:\\n\\u2022 Pick a trade and an area, then call or WhatsApp a trader in one tap.\\n\\u2022 The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"problem_solution\", \"fact_ids\": [\"pain-buried-recommendations\", \"feature-one-tap-contact\", \"feature-categories\", \"url-site\"], \"campaign_id\": \"bolton-vouched-2026-10-21-749d0c\"}",
+    "campaign_id": "bolton-vouched-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:04:22+00:00",
+    "fingerprint": "233f99c52c3f57deb282b107ebbf28f1e67d4ef233e94aecccad936c97e392b1",
+    "id": "cnt_c25a6d5a7005",
+    "kind": "social_post",
+    "platform": "instagram",
+    "product": "bolton-vouched",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:38+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"How Bolton Vouched works:\\n\\n\\u2192 Pick a trade and an area, then call or WhatsApp a trader in one tap.\\n\\u2192 The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport.\\n\\u2192 Profiles show what has been checked about each trader, such as ID, insurance, Gas Safe and DVSA.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\\n\\n#Bolton #BoltonTrades #LocalTrades #SupportLocal\", \"pillar\": \"how_it_works\", \"fact_ids\": [\"feature-one-tap-contact\", \"feature-categories\", \"feature-checks\", \"url-site\"], \"campaign_id\": \"bolton-vouched-2026-10-21-749d0c\"}",
+    "campaign_id": "bolton-vouched-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:04:22+00:00",
+    "fingerprint": "1c7fbad8e1d38b3ec8db73e3f74f3efa68e175963169abf548497c563c438e45",
+    "id": "cnt_fb031403a751",
+    "kind": "social_post",
+    "platform": "linkedin",
+    "product": "bolton-vouched",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:39+00:00",
+    "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
+   },
+   {
+    "body": "{\"text\": \"Pick a trade and an area, then call or WhatsApp a trader in one tap.\\n\\nFind out more: https://boltonvouched.ysbdesigns.uk\", \"pillar\": \"feature_spotlight\", \"fact_ids\": [\"feature-one-tap-contact\", \"value-no-pay-to-rank\", \"url-site\"], \"campaign_id\": \"bolton-vouched-2026-10-21-749d0c\"}",
+    "campaign_id": "bolton-vouched-2026-10-21-749d0c",
+    "created_at": "2026-10-21T19:04:22+00:00",
+    "fingerprint": "6a684e4de25ea6c53337bb00cfe7db9a5c1e18406e290cbeb72381ba4cbe5c1e",
+    "id": "cnt_981948a45ecb",
+    "kind": "social_post",
+    "platform": "x",
+    "product": "bolton-vouched",
+    "status": "cancelled",
+    "updated_at": "2026-10-21T20:16:39+00:00",
     "validation": "{\"ok\": true, \"errors\": [], \"warnings\": [\"product profile not yet human-approved \\u2014 content cannot be approved until it is\"]}"
    }
   ],

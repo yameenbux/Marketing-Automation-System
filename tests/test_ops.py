@@ -35,3 +35,19 @@ def test_desk_queue_and_decisions(ctx):
 def test_decision_errors_are_reported_not_raised(ctx):
     res = ops.apply_decisions(ctx, [{"id": "content:nope", "decision": "approve"}])
     assert res[0]["applied"] is False and res[0]["error"]
+
+
+def test_state_export_carries_no_lead_names_or_suppression_keys(root):
+    import json as _j
+    from mas.lead_generation.leads import Lead, add_lead, suppress
+    from mas.ops import export_state
+    from mas.outreach import drafts
+    (root / "config" / "outreach.json").write_text(_j.dumps({"sender": {}, "products": {"acme": {"allowed_channels": ["email"]}}}))
+    c = Context.create(root=root, db=":memory:")
+    lid, _ = add_lead(c.store, "acme", Lead(company="Secret Cafe Ltd", source_url="https://x.test/l", research_date="2026-10-01",
+                                         qualification_reason="runs cafes", subscriber_type="corporate",
+                                         contact_email="info@secretcafe.test"), None)
+    drafts.prepare(c, lid)
+    suppress(c.store, "email:owner@secretcafe.test", "asked to stop")
+    text = export_state(c, root / "state.json").read_text()
+    assert "Secret Cafe" not in text and "secretcafe" not in text

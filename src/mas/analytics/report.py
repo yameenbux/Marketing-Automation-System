@@ -36,6 +36,11 @@ def build(ctx: Context) -> tuple[str, Path]:
     L += [f"**Mode:** {status} · live publishing: {ctx.settings['live']['publishing']} · "
           f"live outreach: {ctx.settings['live']['outreach_sending']}", ""]
 
+    from ..acquisition import report as acquisition_report
+    acq = acquisition_report(ctx, short=True)               # outcomes first: conversations, demos, pilots, paying
+    if acq:
+        L += [acq.rstrip(), "", "---", "", "*Production detail below is secondary: it only matters if it moves the numbers above.*", ""]
+
     L += ["## Workflows run today"] + ([f"- {r['workflow']}: **{r['status']}**" for r in runs] or ["- none"]) + [""]
 
     L += ["## Content", f"- Totals by status: {dict(content) or 'none'}",

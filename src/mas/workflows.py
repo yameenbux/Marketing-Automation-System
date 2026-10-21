@@ -63,7 +63,14 @@ def run_production(ctx: Context, plan: dict | None = None) -> list[dict]:
         raise PermissionError("kill switch is active")
     plan = plan or json.loads((_plans_dir(ctx) / f"{_today(ctx)}.json").read_text())
     writer, out = TemplateWriter(), []
+    from .acquisition import content_gate
+    from .marketing.calendar import _posted_on
+    gate, today = content_gate(ctx.root), ctx.policy.london_now().date()
     for pp in plan["products"]:
+        if gate is not None and (pp["slug"] not in gate or today.weekday() not in gate[pp["slug"]]["post_days"]
+                                 or not pp["destinations"] or _posted_on(ctx, pp["slug"], today)):
+            out.append({"product": pp["slug"], "status": "skipped: no acquisition hypothesis needs content today"})
+            continue
         prof = load_profile(ctx.root, pp["slug"])
         for action in pp["actions"]:
             if not action.startswith(("produce_post:", "draft_only:")):
@@ -79,7 +86,8 @@ def run_production(ctx: Context, plan: dict | None = None) -> list[dict]:
                     out.append({"product": pp["slug"], "pillar": pillar, "status": "skipped (not enough facts)"})
                     continue
                 cid, created = ctx.store.add_content(product=draft.product, kind=draft.kind, platform=platform,
-                                                     body=draft.body() | {"planned_destinations": pp["destinations"]},
+                                                     body=draft.body() | {"planned_destinations": pp["destinations"],
+                                                                          "hypothesis": (gate or {}).get(pp["slug"], {}).get("hypothesis")},
                                                      fingerprint=draft.fingerprint())
                 out.append({"content_id": cid, "product": pp["slug"], "platform": platform, "pillar": pillar,
                             "created": created, **validate_content(ctx, cid)})

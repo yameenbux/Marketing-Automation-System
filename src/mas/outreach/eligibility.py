@@ -70,10 +70,10 @@ def _assess(store, cfg, product, lead: Lead, channel, consent, today) -> Eligibi
         return Eligibility("blocked", ["phone marketing needs TPS/CTPS screening, which is not implemented"], ["PHONE"])
     if channel == "linkedin":
         return Eligibility("blocked", ["automated LinkedIn messaging breaches platform terms"], ["LINKEDIN"])
-    if channel != "email":
+    if channel not in ("email", "post"):
         return Eligibility("blocked", [f"unsupported channel {channel}"], ["UNSUPPORTED"])
 
-    verdict = _lead_checks(pcfg, cfg, lead, consent, today)
+    verdict = _post_checks(cfg, lead, today) if channel == "post" else _lead_checks(pcfg, cfg, lead, consent, today)
     verdict.lead_status = verdict.status
     sender = cfg.get("sender", {})
     missing = [k for k in ("legal_name", "postal_address", "reply_to", "opt_out_instructions") if not sender.get(k)]
@@ -84,6 +84,17 @@ def _assess(store, cfg, product, lead: Lead, channel, consent, today) -> Eligibi
         verdict.reasons.append("sender ID and opt-out configured")
         verdict.rules.append("SENDER_ID_OK")
     return verdict
+
+
+def _post_checks(cfg, lead: Lead, today) -> Eligibility:
+    """A letter addressed to a role ("The Committee") at an organisation's registered address: outside PECR and
+    no named person, so no personal data. Suppression and sender identification still apply (checked by the caller)."""
+    age = (today - date.fromisoformat(lead.research_date)).days
+    if age > int(cfg.get("research_max_age_days", 180)):
+        return Eligibility("manual_review", [f"research is {age} days old — re-verify the organisation and address"],
+                           ["STALE_RESEARCH"])
+    return Eligibility("eligible", ["role-addressed letter to the organisation: outside PECR, no named person"],
+                       ["POST_ROLE_ADDRESSED"])
 
 
 def _lead_checks(pcfg, cfg, lead: Lead, consent, today) -> Eligibility:

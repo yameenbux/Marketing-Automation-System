@@ -14,6 +14,7 @@ from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from ..acquisition import content_gate
 from ..context import Context
 from ..products.profile import load_profile
 from .planner import build_plan, recent_usage
@@ -44,6 +45,10 @@ def build_calendar(ctx: Context, start: date | None = None, weeks: int = 2) -> d
     primary = channels.get("primary_platform", {})
     plan = build_plan(ctx.root, ctx.store, per_day)
     order = [p["slug"] for p in plan["products"]]           # readiness order
+    gate = content_gate(ctx.root)                            # acquisition plan: only hypothesis-backed content
+    if gate is not None:
+        routed = {s for s, cs in channels["products"].items() if any(c.get("verified") for c in cs)}
+        order = [s for s in order if s in gate and s in routed]
     if not order:
         return {"slots": []}
 
@@ -59,15 +64,25 @@ def build_calendar(ctx: Context, start: date | None = None, weeks: int = 2) -> d
 
     writer, slots, rr = TemplateWriter(), [], 0
     for day in _weekdays(start, weeks, ctx.settings["operating_hours"]["days"]):
-        for k in range(min(per_day, len(order))):
-            slug = order[rr % len(order)]
+        todays = [order[(rr + i) % len(order)] for i in range(len(order))]
+        if gate is not None:
+            todays = [s for s in todays if day.weekday() in gate[s]["post_days"]]
+            for s in [s for s in todays if _posted_on(ctx, s, day)]:     # keep, and show, the post already there
+                todays.remove(s)
+                item = _posted_on(ctx, s, day)
+                slots.append({"date": day.isoformat(), "time": item["body"]["scheduled_for"][11:16], "product": s,
+                              "platform": item["platform"], "pillar": item["body"].get("pillar"),
+                              "publish_route": (item["body"].get("planned_destinations") or ["draft-only"])[0],
+                              "content_id": item["id"], "status": item["status"], "errors": []})
+        for k, slug in enumerate(todays[:per_day]):
             rr += 1
             prof = profiles[slug]
             connected = [c["destination"].split(":", 1)[1] for c in channels["products"].get(slug, []) if c.get("verified")]
             platform = primary.get(slug) or (connected[0] if connected else "linkedin")
             dests = [c["destination"] for c in channels["products"].get(slug, [])
                      if c.get("verified") and c["destination"].endswith(":" + platform)]
-            when = datetime.combine(day, SLOT_TIMES[k % len(SLOT_TIMES)], tzinfo=tz)
+            at = time.fromisoformat(gate[slug].get("post_time", "12:30")) if gate else SLOT_TIMES[k % len(SLOT_TIMES)]
+            when = datetime.combine(day, at, tzinfo=tz)
             slot_key = f"{slug}|{when.isoformat(timespec='minutes')}"
             existing = ctx.store.conn.execute(
                 "SELECT id, status FROM content WHERE json_extract(body, '$.calendar_slot')=? "
@@ -98,7 +113,8 @@ def build_calendar(ctx: Context, start: date | None = None, weeks: int = 2) -> d
             cid, created = ctx.store.add_content(
                 product=slug, kind="social_post", platform=platform, fingerprint=draft.fingerprint(),
                 body=draft.body() | {"planned_destinations": dests, "scheduled_for": when.isoformat(timespec="seconds"),
-                                     "calendar_start": start.isoformat(), "calendar_slot": slot_key})
+                                     "calendar_start": start.isoformat(), "calendar_slot": slot_key,
+                                     "hypothesis": (gate or {}).get(slug, {}).get("hypothesis")})
             res = validate_content(ctx, cid)
             slots.append(slot | {"content_id": cid, "status": res["status"] if created else "duplicate of existing draft",
                                  "errors": res["validation"]["errors"]})
@@ -110,6 +126,14 @@ def build_calendar(ctx: Context, start: date | None = None, weeks: int = 2) -> d
     (out / f"{start.isoformat()}.json").write_text(json.dumps(cal, indent=2))
     (out / f"{start.isoformat()}.md").write_text(render_markdown(cal))
     return cal
+
+
+def _posted_on(ctx: Context, slug: str, day: date) -> dict | None:
+    """The live (not cancelled or rejected) post already sitting on this day for this product, if any."""
+    row = ctx.store.conn.execute(
+        "SELECT id FROM content WHERE product=? AND substr(json_extract(body, '$.scheduled_for'), 1, 10)=? "
+        "AND status NOT IN ('cancelled','rejected')", (slug, day.isoformat())).fetchone()
+    return ctx.store.get_content(row["id"]) if row else None
 
 
 def render_markdown(cal: dict) -> str:

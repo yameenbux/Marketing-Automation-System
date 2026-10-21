@@ -14,6 +14,8 @@ from .store import now_iso
 
 STATE_TABLES = ("content", "campaigns", "publications", "runs", "costs", "sync_state")
 NEVER_EXPORT = ("leads", "suppression", "outreach")
+# Audit rows about leads and outreach name organisations or carry suppression keys (which can be email addresses).
+PRIVATE_AUDIT_ACTIONS = ("eligibility", "suppress", "draft_outreach", "approve_outreach", "send_outreach")
 AUDIT_DAYS = 30
 
 
@@ -27,7 +29,9 @@ def export_state(ctx: Context, path: Path | None = None) -> Path:
     data = {"exported_at": now_iso(), "tables": {}}
     for t in STATE_TABLES:
         data["tables"][t] = [dict(r) for r in ctx.store.q(f"SELECT * FROM {t}")]  # noqa: S608 — fixed table names
-    data["tables"]["audit"] = [dict(r) for r in ctx.store.q("SELECT * FROM audit WHERE ts >= ?", (since,))]
+    marks = ",".join("?" * len(PRIVATE_AUDIT_ACTIONS))
+    data["tables"]["audit"] = [dict(r) for r in ctx.store.q(
+        f"SELECT * FROM audit WHERE ts >= ? AND action NOT IN ({marks})", (since, *PRIVATE_AUDIT_ACTIONS))]
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=1, sort_keys=True, default=str), encoding="utf-8")
     return path
@@ -75,7 +79,8 @@ def desk_queue(ctx: Context, repo_web: str | None = None) -> list[dict]:
         b = json.loads(r["body"])
         routes = b.get("planned_destinations") or []
         items.append({"id": f"content:{r['id']}", "kind": b.get("post_type", "post").lower(), "product": r["product"],
-                      "title": f"{r['product']} · {r['platform']} · {b.get('pillar', '')}",
+                      "title": f"{r['product']} · {r['platform']} · {b.get('pillar', '')}"
+                               + (f" · tests {b['hypothesis']}" if b.get("hypothesis") else ""),
                       "text": b["text"], "when": b.get("scheduled_for"),
                       "route": routes[0] if routes else "draft only — no connected account",
                       "media": (b.get("media_urls") or [public_url(media_base, still_for(ctx.root, r["product"], b.get("pillar")))])[0]})
