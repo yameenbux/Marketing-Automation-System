@@ -36,7 +36,14 @@ GUARDRAILS: dict[str, list[tuple[str, str]]] = {
     "booked-in": [(r"\bcustom domains?\b|\breschedul", "not built"),
                   (r"\bdeposits? (?:are |is )?(?:confirmed|verified|tracked) automatically\b", "deposits can't be verified; she marks them received"),
                   (r"\bpublish(?:es|ing)? (?:straight |directly )?to instagram\b", "not built"),
-                  (r"\bsign up (?:now|today)\b|\bstart (?:your )?free\b", "not provisioned for live sign-ups")],
+                  # Free sign-up is live (site checked 26 Oct 2026); billing has never taken a real payment, so
+                  # nothing may push the trial or a paid tier until it has.
+                  (r"\btrial\b|\b(?:14|fourteen)[- ]days?\b|\bupgrade\b|\bsubscribe\b|\block in\b",
+                   "billing not live: promote the Free plan, never the trial or an upgrade"),
+                  (r"\b(?:techs?|technicians?|artists?|studios?|pros|stylists?|therapists?|customers|clients) "
+                   r"(?:love|trust|swear by|rely on)\b|\b(?:join|trusted by) (?:hundreds|thousands|dozens)\b"
+                   r"|\bour (?:studios|customers|users|members)\b", "no verified customers yet"),
+                  (r"\bworks on (?:any|every|all) (?:phones?|devices?|iphones?)\b", "not yet tested on real Safari")],
     "domi": [(r"\bpractices? (?:use|love|rely)\b|\bour customers\b", "no customers yet"),
              (r"\bnoah\b|\bdental charting\b|\bwound charts?\b", "not built"),
              (r"\b(?:scotland|wales|northern ireland)\b", "rules not modelled"),

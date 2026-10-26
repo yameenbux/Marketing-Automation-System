@@ -16,7 +16,7 @@
       "website": "https://masjidone.co.uk",
       "demo_url": null,
       "notes": "B2B SaaS for mas\u0101jid/madrasahs. Has pricing and a live website.",
-      "last_successful_sync": "2026-10-21T20:24:31+00:00",
+      "last_successful_sync": "2026-10-26T12:15:08+00:00",
       "last_synced_commit": "df33768d6dbbd3823b6fb18a6bf5a9d3ae5e741b",
       "brand": {
         "primary_color": "#0C2A21",
@@ -44,8 +44,8 @@
       "website": "https://domi.ysbdesigns.uk",
       "demo_url": "https://app.domi.ysbdesigns.uk/?brand=domi",
       "notes": "B2B SaaS for home-visit healthcare. Working demo, no customers yet.",
-      "last_successful_sync": "2026-10-21T20:24:32+00:00",
-      "last_synced_commit": "3ad233a9b15f9ddfc2fca6df12f72166c6bf6016",
+      "last_successful_sync": "2026-10-26T12:15:09+00:00",
+      "last_synced_commit": "3af75ab02af0d37577b578e9e90962541cc31000",
       "brand": {
         "primary_color": "#1E4D40",
         "secondary_color": "#15241F",
@@ -72,8 +72,8 @@
       "website": null,
       "demo_url": null,
       "notes": "Booking page for solo beauty professionals. README: not provisioned (no live email/payments).",
-      "last_successful_sync": "2026-10-21T20:24:34+00:00",
-      "last_synced_commit": "7f284382222fe5f24a3fab256935e9573fc12d8e",
+      "last_successful_sync": "2026-10-26T12:15:10+00:00",
+      "last_synced_commit": "5c807180a72fb8558c94d25da1af0dbcbfb0f3cb",
       "brand": {
         "primary_color": "#43192A",
         "secondary_color": "#8E2F43",
@@ -100,7 +100,7 @@
       "website": "https://tidemark.ysbdesigns.uk",
       "demo_url": null,
       "notes": "B2C iPhone weight tracker. Not yet on the App Store.",
-      "last_successful_sync": "2026-10-21T20:24:35+00:00",
+      "last_successful_sync": "2026-10-26T12:15:10+00:00",
       "last_synced_commit": "f9be463f63cb0c87c01cd9fda65273988b780c2b",
       "brand": {
         "primary_color": "#2A1E45",
@@ -128,8 +128,8 @@
       "website": null,
       "demo_url": null,
       "notes": "Local tradespeople directory for Bolton (confirmed in scope by owner 2026-10-21).",
-      "last_successful_sync": "2026-10-21T20:24:36+00:00",
-      "last_synced_commit": "590846db8232168b8edca485345b76d655af318d",
+      "last_successful_sync": "2026-10-26T12:15:11+00:00",
+      "last_synced_commit": "e759f82c21904aedd25ab30e8d3c0804ff8d30f7",
       "screenshots": false,
       "screenshots_note": "Live listings show real tradespeople's names and numbers; they consented to a listing, not to appearing in ads.",
       "brand": {

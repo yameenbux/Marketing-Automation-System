@@ -123,10 +123,10 @@
     {
       "id": "feature-categories",
       "kind": "feature",
-      "text": "The directory covers 43 categories in seven groups, from home and trades to repairs, moving, events, lessons, vehicles and transport.",
+      "text": "The directory covers 66 trades in eight groups, from home and trades to business and finance.",
       "source": {
         "path": "README.md",
-        "quote": "**43 categories in seven groups**: home and trades, repairs and appliances,"
+        "quote": "**66 trades in eight groups**: home and trades, repairs and appliances, moving and waste,"
       }
     },
     {
@@ -144,7 +144,7 @@
       "text": "Gas and boiler listings cannot go live without a Gas Safe check, and driving instructors need a DVSA ADI check.",
       "source": {
         "path": "README.md",
-        "quote": "Gas & boilers can't go live without a Gas Safe check; driving instructors need"
+        "quote": "A trader is only listed under Gas & boilers with an in-date Gas Safe check, and under Driving instructors with an in-date DVSA ADI check."
       }
     },
     {
@@ -153,7 +153,7 @@
       "text": "Every trader on Bolton Vouched has agreed to be listed, after reading exactly how they will appear.",
       "source": {
         "path": "README.md",
-        "quote": "a trader is listed only after they open their link, read exactly how they'll appear, and agree."
+        "quote": "Every trader on it has agreed to be listed."
       }
     },
     {
@@ -180,7 +180,7 @@
       "text": "Traders linked to their listing can reply once to each review.",
       "source": {
         "path": "README.md",
-        "quote": "signed in and their account is linked to the listing. Then they reply once to each review."
+        "quote": "Then they reply once to each review."
       }
     },
     {
@@ -324,7 +324,16 @@
       "text": "Traders can request a listing on the Get listed page without creating an account.",
       "source": {
         "path": "README.md",
-        "quote": "**Get listed** (`/get-listed`) takes a request without an account."
+        "quote": "(`/get-listed`) still takes a request without an account"
+      }
+    },
+    {
+      "id": "feature-self-serve-listing",
+      "kind": "feature",
+      "text": "A trader can sign in, fill in one form and their listing goes live straight away.",
+      "source": {
+        "path": "README.md",
+        "quote": "listing goes **live straight away**, linked to their account."
       }
     },
     {
@@ -333,7 +342,7 @@
       "text": "Traders get their own review link, a QR card and a 'Vouched in Bolton' badge for their website.",
       "source": {
         "path": "README.md",
-        "quote": "their review link and QR card, and their \"Vouched in Bolton\" website badge."
+        "quote": "their review link and QR card, **Put it on Google** (their page link for the Website box of a Google Business Profile, tagged `?utm_source=google_business`), and their \"Vouched in Bolton\" website badge."
       }
     },
     {

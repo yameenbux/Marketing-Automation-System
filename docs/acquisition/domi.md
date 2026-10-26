@@ -33,7 +33,7 @@ Don't lead with: Replacing Opticabase or the practice system: Opticabase stays t
 
 ## Prerequisites (yours)
 - [ ] **D-P1** blocks *paying*: UK hosting, real accounts and ICO registration are done (README). Before the first real patient: the DPIA (drafted), the practice's data processing agreement and a DSPT check; processor DPAs; encrypting the offline copy on clinicians' phones; hardening; Cyber Essentials for NHS buyers.
-- [ ] **D-P3** blocks *email*: Set sender identity and opt-out in config/outreach.json before any email.
+- [x] **D-P3** blocks *email*: Sender identity and opt-out set from the Companies House record (config/company.json).
 - [ ] **D-P4** blocks *pilot*: Approve the Domi profile in the approval desk.
 
 ## Channels, in order

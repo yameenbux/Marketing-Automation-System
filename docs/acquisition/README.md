@@ -1,10 +1,10 @@
 # 30-day customer-acquisition plan (22 Oct – 20 Nov 2026)
 
 **Goal:** real conversations, demos, pilots and paying customers, measured by source. Not posts, not views.
-**Order:** MasjidOne → Domi → Bolton Vouched. Booked In and Tidemark stay in readiness mode until launch.
+**Order:** MasjidOne → Domi → Bolton Vouched → Booked In (active from 26 Oct). Tidemark stays in readiness mode until launch.
 
 Per-product plans (generated from `config/acquisition.json`; edit the config, then `mas acq docs`):
-[MasjidOne](masjidone.md) · [Domi](domi.md) · [Bolton Vouched](bolton-vouched.md)
+[MasjidOne](masjidone.md) · [Domi](domi.md) · [Bolton Vouched](bolton-vouched.md) · [Booked In](booked-in.md)
 
 ## What the evidence says before you start (READMEs re-read 21 Oct, evening)
 - **MasjidOne can't take a second masjid yet.** Its README says a known platform fix is "Blocking the moment a
@@ -20,8 +20,13 @@ Per-product plans (generated from `config/acquisition.json`; edit the config, th
   year, offered, never pushed). The site moved to www.boltonvouched.co.uk (the old ysbdesigns address no
   longer responds). The live directory had **2 listings** on 21 Oct and every home and trades category says
   "soon". Supply is the whole game for the first fortnight.
-- **Booked In and Tidemark stay in readiness.** Booked In: email is live, subscription billing isn't, and there's
-  no launch waitlist. Tidemark: no signed iPhone build yet, and the site has no sign-up form.
+- **Booked In went active on 26 Oct: free sign-up works, paying doesn't.** The live site takes free sign-ups and
+  starts every studio on a fourteen-day Pro+ trial, but billing has only run against a Stripe sandbox and has never
+  taken a real payment (K-P1, which turns urgent with the first sign-up). Before any public push: confirm the
+  security fixes 029/032 are in production (K-P2), test a booking on a real iPhone (K-P3), and fix the footer and
+  the "next" promises on the pricing card (K-P4). The measure is pages taking real bookings, because each live page
+  carries "Powered by Booked In" to its clients. No cold messages: buyers are sole traders.
+- **Tidemark stays in readiness.** No signed iPhone build yet, and the site has no sign-up form.
 - **Distribution is the bottleneck.** The only connected social account has about 1 follower. Acquisition here is
   relationships: referrals, visits, phone calls, letters. Content is kept to two MasjidOne posts a week.
 

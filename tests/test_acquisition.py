@@ -61,8 +61,11 @@ def test_real_plan_cites_verified_facts_and_messages_pass_validator():
 
 def test_real_plan_priorities_and_readiness():
     p = acq.load_plan(REPO)
-    assert acq.active(p) == ["masjidone", "domi", "bolton-vouched"]
-    assert {p["products"][s]["mode"] for s in ("booked-in", "tidemark")} == {"readiness"}
+    assert acq.active(p) == ["masjidone", "domi", "bolton-vouched", "booked-in"]
+    assert p["products"]["tidemark"]["mode"] == "readiness"
+    bi = p["products"]["booked-in"]
+    assert bi["targets"]["paying"] == [0, 0, 0, 0]                   # billing has never taken a real payment
+    assert not next(x for x in bi["prerequisites"] if x["id"] == "K-P1")["done"]
 
 
 def test_check_plan_flags_unsupported_message(root):

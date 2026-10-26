@@ -730,20 +730,286 @@
     },
     "booked-in": {
       "priority": 4,
-      "mode": "readiness",
-      "launch_prerequisites": [
-        "Make subscription billing live: the Stripe path has never run against a live provider (email is now live)",
-        "Add a waitlist with explicit consent: none exists (the README's 'waiting list' is a Pro+ feature for her clients)"
+      "mode": "active",
+      "activated": "2026-10-26",
+      "stages": {
+        "contacted": "A beauty pro reached in person, by a referral, or one who answered a group or Instagram post (not views or likes)",
+        "signed_up": "She created a page (count from the platform's studio list)",
+        "live": "Her page took its first real client booking",
+        "active": "Five or more real bookings in her first fourteen days, with the link in her bio",
+        "paying": "Paid for Pro or Pro+ (none possible until billing is live: K-P1)"
+      },
+      "icp": {
+        "who": "A UK lash, brow or tinting technician working on her own, mobile or from home or a rented chair, who takes bookings through Instagram DMs today.",
+        "where": "Online UK-wide; in person around Bolton and Manchester so you can sit with her while she sets it up.",
+        "buyer": "She is the buyer and the user. She decides in a minute, on her phone, between clients.",
+        "disqualify": [
+          "Works in a salon whose owner runs the booking system",
+          "Happy on Fresha, Booksy or Treatwell and gets most new clients from their marketplace",
+          "No Instagram or link-in-bio habit"
+        ],
+        "evidence_fact_ids": [
+          "audience-solo-beauty",
+          "audience-lash-technicians",
+          "overview-self-booking"
+        ]
+      },
+      "value_proposition": {
+        "headline": "Her clients book themselves from her own page, and a treatment that needs a patch test can't be booked without one.",
+        "fact_ids": [
+          "overview-self-booking",
+          "pain-dm-eleven-pm",
+          "value-page-is-hers",
+          "feature-patch-test",
+          "pain-patch-test-compliance",
+          "pricing-free-tier"
+        ],
+        "do_not_lead_with": [
+          "The fourteen-day Pro+ trial or any paid tier: billing has never taken a real payment (K-P1)",
+          "Custom domains, rescheduling or posting straight to Instagram: not built",
+          "Named competitors' prices, unless you have checked them that week (the site's own calculator does this)",
+          "Anything implying existing customers: there are none to point to yet"
+        ]
+      },
+      "assumptions": [
+        {
+          "id": "K-A1",
+          "risk": "highest",
+          "statement": "A technician who signs up will put the link in her bio and take a real client booking within fourteen days.",
+          "test": "Track signed_up against live for each signup.",
+          "min_sample": 5,
+          "success_ratio": 0.5,
+          "if_contradicted": "Stop promoting. Ask each one what stopped her (setup, trust, clients prefer DMs) and fix the first week before finding more signups."
+        },
+        {
+          "id": "K-A2",
+          "risk": "high",
+          "statement": "Patch-test enforcement is a reason to switch that DM booking and the big platforms don't give her.",
+          "test": "Ask every signup and conversation what made her try it; log 'supports' when she names patch tests or insurance.",
+          "min_sample": 8,
+          "success_ratio": 0.3,
+          "if_contradicted": "Lead with the eleven o'clock DM and 'the page is hers' instead; keep patch tests as the reason to stay."
+        },
+        {
+          "id": "K-A3",
+          "risk": "medium",
+          "statement": "The 'Powered by Booked In' line on live pages brings new studios.",
+          "test": "Ask every signup how she heard; log 'supports' when it was a client's booking page.",
+          "min_sample": 10,
+          "success_ratio": 0.1,
+          "if_contradicted": "Growth has to come from referrals and groups; ask live studios for introductions instead."
+        },
+        {
+          "id": "K-A4",
+          "risk": "high",
+          "statement": "A studio on the Free plan will pay ten pounds a month for deposits, reminders and rebooking.",
+          "test": "Untestable until K-P1. Then offer Pro to active studios and log yes or no.",
+          "min_sample": 5,
+          "success_ratio": 0.4,
+          "if_contradicted": "Ask what would be worth paying for; don't cut the price first."
+        }
       ],
-      "allowed_now": [
-        "Collect waitlist sign-ups with explicit consent",
-        "Keep the verified profile in sync"
+      "prerequisites": [
+        {
+          "id": "K-P1",
+          "blocks": "signed_up",
+          "item": "Billing has never taken a real payment (README). Every new studio starts a fourteen-day Pro+ trial, so the first one ends fourteen days after the first signup. Before then, either make Stripe live and run one real payment end to end (check the stripe-webhook's SUPABASE_SERVICE_ROLE_KEY first, the README's open question), or change the site so nobody is asked to pay.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "K-P2",
+          "blocks": "instagram",
+          "item": "Confirm migrations 029 and 032 are applied in production. The README found that anyone holding the page's public key could delete every booking; re-run its own non-destructive check (a DELETE filtered to a tenant that cannot exist must be refused, not return 204) before driving any traffic.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "K-P3",
+          "blocks": "instagram",
+          "item": "Book an appointment end to end on a real iPhone in Safari. The README says it hasn't been tested there, and most of her clients will book from an iPhone.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "K-P4",
+          "blocks": "instagram",
+          "item": "Site: the footer says 'a YSB Designs product'; add 'Booked In is a trading name of YSB Ventures Ltd' with the company number, place of registration and registered office. And remove 'your own domain and posting a Story straight to Instagram are next' from the Pro+ card: the README says never to describe them, and 'this price is locked' turns it into a promise.",
+          "owner": "you",
+          "done": false
+        },
+        {
+          "id": "K-P5",
+          "blocks": "instagram",
+          "item": "Connect @bookedin.uk (Instagram, and TikTok if you want it) to Metricool, then list it under booked-in in config/channels.json. Until then you post by hand; the system will never post Booked In to another product's account.",
+          "owner": "you",
+          "done": false
+        }
       ],
-      "not_allowed_now": [
-        "Outreach (buyers are sole traders: individual subscribers)",
-        "Scheduled content",
-        "New creative production"
-      ]
+      "channels": [
+        {
+          "source": "referral",
+          "priority": 1,
+          "who_acts": "you",
+          "how": "Ask the technicians you already know (first, the technician whose page Booked In grew from) who they'd introduce, and ask every new signup for two names.",
+          "compliance": "The introducer makes the first contact; you reply. No messages to people who haven't asked."
+        },
+        {
+          "source": "instagram",
+          "priority": 2,
+          "who_acts": "you",
+          "how": "Post from @bookedin.uk using the messages below (by hand until K-P5). Comment helpfully under UK lash and brow posts as yourself; answer anyone who messages first.",
+          "compliance": "Never send an unsolicited DM: the ICO treats direct messages as electronic mail, and sole traders are individuals under PECR."
+        },
+        {
+          "source": "facebook_group",
+          "priority": 3,
+          "who_acts": "you",
+          "how": "In UK lash and brow business groups you belong to, with the admin's agreement, share the patch-test and insurance point (the group post below) rather than an advert.",
+          "compliance": "Posted by you, never automated; respect each group's rules."
+        },
+        {
+          "source": "in_person",
+          "priority": 4,
+          "who_acts": "you",
+          "how": "Lash and brow training academies (their students need a booking page on day one) and technicians you meet around Bolton and Manchester: set the page up with her, on her phone.",
+          "compliance": "Face to face. Academies are businesses: a phone call is fine after a TPS/CTPS check; email stays off."
+        },
+        {
+          "source": "website_inbound",
+          "priority": 5,
+          "who_acts": "system",
+          "how": "The site's guides (patch tests and insurers; a Booksy alternative) bring searchers. Ask every signup how she heard and log it.",
+          "compliance": "—"
+        }
+      ],
+      "content": {
+        "post_days": [],
+        "hypothesis": "K-A2",
+        "why": "@bookedin.uk isn't connected to Metricool (K-P5), so you post the messages below by hand. Judge them by signups that mention them, not views."
+      },
+      "targets": {
+        "contacted": [
+          3,
+          12,
+          15,
+          15
+        ],
+        "signed_up": [
+          1,
+          4,
+          6,
+          8
+        ],
+        "live": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "active": [
+          0,
+          0,
+          2,
+          3
+        ],
+        "paying": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "targets_note": "Guesses for a product with no customers yet; week 1 is nearly over. Paying stays at 0 until K-P1. The number that matters is live: a live page carries 'Powered by Booked In' to her clients.",
+      "messages": [
+        {
+          "id": "bookedin-dm-pain",
+          "use": "Instagram post: the problem",
+          "platform": "instagram",
+          "fact_ids": [
+            "pain-dm-eleven-pm",
+            "overview-self-booking",
+            "value-not-the-bottleneck",
+            "url-website"
+          ],
+          "text": "A client asks at eleven at night whether Saturday is free. By the time you answer, she has gone quiet and the slot is still empty. With Booked In your clients book themselves from a link in your Instagram bio, and bookings arrive while you are working. booked-in.co.uk"
+        },
+        {
+          "id": "bookedin-patch-test",
+          "use": "Instagram post: the reason to switch (tests K-A2)",
+          "platform": "instagram",
+          "fact_ids": [
+            "pain-patch-test-compliance",
+            "feature-patch-test",
+            "pricing-free-tier",
+            "url-website"
+          ],
+          "text": "Most booking platforms leave patch tests to you, even though a missing dated record can put your insurance cover at risk. On Booked In, a treatment that needs a patch test can't be booked by someone who hasn't had one in time, and the patch-test booking itself becomes the record. That rule is on the Free plan too. booked-in.co.uk"
+        },
+        {
+          "id": "bookedin-page-is-hers",
+          "use": "Instagram post: against the marketplaces",
+          "platform": "instagram",
+          "fact_ids": [
+            "value-page-is-hers",
+            "value-no-commission",
+            "url-website"
+          ],
+          "text": "Your page should be yours: your photographs, your prices, your link, and no marketplace showing your client three other technicians nearby. No commission, and nobody else advertised on it. booked-in.co.uk"
+        },
+        {
+          "id": "bookedin-group-post",
+          "use": "Facebook group post, with the admin's agreement",
+          "platform": "facebook",
+          "fact_ids": [
+            "pain-reaction-claim",
+            "overview-booking-page",
+            "feature-patch-test",
+            "pricing-free-tier",
+            "url-website"
+          ],
+          "text": "For anyone doing lashes, brows or tinting: if a client reacts and you can't produce a dated patch-test record, the insurance meant to cover it may not. Booked In is a booking page built for solo beauty professionals, and a treatment that needs a patch test can't be booked by someone who hasn't had one in time. The patch-test booking itself becomes the record, and that's on the Free plan. booked-in.co.uk"
+        },
+        {
+          "id": "bookedin-in-person",
+          "use": "What to say when you meet a technician or an academy",
+          "platform": "instagram",
+          "fact_ids": [
+            "overview-self-booking",
+            "feature-no-double-booking",
+            "feature-live-changes",
+            "pricing-free-tier",
+            "url-website"
+          ],
+          "text": "Your clients book themselves from a link in your Instagram bio. Two clients can't take the same slot, and a change to a price, your hours or a day off is live on your page as soon as you save it. There's a Free plan. booked-in.co.uk"
+        }
+      ],
+      "demo": {
+        "assets": [
+          "booked-in.co.uk on her phone",
+          "your phone, to book as a client"
+        ],
+        "flow": [
+          "Start free with her email and trade; the treatments and prices arrive filled in",
+          "Check the prices and add one photograph",
+          "Book a test appointment from your phone and watch it land in her diary",
+          "Show the patch-test rule refusing a lash booking for a client with no test",
+          "Put the link in her Instagram bio"
+        ],
+        "never_show": [
+          "The Pro+ trial or a checkout: billing has never taken a real payment",
+          "Custom domains, rescheduling or posting to Instagram: not built",
+          "The original client's page as a sample: her clients' faces are on it"
+        ]
+      },
+      "discovery_questions": [
+        "How do clients book you today, and what happens to a DM you see at eleven at night?",
+        "Does your insurer ask for patch tests on anything you do? Where is your record of them now?",
+        "Have you used Fresha, Booksy or Treatwell? What made you stay or leave?",
+        "How did you hear about Booked In?"
+      ],
+      "pilot_offer": "No pilot needed: the Free plan is the trial. Offer to set her page up with her, on her phone, in ten minutes.",
+      "baseline": "26 Oct 2026: free signup live on booked-in.co.uk; billing never taken a real payment; no verified customers; @bookedin.uk exists on Instagram and TikTok but isn't connected to Metricool."
     },
     "tidemark": {
       "priority": 5,

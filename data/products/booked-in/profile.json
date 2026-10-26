@@ -222,10 +222,10 @@
     {
       "id": "privacy-no-third-parties",
       "kind": "privacy",
-      "text": "Nothing on any page is fetched from third parties, so opening a booking page shares nothing with Google or other providers.",
+      "text": "Pages load nothing from third parties except Cloudflare Web Analytics, which sets no cookie and writes nothing to the visitor's device.",
       "source": {
         "path": "README.md",
-        "quote": "Nothing on any page is fetched from anybody else."
+        "quote": "Cloudflare Web Analytics, which the privacy notice describes and which the build adds only when `CF_ANALYTICS_TOKEN` is set. It sets no cookie and writes nothing to the visitor's device"
       }
     },
     {
@@ -258,10 +258,19 @@
     {
       "id": "limitation-not-provisioned",
       "kind": "limitation",
-      "text": "Email is now live, but subscription billing is not: the Stripe path has never run against a live payment provider.",
+      "text": "Email is live, but subscription billing is not: it has never taken a payment against a real account.",
       "source": {
         "path": "README.md",
-        "quote": "**Email is live. Subscription billing is not.**"
+        "quote": "taken a payment against a real account, and it should not be described as"
+      }
+    },
+    {
+      "id": "limitation-billing-sandbox-only",
+      "kind": "limitation",
+      "text": "Billing has been run end to end against a Stripe sandbox, with a hosted checkout, a card and a signed webhook, but not against a live account.",
+      "source": {
+        "path": "README.md",
+        "quote": "It has, however, been run end to end against a **Stripe sandbox**: a real"
       }
     },
     {
@@ -397,6 +406,51 @@
       "source": {
         "path": "README.md",
         "quote": "A single client coming back one extra time in a year covers the subscription several times over."
+      }
+    },
+    {
+      "id": "url-website",
+      "kind": "url",
+      "text": "Booked In is at booked-in.co.uk.",
+      "source": {
+        "path": "README.md",
+        "quote": "`booked-in.co.uk` is verified"
+      }
+    },
+    {
+      "id": "value-page-is-hers",
+      "kind": "value_prop",
+      "text": "The page is hers: her photographs, her prices, her link, and no marketplace showing her client three other technicians nearby.",
+      "source": {
+        "path": "README.md",
+        "quote": "**the page is hers**: her photographs, her prices, her link, and no marketplace showing her client three other technicians nearby."
+      }
+    },
+    {
+      "id": "pain-dm-eleven-pm",
+      "kind": "pain_point",
+      "text": "A client asks at eleven at night whether Saturday is free; by the time she answers, the client has gone quiet and the slot is still empty.",
+      "source": {
+        "path": "README.md",
+        "quote": "By the time she answers, the client has gone quiet and the slot is still empty."
+      }
+    },
+    {
+      "id": "pain-reaction-claim",
+      "kind": "pain_point",
+      "text": "If a client reacts and the studio cannot produce a dated patch-test record, the insurance meant to cover it may not.",
+      "source": {
+        "path": "README.md",
+        "quote": "If a client reacts and the studio cannot produce a dated record, the insurance that was supposed to cover it may not"
+      }
+    },
+    {
+      "id": "pricing-free-tier",
+      "kind": "pricing",
+      "text": "There is a Free plan, and the patch-test rule is on it as well as on the paid plans.",
+      "source": {
+        "path": "README.md",
+        "quote": "**The patch-test rule itself is free and always will be**"
       }
     }
   ]

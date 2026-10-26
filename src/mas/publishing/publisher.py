@@ -99,6 +99,11 @@ class Publisher:
         integration, network = DESTINATIONS[destination]
         if item["platform"] != (network if network != "twitter" else "x"):
             return PublishResult("blocked", key, f"content written for {item['platform']}, not {network}")
+        # One Metricool brand can hold several products' accounts: only post where this product has its own verified one.
+        cfile = self.root / "config" / "channels.json"
+        owned = json.loads(cfile.read_text()).get("products", {}).get(item["product"], []) if cfile.exists() else []
+        if not any(c.get("destination") == destination and c.get("verified") for c in owned):
+            return PublishResult("blocked", key, f"no verified {destination} account for {item['product']} in config/channels.json")
 
         decision = self.policy.authorize(Action.PUBLISH, integration,
                                          detail={"content_id": content_id, "destination": destination, "key": key})

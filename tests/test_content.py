@@ -367,3 +367,43 @@ def test_utm_tagging_for_link_networks():
     t = tag_links("See https://acmerota.example.co.uk/demo now", "linkedin", "acme", "cnt_1")
     assert "utm_source=linkedin" in t and "utm_campaign=acme-organic" in t and "utm_content=cnt_1" in t
     assert tag_links("https://x.example.co.uk", "instagram", "acme", "c") == "https://x.example.co.uk"
+
+
+def test_publisher_refuses_a_destination_the_product_does_not_own(ctx):
+    """The only connected Instagram account belongs to one product; another product's post must never go there."""
+    approve_profile(ctx, "acme", "tester")
+    _, out = _produce(ctx)
+    cid = out[0]["content_id"]
+    approve_content(ctx, cid, "tester")
+    (ctx.root / "config" / "channels.json").write_text(json.dumps({"products": {"acme": []}}))
+    r = Publisher(ctx.policy, ctx.store, ctx.root).schedule(cid, "metricool:instagram", "2030-01-01T12:00:00+00:00")
+    assert r.status == "blocked" and "no verified" in r.detail
+    (ctx.root / "config" / "channels.json").write_text(json.dumps(
+        {"products": {"acme": [{"destination": "metricool:instagram", "account": "acme", "verified": False}]}}))
+    assert Publisher(ctx.policy, ctx.store, ctx.root).schedule(
+        cid, "metricool:instagram", "2030-01-01T12:00:00+00:00").status == "blocked"
+
+
+@pytest.mark.parametrize("text,blocked", [
+    ("Start free at booked-in.co.uk.", False),                        # free signup is live (site checked 26 Oct)
+    ("Put the link in your bio tonight.", False),
+    ("There are three tiers: Free, Pro at ten pounds a month, and Pro+ at twenty-four pounds.", False),
+    ("Start your 14-day free trial of Pro+.", True),                   # trial ends in a payment step that can't take money
+    ("Try Pro+ free for fourteen days.", True),
+    ("Upgrade to Pro for deposits.", True),
+    ("Subscribe now and lock in the price.", True),
+    ("Lash techs love it.", True),                                     # no verified customers yet
+    ("Join hundreds of beauty pros.", True),
+    ("Our studios never miss a patch test.", True),
+    ("Use your own custom domain.", True),                             # not built
+    ("Reschedule in one tap.", True),
+    ("Publish straight to Instagram.", True),
+    ("Deposits are confirmed automatically.", True),
+    ("Works on every phone.", True),                                   # not yet tested on real Safari
+    ("Bookings arrive while you are working.", False),
+])
+def test_booked_in_guardrails(text, blocked):
+    import re
+    from mas.marketing.validator import GUARDRAILS
+    hit = any(re.search(p, text.lower(), re.I) for p, _ in GUARDRAILS["booked-in"])
+    assert hit == blocked, text
